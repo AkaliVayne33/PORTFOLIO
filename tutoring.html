@@ -26,59 +26,424 @@
     </div>
   </nav>
 
-  <!-- ══════════════════════════════════════════
+
+  <!-- ════════════════════════════════════════
        #LUXE — ATHENA ACADEMY
-       Luxury & Minimalist elite tutoring
-  ══════════════════════════════════════════ -->
-  <section id="luxe">
-    <!-- TODO: Build luxury mockup for ATHENA ACADEMY — elite IB/A-level tutoring, Buona Vista -->
-    <!-- Structure: tu-luxe-nav / tu-luxe-hero / tu-luxe-services / tu-luxe-temoignages / tu-luxe-cta / tu-luxe-footer -->
-    <div style="padding:120px 24px;text-align:center;background:#FAFAFA;">
-      <p style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#C9A84C;letter-spacing:4px;text-transform:uppercase;">Coming soon</p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:3rem;color:#0A0A0A;margin-top:16px;">ATHENA ACADEMY</h2>
-      <p style="color:#999;margin-top:12px;">Elite IB & A-Level Tutoring — Buona Vista</p>
-    </div>
-  </section>
+  ════════════════════════════════════════ -->
+  <div id="luxe">
 
-  <!-- ══ DIVIDER ══ -->
-  <div class="mockup-divider">
-    <span class="mockup-divider__label">Style 2 / 3</span>
-    <p class="mockup-divider__title">Premium & Corporate</p>
-    <p class="mockup-divider__desc">Structured, results-focused design for established tutoring chains.</p>
+    <div class="mockup-divider">
+      <p class="mockup-divider__label">Style 01</p>
+      <h2 class="mockup-divider__title">Luxury & Minimalist</h2>
+      <p class="mockup-divider__desc">Prestigious, considered, academic — for the elite tutoring centre parents trust implicitly.</p>
+    </div>
+
+    <nav class="tu-luxe-nav">
+      <span class="tu-luxe-nav__logo">Athena Academy</span>
+      <div class="tu-luxe-nav__links">
+        <a href="#">Programmes</a>
+        <a href="#">Our Tutors</a>
+        <a href="#">Results</a>
+        <a href="#">Enrol</a>
+      </div>
+      <a href="#" class="tu-luxe-nav__cta">Book a Trial</a>
+    </nav>
+
+    <!-- Hero — split layout -->
+    <section class="tu-luxe-hero">
+      <div class="tu-luxe-hero__left">
+        <p class="tu-luxe-hero__eyebrow animate-in">IB & A-Level Specialists · Buona Vista</p>
+        <h1 class="tu-luxe-hero__title animate-in">
+          Excellence is<br><em>a practice.</em>
+        </h1>
+        <p class="tu-luxe-hero__sub animate-in">
+          Athena Academy is Singapore's most selective tutoring centre.
+          Small classes, expert tutors, and a culture of intellectual rigour
+          that prepares students for the world's finest universities.
+        </p>
+        <a href="#" class="tu-luxe-btn animate-in">Explore Programmes</a>
+      </div>
+      <div class="tu-luxe-hero__right">
+        <img
+          class="tu-luxe-hero__img"
+          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&auto=format&fit=crop"
+          alt="Athena Academy tutoring"
+        />
+        <div class="tu-luxe-hero__badge animate-in">
+          <p class="tu-luxe-hero__badge-label">University Placements</p>
+          <p class="tu-luxe-hero__badge-val">Oxford · NUS · LSE</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="tu-luxe-services">
+      <p class="tu-luxe-services__eyebrow animate-in">Our Programmes</p>
+      <h2 class="tu-luxe-services__title animate-in">
+        Tailored learning<br>for exceptional students.
+      </h2>
+      <div class="tu-luxe-services__grid">
+        <div class="tu-luxe-service animate-in">
+          <p class="tu-luxe-service__num">01</p>
+          <h3 class="tu-luxe-service__title">IB Diploma</h3>
+          <p class="tu-luxe-service__text">Specialist IB tutoring across all subjects and levels. Our tutors hold IB diplomas themselves and know exactly where students lose marks.</p>
+        </div>
+        <div class="tu-luxe-service animate-in">
+          <p class="tu-luxe-service__num">02</p>
+          <h3 class="tu-luxe-service__title">A-Level Excellence</h3>
+          <p class="tu-luxe-service__text">H1 to H3, all subjects. Weekly classes capped at 6 students. Past-paper focused, examiner-informed, results-guaranteed.</p>
+        </div>
+        <div class="tu-luxe-service animate-in">
+          <p class="tu-luxe-service__num">03</p>
+          <h3 class="tu-luxe-service__title">University Admissions</h3>
+          <p class="tu-luxe-service__text">Personal statement coaching, interview preparation and application strategy for Oxbridge, Ivy League and Singapore's top programmes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="tu-luxe-temoignages">
+      <p class="tu-luxe-temoignages__eyebrow animate-in">Parent & Student Voices</p>
+      <h2 class="tu-luxe-temoignages__title animate-in">« My daughter didn't just improve — she found her love of learning. »</h2>
+      <div class="tu-luxe-temoignages__grid">
+        <div class="tu-luxe-temoignage animate-in">
+          <p class="tu-luxe-temoignage__stars">★★★★★</p>
+          <p class="tu-luxe-temoignage__quote">« Our son went from a predicted 36 to a 43 in his IB. Athena Academy's approach is demanding, thoughtful, and completely different from every other centre. »</p>
+          <p class="tu-luxe-temoignage__author">— Dr. Helena M., parent of IB student</p>
+        </div>
+        <div class="tu-luxe-temoignage animate-in">
+          <p class="tu-luxe-temoignage__stars">★★★★★</p>
+          <p class="tu-luxe-temoignage__quote">« The personal statement coaching was the best investment we made. My daughter received three offers from Russell Group universities. Worth every cent. »</p>
+          <p class="tu-luxe-temoignage__author">— James R., parent of A-Level student</p>
+        </div>
+        <div class="tu-luxe-temoignage animate-in">
+          <p class="tu-luxe-temoignage__stars">★★★★★</p>
+          <p class="tu-luxe-temoignage__quote">« I was failing Chemistry. After 3 months at Athena, I scored an A in prelims. My tutor explained things no teacher had ever explained before. Grateful. »</p>
+          <p class="tu-luxe-temoignage__author">— Ethan L., A-Level student</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="tu-luxe-cta">
+      <h2 class="tu-luxe-cta__title animate-in">
+        The right start<br><em>changes everything.</em>
+      </h2>
+      <p class="tu-luxe-cta__sub animate-in">Places are limited. Book a complimentary trial session with one of our tutors.</p>
+      <a href="#" class="tu-luxe-btn animate-in">Book a Trial Session</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="tu-luxe-footer">
+      <span class="tu-luxe-footer__logo">Athena Academy</span>
+      <div class="tu-luxe-footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <span class="tu-luxe-footer__copy">© 2026 Athena Academy</span>
+    </footer>
+
   </div>
 
-  <!-- ══════════════════════════════════════════
+
+  <!-- ════════════════════════════════════════
        #PREMIUM — SMARTPATH EDUCATION
-       Premium & Corporate tutoring centre group
-  ══════════════════════════════════════════ -->
-  <section id="premium">
-    <!-- TODO: Build premium mockup for SMARTPATH EDUCATION — MOE-aligned, multi-subject -->
-    <div style="padding:120px 24px;text-align:center;background:#0D1B3E;">
-      <p style="font-family:'DM Sans',sans-serif;font-size:1rem;color:#2ECC71;letter-spacing:3px;text-transform:uppercase;">Coming soon</p>
-      <h2 style="font-family:'DM Sans',sans-serif;font-size:3rem;color:#fff;margin-top:16px;">SMARTPATH EDUCATION</h2>
-      <p style="color:rgba(255,255,255,0.5);margin-top:12px;">Proven Results, Every Subject — PSLE to A-Levels</p>
-    </div>
-  </section>
+  ════════════════════════════════════════ -->
+  <div id="premium">
 
-  <!-- ══ DIVIDER ══ -->
-  <div class="mockup-divider">
-    <span class="mockup-divider__label">Style 3 / 3</span>
-    <p class="mockup-divider__title">Vibrant & Creative</p>
-    <p class="mockup-divider__desc">Engaging, energetic branding for enrichment programmes and kids coding schools.</p>
+    <div class="mockup-divider">
+      <p class="mockup-divider__label">Style 02</p>
+      <h2 class="mockup-divider__title">Premium & Corporate</h2>
+      <p class="mockup-divider__desc">Structured, results-focused, trusted — for the tutoring centre that gets consistent grades.</p>
+    </div>
+
+    <nav class="tu-premium-nav">
+      <span class="tu-premium-nav__logo">SmartPath <span>Education</span></span>
+      <div class="tu-premium-nav__links">
+        <a href="#">Subjects</a>
+        <a href="#">Levels</a>
+        <a href="#">Centres</a>
+        <a href="#">Results</a>
+        <a href="#">Enrol</a>
+      </div>
+      <a href="#" class="tu-premium-btn">Free Trial Class</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="tu-premium-hero">
+      <div>
+        <span class="tu-premium-hero__badge">🏆 #1 Rated Tuition Centre — Singapore Parents Choice Award</span>
+        <h1 class="tu-premium-hero__title">
+          Better grades,<br><span>guaranteed.</span>
+        </h1>
+        <p class="tu-premium-hero__sub">
+          SmartPath Education delivers MOE-aligned tutoring for Primary,
+          Secondary and JC students. Proven methods, experienced teachers,
+          real results — since 2011.
+        </p>
+        <div class="tu-premium-hero__actions">
+          <a href="#" class="tu-premium-btn">Enrol Now</a>
+          <a href="#" class="tu-premium-btn tu-premium-btn--outline">View Subjects</a>
+        </div>
+        <div class="tu-premium-hero__stats">
+          <div>
+            <p class="tu-premium-stat__num">3,500+</p>
+            <p class="tu-premium-stat__label">Students</p>
+          </div>
+          <div>
+            <p class="tu-premium-stat__num">92%</p>
+            <p class="tu-premium-stat__label">Grade Improvement</p>
+          </div>
+          <div>
+            <p class="tu-premium-stat__num">14 yrs</p>
+            <p class="tu-premium-stat__label">In Singapore</p>
+          </div>
+        </div>
+      </div>
+      <div class="tu-premium-hero__img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&auto=format&fit=crop"
+          alt="SmartPath Education classroom"
+        />
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="tu-premium-services">
+      <p class="tu-premium-services__tag animate-in">What We Offer</p>
+      <h2 class="tu-premium-services__title animate-in">Every subject, every level, one centre.</h2>
+      <div class="tu-premium-services__grid">
+        <div class="tu-premium-service animate-in">
+          <div class="tu-premium-service__icon">📐</div>
+          <h3 class="tu-premium-service__title">Maths & Sciences</h3>
+          <p class="tu-premium-service__text">Primary Maths to JC H2 Physics. Concept-first teaching, past-paper drilling and step-by-step exam technique for every MOE syllabus.</p>
+        </div>
+        <div class="tu-premium-service animate-in">
+          <div class="tu-premium-service__icon">📝</div>
+          <h3 class="tu-premium-service__title">English & Humanities</h3>
+          <p class="tu-premium-service__text">Comprehension, composition, essay writing and oral preparation. Our English teachers are published authors and former MOE examiners.</p>
+        </div>
+        <div class="tu-premium-service animate-in">
+          <div class="tu-premium-service__icon">🌍</div>
+          <h3 class="tu-premium-service__title">Chinese & Mother Tongue</h3>
+          <p class="tu-premium-service__text">Higher Chinese, Foundation Chinese and Mother Tongue tuition. Small groups, native-speaker teachers, proven results at PSLE and O-Level.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="tu-premium-temoignages">
+      <p class="tu-premium-temoignages__tag animate-in">Parent Reviews</p>
+      <h2 class="tu-premium-temoignages__title animate-in">Results speak louder than promises.</h2>
+      <div class="tu-premium-temoignages__grid">
+        <div class="tu-premium-temoignage animate-in">
+          <p class="tu-premium-temoignage__stars">★★★★★</p>
+          <p class="tu-premium-temoignage__quote">« My son went from a C5 to B3 in O-Level Maths in one term. The teachers explain in a way that finally made sense to him. We're sticking with SmartPath for A-Levels. »</p>
+          <div class="tu-premium-temoignage__author">
+            <div class="tu-premium-temoignage__avatar">PM</div>
+            <div>
+              <p class="tu-premium-temoignage__name">Priya M.</p>
+              <p class="tu-premium-temoignage__role">Mother of Sec 4 student</p>
+            </div>
+          </div>
+        </div>
+        <div class="tu-premium-temoignage animate-in">
+          <p class="tu-premium-temoignage__stars">★★★★★</p>
+          <p class="tu-premium-temoignage__quote">« Enroled our daughter for PSLE English. She scored AL2 — up from AL4. The compositions tutor was exceptional. Highly recommend to all P6 parents. »</p>
+          <div class="tu-premium-temoignage__author">
+            <div class="tu-premium-temoignage__avatar">JL</div>
+            <div>
+              <p class="tu-premium-temoignage__name">James L.</p>
+              <p class="tu-premium-temoignage__role">Father of P6 student</p>
+            </div>
+          </div>
+        </div>
+        <div class="tu-premium-temoignage animate-in">
+          <p class="tu-premium-temoignage__stars">★★★★★</p>
+          <p class="tu-premium-temoignage__quote">« Three children, three subjects, all at SmartPath. Best decision we made. The teachers are caring, consistent and know the syllabus inside out. »</p>
+          <div class="tu-premium-temoignage__author">
+            <div class="tu-premium-temoignage__avatar">SR</div>
+            <div>
+              <p class="tu-premium-temoignage__name">Sandra R.</p>
+              <p class="tu-premium-temoignage__role">Mother of 3 students</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="tu-premium-cta">
+      <h2 class="tu-premium-cta__title animate-in">
+        Start with a<br><span>free trial class.</span>
+      </h2>
+      <p class="tu-premium-cta__sub animate-in">No commitment. See the difference for yourself — in one lesson.</p>
+      <a href="#" class="tu-premium-btn animate-in">Register for Free Trial</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="tu-premium-footer">
+      <span class="tu-premium-footer__logo">SmartPath <span>Education</span></span>
+      <div class="tu-premium-footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Locations</a>
+      </div>
+      <span class="tu-premium-footer__copy">© 2026 SmartPath Education</span>
+    </footer>
+
   </div>
 
-  <!-- ══════════════════════════════════════════
+
+  <!-- ════════════════════════════════════════
        #VIBRANT — SPARK LABS
-       Vibrant & Creative kids coding / STEM enrichment
-  ══════════════════════════════════════════ -->
-  <section id="vibrant">
-    <!-- TODO: Build vibrant mockup for SPARK LABS — coding, robotics & STEM for kids -->
-    <div style="padding:120px 24px;text-align:center;background:#0F0F0F;">
-      <p style="font-family:'Space Grotesk',sans-serif;font-size:1rem;color:#F107A3;letter-spacing:3px;text-transform:uppercase;">Coming soon</p>
-      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:800;color:#fff;margin-top:16px;">SPARK LABS</h2>
-      <p style="color:rgba(255,255,255,0.4);margin-top:12px;">Coding, Robotics & STEM — Built for Curious Kids</p>
+  ════════════════════════════════════════ -->
+  <div id="vibrant">
+
+    <div class="mockup-divider">
+      <p class="mockup-divider__label">Style 03</p>
+      <h2 class="mockup-divider__title">Vibrant & Creative</h2>
+      <p class="mockup-divider__desc">Fun, energetic, future-ready — for the enrichment centre that makes kids love learning.</p>
     </div>
-  </section>
+
+    <nav class="tu-vibrant-nav">
+      <span class="tu-vibrant-nav__logo">SPARK<span>LABS</span></span>
+      <div class="tu-vibrant-nav__links">
+        <a href="#">Courses</a>
+        <a href="#">Camps</a>
+        <a href="#">Age Groups</a>
+        <a href="#">Book</a>
+      </div>
+      <a href="#" class="tu-vibrant-btn">Book a Free Trial →</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="tu-vibrant-hero">
+      <div class="tu-vibrant-hero__inner">
+        <div>
+          <span class="tu-vibrant-hero__tag">🚀 Holiday Coding Camp — Register Now</span>
+          <h1 class="tu-vibrant-hero__title">
+            Kids who code<br><span class="tu-grad">build the future.</span>
+          </h1>
+          <p class="tu-vibrant-hero__sub">
+            SPARK LABS is Singapore's most exciting coding and robotics enrichment centre.
+            Ages 5 to 17. Hands-on, project-based, no boring lectures.
+          </p>
+          <div class="tu-vibrant-hero__actions">
+            <a href="#" class="tu-vibrant-btn">Book Free Trial</a>
+            <a href="#" class="tu-vibrant-btn tu-vibrant-btn--ghost">See All Courses →</a>
+          </div>
+        </div>
+        <div class="tu-vibrant-hero__visual">
+          <div class="tu-vibrant-hero__img">
+            <img
+              src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop"
+              alt="SPARK LABS coding class"
+            />
+          </div>
+          <div class="tu-vibrant-hero__badge">
+            <span class="tu-vibrant-hero__badge-icon">⭐</span>
+            <div>
+              <p class="tu-vibrant-hero__badge-num">2,400+</p>
+              <p class="tu-vibrant-hero__badge-label">Young coders</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="tu-vibrant-services">
+      <p class="tu-vibrant-services__tag animate-in">What kids learn</p>
+      <h2 class="tu-vibrant-services__title animate-in">
+        Code. Build. Launch.<br>Repeat.
+      </h2>
+      <div class="tu-vibrant-services__grid">
+        <div class="tu-vibrant-service animate-in">
+          <div class="tu-vibrant-service__icon">💻</div>
+          <h3 class="tu-vibrant-service__title">Coding & App Development</h3>
+          <p class="tu-vibrant-service__text">Scratch for beginners, Python for intermediates, app and web development for advanced students. Build real projects from day one.</p>
+        </div>
+        <div class="tu-vibrant-service animate-in">
+          <div class="tu-vibrant-service__icon">🤖</div>
+          <h3 class="tu-vibrant-service__title">Robotics & AI</h3>
+          <p class="tu-vibrant-service__text">LEGO Mindstorms, Arduino and machine learning basics. Kids design, build and programme their own robots — and compete in national tournaments.</p>
+        </div>
+        <div class="tu-vibrant-service animate-in">
+          <div class="tu-vibrant-service__icon">🎮</div>
+          <h3 class="tu-vibrant-service__title">Game Design</h3>
+          <p class="tu-vibrant-service__text">Design, code and publish real games. Kids learn game logic, storytelling and UX — and finish every term with a playable project to show off.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="tu-vibrant-temoignages">
+      <p class="tu-vibrant-temoignages__tag animate-in">Parents & kids love it</p>
+      <h2 class="tu-vibrant-temoignages__title animate-in">
+        Monday mornings?<br><span class="tu-grad">They can't wait.</span>
+      </h2>
+      <div class="tu-vibrant-temoignages__grid">
+        <div class="tu-vibrant-temoignage animate-in">
+          <p class="tu-vibrant-temoignage__stars">★★★★★</p>
+          <p class="tu-vibrant-temoignage__quote">« My son used to fight me to do homework. Now he's up at 7am on Saturdays because he doesn't want to miss coding class. SPARK LABS changed everything. »</p>
+          <div class="tu-vibrant-temoignage__author">
+            <div class="tu-vibrant-temoignage__avatar">L</div>
+            <div>
+              <p class="tu-vibrant-temoignage__name">Lisa C.</p>
+              <p class="tu-vibrant-temoignage__role">Mother of 9-year-old</p>
+            </div>
+          </div>
+        </div>
+        <div class="tu-vibrant-temoignage animate-in">
+          <p class="tu-vibrant-temoignage__stars">★★★★★</p>
+          <p class="tu-vibrant-temoignage__quote">« My daughter presented her app at the school science fair and won first place. She built it entirely in her SPARK LABS course. I was speechless. »</p>
+          <div class="tu-vibrant-temoignage__author">
+            <div class="tu-vibrant-temoignage__avatar">R</div>
+            <div>
+              <p class="tu-vibrant-temoignage__name">Raj P.</p>
+              <p class="tu-vibrant-temoignage__role">Father of 12-year-old</p>
+            </div>
+          </div>
+        </div>
+        <div class="tu-vibrant-temoignage animate-in">
+          <p class="tu-vibrant-temoignage__stars">★★★★★</p>
+          <p class="tu-vibrant-temoignage__quote">« The robotics holiday camp was the best investment we made this year. Two weeks, my son made three robots and five new friends. He's already asking about next term. »</p>
+          <div class="tu-vibrant-temoignage__author">
+            <div class="tu-vibrant-temoignage__avatar">M</div>
+            <div>
+              <p class="tu-vibrant-temoignage__name">Michelle O.</p>
+              <p class="tu-vibrant-temoignage__role">Mother of 11-year-old</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="tu-vibrant-cta">
+      <h2 class="tu-vibrant-cta__title animate-in">
+        Your kid's<br><span class="tu-grad">first line of code</span><br>starts here.
+      </h2>
+      <p class="tu-vibrant-cta__sub animate-in">Free trial class. No experience needed. Ages 5 to 17.</p>
+      <a href="#" class="tu-vibrant-btn animate-in" style="font-size:1rem;padding:16px 40px;">
+        Book Free Trial →
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="tu-vibrant-footer">
+      <span class="tu-vibrant-footer__logo">SPARK<span>LABS</span></span>
+      <div class="tu-vibrant-footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+      <span class="tu-vibrant-footer__copy">© 2026 Spark Labs Singapore</span>
+    </footer>
+
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>

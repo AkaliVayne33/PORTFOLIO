@@ -18,6 +18,10 @@ Fake names in testimonials must be English-speaking (Sarah L., James T., Priya M
 | /immobilier | immobilier.html | ✅ Done |
 | /pharmacie | pharmacie.html | ✅ Done |
 | /restaurant | restaurant.html | ✅ Done |
+| /beauty | beauty.html | 🔲 Skeleton only — mockups to build |
+| /clinic | clinic.html | 🔲 Skeleton only — mockups to build |
+| /tutoring | tutoring.html | 🔲 Skeleton only — mockups to build |
+| /interior | interior.html | 🔲 Skeleton only — mockups to build |
 
 ## Sector page structure
 Each sector page (sport, immobilier, pharmacie, restaurant) contains:
@@ -85,6 +89,26 @@ Each mockup contains:
 - Premium: "Brasserie Centrale" — trusted neighbourhood brasserie
 - Vibrant: "STREET & CO" — bold street food brand
 
+### Beauty & Wellness (beauty.html)
+- Luxury: "SERENOVA" — upscale day spa, Orchard Road
+- Premium: "GLOWPRO STUDIOS" — multi-location hair & beauty chain
+- Vibrant: "BLOSSOM STUDIO" — trendy nail art bar
+
+### Clinic & Dental (clinic.html)
+- Luxury: "THE PARAGON CLINIC" — aesthetic medicine, Orchard Road
+- Premium: "SMILECARE DENTAL" — multi-branch dental chain
+- Vibrant: "MEDIPOINT" — tech-forward GP / telehealth
+
+### Tutoring & Enrichment (tutoring.html)
+- Luxury: "ATHENA ACADEMY" — elite IB/A-level tutoring, Buona Vista
+- Premium: "SMARTPATH EDUCATION" — MOE-aligned, multi-subject
+- Vibrant: "SPARK LABS" — coding, robotics & STEM for kids
+
+### Interior Design & Renovation (interior.html)
+- Luxury: "MAISON ATELIER" — bespoke luxury interior design
+- Premium: "LIVSPACE PRO" — full-service HDB/condo renovation
+- Vibrant: "FORM & FLUX" — bold editorial interior design studio
+
 ## Global navigation
 - `index.html`: home with 4 sector cards → links to sport.html, immobilier.html, pharmacie.html, restaurant.html
 - Each sector page: sticky nav with `#luxe`, `#premium`, `#vibrant` anchor links + back to home
@@ -101,7 +125,11 @@ Each mockup contains:
 - `immobilier.css`: `.re-luxe-*`, `.re-premium-*`, `.re-vibrant-*` prefixes
 - `pharmacie.css`: `.ph-luxe-*`, `.ph-premium-*`, `.ph-vibrant-*` prefixes
 - `restaurant.css`: `.rs-luxe-*`, `.rs-premium-*`, `.rs-vibrant-*` prefixes
-- `main.js`: IntersectionObserver for `.animate-in` class + smooth scroll
+- `beauty.css`: `.bw-luxe-*`, `.bw-premium-*`, `.bw-vibrant-*` prefixes
+- `clinic.css`: `.cl-luxe-*`, `.cl-premium-*`, `.cl-vibrant-*` prefixes
+- `tutoring.css`: `.tu-luxe-*`, `.tu-premium-*`, `.tu-vibrant-*` prefixes
+- `interior.css`: `.id-luxe-*`, `.id-premium-*`, `.id-vibrant-*` prefixes
+- `main.js`: IntersectionObserver for `.animate-in` class + smooth scroll + active nav state
 
 ## Progress
 - [x] Step 1: CLAUDE.md + CONTEXT.md
@@ -112,6 +140,11 @@ Each mockup contains:
 - [x] Step 5b: restaurant.html + restaurant.css
 - [x] Step 6: main.js polish (staggered animations, nav active state highlight)
 - [x] Step 7: Final responsive pass + cross-browser testing
+- [x] Step 8: index.html updated with 4 new sector cards (beauty, clinic, tutoring, interior)
+- [x] Step 9: beauty.html + beauty.css — 3 full mockups (SERENOVA / GLOWPRO STUDIOS / BLOSSOM STUDIO)
+- [x] Step 10: clinic.html + clinic.css — 3 full mockups (THE PARAGON CLINIC / SMILECARE DENTAL / MEDIPOINT)
+- [x] Step 11: tutoring.html + tutoring.css — 3 full mockups (ATHENA ACADEMY / SMARTPATH EDUCATION / SPARK LABS)
+- [x] Step 12: interior.html + interior.css — 3 full mockups (MAISON ATELIER / LIVSPACE PRO / FORM & FLUX)
 
 ## How to resume in a new session
 1. Open the PORTFOLIO folder in VS Code

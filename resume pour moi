@@ -1,0 +1,21 @@
+Résumé de session
+Ce qui a été construit
+8 pages secteur complètes : sport, immobilier, pharmacie, restaurant, beauty, clinic, tutoring, interior
+9 fichiers CSS : global + 1 par secteur
+24 mockups au total (3 par secteur × 8 secteurs), chacun avec hero / services / témoignages / CTA / footer
+main.js poli : animations en cascade + active nav state au scroll
+Responsive sur tous les fichiers : 900px + 480px
+Bug corrigé ce soir : .mockup-divider était uniquement dans sport.css — déplacé dans global.css pour que les 4 nouveaux secteurs l'aient
+État du projet
+Tout est coché ✅ dans CONTEXT.md. CLAUDE.md et CONTEXT.md sont à jour avec les 8 secteurs, les marques, les prefixes CSS et l'architecture.
+
+Ce qu'il reste à faire pour la prochaine session
+Technique :
+
+Tester les 8 pages dans le navigateur (DevTools > responsive 375px / 768px / 1280px)
+Vérifier que les images Unsplash chargent bien (nécessite connexion internet)
+Business (optionnel mais recommandé avant prospection) :
+
+Déployer sur Netlify (drag & drop du dossier PORTFOLIO) pour avoir un vrai lien à envoyer aux prospects — gratuit, en 2 minutes
+Éventuellement ajouter un 6ème secteur si tu identifies un marché supplémentaire à cibler
+Pour reprendre : dis simplement "Read CLAUDE.md and CONTEXT.md then resume" et je saurai exactement où on en est.

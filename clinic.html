@@ -26,59 +26,424 @@
     </div>
   </nav>
 
-  <!-- ══════════════════════════════════════════
+
+  <!-- ════════════════════════════════════════
        #LUXE — THE PARAGON CLINIC
-       Luxury & Minimalist private aesthetic clinic
-  ══════════════════════════════════════════ -->
-  <section id="luxe">
-    <!-- TODO: Build luxury mockup for THE PARAGON CLINIC — aesthetic medicine, Orchard -->
-    <!-- Structure: cl-luxe-nav / cl-luxe-hero / cl-luxe-services / cl-luxe-temoignages / cl-luxe-cta / cl-luxe-footer -->
-    <div style="padding:120px 24px;text-align:center;background:#FAFAFA;">
-      <p style="font-family:'Playfair Display',serif;font-size:1.2rem;color:#C9A84C;letter-spacing:4px;text-transform:uppercase;">Coming soon</p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:3rem;color:#0A0A0A;margin-top:16px;">THE PARAGON CLINIC</h2>
-      <p style="color:#999;margin-top:12px;">Aesthetic Medicine & Wellness — Orchard Road</p>
-    </div>
-  </section>
+  ════════════════════════════════════════ -->
+  <div id="luxe">
 
-  <!-- ══ DIVIDER ══ -->
-  <div class="mockup-divider">
-    <span class="mockup-divider__label">Style 2 / 3</span>
-    <p class="mockup-divider__title">Premium & Corporate</p>
-    <p class="mockup-divider__desc">Clean, trustworthy design for family clinics and dental group practices.</p>
+    <div class="mockup-divider">
+      <p class="mockup-divider__label">Style 01</p>
+      <h2 class="mockup-divider__title">Luxury & Minimalist</h2>
+      <p class="mockup-divider__desc">Refined, discreet, world-class — for the private aesthetic clinic that speaks for itself.</p>
+    </div>
+
+    <nav class="cl-luxe-nav">
+      <span class="cl-luxe-nav__logo">The Paragon Clinic</span>
+      <div class="cl-luxe-nav__links">
+        <a href="#">Treatments</a>
+        <a href="#">Doctors</a>
+        <a href="#">About</a>
+        <a href="#">Appointments</a>
+      </div>
+      <a href="#" class="cl-luxe-nav__cta">Book a Consultation</a>
+    </nav>
+
+    <!-- Hero — split layout -->
+    <section class="cl-luxe-hero">
+      <div class="cl-luxe-hero__left">
+        <p class="cl-luxe-hero__eyebrow animate-in">Aesthetic Medicine · Orchard Road</p>
+        <h1 class="cl-luxe-hero__title animate-in">
+          Excellence in care,<br><em>quietly delivered.</em>
+        </h1>
+        <p class="cl-luxe-hero__sub animate-in">
+          The Paragon Clinic brings together Singapore's most respected
+          doctors to deliver bespoke aesthetic treatments in an atmosphere
+          of complete privacy and trust.
+        </p>
+        <a href="#" class="cl-luxe-btn animate-in">Explore Treatments</a>
+      </div>
+      <div class="cl-luxe-hero__right">
+        <img
+          class="cl-luxe-hero__img"
+          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop"
+          alt="The Paragon Clinic"
+        />
+        <div class="cl-luxe-hero__badge animate-in">
+          <p class="cl-luxe-hero__badge-label">MOH Registered</p>
+          <p class="cl-luxe-hero__badge-val">Since 2010</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="cl-luxe-services">
+      <p class="cl-luxe-services__eyebrow animate-in">Our Specialties</p>
+      <h2 class="cl-luxe-services__title animate-in">
+        Treatments crafted<br>for your confidence.
+      </h2>
+      <div class="cl-luxe-services__grid">
+        <div class="cl-luxe-service animate-in">
+          <p class="cl-luxe-service__num">01</p>
+          <h3 class="cl-luxe-service__title">Aesthetic Dermatology</h3>
+          <p class="cl-luxe-service__text">Skin rejuvenation, laser treatments, injectables and more — each protocol designed exclusively for your skin type and goals.</p>
+        </div>
+        <div class="cl-luxe-service animate-in">
+          <p class="cl-luxe-service__num">02</p>
+          <h3 class="cl-luxe-service__title">Preventive Health</h3>
+          <p class="cl-luxe-service__text">Comprehensive health screenings, IV therapy and personalised wellness programmes designed by our board-certified physicians.</p>
+        </div>
+        <div class="cl-luxe-service animate-in">
+          <p class="cl-luxe-service__num">03</p>
+          <h3 class="cl-luxe-service__title">Private Consultations</h3>
+          <p class="cl-luxe-service__text">One-to-one sessions with our senior doctors. No waiting rooms, no rush. Complete confidentiality, always.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="cl-luxe-temoignages">
+      <p class="cl-luxe-temoignages__eyebrow animate-in">Patient Experiences</p>
+      <h2 class="cl-luxe-temoignages__title animate-in">« I trust no one else with my care. »</h2>
+      <div class="cl-luxe-temoignages__grid">
+        <div class="cl-luxe-temoignage animate-in">
+          <p class="cl-luxe-temoignage__stars">★★★★★</p>
+          <p class="cl-luxe-temoignage__quote">« The discretion and professionalism at The Paragon Clinic is unmatched. My results speak for themselves — natural, refined, perfect. »</p>
+          <p class="cl-luxe-temoignage__author">— Victoria L., aesthetic patient</p>
+        </div>
+        <div class="cl-luxe-temoignage animate-in">
+          <p class="cl-luxe-temoignage__stars">★★★★★</p>
+          <p class="cl-luxe-temoignage__quote">« Dr. Chen took the time to understand exactly what I wanted — and delivered something even better. I refer all my friends here. »</p>
+          <p class="cl-luxe-temoignage__author">— Aaron T., preventive health</p>
+        </div>
+        <div class="cl-luxe-temoignage animate-in">
+          <p class="cl-luxe-temoignage__stars">★★★★★</p>
+          <p class="cl-luxe-temoignage__quote">« From the booking process to the follow-up, every touchpoint was seamless. This is healthcare the way it should always be. »</p>
+          <p class="cl-luxe-temoignage__author">— Priya S., wellness patient</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cl-luxe-cta">
+      <h2 class="cl-luxe-cta__title animate-in">
+        Begin your journey<br><em>to confidence.</em>
+      </h2>
+      <p class="cl-luxe-cta__sub animate-in">Complimentary 30-minute consultation with our lead physician. Limited appointments weekly.</p>
+      <a href="#" class="cl-luxe-btn animate-in">Request a Consultation</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cl-luxe-footer">
+      <span class="cl-luxe-footer__logo">The Paragon Clinic</span>
+      <div class="cl-luxe-footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">MOH Info</a>
+      </div>
+      <span class="cl-luxe-footer__copy">© 2026 The Paragon Clinic</span>
+    </footer>
+
   </div>
 
-  <!-- ══════════════════════════════════════════
+
+  <!-- ════════════════════════════════════════
        #PREMIUM — SMILECARE DENTAL
-       Premium & Corporate dental group
-  ══════════════════════════════════════════ -->
-  <section id="premium">
-    <!-- TODO: Build premium mockup for SMILECARE DENTAL — multi-branch dental chain -->
-    <div style="padding:120px 24px;text-align:center;background:#0D1B3E;">
-      <p style="font-family:'DM Sans',sans-serif;font-size:1rem;color:#2ECC71;letter-spacing:3px;text-transform:uppercase;">Coming soon</p>
-      <h2 style="font-family:'DM Sans',sans-serif;font-size:3rem;color:#fff;margin-top:16px;">SMILECARE DENTAL</h2>
-      <p style="color:rgba(255,255,255,0.5);margin-top:12px;">Trusted Dental Care — Multiple Clinics</p>
-    </div>
-  </section>
+  ════════════════════════════════════════ -->
+  <div id="premium">
 
-  <!-- ══ DIVIDER ══ -->
-  <div class="mockup-divider">
-    <span class="mockup-divider__label">Style 3 / 3</span>
-    <p class="mockup-divider__title">Vibrant & Creative</p>
-    <p class="mockup-divider__desc">Modern, approachable branding for digital-first GP and telehealth clinics.</p>
+    <div class="mockup-divider">
+      <p class="mockup-divider__label">Style 02</p>
+      <h2 class="mockup-divider__title">Premium & Corporate</h2>
+      <p class="mockup-divider__desc">Trustworthy, clinical, family-friendly — for the dental group everyone recommends.</p>
+    </div>
+
+    <nav class="cl-premium-nav">
+      <span class="cl-premium-nav__logo">SmileCare <span>Dental</span></span>
+      <div class="cl-premium-nav__links">
+        <a href="#">Services</a>
+        <a href="#">Locations</a>
+        <a href="#">Team</a>
+        <a href="#">Insurance</a>
+        <a href="#">Book</a>
+      </div>
+      <a href="#" class="cl-premium-btn">Book Appointment</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="cl-premium-hero">
+      <div>
+        <span class="cl-premium-hero__badge">🦷 Singapore's Most Trusted Dental Group</span>
+        <h1 class="cl-premium-hero__title">
+          Healthy smiles,<br><span>for the whole family.</span>
+        </h1>
+        <p class="cl-premium-hero__sub">
+          SmileCare Dental provides comprehensive dental care across
+          6 clinics in Singapore. From routine check-ups to full smile
+          transformations — we've got every age covered.
+        </p>
+        <div class="cl-premium-hero__actions">
+          <a href="#" class="cl-premium-btn">Book a Check-Up</a>
+          <a href="#" class="cl-premium-btn cl-premium-btn--outline">Our Services</a>
+        </div>
+        <div class="cl-premium-hero__stats">
+          <div>
+            <p class="cl-premium-stat__num">6</p>
+            <p class="cl-premium-stat__label">Clinics</p>
+          </div>
+          <div>
+            <p class="cl-premium-stat__num">4.9 ★</p>
+            <p class="cl-premium-stat__label">Google Rating</p>
+          </div>
+          <div>
+            <p class="cl-premium-stat__num">20k+</p>
+            <p class="cl-premium-stat__label">Patients</p>
+          </div>
+        </div>
+      </div>
+      <div class="cl-premium-hero__img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop"
+          alt="SmileCare Dental clinic"
+        />
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="cl-premium-services">
+      <p class="cl-premium-services__tag animate-in">Our Services</p>
+      <h2 class="cl-premium-services__title animate-in">Complete dental care, simplified.</h2>
+      <div class="cl-premium-services__grid">
+        <div class="cl-premium-service animate-in">
+          <div class="cl-premium-service__icon">🦷</div>
+          <h3 class="cl-premium-service__title">General Dentistry</h3>
+          <p class="cl-premium-service__text">Routine check-ups, fillings, extractions and cleanings. Gentle, thorough and stress-free for patients of all ages.</p>
+        </div>
+        <div class="cl-premium-service animate-in">
+          <div class="cl-premium-service__icon">✨</div>
+          <h3 class="cl-premium-service__title">Teeth Whitening</h3>
+          <p class="cl-premium-service__text">Professional in-clinic and take-home whitening systems. Visible results after one session, guaranteed or your money back.</p>
+        </div>
+        <div class="cl-premium-service animate-in">
+          <div class="cl-premium-service__icon">😁</div>
+          <h3 class="cl-premium-service__title">Orthodontics & Invisalign</h3>
+          <p class="cl-premium-service__text">Braces and clear aligners for teens and adults. Free consultation, flexible payment plans, results in as little as 6 months.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="cl-premium-temoignages">
+      <p class="cl-premium-temoignages__tag animate-in">Patient Reviews</p>
+      <h2 class="cl-premium-temoignages__title animate-in">Why families choose SmileCare.</h2>
+      <div class="cl-premium-temoignages__grid">
+        <div class="cl-premium-temoignage animate-in">
+          <p class="cl-premium-temoignage__stars">★★★★★</p>
+          <p class="cl-premium-temoignage__quote">« I was terrified of the dentist. The team at SmileCare was so patient and kind. My first check-up in 5 years — and I've already booked the next one. »</p>
+          <div class="cl-premium-temoignage__author">
+            <div class="cl-premium-temoignage__avatar">SL</div>
+            <div>
+              <p class="cl-premium-temoignage__name">Sarah L.</p>
+              <p class="cl-premium-temoignage__role">General patient</p>
+            </div>
+          </div>
+        </div>
+        <div class="cl-premium-temoignage animate-in">
+          <p class="cl-premium-temoignage__stars">★★★★★</p>
+          <p class="cl-premium-temoignage__quote">« The Invisalign process was smooth and the results are incredible. My teeth are straighter in 8 months. Worth every dollar. »</p>
+          <div class="cl-premium-temoignage__author">
+            <div class="cl-premium-temoignage__avatar">JT</div>
+            <div>
+              <p class="cl-premium-temoignage__name">James T.</p>
+              <p class="cl-premium-temoignage__role">Invisalign patient</p>
+            </div>
+          </div>
+        </div>
+        <div class="cl-premium-temoignage animate-in">
+          <p class="cl-premium-temoignage__stars">★★★★★</p>
+          <p class="cl-premium-temoignage__quote">« We bring the whole family — kids included. The clinic is welcoming, clean, and the dentists are wonderful with children. Highly recommended. »</p>
+          <div class="cl-premium-temoignage__author">
+            <div class="cl-premium-temoignage__avatar">PM</div>
+            <div>
+              <p class="cl-premium-temoignage__name">Priya M.</p>
+              <p class="cl-premium-temoignage__role">Family patient</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cl-premium-cta">
+      <h2 class="cl-premium-cta__title animate-in">
+        Your next smile<br><span>starts here.</span>
+      </h2>
+      <p class="cl-premium-cta__sub animate-in">Book a check-up online. Most insurance plans accepted. Same-week appointments available.</p>
+      <a href="#" class="cl-premium-btn animate-in">Book an Appointment</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cl-premium-footer">
+      <span class="cl-premium-footer__logo">SmileCare <span>Dental</span></span>
+      <div class="cl-premium-footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Insurance</a>
+      </div>
+      <span class="cl-premium-footer__copy">© 2026 SmileCare Dental</span>
+    </footer>
+
   </div>
 
-  <!-- ══════════════════════════════════════════
+
+  <!-- ════════════════════════════════════════
        #VIBRANT — MEDIPOINT
-       Vibrant & Creative digital-first GP clinic
-  ══════════════════════════════════════════ -->
-  <section id="vibrant">
-    <!-- TODO: Build vibrant mockup for MEDIPOINT — tech-forward GP / telehealth -->
-    <div style="padding:120px 24px;text-align:center;background:#0F0F0F;">
-      <p style="font-family:'Space Grotesk',sans-serif;font-size:1rem;color:#F107A3;letter-spacing:3px;text-transform:uppercase;">Coming soon</p>
-      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:3rem;font-weight:800;color:#fff;margin-top:16px;">MEDIPOINT</h2>
-      <p style="color:rgba(255,255,255,0.4);margin-top:12px;">Your GP, Reimagined — Fast, Digital, Human</p>
+  ════════════════════════════════════════ -->
+  <div id="vibrant">
+
+    <div class="mockup-divider">
+      <p class="mockup-divider__label">Style 03</p>
+      <h2 class="mockup-divider__title">Vibrant & Creative</h2>
+      <p class="mockup-divider__desc">Digital-first, bold, human — for the GP clinic that actually fits your life.</p>
     </div>
-  </section>
+
+    <nav class="cl-vibrant-nav">
+      <span class="cl-vibrant-nav__logo">MEDI<span>POINT</span></span>
+      <div class="cl-vibrant-nav__links">
+        <a href="#">Book</a>
+        <a href="#">Teleconsult</a>
+        <a href="#">Services</a>
+        <a href="#">About</a>
+      </div>
+      <a href="#" class="cl-vibrant-btn">See a Doctor →</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="cl-vibrant-hero">
+      <div class="cl-vibrant-hero__inner">
+        <div>
+          <span class="cl-vibrant-hero__tag">⚡ Same-Day Appointments Available</span>
+          <h1 class="cl-vibrant-hero__title">
+            Your GP,<br><span class="cl-grad">reimagined.</span>
+          </h1>
+          <p class="cl-vibrant-hero__sub">
+            MEDIPOINT is Singapore's most accessible digital-first GP clinic.
+            Book in seconds, see a doctor in person or by video, get your MC instantly.
+          </p>
+          <div class="cl-vibrant-hero__actions">
+            <a href="#" class="cl-vibrant-btn">Book Now</a>
+            <a href="#" class="cl-vibrant-btn cl-vibrant-btn--ghost">Teleconsult →</a>
+          </div>
+        </div>
+        <div class="cl-vibrant-hero__visual">
+          <div class="cl-vibrant-hero__img">
+            <img
+              src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&auto=format&fit=crop"
+              alt="MEDIPOINT clinic"
+            />
+          </div>
+          <div class="cl-vibrant-hero__badge">
+            <span class="cl-vibrant-hero__badge-icon">🩺</span>
+            <div>
+              <p class="cl-vibrant-hero__badge-num">30 min</p>
+              <p class="cl-vibrant-hero__badge-label">Avg. wait time</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="cl-vibrant-services">
+      <p class="cl-vibrant-services__tag animate-in">What we offer</p>
+      <h2 class="cl-vibrant-services__title animate-in">
+        Healthcare that<br>works for you.
+      </h2>
+      <div class="cl-vibrant-services__grid">
+        <div class="cl-vibrant-service animate-in">
+          <div class="cl-vibrant-service__icon">📱</div>
+          <h3 class="cl-vibrant-service__title">Teleconsultation</h3>
+          <p class="cl-vibrant-service__text">See a certified GP from your phone. Video call, prescription delivery and MC issued — all in under an hour.</p>
+        </div>
+        <div class="cl-vibrant-service animate-in">
+          <div class="cl-vibrant-service__icon">💉</div>
+          <h3 class="cl-vibrant-service__title">Vaccinations & Screening</h3>
+          <p class="cl-vibrant-service__text">Full range of vaccinations, health screenings and chronic disease management. Walk-in or book ahead — always same-day results.</p>
+        </div>
+        <div class="cl-vibrant-service animate-in">
+          <div class="cl-vibrant-service__icon">📋</div>
+          <h3 class="cl-vibrant-service__title">Digital Health Records</h3>
+          <p class="cl-vibrant-service__text">All your records, prescriptions and referrals in one secure app. Share with specialists instantly, no paper, no hassle.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="cl-vibrant-temoignages">
+      <p class="cl-vibrant-temoignages__tag animate-in">Patient stories</p>
+      <h2 class="cl-vibrant-temoignages__title animate-in">
+        Finally, a clinic<br><span class="cl-grad">built around you.</span>
+      </h2>
+      <div class="cl-vibrant-temoignages__grid">
+        <div class="cl-vibrant-temoignage animate-in">
+          <p class="cl-vibrant-temoignage__stars">★★★★★</p>
+          <p class="cl-vibrant-temoignage__quote">« I did a teleconsult during my lunch break and had my prescription delivered to the office by 3pm. This is how healthcare should work. »</p>
+          <div class="cl-vibrant-temoignage__author">
+            <div class="cl-vibrant-temoignage__avatar">R</div>
+            <div>
+              <p class="cl-vibrant-temoignage__name">Ryan O.</p>
+              <p class="cl-vibrant-temoignage__role">Teleconsult patient</p>
+            </div>
+          </div>
+        </div>
+        <div class="cl-vibrant-temoignage animate-in">
+          <p class="cl-vibrant-temoignage__stars">★★★★★</p>
+          <p class="cl-vibrant-temoignage__quote">« Booked at 8am, seen by 8:45am, MC emailed by 9am. I've never experienced anything so smooth at a clinic. Never going back to queuing. »</p>
+          <div class="cl-vibrant-temoignage__author">
+            <div class="cl-vibrant-temoignage__avatar">A</div>
+            <div>
+              <p class="cl-vibrant-temoignage__name">Alicia W.</p>
+              <p class="cl-vibrant-temoignage__role">Regular patient</p>
+            </div>
+          </div>
+        </div>
+        <div class="cl-vibrant-temoignage animate-in">
+          <p class="cl-vibrant-temoignage__stars">★★★★★</p>
+          <p class="cl-vibrant-temoignage__quote">« The digital health records feature is a game changer. My specialist got my full history instantly. No repeating myself. Finally. »</p>
+          <div class="cl-vibrant-temoignage__author">
+            <div class="cl-vibrant-temoignage__avatar">M</div>
+            <div>
+              <p class="cl-vibrant-temoignage__name">Marcus T.</p>
+              <p class="cl-vibrant-temoignage__role">App user</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cl-vibrant-cta">
+      <h2 class="cl-vibrant-cta__title animate-in">
+        See a doctor<br><span class="cl-grad">today.</span>
+      </h2>
+      <p class="cl-vibrant-cta__sub animate-in">In-clinic or teleconsult. Appointments in under 60 seconds.</p>
+      <a href="#" class="cl-vibrant-btn animate-in" style="font-size:1rem;padding:16px 40px;">
+        Book Now →
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="cl-vibrant-footer">
+      <span class="cl-vibrant-footer__logo">MEDI<span>POINT</span></span>
+      <div class="cl-vibrant-footer__links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">MOH Info</a>
+      </div>
+      <span class="cl-vibrant-footer__copy">© 2026 MEDIPOINT</span>
+    </footer>
+
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>

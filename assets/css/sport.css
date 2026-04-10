@@ -3,41 +3,7 @@
    ============================================================ */
 
 /* ══════════════════════════════════════════════
-   SECTION SÉPARATRICE ENTRE MOCKUPS
-══════════════════════════════════════════════ */
-.mockup-divider {
-  padding: 48px 24px;
-  text-align: center;
-  background: #F4F4F4;
-  border-top: 1px solid #E0E0E0;
-  border-bottom: 1px solid #E0E0E0;
-}
-
-.mockup-divider__label {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #999;
-  margin-bottom: 8px;
-}
-
-.mockup-divider__title {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #1A1A1A;
-  margin-bottom: 8px;
-}
-
-.mockup-divider__desc {
-  font-size: 0.9rem;
-  color: #777;
-  max-width: 480px;
-  margin: 0 auto;
-}
-
+   Note: .mockup-divider styles are in global.css
 /* ══════════════════════════════════════════════
    #LUXE — ÉLITE PERFORMANCE
    Palette : #FAFAFA / #0A0A0A / #C9A84C

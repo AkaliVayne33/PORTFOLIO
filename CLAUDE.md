@@ -28,15 +28,23 @@ PORTFOLIO/
 ├── immobilier.html
 ├── pharmacie.html
 ├── restaurant.html
+├── beauty.html          ← skeleton ready, mockups to build
+├── clinic.html          ← skeleton ready, mockups to build
+├── tutoring.html        ← skeleton ready, mockups to build
+├── interior.html        ← skeleton ready, mockups to build
 ├── assets/
 │   ├── css/
 │   │   ├── global.css       ← reset, CSS variables, typography, shared components
 │   │   ├── sport.css
 │   │   ├── immobilier.css
 │   │   ├── pharmacie.css
-│   │   └── restaurant.css
+│   │   ├── restaurant.css
+│   │   ├── beauty.css       ← prefixes: .bw-luxe-* / .bw-premium-* / .bw-vibrant-*
+│   │   ├── clinic.css       ← prefixes: .cl-luxe-* / .cl-premium-* / .cl-vibrant-*
+│   │   ├── tutoring.css     ← prefixes: .tu-luxe-* / .tu-premium-* / .tu-vibrant-*
+│   │   └── interior.css     ← prefixes: .id-luxe-* / .id-premium-* / .id-vibrant-*
 │   ├── js/
-│   │   └── main.js          ← scroll animations, smooth scroll, interactions
+│   │   └── main.js          ← scroll animations, smooth scroll, active nav state
 │   └── img/                 ← images via Unsplash URLs or inline SVG
 ```
 
