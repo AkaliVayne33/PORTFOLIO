@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant — Redesign Examples</title>
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/restaurant.css" />
+</head>
+<body>
+
+  <!-- ══ GLOBAL NAV ══ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="site-nav__inner">
+      <a href="index.html" class="site-nav__back">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Home
+      </a>
+      <span class="site-nav__logo">Restaurant — <span>Redesign</span></span>
+      <div class="site-nav__links">
+        <a href="#luxe" class="tag--luxe">Luxury</a>
+        <a href="#premium" class="tag--premium">Premium</a>
+        <a href="#vibrant" class="tag--vibrant">Vibrant</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- ════════════════════════════════════════
+       #LUXE — LE CÈDRE BLANC
+  ════════════════════════════════════════ -->
+  <div id="luxe">
+
+    <div class="mockup-divider">
+      <p class="mockup-divider__label">Style 01</p>
+      <h2 class="mockup-divider__title">Luxury & Minimalist</h2>
+      <p class="mockup-divider__desc">Timeless, sensorial, understated — for the fine dining destination.</p>
+    </div>
+
+    <nav class="rs-luxe-nav">
+      <span class="rs-luxe-nav__logo">Le Cèdre Blanc</span>
+      <div class="rs-luxe-nav__links">
+        <a href="#">Menu</a>
+        <a href="#">Our Story</a>
+        <a href="#">Wine Cellar</a>
+        <a href="#">Reservations</a>
+      </div>
+      <a href="#" class="rs-luxe-nav__cta">Reserve a Table</a>
+    </nav>
+
+    <!-- Hero — full bleed -->
+    <section class="rs-luxe-hero">
+      <img
+        class="rs-luxe-hero__img"
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1800&auto=format&fit=crop"
+        alt="Le Cèdre Blanc fine dining"
+      />
+      <div class="rs-luxe-hero__content">
+        <p class="rs-luxe-hero__eyebrow animate-in">Fine Dining · Singapore</p>
+        <h1 class="rs-luxe-hero__title animate-in">
+          Each dish,<br>a <em>moment.</em>
+        </h1>
+        <p class="rs-luxe-hero__sub animate-in">
+          Le Cèdre Blanc reinterprets Mediterranean heritage through the
+          lens of Singapore's finest produce. An experience for the senses.
+        </p>
+        <a href="#" class="rs-luxe-btn animate-in">View the Menu</a>
+      </div>
+    </section>
+
+    <!-- Thin strip -->
+    <div class="rs-luxe-strip">
+      <span class="rs-luxe-strip__item">Tasting Menu</span>
+      <span class="rs-luxe-strip__dot"></span>
+      <span class="rs-luxe-strip__item">À La Carte</span>
+      <span class="rs-luxe-strip__dot"></span>
+      <span class="rs-luxe-strip__item">Private Dining</span>
+      <span class="rs-luxe-strip__dot"></span>
+      <span class="rs-luxe-strip__item">Wine Pairing</span>
+      <span class="rs-luxe-strip__dot"></span>
+      <span class="rs-luxe-strip__item">Chef's Table</span>
+    </div>
+
+    <!-- Services -->
+    <section class="rs-luxe-services">
+      <p class="rs-luxe-services__eyebrow animate-in">The Experience</p>
+      <h2 class="rs-luxe-services__title animate-in">
+        Every detail,<br>carefully considered.
+      </h2>
+      <div class="rs-luxe-services__grid">
+        <div class="rs-luxe-service animate-in">
+          <p class="rs-luxe-service__num">01</p>
+          <h3 class="rs-luxe-service__title">Online Reservations</h3>
+          <p class="rs-luxe-service__text">Secure your table in seconds. Dietary preferences, special occasions, seating requests — all noted before you arrive.</p>
+        </div>
+        <div class="rs-luxe-service animate-in">
+          <p class="rs-luxe-service__num">02</p>
+          <h3 class="rs-luxe-service__title">Chef's Tasting Menu</h3>
+          <p class="rs-luxe-service__text">Seven courses, seasonal ingredients, paired wines. A curated journey through the best of our kitchen, reimagined nightly.</p>
+        </div>
+        <div class="rs-luxe-service animate-in">
+          <p class="rs-luxe-service__num">03</p>
+          <h3 class="rs-luxe-service__title">Private Dining</h3>
+          <p class="rs-luxe-service__text">An intimate space for up to 18 guests. Custom menus, exclusive wine selections, dedicated service — entirely yours.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="rs-luxe-temoignages">
+      <p class="rs-luxe-temoignages__eyebrow animate-in">Guest Impressions</p>
+      <h2 class="rs-luxe-temoignages__title animate-in">« A meal we will never forget. »</h2>
+      <div class="rs-luxe-temoignages__grid">
+        <div class="rs-luxe-temoignage animate-in">
+          <p class="rs-luxe-temoignage__stars">★★★★★</p>
+          <p class="rs-luxe-temoignage__quote">« The tasting menu was extraordinary — each course a conversation between heritage and innovation. The wine pairing was flawless. »</p>
+          <p class="rs-luxe-temoignage__author">— Catherine M., anniversary dinner</p>
+        </div>
+        <div class="rs-luxe-temoignage animate-in">
+          <p class="rs-luxe-temoignage__stars">★★★★★</p>
+          <p class="rs-luxe-temoignage__quote">« We hosted a client dinner in the private room. The team anticipated every need without being intrusive. An impeccable evening. »</p>
+          <p class="rs-luxe-temoignage__author">— David L., corporate event</p>
+        </div>
+        <div class="rs-luxe-temoignage animate-in">
+          <p class="rs-luxe-temoignage__stars">★★★★★</p>
+          <p class="rs-luxe-temoignage__quote">« The sommelier's pairing for the chef's table was the most thoughtful I've experienced in Singapore. Worth every visit. »</p>
+          <p class="rs-luxe-temoignage__author">— Priya T., regular guest</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rs-luxe-cta">
+      <h2 class="rs-luxe-cta__title animate-in">
+        Your table<br><em>is waiting.</em>
+      </h2>
+      <p class="rs-luxe-cta__sub animate-in">Reservations open daily. Private dining available upon request.</p>
+      <a href="#" class="rs-luxe-btn animate-in">Reserve Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="rs-luxe-footer">
+      <span class="rs-luxe-footer__logo">Le Cèdre Blanc</span>
+      <div class="rs-luxe-footer__links">
+        <a href="#">Legal</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+      <span class="rs-luxe-footer__copy">© 2026 Le Cèdre Blanc</span>
+    </footer>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       #PREMIUM — BRASSERIE CENTRALE
+  ════════════════════════════════════════ -->
+  <div id="premium">
+
+    <div class="mockup-divider">
+      <p class="mockup-divider__label">Style 02</p>
+      <h2 class="mockup-divider__title">Premium & Corporate</h2>
+      <p class="mockup-divider__desc">Warm, reliable, quality-driven — for the neighbourhood favourite everyone trusts.</p>
+    </div>
+
+    <nav class="rs-premium-nav">
+      <span class="rs-premium-nav__logo">Brasserie <span>Centrale</span></span>
+      <div class="rs-premium-nav__links">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Events</a>
+        <a href="#">Reservations</a>
+        <a href="#">Contact</a>
+      </div>
+      <a href="#" class="rs-premium-btn">Book a Table</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="rs-premium-hero">
+      <div>
+        <span class="rs-premium-hero__badge">🏆 Best Brasserie Singapore 2025</span>
+        <h1 class="rs-premium-hero__title">
+          Good food, good people,<br><span>great evenings.</span>
+        </h1>
+        <p class="rs-premium-hero__sub">
+          Brasserie Centrale brings classic French-inspired comfort food to
+          the heart of Singapore. A place to gather, celebrate, and linger.
+        </p>
+        <div class="rs-premium-hero__actions">
+          <a href="#" class="rs-premium-btn">Book a Table</a>
+          <a href="#" class="rs-premium-btn rs-premium-btn--outline">See the Menu</a>
+        </div>
+        <div class="rs-premium-hero__stats">
+          <div>
+            <p class="rs-premium-stat__num">12 yrs</p>
+            <p class="rs-premium-stat__label">In Singapore</p>
+          </div>
+          <div>
+            <p class="rs-premium-stat__num">4.8 ★</p>
+            <p class="rs-premium-stat__label">Google Rating</p>
+          </div>
+          <div>
+            <p class="rs-premium-stat__num">200+</p>
+            <p class="rs-premium-stat__label">Covers / week</p>
+          </div>
+        </div>
+      </div>
+      <div class="rs-premium-hero__img-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800&auto=format&fit=crop"
+          alt="Brasserie Centrale interior"
+        />
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="rs-premium-services">
+      <p class="rs-premium-services__tag animate-in">What We Offer</p>
+      <h2 class="rs-premium-services__title animate-in">More than a meal — an experience.</h2>
+      <div class="rs-premium-services__grid">
+        <div class="rs-premium-service animate-in">
+          <div class="rs-premium-service__icon">📅</div>
+          <h3 class="rs-premium-service__title">Easy Reservations</h3>
+          <p class="rs-premium-service__text">Book online in under a minute. Instant confirmation, flexible cancellation up to 24 hours before.</p>
+        </div>
+        <div class="rs-premium-service animate-in">
+          <div class="rs-premium-service__icon">🎉</div>
+          <h3 class="rs-premium-service__title">Private Events</h3>
+          <p class="rs-premium-service__text">Birthdays, corporate lunches, farewell dinners. We handle everything from setup to dessert.</p>
+        </div>
+        <div class="rs-premium-service animate-in">
+          <div class="rs-premium-service__icon">🚗</div>
+          <h3 class="rs-premium-service__title">Catering & Delivery</h3>
+          <p class="rs-premium-service__text">Bring Brasserie Centrale to your home or office. Full catering service for groups of 10 to 150.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="rs-premium-temoignages">
+      <p class="rs-premium-temoignages__tag animate-in">Guest Reviews</p>
+      <h2 class="rs-premium-temoignages__title animate-in">Our regulars say it best.</h2>
+      <div class="rs-premium-temoignages__grid">
+        <div class="rs-premium-temoignage animate-in">
+          <p class="rs-premium-temoignage__stars">★★★★★</p>
+          <p class="rs-premium-temoignage__quote">« Our go-to for every occasion — birthdays, business lunches, date nights. Consistent quality, always a warm welcome. »</p>
+          <div class="rs-premium-temoignage__author">
+            <div class="rs-premium-temoignage__avatar">SL</div>
+            <div>
+              <p class="rs-premium-temoignage__name">Sarah L.</p>
+              <p class="rs-premium-temoignage__role">Regular guest — 4 years</p>
+            </div>
+          </div>
+        </div>
+        <div class="rs-premium-temoignage animate-in">
+          <p class="rs-premium-temoignage__stars">★★★★★</p>
+          <p class="rs-premium-temoignage__quote">« Hosted our team of 30 for a year-end dinner. Service was seamless, the set menu was delicious. Everyone left happy. »</p>
+          <div class="rs-premium-temoignage__author">
+            <div class="rs-premium-temoignage__avatar">JT</div>
+            <div>
+              <p class="rs-premium-temoignage__name">James T.</p>
+              <p class="rs-premium-temoignage__role">Corporate client</p>
+            </div>
+          </div>
+        </div>
+        <div class="rs-premium-temoignage animate-in">
+          <p class="rs-premium-temoignage__stars">★★★★☆</p>
+          <p class="rs-premium-temoignage__quote">« The steak frites is the best in Singapore — I've been saying this for years. The wine list is excellent too. A true classic. »</p>
+          <div class="rs-premium-temoignage__author">
+            <div class="rs-premium-temoignage__avatar">MK</div>
+            <div>
+              <p class="rs-premium-temoignage__name">Michael K.</p>
+              <p class="rs-premium-temoignage__role">Food blogger</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rs-premium-cta">
+      <h2 class="rs-premium-cta__title animate-in">
+        Ready for a <span>great evening?</span>
+      </h2>
+      <p class="rs-premium-cta__sub animate-in">Tables fill up fast on weekends — book early to avoid disappointment.</p>
+      <a href="#" class="rs-premium-btn animate-in">Reserve Your Table</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="rs-premium-footer">
+      <span class="rs-premium-footer__logo">Brasserie <span>Centrale</span></span>
+      <div class="rs-premium-footer__links">
+        <a href="#">Legal</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+      <span class="rs-premium-footer__copy">© 2026 Brasserie Centrale</span>
+    </footer>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════
+       #VIBRANT — STREET & CO
+       Fruit chaud, ambiance chaude. C'est du lourd.
+  ════════════════════════════════════════ -->
+  <div id="vibrant">
+
+    <div class="mockup-divider">
+      <p class="mockup-divider__label">Style 03</p>
+      <h2 class="mockup-divider__title">Vibrant & Creative</h2>
+      <p class="mockup-divider__desc">Bold flavours, bold identity — for the street food brand that owns the block.</p>
+    </div>
+
+    <nav class="rs-vibrant-nav">
+      <span class="rs-vibrant-nav__logo">STREET<span>&CO</span></span>
+      <div class="rs-vibrant-nav__links">
+        <a href="#">Menu</a>
+        <a href="#">Locations</a>
+        <a href="#">Collabs</a>
+        <a href="#">Order</a>
+      </div>
+      <a href="#" class="rs-vibrant-btn">Order Now →</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="rs-vibrant-hero">
+      <div class="rs-vibrant-hero__inner">
+        <div>
+          <span class="rs-vibrant-hero__tag">Hot Drop — New Menu 2026</span>
+          <h1 class="rs-vibrant-hero__title">
+            Eat bold.<br><span class="grad">No apologies.</span>
+          </h1>
+          <p class="rs-vibrant-hero__sub">
+            STREET & CO brings the flavours of the world's greatest street markets
+            to Singapore — loud, unapologetic, and absolutely delicious.
+          </p>
+          <div class="rs-vibrant-hero__actions">
+            <a href="#" class="rs-vibrant-btn">Order Online</a>
+            <a href="#" class="rs-vibrant-btn rs-vibrant-btn--ghost">See Full Menu →</a>
+          </div>
+        </div>
+        <div class="rs-vibrant-hero__visual">
+          <div class="rs-vibrant-hero__img">
+            <img
+              src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&auto=format&fit=crop"
+              alt="STREET & CO bold food"
+            />
+          </div>
+          <div class="rs-vibrant-hero__badge">
+            <span class="rs-vibrant-hero__badge-icon">🔥</span>
+            <div>
+              <p class="rs-vibrant-hero__badge-num">4.9 ★</p>
+              <p class="rs-vibrant-hero__badge-label">2,800+ reviews</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="rs-vibrant-services">
+      <p class="rs-vibrant-services__tag animate-in">What's good</p>
+      <h2 class="rs-vibrant-services__title animate-in">
+        Fast, fresh,<br>full of flavour.
+      </h2>
+      <div class="rs-vibrant-services__grid">
+        <div class="rs-vibrant-service animate-in">
+          <div class="rs-vibrant-service__icon">📲</div>
+          <h3 class="rs-vibrant-service__title">Online Ordering</h3>
+          <p class="rs-vibrant-service__text">Order your favourites from the app or website. Pick up in-store or get it delivered hot to your door in 30 min.</p>
+        </div>
+        <div class="rs-vibrant-service animate-in">
+          <div class="rs-vibrant-service__icon">🎤</div>
+          <h3 class="rs-vibrant-service__title">Event Catering</h3>
+          <p class="rs-vibrant-service__text">Street food station at your next event? We set up, we cook live, we bring the energy. From 20 to 500 guests.</p>
+        </div>
+        <div class="rs-vibrant-service animate-in">
+          <div class="rs-vibrant-service__icon">🤝</div>
+          <h3 class="rs-vibrant-service__title">Brand Collabs</h3>
+          <p class="rs-vibrant-service__text">Limited-edition menus, pop-ups, brand partnerships. If your brand is bold enough, let's build something together.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="rs-vibrant-temoignages">
+      <p class="rs-vibrant-temoignages__tag animate-in">The people love it</p>
+      <h2 class="rs-vibrant-temoignages__title animate-in">
+        Real talk from <span class="grad">real eaters.</span>
+      </h2>
+      <div class="rs-vibrant-temoignages__grid">
+        <div class="rs-vibrant-temoignage animate-in">
+          <p class="rs-vibrant-temoignage__stars">★★★★★</p>
+          <p class="rs-vibrant-temoignage__quote">« The spicy chicken wrap had me sweating but I went back the next day. And the day after. STREET & CO is a problem. A delicious problem. »</p>
+          <div class="rs-vibrant-temoignage__author">
+            <div class="rs-vibrant-temoignage__avatar">K</div>
+            <div>
+              <p class="rs-vibrant-temoignage__name">Kevin O.</p>
+              <p class="rs-vibrant-temoignage__role">Loyal customer</p>
+            </div>
+          </div>
+        </div>
+        <div class="rs-vibrant-temoignage animate-in">
+          <p class="rs-vibrant-temoignage__stars">★★★★★</p>
+          <p class="rs-vibrant-temoignage__quote">« They catered our office party — live cooking station, massive variety, everyone went back for seconds. Best catering we've ever booked. »</p>
+          <div class="rs-vibrant-temoignage__author">
+            <div class="rs-vibrant-temoignage__avatar">A</div>
+            <div>
+              <p class="rs-vibrant-temoignage__name">Alicia N.</p>
+              <p class="rs-vibrant-temoignage__role">Office manager</p>
+            </div>
+          </div>
+        </div>
+        <div class="rs-vibrant-temoignage animate-in">
+          <p class="rs-vibrant-temoignage__stars">★★★★★</p>
+          <p class="rs-vibrant-temoignage__quote">« Finally, a street food brand in Singapore that actually delivers on the hype. The mango habanero sauce alone is worth the trip. »</p>
+          <div class="rs-vibrant-temoignage__author">
+            <div class="rs-vibrant-temoignage__avatar">R</div>
+            <div>
+              <p class="rs-vibrant-temoignage__name">Ravi S.</p>
+              <p class="rs-vibrant-temoignage__role">Food critic</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="rs-vibrant-cta">
+      <h2 class="rs-vibrant-cta__title animate-in">
+        Hungry?<br><span class="grad">We got you.</span>
+      </h2>
+      <p class="rs-vibrant-cta__sub animate-in">Order online. Pick up in 15 min or delivered in 30. Always hot.</p>
+      <a href="#" class="rs-vibrant-btn animate-in" style="font-size:1rem;padding:16px 40px;">
+        Order Now →
+      </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="rs-vibrant-footer">
+      <span class="rs-vibrant-footer__logo">STREET<span>&CO</span></span>
+      <div class="rs-vibrant-footer__links">
+        <a href="#">Legal</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+      <span class="rs-vibrant-footer__copy">© 2026 Street & Co</span>
+    </footer>
+
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

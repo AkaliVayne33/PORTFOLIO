@@ -1,0 +1,71 @@
+/* ============================================================
+   BEAUTY.CSS — Styles spécifiques à la page Beauty & Wellness
+   CSS class prefixes:
+     Luxe    → .bw-luxe-*
+     Premium → .bw-premium-*
+     Vibrant → .bw-vibrant-*
+   ============================================================ */
+
+/* ══════════════════════════════════════════════
+   SECTION SÉPARATRICE (shared with global mockup-divider)
+══════════════════════════════════════════════ */
+/* Uses .mockup-divider from sport.css — duplicate here if needed */
+
+/* ══════════════════════════════════════════════
+   #LUXE — SERENOVA
+   Palette : #FAFAFA / #0A0A0A / #C9A84C
+   Brand tone : upscale day spa, Orchard Road
+   Font : Playfair Display + Inter 300
+   CSS prefix : .bw-luxe-*
+══════════════════════════════════════════════ */
+
+/* TODO: .bw-luxe-nav */
+/* TODO: .bw-luxe-hero */
+/* TODO: .bw-luxe-services */
+/* TODO: .bw-luxe-temoignages */
+/* TODO: .bw-luxe-cta */
+/* TODO: .bw-luxe-footer */
+
+
+/* ══════════════════════════════════════════════
+   #PREMIUM — GLOWPRO STUDIOS
+   Palette : navy #0D1B3E / white / accent #E879A0 (rose pink)
+   Brand tone : multi-location hair & beauty chain
+   Font : DM Sans 700 + Inter 400
+   CSS prefix : .bw-premium-*
+══════════════════════════════════════════════ */
+
+/* TODO: .bw-premium-nav */
+/* TODO: .bw-premium-hero (grid 2 cols: text + image) */
+/* TODO: .bw-premium-services */
+/* TODO: .bw-premium-temoignages */
+/* TODO: .bw-premium-cta */
+/* TODO: .bw-premium-footer */
+
+
+/* ══════════════════════════════════════════════
+   #VIBRANT — BLOSSOM STUDIO
+   Palette : dark #0F0F0F / gradient #FF6FD8 → #FFB347
+   Brand tone : trendy nail art bar, Instagram-first
+   Font : Space Grotesk 800
+   CSS prefix : .bw-vibrant-*
+══════════════════════════════════════════════ */
+
+/* TODO: .bw-vibrant-nav */
+/* TODO: .bw-vibrant-hero (asymmetric, floating badge) */
+/* TODO: .bw-vibrant-services */
+/* TODO: .bw-vibrant-temoignages */
+/* TODO: .bw-vibrant-cta */
+/* TODO: .bw-vibrant-footer */
+
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+@media (max-width: 900px) {
+  /* TODO: collapse grids, hide side images, reduce padding */
+}
+
+@media (max-width: 480px) {
+  /* TODO: font-size reductions for mobile */
+}
