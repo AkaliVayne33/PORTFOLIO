@@ -42,12 +42,13 @@
     .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
     .animate-in.visible{opacity:1;transform:translateY(0)}
     #luxe{background:#FAFAFA}
-    .bw-luxe-hero{position:relative;height:100vh;min-height:600px;overflow:hidden}
+    .bw-luxe-hero{position:relative;height:90vh;min-height:600px;overflow:hidden;display:flex;align-items:flex-end}
     .bw-luxe-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .bw-luxe-hero__content{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;padding:0 8vw;background:linear-gradient(to right,rgba(10,10,10,.55) 0%,transparent 70%)}
-    .bw-luxe-hero__eyebrow{font-size:.75rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#C9A84C;margin-bottom:16px}
-    .bw-luxe-hero__title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;color:#fff;line-height:1.1;max-width:600px;margin-bottom:20px}
-    .bw-luxe-hero__sub{font-size:1rem;font-weight:300;color:rgba(255,255,255,.8);max-width:420px;margin-bottom:36px;line-height:1.7}
+    .bw-luxe-hero__content{position:relative;z-index:1;padding:0 60px 80px;max-width:680px}
+    .bw-luxe-hero__eyebrow{font-size:.7rem;letter-spacing:5px;text-transform:uppercase;color:#C9A84C;margin-bottom:20px}
+    .bw-luxe-hero__title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,5vw,5rem);font-weight:400;color:#FAFAFA;line-height:1.15;margin-bottom:20px}
+    .bw-luxe-hero__sub{font-size:1rem;font-weight:300;color:rgba(250,250,250,.7);max-width:440px;margin-bottom:36px;line-height:1.7}
+    @media(max-width:768px){.bw-luxe-hero{height:75vh;min-height:520px}.bw-luxe-hero__content{padding:0 24px 48px}}
   </style>
 
   <!-- ── Full CSS (non-blocking) ── -->

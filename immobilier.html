@@ -42,12 +42,14 @@
     .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
     .animate-in.visible{opacity:1;transform:translateY(0)}
     #luxe{background:#FAFAFA}
-    .re-luxe-hero{position:relative;height:100vh;min-height:600px;overflow:hidden}
-    .re-luxe-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-    .re-luxe-hero__content{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;padding:0 8vw;background:linear-gradient(to right,rgba(10,10,10,.55) 0%,transparent 70%)}
-    .re-luxe-hero__eyebrow{font-size:.75rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#C9A84C;margin-bottom:16px}
-    .re-luxe-hero__title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;color:#fff;line-height:1.1;max-width:600px;margin-bottom:20px}
-    .re-luxe-hero__sub{font-size:1rem;font-weight:300;color:rgba(255,255,255,.8);max-width:420px;margin-bottom:36px;line-height:1.7}
+    .re-luxe-hero{display:grid;grid-template-columns:1fr 1fr;min-height:88vh}
+    .re-luxe-hero__left{background:#1A1209;display:flex;flex-direction:column;justify-content:center;padding:80px 64px}
+    .re-luxe-hero__right{overflow:hidden;position:relative}
+    .re-luxe-hero__img{width:100%;height:100%;object-fit:cover;display:block}
+    .re-luxe-hero__eyebrow{font-size:.68rem;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:#C9A84C;margin-bottom:20px}
+    .re-luxe-hero__title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3.5vw,3.5rem);font-weight:700;color:#FAFAFA;line-height:1.1;margin-bottom:20px}
+    .re-luxe-hero__sub{font-size:.95rem;font-weight:300;color:rgba(250,250,250,.7);margin-bottom:36px;line-height:1.7}
+    @media(max-width:768px){.re-luxe-hero{grid-template-columns:1fr;min-height:auto}.re-luxe-hero__right{display:none}}
   </style>
 
   <!-- ── Full CSS (non-blocking) ── -->
