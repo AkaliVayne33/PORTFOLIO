@@ -21,7 +21,7 @@
 }
 
 .bw-luxe-nav__logo {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: 1rem;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -95,7 +95,7 @@
 }
 
 .bw-luxe-hero__title {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: clamp(2.8rem, 5vw, 5rem);
   font-weight: 400;
   color: #FAFAFA;
@@ -149,7 +149,7 @@
 }
 
 .bw-luxe-services__title {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: 2.4rem;
   font-weight: 400;
   color: #0A0A0A;
@@ -185,7 +185,7 @@
 }
 
 .bw-luxe-service__num {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: 0.85rem;
   color: #C9A84C;
   letter-spacing: 2px;
@@ -194,7 +194,7 @@
 }
 
 .bw-luxe-service__title {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: 1.3rem;
   font-weight: 400;
   color: #0A0A0A;
@@ -225,7 +225,7 @@
 }
 
 .bw-luxe-temoignages__title {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: 2rem;
   font-weight: 400;
   color: #FAFAFA;
@@ -275,7 +275,7 @@
 }
 
 .bw-luxe-cta__title {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: clamp(2.4rem, 4vw, 4rem);
   font-weight: 400;
   color: #0A0A0A;
@@ -306,7 +306,7 @@
 }
 
 .bw-luxe-footer__logo {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: 0.9rem;
   letter-spacing: 4px;
   text-transform: uppercase;
@@ -352,7 +352,7 @@
 }
 
 .bw-premium-nav__logo {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   color: #1A0533;
@@ -379,7 +379,7 @@
   padding: 10px 24px;
   background: #E879A0;
   color: #fff;
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   border-radius: 6px;
@@ -425,7 +425,7 @@
 }
 
 .bw-premium-hero__title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: clamp(2rem, 3.8vw, 3.2rem);
   font-weight: 800;
   color: #fff;
@@ -456,7 +456,7 @@
 }
 
 .bw-premium-stat__num {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 1.6rem;
   font-weight: 800;
   color: #fff;
@@ -496,7 +496,7 @@
 }
 
 .bw-premium-services__title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
   font-weight: 800;
   color: #1A0533;
@@ -528,7 +528,7 @@
 }
 
 .bw-premium-service__title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: #1A0533;
@@ -557,7 +557,7 @@
 }
 
 .bw-premium-temoignages__title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
   font-weight: 800;
   color: #1A0533;
@@ -630,7 +630,7 @@
 }
 
 .bw-premium-cta__title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 800;
   color: #fff;
@@ -666,7 +666,7 @@
 }
 
 .bw-premium-footer__logo {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;
   color: #fff;
   font-size: 1rem;
@@ -719,7 +719,7 @@
 }
 
 .bw-vibrant-nav__logo {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 800;
   font-size: 1.1rem;
   color: #fff;
@@ -734,7 +734,7 @@
 }
 
 .bw-vibrant-nav__links a {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   color: rgba(255,255,255,0.55);
@@ -748,7 +748,7 @@
   padding: 10px 24px;
   background: linear-gradient(90deg, #FF6FD8, #FFB347);
   color: #0F0F0F;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;
   font-size: 0.875rem;
   border-radius: 8px;
@@ -808,7 +808,7 @@
 
 .bw-vibrant-hero__tag {
   display: inline-block;
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
   color: #FF6FD8;
@@ -820,7 +820,7 @@
 }
 
 .bw-vibrant-hero__title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: clamp(2.6rem, 5vw, 5rem);
   font-weight: 800;
   color: #fff;
@@ -830,7 +830,7 @@
 }
 
 .bw-vibrant-hero__sub {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 1rem;
   color: rgba(255,255,255,0.55);
   line-height: 1.75;
@@ -876,7 +876,7 @@
 .bw-vibrant-hero__badge-icon { font-size: 1.6rem; }
 
 .bw-vibrant-hero__badge-num {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 800;
   color: #fff;
   font-size: 1.1rem;
@@ -895,7 +895,7 @@
 }
 
 .bw-vibrant-services__tag {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 3px;
@@ -905,7 +905,7 @@
 }
 
 .bw-vibrant-services__title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 800;
   color: #fff;
@@ -939,7 +939,7 @@
 }
 
 .bw-vibrant-service__title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: #fff;
@@ -959,7 +959,7 @@
 }
 
 .bw-vibrant-temoignages__tag {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 3px;
@@ -969,7 +969,7 @@
 }
 
 .bw-vibrant-temoignages__title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   font-weight: 800;
   color: #fff;
@@ -1025,7 +1025,7 @@
 }
 
 .bw-vibrant-temoignage__name {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
   color: #fff;
@@ -1045,7 +1045,7 @@
 }
 
 .bw-vibrant-cta__title {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: clamp(2.4rem, 5vw, 4.5rem);
   font-weight: 800;
   color: #fff;
@@ -1072,7 +1072,7 @@
 }
 
 .bw-vibrant-footer__logo {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 800;
   font-size: 1rem;
   color: #fff;

@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   background: #FFFFFF;
   color: #1A1A1A;
   line-height: 1.6;
@@ -44,22 +44,22 @@ ul {
   --luxe-bg: #FAFAFA;
   --luxe-dark: #0A0A0A;
   --luxe-gold: #C9A84C;
-  --luxe-font-title: 'Playfair Display', serif;
-  --luxe-font-body: 'Inter', sans-serif;
+  --luxe-font-title: Georgia,'Times New Roman',serif;
+  --luxe-font-body: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 
   /* Premium */
   --premium-navy: #0D1B3E;
   --premium-gray: #2C2C2C;
   --premium-white: #FFFFFF;
   --premium-green: #2ECC71;
-  --premium-font-title: 'DM Sans', sans-serif;
-  --premium-font-body: 'Inter', sans-serif;
+  --premium-font-title: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  --premium-font-body: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 
   /* Vibrant */
   --vibrant-grad-start: #7B2FF7;
   --vibrant-grad-end: #F107A3;
   --vibrant-dark: #0F0F0F;
-  --vibrant-font: 'Space Grotesk', sans-serif;
+  --vibrant-font: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
 
   /* Spacing */
   --section-padding: 80px 24px;
@@ -115,7 +115,7 @@ ul {
 }
 
 .site-nav__logo {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: -0.5px;
@@ -227,7 +227,7 @@ ul {
 }
 
 .home-hero__title {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 700;
   color: #0A0A0A;
@@ -257,7 +257,7 @@ ul {
 
 .sectors-section__title {
   text-align: center;
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 3px;
@@ -320,7 +320,7 @@ ul {
 }
 
 .sector-card__name {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: 1.8rem;
   font-weight: 700;
   color: #fff;
@@ -370,7 +370,7 @@ ul {
 }
 
 .mockup-divider__title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
   color: #1A1A1A;
@@ -420,7 +420,7 @@ ul {
 }
 
 .pitch-section__title {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 700;
   color: #0A0A0A;
@@ -482,7 +482,7 @@ ul {
 }
 
 .home-cta__title {
-  font-family: 'Playfair Display', serif;
+  font-family: Georgia,'Times New Roman',serif;
   font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 700;
   color: #fff;
