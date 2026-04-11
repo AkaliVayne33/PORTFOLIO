@@ -62,11 +62,11 @@
 /* Hero */
 .bw-luxe-hero {
   position: relative;
-  min-height: 90svh;
+  height: 90svh;
+  max-height: 900px;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  contain: layout style;
 }
 
 .bw-luxe-hero__img {
@@ -1128,7 +1128,7 @@
 }
 
 @media (max-width: 480px) {
-  .bw-luxe-hero { min-height: 75svh; }
+  .bw-luxe-hero { height: 75svh; max-height: none; }
   .bw-luxe-hero__title { font-size: 2.2rem; }
   .bw-premium-hero__title { font-size: 2rem; }
   .bw-vibrant-hero__title { font-size: 2.4rem; }
