@@ -80,9 +80,11 @@ if ('serviceWorker' in navigator) {
     });
   }
 
+  // Cache nav height once — avoids forced reflow on every scroll
+  const navHeight = document.querySelector('.site-nav')?.offsetHeight || 64;
+
   // Set initial active on load based on scroll position
   function getActiveSection() {
-    const navHeight = document.querySelector('.site-nav')?.offsetHeight || 64;
     const scrollMid = window.scrollY + navHeight + window.innerHeight * 0.3;
 
     let active = sections[0];
