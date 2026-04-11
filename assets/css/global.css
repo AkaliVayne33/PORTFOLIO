@@ -129,7 +129,7 @@ ul {
 
 .site-nav__tagline {
   font-size: 0.8rem;
-  color: #999;
+  color: #595959;
   font-weight: 500;
 }
 
@@ -238,7 +238,7 @@ ul {
 
 .home-hero__title em {
   font-style: italic;
-  color: #C9A84C;
+  color: #8B6914;
 }
 
 .home-hero__subtitle {
@@ -511,7 +511,7 @@ ul {
   padding: 40px 24px;
   border-top: 1px solid #E8E8E8;
   font-size: 0.85rem;
-  color: #999;
+  color: #595959;
 }
 
 .home-footer strong {
