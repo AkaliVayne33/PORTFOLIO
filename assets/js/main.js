@@ -53,7 +53,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/PORTFOLIO/sw.js').catch(() => {});
+    const swPath = location.pathname.startsWith('/PORTFOLIO') ? '/PORTFOLIO/sw.js' : '/sw.js';
+    navigator.serviceWorker.register(swPath).catch(() => {});
   });
 }
 

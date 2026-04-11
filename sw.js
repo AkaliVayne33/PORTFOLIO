@@ -5,14 +5,15 @@
 
 const CACHE_NAME = 'studioweb-v1';
 
+const BASE = self.registration.scope;
 const STATIC_ASSETS = [
-  '/PORTFOLIO/',
-  '/PORTFOLIO/index.html',
-  '/PORTFOLIO/offline.html',
-  '/PORTFOLIO/assets/css/global.css',
-  '/PORTFOLIO/assets/js/main.js',
-  '/PORTFOLIO/manifest.json',
-  '/PORTFOLIO/assets/img/icon.svg'
+  BASE,
+  BASE + 'index.html',
+  BASE + 'offline.html',
+  BASE + 'assets/css/global.css',
+  BASE + 'assets/js/main.js',
+  BASE + 'manifest.json',
+  BASE + 'assets/img/icon.svg'
 ];
 
 /* ── Install: pre-cache core shell ── */
@@ -50,7 +51,7 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
           return response;
         })
-        .catch(() => caches.match(request) || caches.match('/PORTFOLIO/offline.html'))
+        .catch(() => caches.match(request) || caches.match(BASE + 'offline.html'))
     );
   } else {
     // Cache-first for CSS, JS, images
