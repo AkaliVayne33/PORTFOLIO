@@ -42,12 +42,12 @@
   transition: color 0.3s;
 }
 
-.bw-luxe-nav__links a:hover { color: #8B6914; }
+.bw-luxe-nav__links a:hover { color: #7A5500; }
 
 .bw-luxe-nav__cta {
   padding: 10px 28px;
   border: 1px solid #C9A84C;
-  color: #8B6914;
+  color: #7A5500;
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -62,11 +62,11 @@
 /* Hero */
 .bw-luxe-hero {
   position: relative;
-  height: 90vh;
-  min-height: 600px;
+  min-height: 90svh;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  contain: layout style;
 }
 
 .bw-luxe-hero__img {
@@ -76,6 +76,7 @@
   height: 100%;
   object-fit: cover;
   filter: brightness(0.42);
+  will-change: transform;
 }
 
 .bw-luxe-hero__content {
@@ -144,7 +145,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
   margin-bottom: 16px;
 }
 
@@ -181,13 +182,13 @@
 }
 
 .bw-luxe-service:hover .bw-luxe-service__num {
-  color: #8B6914;
+  color: #7A5500;
 }
 
 .bw-luxe-service__num {
   font-family: Georgia,'Times New Roman',serif;
   font-size: 0.85rem;
-  color: #8B6914;
+  color: #7A5500;
   letter-spacing: 2px;
   margin-bottom: 20px;
   transition: color 0.4s;
@@ -220,7 +221,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
   margin-bottom: 16px;
 }
 
@@ -245,7 +246,7 @@
 }
 
 .bw-luxe-temoignage__stars {
-  color: #8B6914;
+  color: #7A5500;
   font-size: 0.9rem;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -264,7 +265,7 @@
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
 }
 
 /* CTA */
@@ -285,7 +286,7 @@
 
 .bw-luxe-cta__title em {
   font-style: italic;
-  color: #8B6914;
+  color: #7A5500;
 }
 
 .bw-luxe-cta__sub {
@@ -1127,7 +1128,7 @@
 }
 
 @media (max-width: 480px) {
-  .bw-luxe-hero { height: 75vh; min-height: 520px; }
+  .bw-luxe-hero { min-height: 75svh; }
   .bw-luxe-hero__title { font-size: 2.2rem; }
   .bw-premium-hero__title { font-size: 2rem; }
   .bw-vibrant-hero__title { font-size: 2.4rem; }
