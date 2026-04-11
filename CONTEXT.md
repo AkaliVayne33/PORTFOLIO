@@ -158,6 +158,7 @@ Each mockup contains:
 - [x] Step 23: Contrast fixes — gold on dark bg restored to #C9A84C (8:1), gold on light bg #8B6914 (5:1), footer links rgba opacity raised to 0.65+, #E8A020→#8B5E00, mockup-divider text #777/#999→#696969
 - [x] Step 24: Forced reflow fix in main.js — offsetHeight/offsetTop reads moved into requestAnimationFrame batch (was causing 36ms forced layout on every page load)
 - [x] Step 25: Contrast fixes (accessibility) — tag--luxe hover/active: #fff→#1A1209 on gold #C9A84C (ratio 2.5→10:1); re-premium-footer__logo span: #8B5E00→#E8AA30 on #07192D (ratio was near-fail→7:1)
+- [x] Step 26: beauty.css contrast fixes — bw-luxe-footer__logo: #8B6914→#C9A84C on #0A0A0A; all #E879A0 text uses replaced with #B5006A on light/white backgrounds (services/testimonials/footer tags, stars, nav logo span, btn background); hero title span on dark bg uses #F9A8CC; bw-premium-cta background #E879A0→#B5006A
 
 ## Known remaining issues (as of session end)
 - CLS on immobilier re-luxe-hero still showing ~0.19–0.22 in Lighthouse despite fixes — root cause unclear after multiple attempts. Suspect: either GitHub Pages cache lag, or a remaining element above the hero not covered by inline CSS. Next session should do a fresh Lighthouse audit after hard-refresh to confirm if fixes landed.

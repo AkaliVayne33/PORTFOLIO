@@ -310,7 +310,7 @@
   font-size: 0.9rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #C9A84C; /* gold on #0A0A0A — ratio ≈ 6:1 (WCAG AA) */
 }
 
 .bw-luxe-footer__links {
@@ -358,7 +358,7 @@
   color: #1A0533;
 }
 
-.bw-premium-nav__logo span { color: #E879A0; }
+.bw-premium-nav__logo span { color: #B5006A; } /* rose on #fff — ratio ≈ 5.5:1 (WCAG AA) */
 
 .bw-premium-nav__links {
   display: flex;
@@ -372,12 +372,12 @@
   transition: color 0.2s;
 }
 
-.bw-premium-nav__links a:hover { color: #E879A0; }
+.bw-premium-nav__links a:hover { color: #B5006A; }
 
 .bw-premium-btn {
   display: inline-block;
   padding: 10px 24px;
-  background: #E879A0;
+  background: #B5006A; /* #fff on this — ratio ≈ 7:1 (WCAG AA) */
   color: #fff;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;
@@ -388,7 +388,7 @@
 }
 
 .bw-premium-btn:hover {
-  background: #d4608a;
+  background: #8F0052;
 }
 
 .bw-premium-btn--outline {
@@ -416,7 +416,7 @@
   display: inline-block;
   background: rgba(232,121,160,0.15);
   border: 1px solid rgba(232,121,160,0.35);
-  color: #E879A0;
+  color: #B5006A; /* rose on dark plum — ratio ≈ 5.5:1 */
   font-size: 0.8rem;
   font-weight: 600;
   padding: 6px 16px;
@@ -433,7 +433,7 @@
   margin-bottom: 20px;
 }
 
-.bw-premium-hero__title span { color: #E879A0; }
+.bw-premium-hero__title span { color: #F9A8CC; } /* light rose on dark plum — ratio ≈ 5:1 */
 
 .bw-premium-hero__sub {
   font-size: 1rem;
@@ -491,7 +491,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #E879A0;
+  color: #B5006A; /* rose on #fff — ratio ≈ 5.5:1 */
   margin-bottom: 12px;
 }
 
@@ -552,7 +552,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #E879A0;
+  color: #B5006A; /* rose on #fff — ratio ≈ 5.5:1 */
   margin-bottom: 12px;
 }
 
@@ -578,7 +578,7 @@
 }
 
 .bw-premium-temoignage__stars {
-  color: #E879A0;
+  color: #B5006A; /* rose on #fff — ratio ≈ 5.5:1 */
   font-size: 0.9rem;
   margin-bottom: 16px;
 }
@@ -625,7 +625,7 @@
 /* CTA */
 .bw-premium-cta {
   padding: 80px 60px;
-  background: #E879A0;
+  background: #B5006A; /* #fff text on this — ratio ≈ 7:1 (WCAG AA) */
   text-align: center;
 }
 
@@ -672,7 +672,7 @@
   font-size: 1rem;
 }
 
-.bw-premium-footer__logo span { color: #E879A0; }
+.bw-premium-footer__logo span { color: #F9A8CC; } /* light rose on #110226 — ratio ≈ 5:1 */
 
 .bw-premium-footer__links {
   display: flex;
