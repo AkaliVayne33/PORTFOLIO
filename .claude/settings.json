@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 -c ':*)"
+      "Bash(python3 -c ':*)",
+      "Bash(grep -l \"display=swap\" *.html)",
+      "Bash(sed -i 's/display=swap/display=optional/g' index.html sport.html immobilier.html pharmacie.html restaurant.html beauty.html clinic.html tutoring.html interior.html)",
+      "Bash(grep -l \"display=optional\" *.html)"
     ]
   }
 }
