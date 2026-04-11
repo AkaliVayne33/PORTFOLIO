@@ -163,8 +163,8 @@ ul {
 }
 
 .site-nav__links a.tag--luxe {
-  border-color: #C9A84C;
-  color: #C9A84C;
+  border-color: #8B6914;
+  color: #8B6914;
 }
 .site-nav__links a.tag--luxe:hover {
   background: #C9A84C;
@@ -262,7 +262,7 @@ ul {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #999;
+  color: #696969;
   margin-bottom: 48px;
 }
 
@@ -333,7 +333,7 @@ ul {
   right: 20px;
   width: 36px;
   height: 36px;
-  background: rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.65);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -365,7 +365,7 @@ ul {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #999;
+  color: #696969;
   margin-bottom: 8px;
 }
 
@@ -379,7 +379,7 @@ ul {
 
 .mockup-divider__desc {
   font-size: 0.9rem;
-  color: #777;
+  color: #696969;
   max-width: 480px;
   margin: 0 auto;
 }
@@ -477,7 +477,7 @@ ul {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #C9A84C;
+  color: #8B6914;
   margin-bottom: 16px;
 }
 

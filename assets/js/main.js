@@ -80,30 +80,32 @@ if ('serviceWorker' in navigator) {
     });
   }
 
-  // Cache nav height once — avoids forced reflow on every scroll
-  const navHeight = document.querySelector('.site-nav')?.offsetHeight || 64;
+  // Defer all geometry reads until after first paint — avoids forced reflow
+  requestAnimationFrame(() => {
+    // Read layout values in one batch (no interleaved reads/writes)
+    const navHeight = document.querySelector('.site-nav')?.offsetHeight || 64;
+    const sectionTops = sections.map(s => ({ id: s.id, top: s.offsetTop }));
 
-  // Set initial active on load based on scroll position
-  function getActiveSection() {
-    const scrollMid = window.scrollY + navHeight + window.innerHeight * 0.3;
-
-    let active = sections[0];
-    for (const section of sections) {
-      if (section.offsetTop <= scrollMid) active = section;
+    function getActiveSection() {
+      const scrollMid = window.scrollY + navHeight + window.innerHeight * 0.3;
+      let active = sectionTops[0];
+      for (const s of sectionTops) {
+        if (s.top <= scrollMid) active = s;
+      }
+      return active.id;
     }
-    return active.id;
-  }
 
-  setActive(getActiveSection());
+    setActive(getActiveSection());
 
-  // Update on scroll (throttled with requestAnimationFrame)
-  let ticking = false;
-  window.addEventListener('scroll', () => {
-    if (ticking) return;
-    ticking = true;
-    requestAnimationFrame(() => {
-      setActive(getActiveSection());
-      ticking = false;
-    });
-  }, { passive: true });
+    // Update on scroll (throttled with requestAnimationFrame)
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setActive(getActiveSection());
+        ticking = false;
+      });
+    }, { passive: true });
+  });
 })();

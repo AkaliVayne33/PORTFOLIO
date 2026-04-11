@@ -12,9 +12,9 @@
   border-top: 1px solid #E0E0E0;
   border-bottom: 1px solid #E0E0E0;
 }
-.mockup-divider__label { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #999; margin-bottom: 8px; }
+.mockup-divider__label { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #696969; margin-bottom: 8px; }
 .mockup-divider__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1.6rem; font-weight: 700; color: #1A1A1A; margin-bottom: 8px; }
-.mockup-divider__desc { font-size: 0.9rem; color: #777; max-width: 480px; margin: 0 auto; }
+.mockup-divider__desc { font-size: 0.9rem; color: #696969; max-width: 480px; margin: 0 auto; }
 
 /* ══════════════════════════════════════════════
    #LUXE — THE PARK DISPENSARY
@@ -50,7 +50,7 @@
 .ph-luxe-hero__eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: #4A8C6F; margin-bottom: 28px; font-weight: 300; }
 .ph-luxe-hero__title { font-family: Georgia,'Times New Roman',serif; font-size: clamp(2.2rem, 3.8vw, 3.8rem); font-weight: 400; color: #1C1C1C; line-height: 1.25; margin-bottom: 24px; }
 .ph-luxe-hero__title em { font-style: italic; color: #4A8C6F; }
-.ph-luxe-hero__sub { font-size: 0.95rem; font-weight: 300; color: #777; line-height: 1.9; margin-bottom: 44px; max-width: 400px; }
+.ph-luxe-hero__sub { font-size: 0.95rem; font-weight: 300; color: #696969; line-height: 1.9; margin-bottom: 44px; max-width: 400px; }
 .ph-luxe-btn {
   display: inline-block; padding: 16px 40px;
   border: 1px solid #4A8C6F; color: #4A8C6F;
@@ -134,7 +134,7 @@
 .ph-premium-hero__actions { display: flex; gap: 16px; flex-wrap: wrap; }
 .ph-premium-hero__stats { display: flex; gap: 40px; margin-top: 40px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.12); }
 .ph-premium-stat__num { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 2rem; font-weight: 800; color: #00B4A6; line-height: 1; margin-bottom: 4px; }
-.ph-premium-stat__label { font-size: 0.72rem; color: rgba(255,255,255,0.42); text-transform: uppercase; letter-spacing: 1px; }
+.ph-premium-stat__label { font-size: 0.72rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 1px; }
 .ph-premium-hero__img-wrap { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
 .ph-premium-hero__img-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -160,7 +160,7 @@
 .ph-premium-temoignage__author { display: flex; align-items: center; gap: 12px; }
 .ph-premium-temoignage__avatar { width: 40px; height: 40px; border-radius: 50%; background: #006B6B; display: flex; align-items: center; justify-content: center; color: #00B4A6; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; }
 .ph-premium-temoignage__name { font-weight: 700; font-size: 0.85rem; color: #003D3D; }
-.ph-premium-temoignage__role { font-size: 0.72rem; color: #999; }
+.ph-premium-temoignage__role { font-size: 0.72rem; color: #696969; }
 
 /* CTA */
 .ph-premium-cta { padding: 80px 60px; background: #003D3D; text-align: center; }
@@ -173,9 +173,9 @@
 .ph-premium-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; color: #fff; font-size: 1rem; }
 .ph-premium-footer__logo span { color: #00B4A6; }
 .ph-premium-footer__links { display: flex; gap: 28px; }
-.ph-premium-footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.32); transition: color 0.2s; }
+.ph-premium-footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .ph-premium-footer__links a:hover { color: rgba(255,255,255,0.72); }
-.ph-premium-footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.18); }
+.ph-premium-footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.65); }
 
 /* ══════════════════════════════════════════════
    #VIBRANT — MEDIFAST
@@ -189,7 +189,7 @@
 .ph-vibrant-nav__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1.2rem; font-weight: 800; color: #fff; letter-spacing: -1px; }
 .ph-vibrant-nav__logo span { background: linear-gradient(90deg, #3B82F6, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .ph-vibrant-nav__links { display: flex; gap: 32px; }
-.ph-vibrant-nav__links a { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.42); transition: color 0.2s; }
+.ph-vibrant-nav__links a { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .ph-vibrant-nav__links a:hover { color: #fff; }
 .ph-vibrant-btn { display: inline-block; padding: 12px 28px; background: linear-gradient(90deg, #3B82F6, #06B6D4); color: #fff; font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; font-size: 0.85rem; border-radius: 8px; transition: all 0.2s; }
 .ph-vibrant-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(59,130,246,0.4); }
@@ -205,7 +205,7 @@
 .ph-vibrant-hero__tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #3B82F6; }
 .ph-vibrant-hero__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: clamp(2.4rem, 5vw, 4.5rem); font-weight: 800; color: #fff; line-height: 1.05; letter-spacing: -2px; margin-bottom: 20px; }
 .ph-vibrant-hero__title .grad { background: linear-gradient(90deg, #3B82F6, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.ph-vibrant-hero__sub { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1rem; color: rgba(255,255,255,0.44); line-height: 1.7; margin-bottom: 36px; max-width: 420px; }
+.ph-vibrant-hero__sub { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 36px; max-width: 420px; }
 .ph-vibrant-hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .ph-vibrant-hero__visual { position: relative; }
 .ph-vibrant-hero__img { border-radius: 16px; overflow: hidden; aspect-ratio: 4/5; border: 1px solid rgba(255,255,255,0.07); }
@@ -213,7 +213,7 @@
 .ph-vibrant-hero__badge { position: absolute; bottom: 24px; left: -24px; background: rgba(10,15,30,0.9); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px; display: flex; align-items: center; gap: 12px; }
 .ph-vibrant-hero__badge-icon { font-size: 1.4rem; }
 .ph-vibrant-hero__badge-num { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1.4rem; font-weight: 800; color: #fff; line-height: 1; }
-.ph-vibrant-hero__badge-label { font-size: 0.68rem; color: rgba(255,255,255,0.36); text-transform: uppercase; letter-spacing: 1px; }
+.ph-vibrant-hero__badge-label { font-size: 0.68rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 1px; }
 
 /* Services */
 .ph-vibrant-services { padding: 80px 48px; background: #0A0F1E; }
@@ -226,11 +226,11 @@
 .ph-vibrant-service:hover { border-color: rgba(59,130,246,0.38); transform: translateY(-4px); }
 .ph-vibrant-service__icon { font-size: 2rem; margin-bottom: 16px; position: relative; }
 .ph-vibrant-service__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 10px; position: relative; }
-.ph-vibrant-service__text { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.84rem; color: rgba(255,255,255,0.38); line-height: 1.75; position: relative; }
+.ph-vibrant-service__text { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.84rem; color: rgba(255,255,255,0.65); line-height: 1.75; position: relative; }
 
 /* Testimonials */
 .ph-vibrant-temoignages { padding: 80px 48px; background: #0D1220; }
-.ph-vibrant-temoignages__tag { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.28); text-align: center; margin-bottom: 12px; }
+.ph-vibrant-temoignages__tag { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); text-align: center; margin-bottom: 12px; }
 .ph-vibrant-temoignages__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 2.2rem; font-weight: 800; color: #fff; letter-spacing: -1px; text-align: center; margin-bottom: 48px; }
 .ph-vibrant-temoignages__title .grad { background: linear-gradient(90deg, #3B82F6, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .ph-vibrant-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
@@ -240,23 +240,23 @@
 .ph-vibrant-temoignage__author { display: flex; align-items: center; gap: 10px; }
 .ph-vibrant-temoignage__avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #3B82F6, #06B6D4); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 0.78rem; flex-shrink: 0; }
 .ph-vibrant-temoignage__name { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; font-size: 0.85rem; color: #fff; }
-.ph-vibrant-temoignage__role { font-size: 0.72rem; color: rgba(255,255,255,0.28); }
+.ph-vibrant-temoignage__role { font-size: 0.72rem; color: rgba(255,255,255,0.65); }
 
 /* CTA */
 .ph-vibrant-cta { padding: 80px 48px; background: #0A0F1E; text-align: center; position: relative; overflow: hidden; }
 .ph-vibrant-cta::before { content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 400px; background: radial-gradient(ellipse, rgba(59,130,246,0.18) 0%, transparent 70%); pointer-events: none; }
 .ph-vibrant-cta__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; color: #fff; letter-spacing: -2px; line-height: 1.1; margin-bottom: 16px; position: relative; }
 .ph-vibrant-cta__title .grad { background: linear-gradient(90deg, #3B82F6, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.ph-vibrant-cta__sub { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1rem; color: rgba(255,255,255,0.36); margin-bottom: 36px; position: relative; }
+.ph-vibrant-cta__sub { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1rem; color: rgba(255,255,255,0.65); margin-bottom: 36px; position: relative; }
 
 /* Footer */
 .ph-vibrant-footer { background: #060A14; padding: 32px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.05); }
 .ph-vibrant-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 800; color: #fff; letter-spacing: -1px; }
 .ph-vibrant-footer__logo span { background: linear-gradient(90deg, #3B82F6, #06B6D4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .ph-vibrant-footer__links { display: flex; gap: 24px; }
-.ph-vibrant-footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.2); transition: color 0.2s; font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+.ph-vibrant-footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.65); transition: color 0.2s; font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
 .ph-vibrant-footer__links a:hover { color: rgba(255,255,255,0.52); }
-.ph-vibrant-footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.14); font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+.ph-vibrant-footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
 
 /* ══════════════════════════════════════════════
    RESPONSIVE

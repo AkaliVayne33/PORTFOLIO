@@ -42,12 +42,12 @@
   transition: color 0.3s;
 }
 
-.cl-luxe-nav__links a:hover { color: #C9A84C; }
+.cl-luxe-nav__links a:hover { color: #8B6914; }
 
 .cl-luxe-nav__cta {
   padding: 10px 28px;
   border: 1px solid #C9A84C;
-  color: #C9A84C;
+  color: #8B6914;
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -75,7 +75,7 @@
   font-size: 0.68rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #C9A84C;
+  color: #8B6914;
   margin-bottom: 28px;
   font-weight: 300;
 }
@@ -89,7 +89,7 @@
   margin-bottom: 24px;
 }
 
-.cl-luxe-hero__title em { font-style: italic; color: #C9A84C; }
+.cl-luxe-hero__title em { font-style: italic; color: #8B6914; }
 
 .cl-luxe-hero__sub {
   font-size: 0.95rem;
@@ -104,7 +104,7 @@
   display: inline-block;
   padding: 14px 36px;
   border: 1px solid #C9A84C;
-  color: #C9A84C;
+  color: #8B6914;
   font-size: 0.72rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -139,7 +139,7 @@
   font-size: 0.6rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #C9A84C;
+  color: #8B6914;
   margin-bottom: 4px;
 }
 
@@ -160,7 +160,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #C9A84C;
+  color: #8B6914;
   margin-bottom: 16px;
 }
 
@@ -186,14 +186,14 @@
 }
 
 .cl-luxe-service:hover { background: #0A0A0A; border-color: #0A0A0A; }
-.cl-luxe-service:hover .cl-luxe-service__num { color: #C9A84C; }
+.cl-luxe-service:hover .cl-luxe-service__num { color: #8B6914; }
 .cl-luxe-service:hover .cl-luxe-service__title,
 .cl-luxe-service:hover .cl-luxe-service__text { color: #FAFAFA; }
 
 .cl-luxe-service__num {
   font-family: Georgia,'Times New Roman',serif;
   font-size: 0.85rem;
-  color: #C9A84C;
+  color: #8B6914;
   letter-spacing: 2px;
   margin-bottom: 20px;
   transition: color 0.4s;
@@ -226,7 +226,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #C9A84C;
+  color: #8B6914;
   margin-bottom: 16px;
 }
 
@@ -251,7 +251,7 @@
 }
 
 .cl-luxe-temoignage__stars {
-  color: #C9A84C;
+  color: #8B6914;
   font-size: 0.9rem;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -270,7 +270,7 @@
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #C9A84C;
+  color: #8B6914;
 }
 
 /* CTA */
@@ -289,12 +289,12 @@
   margin-bottom: 20px;
 }
 
-.cl-luxe-cta__title em { font-style: italic; color: #C9A84C; }
+.cl-luxe-cta__title em { font-style: italic; color: #8B6914; }
 
 .cl-luxe-cta__sub {
   font-size: 1rem;
   font-weight: 300;
-  color: #777;
+  color: #696969;
   margin-bottom: 40px;
   line-height: 1.7;
 }
@@ -313,19 +313,19 @@
   font-size: 0.9rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #C9A84C;
+  color: #8B6914;
 }
 
 .cl-luxe-footer__links { display: flex; gap: 32px; }
 
 .cl-luxe-footer__links a {
   font-size: 0.75rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.65);
   transition: color 0.2s;
 }
 
 .cl-luxe-footer__links a:hover { color: #fff; }
-.cl-luxe-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+.cl-luxe-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.65); }
 
 
 /* ══════════════════════════════════════════════
@@ -383,7 +383,7 @@
 
 .cl-premium-btn--outline {
   background: transparent;
-  border-color: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.65);
   color: #fff;
 }
 
@@ -449,7 +449,7 @@
 
 .cl-premium-stat__label {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.72);
   margin-top: 2px;
 }
 
@@ -581,7 +581,7 @@
 }
 
 .cl-premium-temoignage__name { font-weight: 700; font-size: 0.9rem; color: #0B2D6E; }
-.cl-premium-temoignage__role { font-size: 0.78rem; color: #999; margin-top: 2px; }
+.cl-premium-temoignage__role { font-size: 0.78rem; color: #696969; margin-top: 2px; }
 
 /* CTA */
 .cl-premium-cta {
@@ -614,9 +614,9 @@
 .cl-premium-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; color: #fff; font-size: 1rem; }
 .cl-premium-footer__logo span { color: #00B4D8; }
 .cl-premium-footer__links { display: flex; gap: 28px; }
-.cl-premium-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+.cl-premium-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .cl-premium-footer__links a:hover { color: #fff; }
-.cl-premium-footer__copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+.cl-premium-footer__copy { font-size: 0.78rem; color: rgba(255,255,255,0.65); }
 
 
 /* ══════════════════════════════════════════════
@@ -683,7 +683,7 @@
 .cl-vibrant-btn--ghost {
   background: transparent;
   color: rgba(255,255,255,0.6);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.65);
 }
 
 .cl-vibrant-btn--ghost:hover { color: #fff; border-color: rgba(255,255,255,0.5); transform: none; }
@@ -775,7 +775,7 @@
 
 .cl-vibrant-hero__badge-icon { font-size: 1.6rem; }
 .cl-vibrant-hero__badge-num { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 800; color: #fff; font-size: 1.1rem; }
-.cl-vibrant-hero__badge-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+.cl-vibrant-hero__badge-label { font-size: 0.75rem; color: rgba(255,255,255,0.72); margin-top: 2px; }
 
 /* Services */
 .cl-vibrant-services {
@@ -876,7 +876,7 @@
 }
 
 .cl-vibrant-temoignage__name { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; font-size: 0.9rem; color: #fff; }
-.cl-vibrant-temoignage__role { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-top: 2px; }
+.cl-vibrant-temoignage__role { font-size: 0.75rem; color: rgba(255,255,255,0.72); margin-top: 2px; }
 
 /* CTA */
 .cl-vibrant-cta {
@@ -910,9 +910,9 @@
 .cl-vibrant-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 800; font-size: 1rem; color: #fff; }
 .cl-vibrant-footer__logo span { color: #3B82F6; }
 .cl-vibrant-footer__links { display: flex; gap: 28px; }
-.cl-vibrant-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); transition: color 0.2s; }
+.cl-vibrant-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .cl-vibrant-footer__links a:hover { color: #3B82F6; }
-.cl-vibrant-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+.cl-vibrant-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.65); }
 
 
 /* ══════════════════════════════════════════════

@@ -18,7 +18,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #999;
+  color: #696969;
   margin-bottom: 8px;
 }
 .mockup-divider__title {
@@ -30,7 +30,7 @@
 }
 .mockup-divider__desc {
   font-size: 0.9rem;
-  color: #777;
+  color: #696969;
   max-width: 480px;
   margin: 0 auto;
 }
@@ -70,11 +70,11 @@
   color: #1A1209;
   transition: color 0.3s;
 }
-.re-luxe-nav__links a:hover { color: #B8975A; }
+.re-luxe-nav__links a:hover { color: #7A5C1E; }
 .re-luxe-nav__cta {
   padding: 10px 28px;
-  border: 1px solid #B8975A;
-  color: #B8975A;
+  border: 1px solid #7A5C1E;
+  color: #7A5C1E;
   font-size: 0.72rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -99,7 +99,7 @@
   font-size: 0.68rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #B8975A;
+  color: #7A5C1E;
   margin-bottom: 28px;
   font-weight: 300;
 }
@@ -111,7 +111,7 @@
   line-height: 1.2;
   margin-bottom: 24px;
 }
-.re-luxe-hero__title em { font-style: italic; color: #B8975A; }
+.re-luxe-hero__title em { font-style: italic; color: #7A5C1E; }
 .re-luxe-hero__sub {
   font-size: 0.95rem;
   font-weight: 300;
@@ -123,8 +123,8 @@
 .re-luxe-btn {
   display: inline-block;
   padding: 16px 40px;
-  border: 1px solid #B8975A;
-  color: #B8975A;
+  border: 1px solid #7A5C1E;
+  color: #7A5C1E;
   font-size: 0.72rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -153,7 +153,7 @@
   font-size: 0.65rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #B8975A;
+  color: #7A5C1E;
   margin-bottom: 4px;
 }
 .re-luxe-hero__badge-val {
@@ -179,7 +179,7 @@
   font-size: 0.68rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #B8975A;
+  color: #7A5C1E;
   margin-bottom: 16px;
 }
 .re-luxe-services__title {
@@ -192,7 +192,7 @@
 .re-luxe-services__desc {
   font-size: 0.9rem;
   font-weight: 300;
-  color: #777;
+  color: #696969;
   line-height: 1.9;
 }
 .re-luxe-services__grid {
@@ -210,7 +210,7 @@
 .re-luxe-service:hover { background: #1A1209; }
 .re-luxe-service:hover .re-luxe-service__title,
 .re-luxe-service:hover .re-luxe-service__text { color: #FAF8F5; }
-.re-luxe-service:hover .re-luxe-service__num { color: #B8975A; }
+.re-luxe-service:hover .re-luxe-service__num { color: #7A5C1E; }
 .re-luxe-service__num {
   font-family: Georgia,'Times New Roman',serif;
   font-size: 2.2rem;
@@ -243,7 +243,7 @@
   font-size: 0.68rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #B8975A;
+  color: #7A5C1E;
   text-align: center;
   margin-bottom: 12px;
 }
@@ -267,7 +267,7 @@
   border-top: 1px solid rgba(184,151,90,0.3);
   padding-top: 32px;
 }
-.re-luxe-temoignage__stars { color: #B8975A; font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 16px; }
+.re-luxe-temoignage__stars { color: #7A5C1E; font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 16px; }
 .re-luxe-temoignage__quote {
   font-family: Georgia,'Times New Roman',serif;
   font-style: italic;
@@ -280,7 +280,7 @@
   font-size: 0.7rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #B8975A;
+  color: #7A5C1E;
   font-weight: 300;
 }
 
@@ -298,7 +298,7 @@
   line-height: 1.2;
   margin-bottom: 20px;
 }
-.re-luxe-cta__title em { font-style: italic; color: #B8975A; }
+.re-luxe-cta__title em { font-style: italic; color: #7A5C1E; }
 .re-luxe-cta__sub {
   font-size: 0.88rem;
   font-weight: 300;
@@ -318,9 +318,9 @@
 }
 .re-luxe-footer__logo { font-family: Georgia,'Times New Roman',serif; font-size: 0.85rem; letter-spacing: 4px; text-transform: uppercase; color: #FAF8F5; }
 .re-luxe-footer__links { display: flex; gap: 32px; }
-.re-luxe-footer__links a { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(250,248,245,0.35); transition: color 0.3s; }
-.re-luxe-footer__links a:hover { color: #B8975A; }
-.re-luxe-footer__copy { font-size: 0.68rem; color: rgba(250,248,245,0.25); letter-spacing: 1px; }
+.re-luxe-footer__links a { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(250,248,245,0.75); transition: color 0.3s; }
+.re-luxe-footer__links a:hover { color: #7A5C1E; }
+.re-luxe-footer__copy { font-size: 0.68rem; color: rgba(250,248,245,0.65); letter-spacing: 1px; }
 
 /* ══════════════════════════════════════════════
    #PREMIUM — IMMPRO ADVISORY
@@ -421,7 +421,7 @@
   line-height: 1;
   margin-bottom: 4px;
 }
-.re-premium-stat__label { font-size: 0.72rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 1px; }
+.re-premium-stat__label { font-size: 0.72rem; color: rgba(255,255,255,0.72); text-transform: uppercase; letter-spacing: 1px; }
 .re-premium-hero__img-wrap { border-radius: 12px; overflow: hidden; aspect-ratio: 4/3; }
 .re-premium-hero__img-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -474,7 +474,7 @@
   color: #E8A020; font-weight: 700; font-size: 0.82rem; flex-shrink: 0;
 }
 .re-premium-temoignage__name { font-weight: 700; font-size: 0.85rem; color: #0B2540; }
-.re-premium-temoignage__role { font-size: 0.72rem; color: #999; }
+.re-premium-temoignage__role { font-size: 0.72rem; color: #696969; }
 
 /* CTA */
 .re-premium-cta { padding: 80px 60px; background: #0B2540; text-align: center; }
@@ -487,9 +487,9 @@
 .re-premium-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; color: #fff; font-size: 1rem; }
 .re-premium-footer__logo span { color: #E8A020; }
 .re-premium-footer__links { display: flex; gap: 28px; }
-.re-premium-footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.35); transition: color 0.2s; }
+.re-premium-footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.72); transition: color 0.2s; }
 .re-premium-footer__links a:hover { color: rgba(255,255,255,0.75); }
-.re-premium-footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.2); }
+.re-premium-footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.65); }
 
 /* ══════════════════════════════════════════════
    #VIBRANT — NEOHABITAT
@@ -522,7 +522,7 @@
   background-clip: text;
 }
 .re-vibrant-nav__links { display: flex; gap: 32px; }
-.re-vibrant-nav__links a { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.45); transition: color 0.2s; }
+.re-vibrant-nav__links a { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.72); transition: color 0.2s; }
 .re-vibrant-nav__links a:hover { color: #fff; }
 .re-vibrant-btn {
   display: inline-block;
@@ -610,7 +610,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.re-vibrant-hero__sub { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1rem; color: rgba(255,255,255,0.45); line-height: 1.7; margin-bottom: 36px; max-width: 420px; }
+.re-vibrant-hero__sub { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 36px; max-width: 420px; }
 .re-vibrant-hero__actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .re-vibrant-hero__visual { position: relative; }
 .re-vibrant-hero__img { border-radius: 16px; overflow: hidden; aspect-ratio: 4/5; border: 1px solid rgba(255,255,255,0.07); }
@@ -629,7 +629,7 @@
 }
 .re-vibrant-hero__badge-icon { font-size: 1.4rem; }
 .re-vibrant-hero__badge-num { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1.4rem; font-weight: 800; color: #fff; line-height: 1; }
-.re-vibrant-hero__badge-label { font-size: 0.68rem; color: rgba(255,255,255,0.38); text-transform: uppercase; letter-spacing: 1px; }
+.re-vibrant-hero__badge-label { font-size: 0.68rem; color: rgba(255,255,255,0.65); text-transform: uppercase; letter-spacing: 1px; }
 
 /* Services */
 .re-vibrant-services { padding: 80px 48px; background: #0D0D0D; }
@@ -661,11 +661,11 @@
 .re-vibrant-service:hover { border-color: rgba(0,201,167,0.35); transform: translateY(-4px); }
 .re-vibrant-service__icon { font-size: 2rem; margin-bottom: 16px; position: relative; }
 .re-vibrant-service__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1.05rem; font-weight: 700; color: #fff; margin-bottom: 10px; position: relative; }
-.re-vibrant-service__text { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.84rem; color: rgba(255,255,255,0.38); line-height: 1.75; position: relative; }
+.re-vibrant-service__text { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.84rem; color: rgba(255,255,255,0.65); line-height: 1.75; position: relative; }
 
 /* Testimonials */
 .re-vibrant-temoignages { padding: 80px 48px; background: #111; }
-.re-vibrant-temoignages__tag { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.28); text-align: center; margin-bottom: 12px; }
+.re-vibrant-temoignages__tag { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.65); text-align: center; margin-bottom: 12px; }
 .re-vibrant-temoignages__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 2.2rem; font-weight: 800; color: #fff; letter-spacing: -1px; text-align: center; margin-bottom: 48px; }
 .re-vibrant-temoignages__title .grad { background: linear-gradient(90deg, #00C9A7, #845EC2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .re-vibrant-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
@@ -675,7 +675,7 @@
 .re-vibrant-temoignage__author { display: flex; align-items: center; gap: 10px; }
 .re-vibrant-temoignage__avatar { width: 36px; height: 36px; border-radius: 50%; background: linear-gradient(135deg, #00C9A7, #845EC2); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 0.78rem; flex-shrink: 0; }
 .re-vibrant-temoignage__name { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; font-size: 0.85rem; color: #fff; }
-.re-vibrant-temoignage__role { font-size: 0.72rem; color: rgba(255,255,255,0.28); }
+.re-vibrant-temoignage__role { font-size: 0.72rem; color: rgba(255,255,255,0.65); }
 
 /* CTA */
 .re-vibrant-cta { padding: 80px 48px; background: #0D0D0D; text-align: center; position: relative; overflow: hidden; }
@@ -688,16 +688,16 @@
 }
 .re-vibrant-cta__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: clamp(2rem, 5vw, 4rem); font-weight: 800; color: #fff; letter-spacing: -2px; line-height: 1.1; margin-bottom: 16px; position: relative; }
 .re-vibrant-cta__title .grad { background: linear-gradient(90deg, #00C9A7, #845EC2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-.re-vibrant-cta__sub { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1rem; color: rgba(255,255,255,0.38); margin-bottom: 36px; position: relative; }
+.re-vibrant-cta__sub { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1rem; color: rgba(255,255,255,0.65); margin-bottom: 36px; position: relative; }
 
 /* Footer */
 .re-vibrant-footer { background: #080808; padding: 32px 48px; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(255,255,255,0.05); }
 .re-vibrant-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 800; color: #fff; letter-spacing: -1px; }
 .re-vibrant-footer__logo span { background: linear-gradient(90deg, #00C9A7, #845EC2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .re-vibrant-footer__links { display: flex; gap: 24px; }
-.re-vibrant-footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.22); transition: color 0.2s; font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+.re-vibrant-footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.72); transition: color 0.2s; font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
 .re-vibrant-footer__links a:hover { color: rgba(255,255,255,0.55); }
-.re-vibrant-footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.15); font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
+.re-vibrant-footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.65); font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; }
 
 /* ══════════════════════════════════════════════
    RESPONSIVE

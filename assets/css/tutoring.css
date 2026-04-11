@@ -32,12 +32,12 @@
   transition: color 0.3s;
 }
 
-.tu-luxe-nav__links a:hover { color: #C9A84C; }
+.tu-luxe-nav__links a:hover { color: #8B6914; }
 
 .tu-luxe-nav__cta {
   padding: 10px 28px;
   border: 1px solid #C9A84C;
-  color: #C9A84C;
+  color: #8B6914;
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -57,7 +57,7 @@
   padding: 80px 64px;
 }
 
-.tu-luxe-hero__eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: #C9A84C; margin-bottom: 28px; font-weight: 300; }
+.tu-luxe-hero__eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: #8B6914; margin-bottom: 28px; font-weight: 300; }
 
 .tu-luxe-hero__title {
   font-family: Georgia,'Times New Roman',serif;
@@ -68,7 +68,7 @@
   margin-bottom: 24px;
 }
 
-.tu-luxe-hero__title em { font-style: italic; color: #C9A84C; }
+.tu-luxe-hero__title em { font-style: italic; color: #8B6914; }
 
 .tu-luxe-hero__sub {
   font-size: 0.95rem;
@@ -83,7 +83,7 @@
   display: inline-block;
   padding: 14px 36px;
   border: 1px solid #C9A84C;
-  color: #C9A84C;
+  color: #8B6914;
   font-size: 0.72rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -105,48 +105,48 @@
   text-align: center;
 }
 
-.tu-luxe-hero__badge-label { font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; margin-bottom: 4px; }
+.tu-luxe-hero__badge-label { font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; color: #8B6914; margin-bottom: 4px; }
 .tu-luxe-hero__badge-val { font-family: Georgia,'Times New Roman',serif; font-size: 1rem; font-weight: 600; color: #fff; }
 
 /* Services */
 .tu-luxe-services { padding: 100px 60px; background: #FAFAFA; }
-.tu-luxe-services__eyebrow { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: #C9A84C; margin-bottom: 16px; }
+.tu-luxe-services__eyebrow { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: #8B6914; margin-bottom: 16px; }
 .tu-luxe-services__title { font-family: Georgia,'Times New Roman',serif; font-size: 2.4rem; font-weight: 400; color: #0A0A0A; line-height: 1.3; margin-bottom: 64px; }
 .tu-luxe-services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
 
 .tu-luxe-service { padding: 40px 32px; border: 1px solid rgba(0,0,0,0.08); transition: all 0.4s ease; }
 .tu-luxe-service:hover { background: #0A0A0A; border-color: #0A0A0A; }
-.tu-luxe-service:hover .tu-luxe-service__num { color: #C9A84C; }
+.tu-luxe-service:hover .tu-luxe-service__num { color: #8B6914; }
 .tu-luxe-service:hover .tu-luxe-service__title, .tu-luxe-service:hover .tu-luxe-service__text { color: #FAFAFA; }
 
-.tu-luxe-service__num { font-family: Georgia,'Times New Roman',serif; font-size: 0.85rem; color: #C9A84C; letter-spacing: 2px; margin-bottom: 20px; transition: color 0.4s; }
+.tu-luxe-service__num { font-family: Georgia,'Times New Roman',serif; font-size: 0.85rem; color: #8B6914; letter-spacing: 2px; margin-bottom: 20px; transition: color 0.4s; }
 .tu-luxe-service__title { font-family: Georgia,'Times New Roman',serif; font-size: 1.3rem; font-weight: 400; color: #0A0A0A; margin-bottom: 16px; transition: color 0.4s; }
 .tu-luxe-service__text { font-size: 0.9rem; font-weight: 300; color: #666; line-height: 1.8; transition: color 0.4s; }
 
 /* Testimonials */
 .tu-luxe-temoignages { padding: 100px 60px; background: #0A0A0A; }
-.tu-luxe-temoignages__eyebrow { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: #C9A84C; margin-bottom: 16px; }
+.tu-luxe-temoignages__eyebrow { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: #8B6914; margin-bottom: 16px; }
 .tu-luxe-temoignages__title { font-family: Georgia,'Times New Roman',serif; font-size: 2rem; font-weight: 400; color: #FAFAFA; font-style: italic; margin-bottom: 64px; }
 .tu-luxe-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 
 .tu-luxe-temoignage { padding: 36px; border: 1px solid rgba(201,168,76,0.2); }
-.tu-luxe-temoignage__stars { color: #C9A84C; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; }
+.tu-luxe-temoignage__stars { color: #8B6914; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; }
 .tu-luxe-temoignage__quote { font-size: 0.9rem; font-weight: 300; color: rgba(250,250,250,0.75); line-height: 1.9; margin-bottom: 24px; font-style: italic; }
-.tu-luxe-temoignage__author { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #C9A84C; }
+.tu-luxe-temoignage__author { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #8B6914; }
 
 /* CTA */
 .tu-luxe-cta { padding: 120px 60px; background: #F7F5EE; text-align: center; }
 .tu-luxe-cta__title { font-family: Georgia,'Times New Roman',serif; font-size: clamp(2.4rem, 4vw, 4rem); font-weight: 400; color: #0A0A0A; line-height: 1.2; margin-bottom: 20px; }
-.tu-luxe-cta__title em { font-style: italic; color: #C9A84C; }
-.tu-luxe-cta__sub { font-size: 1rem; font-weight: 300; color: #777; margin-bottom: 40px; line-height: 1.7; }
+.tu-luxe-cta__title em { font-style: italic; color: #8B6914; }
+.tu-luxe-cta__sub { font-size: 1rem; font-weight: 300; color: #696969; margin-bottom: 40px; line-height: 1.7; }
 
 /* Footer */
 .tu-luxe-footer { background: #0A0A0A; padding: 40px 60px; display: flex; align-items: center; justify-content: space-between; }
-.tu-luxe-footer__logo { font-family: Georgia,'Times New Roman',serif; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; }
+.tu-luxe-footer__logo { font-family: Georgia,'Times New Roman',serif; font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; color: #8B6914; }
 .tu-luxe-footer__links { display: flex; gap: 32px; }
-.tu-luxe-footer__links a { font-size: 0.75rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+.tu-luxe-footer__links a { font-size: 0.75rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .tu-luxe-footer__links a:hover { color: #fff; }
-.tu-luxe-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+.tu-luxe-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.65); }
 
 
 /* ══════════════════════════════════════════════
@@ -197,7 +197,7 @@
 
 .tu-premium-btn--outline {
   background: transparent;
-  border-color: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.65);
   color: #fff;
 }
 
@@ -232,7 +232,7 @@
 .tu-premium-hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
 .tu-premium-hero__stats { display: flex; gap: 40px; }
 .tu-premium-stat__num { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1.6rem; font-weight: 800; color: #fff; }
-.tu-premium-stat__label { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+.tu-premium-stat__label { font-size: 0.8rem; color: rgba(255,255,255,0.72); margin-top: 2px; }
 .tu-premium-hero__img-wrap { border-radius: 16px; overflow: hidden; aspect-ratio: 4/5; }
 .tu-premium-hero__img-wrap img { width: 100%; height: 100%; object-fit: cover; }
 
@@ -281,7 +281,7 @@
 }
 
 .tu-premium-temoignage__name { font-weight: 700; font-size: 0.9rem; color: #0D2B5E; }
-.tu-premium-temoignage__role { font-size: 0.78rem; color: #999; margin-top: 2px; }
+.tu-premium-temoignage__role { font-size: 0.78rem; color: #696969; margin-top: 2px; }
 
 /* CTA */
 .tu-premium-cta { padding: 80px 60px; background: #0D2B5E; text-align: center; }
@@ -294,9 +294,9 @@
 .tu-premium-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; color: #fff; font-size: 1rem; }
 .tu-premium-footer__logo span { color: #F59E0B; }
 .tu-premium-footer__links { display: flex; gap: 28px; }
-.tu-premium-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.4); transition: color 0.2s; }
+.tu-premium-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .tu-premium-footer__links a:hover { color: #fff; }
-.tu-premium-footer__copy { font-size: 0.78rem; color: rgba(255,255,255,0.3); }
+.tu-premium-footer__copy { font-size: 0.78rem; color: rgba(255,255,255,0.65); }
 
 
 /* ══════════════════════════════════════════════
@@ -355,7 +355,7 @@
 .tu-vibrant-btn--ghost {
   background: transparent;
   color: rgba(255,255,255,0.6);
-  border: 1px solid rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.65);
 }
 
 .tu-vibrant-btn--ghost:hover { color: #fff; border-color: rgba(255,255,255,0.5); transform: none; }
@@ -437,7 +437,7 @@
 
 .tu-vibrant-hero__badge-icon { font-size: 1.6rem; }
 .tu-vibrant-hero__badge-num { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 800; color: #fff; font-size: 1.1rem; }
-.tu-vibrant-hero__badge-label { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+.tu-vibrant-hero__badge-label { font-size: 0.75rem; color: rgba(255,255,255,0.72); margin-top: 2px; }
 
 /* Services */
 .tu-vibrant-services { padding: 100px 48px; background: #111; }
@@ -484,7 +484,7 @@
 }
 
 .tu-vibrant-temoignage__name { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; font-size: 0.9rem; color: #fff; }
-.tu-vibrant-temoignage__role { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-top: 2px; }
+.tu-vibrant-temoignage__role { font-size: 0.75rem; color: rgba(255,255,255,0.72); margin-top: 2px; }
 
 /* CTA */
 .tu-vibrant-cta { padding: 100px 48px; background: linear-gradient(135deg, #12002E 0%, #0F0F0F 100%); text-align: center; }
@@ -504,9 +504,9 @@
 .tu-vibrant-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 800; font-size: 1rem; color: #fff; }
 .tu-vibrant-footer__logo span { color: #7B2FF7; }
 .tu-vibrant-footer__links { display: flex; gap: 28px; }
-.tu-vibrant-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.3); transition: color 0.2s; }
+.tu-vibrant-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .tu-vibrant-footer__links a:hover { color: #7B2FF7; }
-.tu-vibrant-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.25); }
+.tu-vibrant-footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.65); }
 
 
 /* ══════════════════════════════════════════════
