@@ -94,7 +94,7 @@
   font-size: 0.7rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #C9A84C;
   margin-bottom: 24px;
   font-weight: 300;
 }
@@ -110,7 +110,7 @@
 
 .luxe-hero__title em {
   font-style: italic;
-  color: #8B6914;
+  color: #C9A84C;
 }
 
 .luxe-hero__sub {
@@ -127,7 +127,7 @@
   padding: 16px 40px;
   background: transparent;
   border: 1px solid #C9A84C;
-  color: #8B6914;
+  color: #C9A84C;
   font-size: 0.75rem;
   letter-spacing: 3px;
   text-transform: uppercase;

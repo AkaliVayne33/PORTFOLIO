@@ -63,7 +63,7 @@
   padding: 0 64px 72px;
   max-width: 760px;
 }
-.rs-luxe-hero__eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: #6B4E1A; margin-bottom: 20px; font-weight: 300; }
+.rs-luxe-hero__eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: #C9A97A; margin-bottom: 20px; font-weight: 300; }
 .rs-luxe-hero__title { font-family: Georgia,'Times New Roman',serif; font-size: clamp(3rem, 5.5vw, 5.5rem); font-weight: 400; color: #FAF6F0; line-height: 1.1; margin-bottom: 20px; }
 .rs-luxe-hero__title em { font-style: italic; color: #C9A97A; }
 .rs-luxe-hero__sub { font-size: 1rem; font-weight: 300; color: rgba(250,246,240,0.65); line-height: 1.85; margin-bottom: 40px; max-width: 480px; }
@@ -107,14 +107,14 @@
 .rs-luxe-temoignages__title { font-family: Georgia,'Times New Roman',serif; font-size: 2rem; font-weight: 400; color: #FAF6F0; font-style: italic; text-align: center; margin-bottom: 64px; }
 .rs-luxe-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; max-width: 1100px; margin: 0 auto; }
 .rs-luxe-temoignage { border-top: 1px solid rgba(140,109,63,0.3); padding-top: 32px; }
-.rs-luxe-temoignage__stars { color: #6B4E1A; font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 16px; }
+.rs-luxe-temoignage__stars { color: #C9A97A; font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 16px; }
 .rs-luxe-temoignage__quote { font-family: Georgia,'Times New Roman',serif; font-style: italic; font-size: 0.95rem; color: rgba(250,246,240,0.72); line-height: 1.9; margin-bottom: 20px; }
-.rs-luxe-temoignage__author { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: #6B4E1A; font-weight: 300; }
+.rs-luxe-temoignage__author { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: #8B6914; font-weight: 300; }
 
 /* CTA */
 .rs-luxe-cta { padding: 100px 64px; background: #FAF6F0; text-align: center; }
 .rs-luxe-cta__title { font-family: Georgia,'Times New Roman',serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; color: #1A1108; line-height: 1.2; margin-bottom: 20px; }
-.rs-luxe-cta__title em { font-style: italic; color: #6B4E1A; }
+.rs-luxe-cta__title em { font-style: italic; color: #8B6914; }
 .rs-luxe-cta__sub { font-size: 0.88rem; font-weight: 300; color: #888; margin-bottom: 40px; line-height: 1.8; }
 
 /* Footer */
