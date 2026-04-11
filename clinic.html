@@ -5,8 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clinic & Dental — Redesign Examples</title>
   <meta name="description" content="Web redesign examples for private clinics and dental practices in Singapore." />
-  <link rel="stylesheet" href="assets/css/global.css" />
-  <link rel="stylesheet" href="assets/css/clinic.css" />
+
+  <!-- ── Theme & PWA ── -->
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="StudioWeb" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/img/icon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
+
+  <!-- ── Preconnect for speed ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+
+  <!-- ── LCP image preload (luxe hero) ── -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop" />
+
+  <!-- ── Fonts (non-blocking) ── -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" /></noscript>
+
+  <!-- ── Critical CSS inline (above-the-fold: nav + luxe hero) ── -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Inter',sans-serif;background:#fff;color:#1A1A1A;line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    .site-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #E8E8E8;padding:0 24px}
+    .site-nav__inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+    .site-nav__logo{font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.5px;color:#0A0A0A;white-space:nowrap}
+    .site-nav__logo span{color:#7B2FF7}
+    .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+    .animate-in.visible{opacity:1;transform:translateY(0)}
+    #luxe{background:#FAFAFA}
+    .cl-luxe-hero{position:relative;height:100vh;min-height:600px;overflow:hidden}
+    .cl-luxe-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .cl-luxe-hero__content{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;padding:0 8vw;background:linear-gradient(to right,rgba(10,10,10,.55) 0%,transparent 70%)}
+    .cl-luxe-hero__eyebrow{font-size:.75rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#C9A84C;margin-bottom:16px}
+    .cl-luxe-hero__title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;color:#fff;line-height:1.1;max-width:600px;margin-bottom:20px}
+    .cl-luxe-hero__sub{font-size:1rem;font-weight:300;color:rgba(255,255,255,.8);max-width:420px;margin-bottom:36px;line-height:1.7}
+  </style>
+
+  <!-- ── Full CSS (non-blocking) ── -->
+  <link rel="stylesheet" href="assets/css/global.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="assets/css/global.css" /></noscript>
+  <link rel="stylesheet" href="assets/css/clinic.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="assets/css/clinic.css" /></noscript>
 </head>
 <body>
 
@@ -26,6 +74,8 @@
     </div>
   </nav>
 
+
+  <main>
 
   <!-- ════════════════════════════════════════
        #LUXE — THE PARAGON CLINIC
@@ -68,6 +118,8 @@
           class="cl-luxe-hero__img"
           src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop"
           alt="The Paragon Clinic"
+          width="1200" height="800"
+          fetchpriority="high"
         />
         <div class="cl-luxe-hero__badge animate-in">
           <p class="cl-luxe-hero__badge-label">MOH Registered</p>
@@ -205,6 +257,8 @@
         <img
           src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop"
           alt="SmileCare Dental clinic"
+          width="800" height="600"
+          loading="lazy"
         />
       </div>
     </section>
@@ -340,6 +394,8 @@
             <img
               src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&auto=format&fit=crop"
               alt="MEDIPOINT clinic"
+              width="800" height="800"
+              loading="lazy"
             />
           </div>
           <div class="cl-vibrant-hero__badge">
@@ -445,6 +501,8 @@
 
   </div>
 
-  <script src="assets/js/main.js"></script>
+  </main>
+
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
