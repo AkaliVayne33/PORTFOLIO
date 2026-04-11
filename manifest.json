@@ -2,17 +2,29 @@
   "name": "StudioWeb — Web Design Portfolio",
   "short_name": "StudioWeb",
   "description": "Web redesign examples by industry sector for Singapore businesses.",
-  "start_url": "/",
+  "start_url": "/PORTFOLIO/",
+  "scope": "/PORTFOLIO/",
   "display": "standalone",
   "background_color": "#FAFAFA",
   "theme_color": "#0A0A0A",
   "orientation": "portrait-primary",
+  "lang": "en",
+  "categories": ["design", "business"],
   "icons": [
     {
       "src": "assets/img/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/img/screenshot.svg",
+      "sizes": "1280x720",
+      "type": "image/svg+xml",
+      "form_factor": "wide",
+      "label": "StudioWeb portfolio homepage"
     }
   ]
 }

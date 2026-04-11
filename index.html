@@ -21,11 +21,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://images.unsplash.com" />
 
+  <!-- ── LCP image preload ── -->
+  <link rel="preload" as="image"
+    href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop"
+    imagesrcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&auto=format&fit=crop 400w,
+                 https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop 800w"
+    imagesizes="(max-width: 600px) 100vw, 50vw"
+  />
+
   <!-- ── Fonts (non-blocking) ── -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" /></noscript>
 
-  <link rel="stylesheet" href="assets/css/global.css" />
+  <!-- ── Critical CSS inline (above-the-fold: nav + hero) ── -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:'Inter',sans-serif;background:#fff;color:#1A1A1A;line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    .site-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #E8E8E8;padding:0 24px}
+    .site-nav__inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+    .site-nav__logo{font-family:'DM Sans',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.5px;color:#0A0A0A;white-space:nowrap}
+    .site-nav__logo span{color:#7B2FF7}
+    .site-nav__tagline{font-size:0.8rem;color:#999;font-weight:500}
+    .home-hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px;background:#FAFAFA}
+    .home-hero__eyebrow{font-size:0.8rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#7B2FF7;margin-bottom:20px}
+    .home-hero__title{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,6vw,5rem);font-weight:700;color:#0A0A0A;line-height:1.1;max-width:800px;margin-bottom:24px}
+    .home-hero__title em{font-style:italic;color:#C9A84C}
+    .home-hero__subtitle{font-size:clamp(1rem,2vw,1.2rem);color:#555;max-width:560px;margin-bottom:48px;line-height:1.7}
+    .home-hero__cta{display:inline-flex;align-items:center;gap:8px;padding:14px 32px;background:#0A0A0A;color:#fff;border-radius:999px;font-weight:600;font-size:0.95rem;transition:transform .2s,box-shadow .2s}
+    .home-hero__cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.15)}
+    .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+    .animate-in.visible{opacity:1;transform:translateY(0)}
+  </style>
+
+  <!-- ── Full CSS (non-blocking) ── -->
+  <link rel="stylesheet" href="assets/css/global.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="assets/css/global.css" /></noscript>
 </head>
 <body>
 
@@ -264,6 +297,6 @@
     <strong>StudioWeb</strong> — Demo Portfolio &nbsp;·&nbsp; All rights reserved © 2026
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

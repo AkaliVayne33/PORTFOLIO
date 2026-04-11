@@ -6,12 +6,13 @@
 const CACHE_NAME = 'studioweb-v1';
 
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/assets/css/global.css',
-  '/assets/js/main.js',
-  '/manifest.json',
-  '/assets/img/icon.svg'
+  '/PORTFOLIO/',
+  '/PORTFOLIO/index.html',
+  '/PORTFOLIO/offline.html',
+  '/PORTFOLIO/assets/css/global.css',
+  '/PORTFOLIO/assets/js/main.js',
+  '/PORTFOLIO/manifest.json',
+  '/PORTFOLIO/assets/img/icon.svg'
 ];
 
 /* ── Install: pre-cache core shell ── */
@@ -41,7 +42,7 @@ self.addEventListener('fetch', (event) => {
   if (url.origin !== self.location.origin) return;
 
   if (request.headers.get('accept')?.includes('text/html')) {
-    // Network-first for HTML pages
+    // Network-first for HTML pages, fallback to offline.html
     event.respondWith(
       fetch(request)
         .then((response) => {
@@ -49,7 +50,7 @@ self.addEventListener('fetch', (event) => {
           caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
           return response;
         })
-        .catch(() => caches.match(request))
+        .catch(() => caches.match(request) || caches.match('/PORTFOLIO/offline.html'))
     );
   } else {
     // Cache-first for CSS, JS, images
