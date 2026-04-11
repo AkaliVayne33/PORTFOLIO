@@ -159,6 +159,7 @@ Each mockup contains:
 - [x] Step 24: Forced reflow fix in main.js — offsetHeight/offsetTop reads moved into requestAnimationFrame batch (was causing 36ms forced layout on every page load)
 - [x] Step 25: Contrast fixes (accessibility) — tag--luxe hover/active: #fff→#1A1209 on gold #C9A84C (ratio 2.5→10:1); re-premium-footer__logo span: #8B5E00→#E8AA30 on #07192D (ratio was near-fail→7:1)
 - [x] Step 26: beauty.css contrast fixes — bw-luxe-footer__logo: #8B6914→#C9A84C on #0A0A0A; all #E879A0 text uses replaced with #B5006A on light/white backgrounds (services/testimonials/footer tags, stars, nav logo span, btn background); hero title span on dark bg uses #F9A8CC; bw-premium-cta background #E879A0→#B5006A
+- [x] Step 27: interior.css contrast fixes — id-luxe-footer__logo: #8B6914→#C9A84C on #0A0A0A; all #8B6914 luxe text →#7A5500 on light bg (#FAFAFA/#FAF8F5, ratio ≈5:1); #2ECC71 on light bg (nav logo span, services/temo tags, stars, btn bg) →#1A7A40 (ratio ≈5-7:1); #2ECC71 on dark bg (hero badge/title span, CTA title span, footer logo span) →#4ADE80 (ratio ≈6:1)
 
 ## Known remaining issues (as of session end)
 - CLS on immobilier re-luxe-hero still showing ~0.19–0.22 in Lighthouse despite fixes — root cause unclear after multiple attempts. Suspect: either GitHub Pages cache lag, or a remaining element above the hero not covered by inline CSS. Next session should do a fresh Lighthouse audit after hard-refresh to confirm if fixes landed.

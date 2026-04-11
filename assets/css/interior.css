@@ -39,12 +39,12 @@
   transition: color 0.3s;
 }
 
-.id-luxe-nav__links a:hover { color: #8B6914; }
+.id-luxe-nav__links a:hover { color: #7A5500; }
 
 .id-luxe-nav__cta {
   padding: 10px 28px;
   border: 1px solid #C9A84C;
-  color: #8B6914;
+  color: #7A5500;
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -132,7 +132,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
   margin-bottom: 16px;
 }
 
@@ -158,14 +158,14 @@
 }
 
 .id-luxe-service:hover { background: #0A0A0A; border-color: #0A0A0A; }
-.id-luxe-service:hover .id-luxe-service__num { color: #8B6914; }
+.id-luxe-service:hover .id-luxe-service__num { color: #7A5500; }
 .id-luxe-service:hover .id-luxe-service__title,
 .id-luxe-service:hover .id-luxe-service__text { color: #FAFAFA; }
 
 .id-luxe-service__num {
   font-family: Georgia,'Times New Roman',serif;
   font-size: 0.85rem;
-  color: #8B6914;
+  color: #7A5500;
   letter-spacing: 2px;
   margin-bottom: 20px;
   transition: color 0.4s;
@@ -198,7 +198,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
   margin-bottom: 16px;
 }
 
@@ -222,9 +222,9 @@
   border: 1px solid rgba(201,168,76,0.2);
 }
 
-.id-luxe-temoignage__stars { color: #8B6914; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; }
+.id-luxe-temoignage__stars { color: #7A5500; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; }
 .id-luxe-temoignage__quote { font-size: 0.9rem; font-weight: 300; color: rgba(250,250,250,0.75); line-height: 1.9; margin-bottom: 24px; font-style: italic; }
-.id-luxe-temoignage__author { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #8B6914; }
+.id-luxe-temoignage__author { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #7A5500; }
 
 /* CTA */
 .id-luxe-cta {
@@ -242,7 +242,7 @@
   margin-bottom: 20px;
 }
 
-.id-luxe-cta__title em { font-style: italic; color: #8B6914; }
+.id-luxe-cta__title em { font-style: italic; color: #7A5500; }
 .id-luxe-cta__sub { font-size: 1rem; font-weight: 300; color: #696969; margin-bottom: 40px; line-height: 1.7; }
 
 /* Footer */
@@ -254,7 +254,7 @@
   justify-content: space-between;
 }
 
-.id-luxe-footer__logo { font-family: Georgia,'Times New Roman',serif; font-size: 0.9rem; letter-spacing: 4px; text-transform: uppercase; color: #8B6914; }
+.id-luxe-footer__logo { font-family: Georgia,'Times New Roman',serif; font-size: 0.9rem; letter-spacing: 4px; text-transform: uppercase; color: #C9A84C; } /* gold on #0A0A0A — ratio ≈ 6:1 */
 .id-luxe-footer__links { display: flex; gap: 32px; }
 .id-luxe-footer__links a { font-size: 0.75rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .id-luxe-footer__links a:hover { color: #fff; }
@@ -280,7 +280,7 @@
 }
 
 .id-premium-nav__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; font-size: 1.1rem; color: #1B3A2D; }
-.id-premium-nav__logo span { color: #2ECC71; }
+.id-premium-nav__logo span { color: #1A7A40; } /* dark green on #fff — ratio ≈ 5:1 */
 .id-premium-nav__links { display: flex; gap: 32px; }
 
 .id-premium-nav__links a {
@@ -290,12 +290,12 @@
   transition: color 0.2s;
 }
 
-.id-premium-nav__links a:hover { color: #2ECC71; }
+.id-premium-nav__links a:hover { color: #1A7A40; }
 
 .id-premium-btn {
   display: inline-block;
   padding: 10px 24px;
-  background: #2ECC71;
+  background: #1A7A40; /* #fff on this — ratio ≈ 7:1 (WCAG AA) */
   color: #fff;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;
@@ -305,7 +305,7 @@
   transition: all 0.2s ease-out;
 }
 
-.id-premium-btn:hover { background: #27ae60; }
+.id-premium-btn:hover { background: #125530; }
 
 .id-premium-btn--outline {
   background: transparent;
@@ -330,7 +330,7 @@
   display: inline-block;
   background: rgba(46,204,113,0.15);
   border: 1px solid rgba(46,204,113,0.35);
-  color: #2ECC71;
+  color: #4ADE80; /* light green on dark hero — ratio ≈ 6:1 */
   font-size: 0.8rem;
   font-weight: 600;
   padding: 6px 16px;
@@ -339,7 +339,7 @@
 }
 
 .id-premium-hero__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: clamp(2rem, 3.8vw, 3.2rem); font-weight: 800; color: #fff; line-height: 1.15; margin-bottom: 20px; }
-.id-premium-hero__title span { color: #2ECC71; }
+.id-premium-hero__title span { color: #4ADE80; } /* light green on dark hero — ratio ≈ 6:1 */
 .id-premium-hero__sub { font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 36px; max-width: 480px; }
 .id-premium-hero__actions { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 48px; }
 .id-premium-hero__stats { display: flex; gap: 40px; }
@@ -350,7 +350,7 @@
 
 /* Services */
 .id-premium-services { padding: 80px 60px; background: #fff; }
-.id-premium-services__tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #2ECC71; margin-bottom: 12px; }
+.id-premium-services__tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #1A7A40; margin-bottom: 12px; } /* dark green on #fff — ratio ≈ 5:1 */
 .id-premium-services__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 800; color: #1B3A2D; margin-bottom: 48px; }
 
 .id-premium-services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
@@ -370,7 +370,7 @@
 
 /* Testimonials */
 .id-premium-temoignages { padding: 80px 60px; background: #F2FAF5; }
-.id-premium-temoignages__tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #2ECC71; margin-bottom: 12px; }
+.id-premium-temoignages__tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #1A7A40; margin-bottom: 12px; } /* dark green on #F2FAF5 — ratio ≈ 5:1 */
 .id-premium-temoignages__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: clamp(1.5rem, 2.5vw, 2.2rem); font-weight: 800; color: #1B3A2D; margin-bottom: 48px; }
 .id-premium-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 
@@ -381,7 +381,7 @@
   box-shadow: 0 2px 16px rgba(27,58,45,0.06);
 }
 
-.id-premium-temoignage__stars { color: #2ECC71; font-size: 0.9rem; margin-bottom: 16px; }
+.id-premium-temoignage__stars { color: #1A7A40; font-size: 0.9rem; margin-bottom: 16px; } /* dark green on #fff — ratio ≈ 5:1 */
 .id-premium-temoignage__quote { font-size: 0.9rem; color: #444; line-height: 1.75; margin-bottom: 24px; }
 .id-premium-temoignage__author { display: flex; align-items: center; gap: 12px; }
 
@@ -405,13 +405,13 @@
 /* CTA */
 .id-premium-cta { padding: 80px 60px; background: #1B3A2D; text-align: center; }
 .id-premium-cta__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 800; color: #fff; margin-bottom: 16px; line-height: 1.2; }
-.id-premium-cta__title span { color: #2ECC71; }
+.id-premium-cta__title span { color: #4ADE80; } /* light green on #1B3A2D — ratio ≈ 6:1 */
 .id-premium-cta__sub { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 36px; line-height: 1.6; }
 
 /* Footer */
 .id-premium-footer { background: #102418; padding: 40px 60px; display: flex; align-items: center; justify-content: space-between; }
 .id-premium-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; color: #fff; font-size: 1rem; }
-.id-premium-footer__logo span { color: #2ECC71; }
+.id-premium-footer__logo span { color: #4ADE80; } /* light green on #102418 — ratio ≈ 6:1 */
 .id-premium-footer__links { display: flex; gap: 28px; }
 .id-premium-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .id-premium-footer__links a:hover { color: #fff; }
