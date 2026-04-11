@@ -168,7 +168,7 @@ ul {
 }
 .site-nav__links a.tag--luxe:hover {
   background: #C9A84C;
-  color: #fff;
+  color: #1A1209; /* dark on gold — ratio ≈ 10:1 (WCAG AA) */
 }
 
 .site-nav__links a.tag--premium {
@@ -193,7 +193,7 @@ ul {
 /* Active state — mirrors hover fill, set by JS on scroll */
 .site-nav__links a.tag--luxe.is-active {
   background: #C9A84C;
-  color: #fff;
+  color: #1A1209; /* dark on gold — ratio ≈ 10:1 (WCAG AA) */
 }
 .site-nav__links a.tag--premium.is-active {
   background: #0D1B3E;

@@ -153,6 +153,15 @@ Each mockup contains:
 - [x] Step 18: Accessibility fixes — contrast colors updated (#999→#595959, #C9A84C→#8B6914 on em), <main> landmark added, site-nav__tagline class, aria-hidden on decorative elements
 - [x] Step 19: PWA icons — icon-192.png and icon-512.png generated (Python), manifest updated with PNG icons for splash screen
 - [x] Step 20: SW paths made dynamic via self.registration.scope — works on both GitHub Pages (/PORTFOLIO/) and any root deployment (/)
+- [x] Step 21: Performance pass on all 8 sector pages — PWA meta tags, non-blocking CSS (media="print"), critical CSS inlined per page (nav + luxe hero with exact structure), <main> landmark, JS defer, LCP fetchpriority + dimensions, lazy loading on secondary images
+- [x] Step 22: CLS fixes — mockup-divider and luxe-nav styles added to inline critical CSS (were unstyled at first paint, causing 0.19 CLS shift), font-display changed to optional, Google Fonts removed and replaced with system font stacks
+- [x] Step 23: Contrast fixes — gold on dark bg restored to #C9A84C (8:1), gold on light bg #8B6914 (5:1), footer links rgba opacity raised to 0.65+, #E8A020→#8B5E00, mockup-divider text #777/#999→#696969
+- [x] Step 24: Forced reflow fix in main.js — offsetHeight/offsetTop reads moved into requestAnimationFrame batch (was causing 36ms forced layout on every page load)
+- [x] Step 25: Contrast fixes (accessibility) — tag--luxe hover/active: #fff→#1A1209 on gold #C9A84C (ratio 2.5→10:1); re-premium-footer__logo span: #8B5E00→#E8AA30 on #07192D (ratio was near-fail→7:1)
+
+## Known remaining issues (as of session end)
+- CLS on immobilier re-luxe-hero still showing ~0.19–0.22 in Lighthouse despite fixes — root cause unclear after multiple attempts. Suspect: either GitHub Pages cache lag, or a remaining element above the hero not covered by inline CSS. Next session should do a fresh Lighthouse audit after hard-refresh to confirm if fixes landed.
+- Run Lighthouse accessibility audit on other sector pages (sport, pharmacie, restaurant, beauty, clinic, tutoring, interior) to check if similar contrast issues exist on their tag--luxe active state or premium footer spans.
 
 ## How to resume in a new session
 1. Open the PORTFOLIO folder in VS Code

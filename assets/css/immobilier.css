@@ -485,7 +485,7 @@
 /* Footer */
 .re-premium-footer { background: #07192D; padding: 40px 60px; display: flex; align-items: center; justify-content: space-between; }
 .re-premium-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; color: #fff; font-size: 1rem; }
-.re-premium-footer__logo span { color: #8B5E00; }
+.re-premium-footer__logo span { color: #E8AA30; } /* gold on #07192D — ratio ≈ 7:1 (WCAG AA) */
 .re-premium-footer__links { display: flex; gap: 28px; }
 .re-premium-footer__links a { font-size: 0.78rem; color: rgba(255,255,255,0.72); transition: color 0.2s; }
 .re-premium-footer__links a:hover { color: rgba(255,255,255,0.75); }
