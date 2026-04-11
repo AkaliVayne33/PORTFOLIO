@@ -147,6 +147,12 @@ Each mockup contains:
 - [x] Step 12: interior.html + interior.css — 3 full mockups (MAISON ATELIER / LIVSPACE PRO / FORM & FLUX)
 - [x] Step 13: PWA setup — manifest.json + sw.js + service worker registration in main.js
 - [x] Step 14: Performance pass — preconnect hints, fetchpriority on LCP image, width/height on all images, inline styles moved to CSS classes, ARIA labels added
+- [x] Step 15: Critical CSS inlined in index.html (nav + hero above-the-fold), global.css loaded non-blocking via media="print" trick, main.js deferred
+- [x] Step 16: Google Fonts non-blocking (media="print" onload), @import removed from global.css
+- [x] Step 17: All 8 sector grid images downloaded locally as WebP (q=40) + JPEG fallback, served from assets/img/sectors/, <picture> elements with WebP+JPEG, LCP preload updated to local path
+- [x] Step 18: Accessibility fixes — contrast colors updated (#999→#595959, #C9A84C→#8B6914 on em), <main> landmark added, site-nav__tagline class, aria-hidden on decorative elements
+- [x] Step 19: PWA icons — icon-192.png and icon-512.png generated (Python), manifest updated with PNG icons for splash screen
+- [x] Step 20: SW paths made dynamic via self.registration.scope — works on both GitHub Pages (/PORTFOLIO/) and any root deployment (/)
 
 ## How to resume in a new session
 1. Open the PORTFOLIO folder in VS Code

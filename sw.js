@@ -3,7 +3,7 @@
    Strategy: Cache-first for static assets, network-first for HTML
    ============================================================ */
 
-const CACHE_NAME = 'studioweb-v1';
+const CACHE_NAME = 'studioweb-v2';
 
 const BASE = self.registration.scope;
 const STATIC_ASSETS = [

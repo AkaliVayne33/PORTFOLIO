@@ -23,18 +23,23 @@ This ensures future sessions can resume without losing context.
 PORTFOLIO/
 ├── CLAUDE.md
 ├── CONTEXT.md
-├── index.html
+├── index.html           ← homepage, fully optimised (Performance 100 desktop)
+├── manifest.json        ← PWA manifest
+├── sw.js                ← Service Worker (cache-first, dynamic scope for any host)
+├── offline.html         ← PWA offline fallback page
 ├── sport.html
 ├── immobilier.html
 ├── pharmacie.html
 ├── restaurant.html
-├── beauty.html          ← skeleton ready, mockups to build
-├── clinic.html          ← skeleton ready, mockups to build
-├── tutoring.html        ← skeleton ready, mockups to build
-├── interior.html        ← skeleton ready, mockups to build
+├── beauty.html          ← 3 full mockups done
+├── clinic.html          ← 3 full mockups done
+├── tutoring.html        ← 3 full mockups done
+├── interior.html        ← 3 full mockups done
 ├── assets/
 │   ├── css/
 │   │   ├── global.css       ← reset, CSS variables, typography, shared components
+│   │   │                       NOTE: Google Fonts loaded via <link> in HTML (non-blocking)
+│   │   │                       Critical above-the-fold CSS is inlined in index.html <style>
 │   │   ├── sport.css
 │   │   ├── immobilier.css
 │   │   ├── pharmacie.css
@@ -44,8 +49,21 @@ PORTFOLIO/
 │   │   ├── tutoring.css     ← prefixes: .tu-luxe-* / .tu-premium-* / .tu-vibrant-*
 │   │   └── interior.css     ← prefixes: .id-luxe-* / .id-premium-* / .id-vibrant-*
 │   ├── js/
-│   │   └── main.js          ← scroll animations, smooth scroll, active nav state
-│   └── img/                 ← images via Unsplash URLs or inline SVG
+│   │   └── main.js          ← scroll animations, smooth scroll, active nav state, SW registration
+│   └── img/
+│       ├── icon.svg          ← site favicon/icon
+│       ├── icon-192.png      ← PWA icon 192px
+│       ├── icon-512.png      ← PWA icon 512px (required for splash screen)
+│       ├── screenshot.svg    ← PWA install screenshot
+│       └── sectors/          ← local images for index.html sector grid
+│           ├── sport.webp / sport.jpg
+│           ├── realestate.webp / realestate.jpg
+│           ├── pharmacy.webp / pharmacy.jpg
+│           ├── restaurant.webp / restaurant.jpg
+│           ├── beauty.webp / beauty.jpg
+│           ├── clinic.webp / clinic.jpg
+│           ├── tutoring.webp / tutoring.jpg
+│           └── interior.webp / interior.jpg
 ```
 
 ## CSS conventions
@@ -102,9 +120,20 @@ Each section contains a full mockup:
 - Fake testimonial names: English-speaking (e.g. Sarah L., James T., Priya M., Aaron R.)
 - No French text anywhere in the mockups or navigation
 
+## Performance rules (index.html is the reference — do not regress)
+- Critical CSS (nav + hero) must be inlined in `<style>` in `<head>`
+- Full CSS loaded non-blocking: `<link media="print" onload="this.media='all'">`
+- Google Fonts loaded non-blocking same way (no @import in CSS)
+- JS loaded with `defer`
+- LCP image must have `fetchpriority="high"` and a `<link rel="preload">`
+- Sector grid images: local WebP via `<picture>` with JPEG fallback, `loading="lazy"` on all except first
+- All `<img>` must have explicit `width` and `height` attributes
+- Contrast ratio minimum 4.5:1 for all text (use #595959 minimum on white backgrounds)
+- All pages need a `<main>` landmark
+
 ## General rules
 - Clean, commented code (sections clearly separated by comments)
 - Each section must be independently editable
-- Unsplash image URLs must point to licence-free images relevant to the sector
+- Sector page images: Unsplash URLs are fine for inner mockup pages (not the homepage)
 - Testimonials: credible fake names, star rating, short quote
 - Never use Bootstrap or any other CSS framework
