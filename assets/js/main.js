@@ -49,7 +49,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-/* ── 3. Active nav state — highlight tag as section enters viewport ── */
+/* ── 3. Service Worker registration (PWA) ── */
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
+
+
+/* ── 4. Active nav state — highlight tag as section enters viewport ── */
+
 
 (function initActiveNav() {
   // Only runs on sector pages that have the three anchor tags

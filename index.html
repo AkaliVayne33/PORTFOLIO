@@ -4,7 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web Design Portfolio — Redesign Examples by Industry</title>
-  <meta name="description" content="Explore our web redesign examples by industry: sport, real estate, pharmacy, restaurant." />
+  <meta name="description" content="Explore our web redesign examples by industry: sport, real estate, pharmacy, restaurant, beauty, clinic, tutoring and interior design." />
+
+  <!-- ── Theme & PWA ── -->
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="StudioWeb" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="assets/img/icon.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
+
+  <!-- ── Preconnect for speed ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" />
+
+  <!-- ── Fonts ── -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" />
+
   <link rel="stylesheet" href="assets/css/global.css" />
 </head>
 <body>
@@ -19,7 +38,7 @@
 
   <!-- ══ HERO ══ -->
   <section class="home-hero">
-    <p class="home-hero__eyebrow animate-in">Web Agency — Redesign & Creation</p>
+    <p class="home-hero__eyebrow animate-in">Web Agency — Redesign &amp; Creation</p>
     <h1 class="home-hero__title animate-in">
       Your website,<br><em>reinvented.</em>
     </h1>
@@ -27,187 +46,179 @@
       Discover what your website could look like based on your industry
       and positioning. Three styles, one ambition: make you stand out.
     </p>
-    <a href="#sectors" class="animate-in" style="
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:14px 32px;
-      background:#0A0A0A;
-      color:#fff;
-      border-radius:999px;
-      font-weight:600;
-      font-size:0.95rem;
-      transition:transform 0.2s, box-shadow 0.2s;
-    "
-    onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(0,0,0,0.15)'"
-    onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"
-    >
+    <a href="#sectors" class="home-hero__cta animate-in" aria-label="Browse sector examples">
       Browse examples
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </a>
   </section>
 
   <!-- ══ SECTORS GRID ══ -->
-  <section id="sectors" class="sectors-section">
+  <section id="sectors" class="sectors-section" aria-label="Industry sectors">
     <p class="sectors-section__title animate-in">Choose your industry</p>
 
     <div class="sectors-grid">
 
       <!-- Sport -->
-      <a href="sport.html" class="sector-card animate-in">
+      <a href="sport.html" class="sector-card animate-in" aria-label="Sport industry examples">
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop"
-          alt="Sport industry"
-          loading="lazy"
+          alt="Sport gym interior"
+          width="800" height="600"
+          fetchpriority="high"
         />
-        <div class="sector-card__overlay">
+        <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Sport</span>
         </div>
-        <span class="sector-card__arrow">→</span>
+        <span class="sector-card__arrow" aria-hidden="true">→</span>
       </a>
 
       <!-- Real Estate -->
-      <a href="immobilier.html" class="sector-card animate-in">
+      <a href="immobilier.html" class="sector-card animate-in" aria-label="Real estate industry examples">
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop"
-          alt="Real estate industry"
+          alt="Modern real estate building"
+          width="800" height="600"
           loading="lazy"
         />
-        <div class="sector-card__overlay">
+        <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Real Estate</span>
         </div>
-        <span class="sector-card__arrow">→</span>
+        <span class="sector-card__arrow" aria-hidden="true">→</span>
       </a>
 
       <!-- Pharmacy -->
-      <a href="pharmacie.html" class="sector-card animate-in">
+      <a href="pharmacie.html" class="sector-card animate-in" aria-label="Pharmacy industry examples">
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&auto=format&fit=crop"
-          alt="Pharmacy industry"
+          alt="Pharmacy interior with shelves"
+          width="800" height="600"
           loading="lazy"
         />
-        <div class="sector-card__overlay">
+        <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Pharmacy</span>
         </div>
-        <span class="sector-card__arrow">→</span>
+        <span class="sector-card__arrow" aria-hidden="true">→</span>
       </a>
 
       <!-- Restaurant -->
-      <a href="restaurant.html" class="sector-card animate-in">
+      <a href="restaurant.html" class="sector-card animate-in" aria-label="Restaurant industry examples">
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop"
-          alt="Restaurant industry"
+          alt="Elegant restaurant interior"
+          width="800" height="600"
           loading="lazy"
         />
-        <div class="sector-card__overlay">
+        <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Restaurant</span>
         </div>
-        <span class="sector-card__arrow">→</span>
+        <span class="sector-card__arrow" aria-hidden="true">→</span>
       </a>
 
       <!-- Beauty & Wellness -->
-      <a href="beauty.html" class="sector-card animate-in">
+      <a href="beauty.html" class="sector-card animate-in" aria-label="Beauty and wellness industry examples">
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&auto=format&fit=crop"
-          alt="Beauty and wellness industry"
+          alt="Beauty spa treatment"
+          width="800" height="600"
           loading="lazy"
         />
-        <div class="sector-card__overlay">
+        <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
-          <span class="sector-card__name">Beauty & Wellness</span>
+          <span class="sector-card__name">Beauty &amp; Wellness</span>
         </div>
-        <span class="sector-card__arrow">→</span>
+        <span class="sector-card__arrow" aria-hidden="true">→</span>
       </a>
 
       <!-- Clinic & Dental -->
-      <a href="clinic.html" class="sector-card animate-in">
+      <a href="clinic.html" class="sector-card animate-in" aria-label="Clinic and dental industry examples">
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop"
-          alt="Clinic and dental industry"
+          alt="Modern dental clinic interior"
+          width="800" height="600"
           loading="lazy"
         />
-        <div class="sector-card__overlay">
+        <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
-          <span class="sector-card__name">Clinic & Dental</span>
+          <span class="sector-card__name">Clinic &amp; Dental</span>
         </div>
-        <span class="sector-card__arrow">→</span>
+        <span class="sector-card__arrow" aria-hidden="true">→</span>
       </a>
 
       <!-- Tutoring & Enrichment -->
-      <a href="tutoring.html" class="sector-card animate-in">
+      <a href="tutoring.html" class="sector-card animate-in" aria-label="Tutoring and enrichment industry examples">
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop"
-          alt="Tutoring and enrichment industry"
+          alt="Students studying together"
+          width="800" height="600"
           loading="lazy"
         />
-        <div class="sector-card__overlay">
+        <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
-          <span class="sector-card__name">Tutoring & Enrichment</span>
+          <span class="sector-card__name">Tutoring &amp; Enrichment</span>
         </div>
-        <span class="sector-card__arrow">→</span>
+        <span class="sector-card__arrow" aria-hidden="true">→</span>
       </a>
 
       <!-- Interior Design & Renovation -->
-      <a href="interior.html" class="sector-card animate-in">
+      <a href="interior.html" class="sector-card animate-in" aria-label="Interior design and renovation industry examples">
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&auto=format&fit=crop"
-          alt="Interior design and renovation industry"
+          alt="Modern interior design living room"
+          width="800" height="600"
           loading="lazy"
         />
-        <div class="sector-card__overlay">
+        <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Interior Design</span>
         </div>
-        <span class="sector-card__arrow">→</span>
+        <span class="sector-card__arrow" aria-hidden="true">→</span>
       </a>
 
     </div>
   </section>
 
   <!-- ══ AGENCY PITCH ══ -->
-  <section style="padding:80px 24px;background:#FAFAFA;text-align:center;">
+  <section class="pitch-section" aria-labelledby="pitch-heading">
     <div class="container">
-      <p style="font-size:0.8rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#7B2FF7;margin-bottom:16px;" class="animate-in">
-        Why choose us
-      </p>
-      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:#0A0A0A;margin-bottom:16px;line-height:1.2;" class="animate-in">
+      <p class="pitch-section__eyebrow animate-in">Why choose us</p>
+      <h2 id="pitch-heading" class="pitch-section__title animate-in">
         A website that represents you,<br>and converts.
       </h2>
-      <p style="color:#555;max-width:540px;margin:0 auto 56px;font-size:1rem;line-height:1.7;" class="animate-in">
+      <p class="pitch-section__subtitle animate-in">
         Every example below is a real preview of what we can build for you.
         Luxury, corporate or creative — you choose the vibe, we deliver the result.
       </p>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px;max-width:900px;margin:0 auto;">
+      <div class="pitch-grid">
 
-        <div class="animate-in" style="text-align:left;">
-          <div style="font-size:2rem;margin-bottom:12px;">⚡</div>
-          <h3 style="font-weight:700;margin-bottom:8px;font-size:1rem;">Fast delivery</h3>
-          <p style="color:#666;font-size:0.9rem;line-height:1.6;">Your site live in under 2 weeks, fully ready to go.</p>
+        <div class="pitch-card animate-in">
+          <div class="pitch-card__icon" aria-hidden="true">⚡</div>
+          <h3 class="pitch-card__title">Fast delivery</h3>
+          <p class="pitch-card__desc">Your site live in under 2 weeks, fully ready to go.</p>
         </div>
 
-        <div class="animate-in" style="text-align:left;">
-          <div style="font-size:2rem;margin-bottom:12px;">🎨</div>
-          <h3 style="font-weight:700;margin-bottom:8px;font-size:1rem;">Bespoke design</h3>
-          <p style="color:#666;font-size:0.9rem;line-height:1.6;">No templates — every site is unique and tailored to your industry.</p>
+        <div class="pitch-card animate-in">
+          <div class="pitch-card__icon" aria-hidden="true">🎨</div>
+          <h3 class="pitch-card__title">Bespoke design</h3>
+          <p class="pitch-card__desc">No templates — every site is unique and tailored to your industry.</p>
         </div>
 
-        <div class="animate-in" style="text-align:left;">
-          <div style="font-size:2rem;margin-bottom:12px;">📱</div>
-          <h3 style="font-weight:700;margin-bottom:8px;font-size:1rem;">100% responsive</h3>
-          <p style="color:#666;font-size:0.9rem;line-height:1.6;">Optimised for mobile, tablet and desktop. Fast and accessible.</p>
+        <div class="pitch-card animate-in">
+          <div class="pitch-card__icon" aria-hidden="true">📱</div>
+          <h3 class="pitch-card__title">100% responsive</h3>
+          <p class="pitch-card__desc">Optimised for mobile, tablet and desktop. Fast and accessible.</p>
         </div>
 
       </div>
@@ -215,26 +226,10 @@
   </section>
 
   <!-- ══ FINAL CTA ══ -->
-  <section style="padding:80px 24px;background:#0A0A0A;text-align:center;">
-    <p style="font-size:0.8rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#C9A84C;margin-bottom:16px;" class="animate-in">
-      Ready to start?
-    </p>
-    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:#fff;margin-bottom:24px;" class="animate-in">
-      Let's talk about your project.
-    </h2>
-    <a href="mailto:marvin.selftsick@gmail.com" class="animate-in" style="
-      display:inline-block;
-      padding:16px 40px;
-      background:linear-gradient(90deg,#7B2FF7,#F107A3);
-      color:#fff;
-      border-radius:999px;
-      font-weight:700;
-      font-size:1rem;
-      transition:transform 0.2s,box-shadow 0.2s;
-    "
-    onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(123,47,247,0.4)'"
-    onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'"
-    >
+  <section class="home-cta" aria-labelledby="cta-heading">
+    <p class="home-cta__eyebrow animate-in">Ready to start?</p>
+    <h2 id="cta-heading" class="home-cta__title animate-in">Let's talk about your project.</h2>
+    <a href="mailto:marvin.selftsick@gmail.com" class="home-cta__btn animate-in">
       Get in touch →
     </a>
   </section>

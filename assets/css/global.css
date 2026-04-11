@@ -379,6 +379,127 @@ ul {
   margin: 0 auto;
 }
 
+/* ── Hero CTA button ── */
+.home-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: #0A0A0A;
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.home-hero__cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Agency pitch section ── */
+.pitch-section {
+  padding: 80px 24px;
+  background: #FAFAFA;
+  text-align: center;
+}
+
+.pitch-section__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7B2FF7;
+  margin-bottom: 16px;
+}
+
+.pitch-section__title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #0A0A0A;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.pitch-section__subtitle {
+  color: #555;
+  max-width: 540px;
+  margin: 0 auto 56px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.pitch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pitch-card {
+  text-align: left;
+}
+
+.pitch-card__icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.pitch-card__title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.pitch-card__desc {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ── Final CTA section ── */
+.home-cta {
+  padding: 80px 24px;
+  background: #0A0A0A;
+  text-align: center;
+}
+
+.home-cta__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #C9A84C;
+  margin-bottom: 16px;
+}
+
+.home-cta__title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+}
+
+.home-cta__btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: linear-gradient(90deg, #7B2FF7, #F107A3);
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.home-cta__btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(123, 47, 247, 0.4);
+}
+
 /* ── Footer accueil ── */
 .home-footer {
   text-align: center;

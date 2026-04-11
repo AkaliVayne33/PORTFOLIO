@@ -18,10 +18,10 @@ Fake names in testimonials must be English-speaking (Sarah L., James T., Priya M
 | /immobilier | immobilier.html | ✅ Done |
 | /pharmacie | pharmacie.html | ✅ Done |
 | /restaurant | restaurant.html | ✅ Done |
-| /beauty | beauty.html | 🔲 Skeleton only — mockups to build |
-| /clinic | clinic.html | 🔲 Skeleton only — mockups to build |
-| /tutoring | tutoring.html | 🔲 Skeleton only — mockups to build |
-| /interior | interior.html | 🔲 Skeleton only — mockups to build |
+| /beauty | beauty.html | ✅ Done |
+| /clinic | clinic.html | ✅ Done |
+| /tutoring | tutoring.html | ✅ Done |
+| /interior | interior.html | ✅ Done |
 
 ## Sector page structure
 Each sector page (sport, immobilier, pharmacie, restaurant) contains:
@@ -145,6 +145,8 @@ Each mockup contains:
 - [x] Step 10: clinic.html + clinic.css — 3 full mockups (THE PARAGON CLINIC / SMILECARE DENTAL / MEDIPOINT)
 - [x] Step 11: tutoring.html + tutoring.css — 3 full mockups (ATHENA ACADEMY / SMARTPATH EDUCATION / SPARK LABS)
 - [x] Step 12: interior.html + interior.css — 3 full mockups (MAISON ATELIER / LIVSPACE PRO / FORM & FLUX)
+- [x] Step 13: PWA setup — manifest.json + sw.js + service worker registration in main.js
+- [x] Step 14: Performance pass — preconnect hints, fetchpriority on LCP image, width/height on all images, inline styles moved to CSS classes, ARIA labels added
 
 ## How to resume in a new session
 1. Open the PORTFOLIO folder in VS Code
