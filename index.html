@@ -21,8 +21,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://images.unsplash.com" />
 
-  <!-- ── Fonts ── -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" />
+  <!-- ── Fonts (non-blocking) ── -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" /></noscript>
 
   <link rel="stylesheet" href="assets/css/global.css" />
 </head>
@@ -31,8 +32,8 @@
   <!-- ══ NAVIGATION ══ -->
   <nav class="site-nav" aria-label="Main navigation">
     <div class="site-nav__inner">
-      <span class="site-nav__logo">Studio<span>Web</span></span>
-      <span style="font-size:0.8rem;color:#999;font-weight:500;">Redesign Examples</span>
+      <span class="site-nav__logo" role="img" aria-label="StudioWeb">Studio<span aria-hidden="true">Web</span></span>
+      <span class="site-nav__tagline">Redesign Examples</span>
     </div>
   </nav>
 
@@ -63,6 +64,9 @@
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop"
+          srcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&auto=format&fit=crop 400w,
+                  https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop 800w"
+          sizes="(max-width: 600px) 100vw, 50vw"
           alt="Sport gym interior"
           width="800" height="600"
           fetchpriority="high"
@@ -79,6 +83,9 @@
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop"
+          srcset="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&auto=format&fit=crop 400w,
+                  https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop 800w"
+          sizes="(max-width: 600px) 100vw, 50vw"
           alt="Modern real estate building"
           width="800" height="600"
           loading="lazy"
@@ -95,6 +102,9 @@
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&auto=format&fit=crop"
+          srcset="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&auto=format&fit=crop 400w,
+                  https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&auto=format&fit=crop 800w"
+          sizes="(max-width: 600px) 100vw, 50vw"
           alt="Pharmacy interior with shelves"
           width="800" height="600"
           loading="lazy"
@@ -111,6 +121,9 @@
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop"
+          srcset="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&auto=format&fit=crop 400w,
+                  https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop 800w"
+          sizes="(max-width: 600px) 100vw, 50vw"
           alt="Elegant restaurant interior"
           width="800" height="600"
           loading="lazy"
@@ -127,6 +140,9 @@
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&auto=format&fit=crop"
+          srcset="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&auto=format&fit=crop 400w,
+                  https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&auto=format&fit=crop 800w"
+          sizes="(max-width: 600px) 100vw, 50vw"
           alt="Beauty spa treatment"
           width="800" height="600"
           loading="lazy"
@@ -143,6 +159,9 @@
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop"
+          srcset="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&auto=format&fit=crop 400w,
+                  https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&auto=format&fit=crop 800w"
+          sizes="(max-width: 600px) 100vw, 50vw"
           alt="Modern dental clinic interior"
           width="800" height="600"
           loading="lazy"
@@ -159,6 +178,9 @@
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop"
+          srcset="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&auto=format&fit=crop 400w,
+                  https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop 800w"
+          sizes="(max-width: 600px) 100vw, 50vw"
           alt="Students studying together"
           width="800" height="600"
           loading="lazy"
@@ -175,6 +197,9 @@
         <img
           class="sector-card__img"
           src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&auto=format&fit=crop"
+          srcset="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&auto=format&fit=crop 400w,
+                  https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&auto=format&fit=crop 800w"
+          sizes="(max-width: 600px) 100vw, 50vw"
           alt="Modern interior design living room"
           width="800" height="600"
           loading="lazy"
