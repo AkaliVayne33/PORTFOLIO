@@ -19,15 +19,9 @@
   <!-- ── Preconnect for speed ── -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://images.unsplash.com" />
 
   <!-- ── LCP image preload ── -->
-  <link rel="preload" as="image"
-    href="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop"
-    imagesrcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&auto=format&fit=crop 400w,
-                 https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop 800w"
-    imagesizes="(max-width: 600px) 100vw, 50vw"
-  />
+  <link rel="preload" as="image" href="assets/img/sectors/sport.webp" type="image/webp" />
 
   <!-- ── Fonts (non-blocking) ── -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;600;800&family=DM+Sans:wght@400;500;700&display=swap" media="print" onload="this.media='all'" />
@@ -96,16 +90,10 @@
 
       <!-- Sport -->
       <a href="sport.html" class="sector-card animate-in" aria-label="Sport industry examples">
-        <img
-          class="sector-card__img"
-          src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop"
-          srcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&auto=format&fit=crop 400w,
-                  https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop 800w"
-          sizes="(max-width: 600px) 100vw, 50vw"
-          alt="Sport gym interior"
-          width="800" height="600"
-          fetchpriority="high"
-        />
+        <picture>
+          <source srcset="assets/img/sectors/sport.webp" type="image/webp" />
+          <img class="sector-card__img" src="assets/img/sectors/sport.jpg" alt="Sport gym interior" width="600" height="450" fetchpriority="high" />
+        </picture>
         <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Sport</span>
@@ -115,16 +103,10 @@
 
       <!-- Real Estate -->
       <a href="immobilier.html" class="sector-card animate-in" aria-label="Real estate industry examples">
-        <img
-          class="sector-card__img"
-          src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&auto=format&fit=crop&q=65"
-          srcset="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&auto=format&fit=crop&q=65 400w,
-                  https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&auto=format&fit=crop&q=65 600w"
-          sizes="(max-width: 600px) 100vw, 50vw"
-          alt="Modern real estate building"
-          width="800" height="600"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="assets/img/sectors/realestate.webp" type="image/webp" />
+          <img class="sector-card__img" src="assets/img/sectors/realestate.jpg" alt="Modern real estate building" width="600" height="450" loading="lazy" />
+        </picture>
         <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Real Estate</span>
@@ -134,16 +116,10 @@
 
       <!-- Pharmacy -->
       <a href="pharmacie.html" class="sector-card animate-in" aria-label="Pharmacy industry examples">
-        <img
-          class="sector-card__img"
-          src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600&auto=format&fit=crop&q=65"
-          srcset="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=400&auto=format&fit=crop&q=65 400w,
-                  https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600&auto=format&fit=crop&q=65 600w"
-          sizes="(max-width: 600px) 100vw, 50vw"
-          alt="Pharmacy interior with shelves"
-          width="800" height="600"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="assets/img/sectors/pharmacy.webp" type="image/webp" />
+          <img class="sector-card__img" src="assets/img/sectors/pharmacy.jpg" alt="Pharmacy interior with shelves" width="600" height="450" loading="lazy" />
+        </picture>
         <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Pharmacy</span>
@@ -153,16 +129,10 @@
 
       <!-- Restaurant -->
       <a href="restaurant.html" class="sector-card animate-in" aria-label="Restaurant industry examples">
-        <img
-          class="sector-card__img"
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=65"
-          srcset="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&auto=format&fit=crop&q=65 400w,
-                  https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=65 600w"
-          sizes="(max-width: 600px) 100vw, 50vw"
-          alt="Elegant restaurant interior"
-          width="800" height="600"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="assets/img/sectors/restaurant.webp" type="image/webp" />
+          <img class="sector-card__img" src="assets/img/sectors/restaurant.jpg" alt="Elegant restaurant interior" width="600" height="450" loading="lazy" />
+        </picture>
         <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Restaurant</span>
@@ -172,16 +142,10 @@
 
       <!-- Beauty & Wellness -->
       <a href="beauty.html" class="sector-card animate-in" aria-label="Beauty and wellness industry examples">
-        <img
-          class="sector-card__img"
-          src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=65"
-          srcset="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&auto=format&fit=crop&q=65 400w,
-                  https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=65 600w"
-          sizes="(max-width: 600px) 100vw, 50vw"
-          alt="Beauty spa treatment"
-          width="800" height="600"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="assets/img/sectors/beauty.webp" type="image/webp" />
+          <img class="sector-card__img" src="assets/img/sectors/beauty.jpg" alt="Beauty spa treatment" width="600" height="450" loading="lazy" />
+        </picture>
         <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Beauty &amp; Wellness</span>
@@ -191,16 +155,10 @@
 
       <!-- Clinic & Dental -->
       <a href="clinic.html" class="sector-card animate-in" aria-label="Clinic and dental industry examples">
-        <img
-          class="sector-card__img"
-          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop&q=65"
-          srcset="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&auto=format&fit=crop&q=65 400w,
-                  https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop&q=65 600w"
-          sizes="(max-width: 600px) 100vw, 50vw"
-          alt="Modern dental clinic interior"
-          width="800" height="600"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="assets/img/sectors/clinic.webp" type="image/webp" />
+          <img class="sector-card__img" src="assets/img/sectors/clinic.jpg" alt="Modern dental clinic interior" width="600" height="450" loading="lazy" />
+        </picture>
         <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Clinic &amp; Dental</span>
@@ -210,16 +168,10 @@
 
       <!-- Tutoring & Enrichment -->
       <a href="tutoring.html" class="sector-card animate-in" aria-label="Tutoring and enrichment industry examples">
-        <img
-          class="sector-card__img"
-          src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&auto=format&fit=crop&q=65"
-          srcset="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&auto=format&fit=crop&q=65 400w,
-                  https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&auto=format&fit=crop&q=65 600w"
-          sizes="(max-width: 600px) 100vw, 50vw"
-          alt="Students studying together"
-          width="800" height="600"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="assets/img/sectors/tutoring.webp" type="image/webp" />
+          <img class="sector-card__img" src="assets/img/sectors/tutoring.jpg" alt="Students studying together" width="600" height="450" loading="lazy" />
+        </picture>
         <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Tutoring &amp; Enrichment</span>
@@ -229,16 +181,10 @@
 
       <!-- Interior Design & Renovation -->
       <a href="interior.html" class="sector-card animate-in" aria-label="Interior design and renovation industry examples">
-        <img
-          class="sector-card__img"
-          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&auto=format&fit=crop&q=65"
-          srcset="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&auto=format&fit=crop&q=65 400w,
-                  https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&auto=format&fit=crop&q=65 600w"
-          sizes="(max-width: 600px) 100vw, 50vw"
-          alt="Modern interior design living room"
-          width="800" height="600"
-          loading="lazy"
-        />
+        <picture>
+          <source srcset="assets/img/sectors/interior.webp" type="image/webp" />
+          <img class="sector-card__img" src="assets/img/sectors/interior.jpg" alt="Modern interior design living room" width="600" height="450" loading="lazy" />
+        </picture>
         <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
           <span class="sector-card__name">Interior Design</span>
