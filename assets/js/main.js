@@ -95,7 +95,8 @@ if ('serviceWorker' in navigator) {
     return activeId;
   }
 
-  setActive(getActiveSection());
+  // Set initial active state without any geometry read — user always starts at top
+  setActive(sections[0].id);
 
   // Update on scroll (throttled with requestAnimationFrame)
   let ticking = false;
