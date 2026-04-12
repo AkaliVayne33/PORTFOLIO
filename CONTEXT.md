@@ -169,9 +169,25 @@ Each mockup contains:
 - [x] Step 34: pharmacie.css + pharmacie.html — contrast: #00B4A6 on white/light bg (nav logo span, services tag, temoignages tag) →#006B6B; avatar text #00B4A6 on #006B6B bg →#fff; stars #F59E0B→#92600A; CLS: preload fetchpriority="high", site-nav__links tags + ph-luxe-nav__cta in inline CSS, will-change:transform on LCP img
 - [x] Step 35: restaurant.css + restaurant.html — contrast: luxe temo eyebrow/author #6B4E1A/#8B6914 on dark #1A1108 bg →#C9A97A; CTA em #8B6914 on #FAF6F0 →#7A5500; footer links hover #6B4E1A on dark →#C9A97A; premium nav span/services tag/temo tag #E8C547 on white/light bg →#7A5F00; stars #F59E0B→#92600A; CLS: preload fetchpriority="high", hero 92svh+max-height:900px, site-nav__links tags + rs-luxe-nav__cta in inline CSS, will-change:transform on LCP img
 
+- [x] Step 36: sport.css contrast — luxe-footer__links + luxe-footer__copy opacity 0.4/0.3→0.65 on #0A0A0A; luxe-service-card__num rgba(gold,0.3)→#7A5500 on #FAFAFA
+- [x] Step 37: pharmacie.css contrast — ph-luxe-nav__cta + ph-luxe-hero__eyebrow #4A8C6F→#2D6B52 on #F9F7F4; footer links + copy opacity→0.65 on #1C1C1C
+- [x] Step 38: restaurant.css contrast — rs-luxe-strip__item + footer links + copy opacity→0.65 on #1A1108
+- [x] Step 39: main.js forced reflow fix — replaced offsetHeight/offsetTop batch RAF with lazy getBoundingClientRect() on scroll only; init active state set directly to sections[0].id (no geometry read at load)
+- [x] Step 40: sport.html CLS fix — style="" inline on <section class="luxe-hero"> and <img class="luxe-hero__img">; luxe-hero__title em inlined in critical CSS
+- [x] Step 41: restaurant.html CLS fix — style="" on <section> + <img>; overlay moved from div/::after to ::before defined in inline <style>; image optimised w=1100&q=50
+- [x] Step 42: pharmacie.html CLS fix — style="" on <section class="ph-luxe-hero">, <div class="ph-luxe-hero__right">, <img>
+- [x] Step 43: tutoring.html CLS fix — style="" on <section class="tu-luxe-hero">, <div class="tu-luxe-hero__right">, <img>
+
+## CLS pattern (rule for all pages)
+- For full-bleed hero (position:absolute img): add style="" on <section> with height/overflow/display, and style="" on <img> with position/inset/object-fit/filter/will-change
+- For split-grid hero (2-col grid): add style="" on <section> with display:grid/grid-template-columns/height, style="" on __right div with overflow/position, style="" on <img> with width/height/object-fit
+- Pseudo-elements (::before/::after) defined in inline <style> do NOT cause CLS — they only exist once CSS is parsed, so no pre-CSS state to shift from
+- style="" attribute on an element is applied at HTML parse time — before any <style> block — so it prevents the "unstyled → styled" shift window
+
 ## Known remaining issues (as of session end)
-- All 8 sector pages have been audited and contrast + CLS fixes applied. No known remaining WCAG AA failures.
-- A final Lighthouse pass on all 8 pages is recommended to confirm 100 Accessibility score across the board.
+- sport, restaurant, pharmacie, tutoring: CLS fixed via style="" attributes. Remaining pages (immobilier, beauty, clinic, interior) not yet audited for this specific pattern — run Lighthouse to check.
+- The [non attribué] forced reflow (30–90ms) on all sector pages is incompressible — it's the browser recalculating layout when deferred CSS loads. Not scored by Lighthouse.
+- A final Lighthouse pass on all pages is recommended to confirm 100 Accessibility + maximum Performance scores.
 
 ## How to resume in a new session
 1. Open the PORTFOLIO folder in VS Code
