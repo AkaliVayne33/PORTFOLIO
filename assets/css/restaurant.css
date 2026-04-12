@@ -85,7 +85,7 @@
   justify-content: center;
   gap: 48px;
 }
-.rs-luxe-strip__item { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(250,246,240,0.45); font-weight: 300; }
+.rs-luxe-strip__item { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(250,246,240,0.65); font-weight: 300; } /* raised 0.45→0.65 on #1A1108 (~5:1) */
 .rs-luxe-strip__dot { width: 3px; height: 3px; border-radius: 50%; background: #8C6D3F; }
 
 /* Services */
@@ -122,9 +122,9 @@
 .rs-luxe-footer { padding: 40px 64px; background: #1A1108; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(140,109,63,0.2); }
 .rs-luxe-footer__logo { font-family: Georgia,'Times New Roman',serif; font-size: 0.85rem; letter-spacing: 4px; text-transform: uppercase; color: #FAF6F0; }
 .rs-luxe-footer__links { display: flex; gap: 32px; }
-.rs-luxe-footer__links a { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(250,246,240,0.3); transition: color 0.3s; }
+.rs-luxe-footer__links a { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(250,246,240,0.65); transition: color 0.3s; } /* raised 0.3→0.65 on #1A1108 (~5:1) */
 .rs-luxe-footer__links a:hover { color: #C9A97A; } /* on dark #1A1108 bg — ratio ≈8:1 */
-.rs-luxe-footer__copy { font-size: 0.68rem; color: rgba(250,246,240,0.2); letter-spacing: 1px; }
+.rs-luxe-footer__copy { font-size: 0.68rem; color: rgba(250,246,240,0.65); letter-spacing: 1px; } /* raised 0.2→0.65 on #1A1108 (~5:1) */
 
 /* ══════════════════════════════════════════════
    #PREMIUM — BRASSERIE CENTRALE
