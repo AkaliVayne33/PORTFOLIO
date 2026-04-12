@@ -54,11 +54,12 @@
   filter: brightness(0.5) saturate(0.9);
   will-change: transform;
 }
-/* Subtle warm vignette */
-.rs-luxe-hero::after {
-  content: '';
+/* Warm vignette overlay — real div (not ::after) to avoid CLS on deferred CSS load */
+.rs-luxe-hero__overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(26,17,8,0.85) 0%, transparent 55%);
+  pointer-events: none;
+  z-index: 0;
 }
 .rs-luxe-hero__content {
   position: relative; z-index: 1;
