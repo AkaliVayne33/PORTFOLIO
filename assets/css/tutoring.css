@@ -47,7 +47,7 @@
 .tu-luxe-nav__cta:hover { background: #C9A84C; color: #fff; }
 
 /* Hero — split */
-.tu-luxe-hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 88vh; }
+.tu-luxe-hero { display: grid; grid-template-columns: 1fr 1fr; height: 88svh; max-height: 900px; }
 
 .tu-luxe-hero__left {
   background: #F7F5EE;
@@ -539,7 +539,7 @@
 }
 
 @media (max-width: 480px) {
-  .tu-luxe-hero { min-height: auto; }
+  .tu-luxe-hero { height: auto; min-height: 520px; max-height: none; }
   .tu-luxe-hero__title { font-size: 2.2rem; }
   .tu-premium-hero__title { font-size: 2rem; }
   .tu-vibrant-hero__title { font-size: 2.4rem; }

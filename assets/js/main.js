@@ -7,22 +7,24 @@
 const animateEls = document.querySelectorAll('.animate-in');
 
 const scrollObserver = new IntersectionObserver((entries) => {
-  // Group entries by their closest parent section so siblings
-  // inside the same block stagger relative to each other.
+  // Batch all DOM reads first, then schedule writes — avoids forced reflow
+  const toAnimate = [];
+
   entries.forEach((entry) => {
     if (!entry.isIntersecting) return;
 
-    // Find the element's stagger index among visible siblings
+    // Read: find stagger index (pure read, no write yet)
     const siblings = Array.from(
       (entry.target.parentElement || document).querySelectorAll('.animate-in')
     );
     const idx = siblings.indexOf(entry.target);
-
-    setTimeout(() => {
-      entry.target.classList.add('visible');
-    }, idx * 90); // 90 ms between each sibling
-
+    toAnimate.push({ el: entry.target, idx });
     scrollObserver.unobserve(entry.target);
+  });
+
+  // Write: schedule classList changes after all reads are done
+  toAnimate.forEach(({ el, idx }) => {
+    setTimeout(() => el.classList.add('visible'), idx * 90);
   });
 }, {
   threshold: 0.12,
