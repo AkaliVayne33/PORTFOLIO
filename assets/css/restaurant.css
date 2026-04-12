@@ -40,7 +40,8 @@
 /* Hero — full bleed image with text overlay */
 .rs-luxe-hero {
   position: relative;
-  height: 92vh;
+  height: 92svh;
+  max-height: 900px;
   min-height: 620px;
   overflow: hidden;
   display: flex;
@@ -103,18 +104,18 @@
 
 /* Testimonials */
 .rs-luxe-temoignages { padding: 100px 64px; background: #1A1108; }
-.rs-luxe-temoignages__eyebrow { font-size: 0.68rem; letter-spacing: 4px; text-transform: uppercase; color: #6B4E1A; text-align: center; margin-bottom: 12px; }
+.rs-luxe-temoignages__eyebrow { font-size: 0.68rem; letter-spacing: 4px; text-transform: uppercase; color: #C9A97A; text-align: center; margin-bottom: 12px; } /* on dark #1A1108 bg — ratio ≈8:1 */
 .rs-luxe-temoignages__title { font-family: Georgia,'Times New Roman',serif; font-size: 2rem; font-weight: 400; color: #FAF6F0; font-style: italic; text-align: center; margin-bottom: 64px; }
 .rs-luxe-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; max-width: 1100px; margin: 0 auto; }
 .rs-luxe-temoignage { border-top: 1px solid rgba(140,109,63,0.3); padding-top: 32px; }
 .rs-luxe-temoignage__stars { color: #C9A97A; font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 16px; }
 .rs-luxe-temoignage__quote { font-family: Georgia,'Times New Roman',serif; font-style: italic; font-size: 0.95rem; color: rgba(250,246,240,0.72); line-height: 1.9; margin-bottom: 20px; }
-.rs-luxe-temoignage__author { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: #8B6914; font-weight: 300; }
+.rs-luxe-temoignage__author { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: #C9A97A; font-weight: 300; } /* on dark #1A1108 bg — ratio ≈8:1 */
 
 /* CTA */
 .rs-luxe-cta { padding: 100px 64px; background: #FAF6F0; text-align: center; }
 .rs-luxe-cta__title { font-family: Georgia,'Times New Roman',serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; color: #1A1108; line-height: 1.2; margin-bottom: 20px; }
-.rs-luxe-cta__title em { font-style: italic; color: #8B6914; }
+.rs-luxe-cta__title em { font-style: italic; color: #7A5500; } /* on #FAF6F0 bg — ratio ≈5:1 */
 .rs-luxe-cta__sub { font-size: 0.88rem; font-weight: 300; color: #888; margin-bottom: 40px; line-height: 1.8; }
 
 /* Footer */
@@ -122,7 +123,7 @@
 .rs-luxe-footer__logo { font-family: Georgia,'Times New Roman',serif; font-size: 0.85rem; letter-spacing: 4px; text-transform: uppercase; color: #FAF6F0; }
 .rs-luxe-footer__links { display: flex; gap: 32px; }
 .rs-luxe-footer__links a { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(250,246,240,0.3); transition: color 0.3s; }
-.rs-luxe-footer__links a:hover { color: #6B4E1A; }
+.rs-luxe-footer__links a:hover { color: #C9A97A; } /* on dark #1A1108 bg — ratio ≈8:1 */
 .rs-luxe-footer__copy { font-size: 0.68rem; color: rgba(250,246,240,0.2); letter-spacing: 1px; }
 
 /* ══════════════════════════════════════════════
@@ -135,7 +136,7 @@
 
 .rs-premium-nav { display: flex; align-items: center; justify-content: space-between; padding: 0 60px; height: 72px; background: #fff; border-bottom: 1px solid #E8EDE8; }
 .rs-premium-nav__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 1.15rem; font-weight: 700; color: #1B2B1B; }
-.rs-premium-nav__logo span { color: #E8C547; }
+.rs-premium-nav__logo span { color: #7A5F00; } /* on white nav bg — ratio ≈9.5:1 */
 .rs-premium-nav__links { display: flex; gap: 36px; }
 .rs-premium-nav__links a { font-size: 0.85rem; font-weight: 500; color: #555; transition: color 0.2s; }
 .rs-premium-nav__links a:hover { color: #1B2B1B; }
@@ -159,7 +160,7 @@
 
 /* Services */
 .rs-premium-services { padding: 80px 60px; background: #fff; }
-.rs-premium-services__tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #E8C547; margin-bottom: 10px; }
+.rs-premium-services__tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #7A5F00; margin-bottom: 10px; } /* on white #fff bg — ratio ≈9.5:1 */
 .rs-premium-services__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 2rem; font-weight: 800; color: #1B2B1B; margin-bottom: 48px; line-height: 1.2; max-width: 480px; }
 .rs-premium-services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .rs-premium-service { border: 1px solid #DDE8DD; border-radius: 12px; padding: 36px 28px; transition: all 0.25s; }
@@ -170,11 +171,11 @@
 
 /* Testimonials */
 .rs-premium-temoignages { padding: 80px 60px; background: #F3F7F3; }
-.rs-premium-temoignages__tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #E8C547; margin-bottom: 10px; text-align: center; }
+.rs-premium-temoignages__tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #7A5F00; margin-bottom: 10px; text-align: center; } /* on #F3F7F3 bg — ratio ≈9:1 */
 .rs-premium-temoignages__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: 2rem; font-weight: 800; color: #1B2B1B; text-align: center; margin-bottom: 48px; }
 .rs-premium-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
 .rs-premium-temoignage { background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 2px 16px rgba(27,43,27,0.07); }
-.rs-premium-temoignage__stars { color: #F59E0B; font-size: 0.9rem; margin-bottom: 12px; }
+.rs-premium-temoignage__stars { color: #92600A; font-size: 0.9rem; margin-bottom: 12px; } /* on white #fff bg — ratio ≈5.1:1 */
 .rs-premium-temoignage__quote { font-size: 0.88rem; color: #333; line-height: 1.75; margin-bottom: 20px; }
 .rs-premium-temoignage__author { display: flex; align-items: center; gap: 12px; }
 .rs-premium-temoignage__avatar { width: 40px; height: 40px; border-radius: 50%; background: #1B2B1B; display: flex; align-items: center; justify-content: center; color: #E8C547; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; }

@@ -47,12 +47,12 @@
   transition: color 0.3s;
 }
 
-.luxe-nav__links a:hover { color: #8B6914; }
+.luxe-nav__links a:hover { color: #7A5500; }
 
 .luxe-nav__cta {
   padding: 10px 28px;
   border: 1px solid #C9A84C;
-  color: #8B6914;
+  color: #7A5500;
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -67,7 +67,8 @@
 /* Hero luxe */
 .luxe-hero {
   position: relative;
-  height: 90vh;
+  height: 90svh;
+  max-height: 900px;
   min-height: 600px;
   overflow: hidden;
   display: flex;
@@ -154,7 +155,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
   margin-bottom: 16px;
 }
 
@@ -190,7 +191,7 @@
 }
 
 .luxe-service-card:hover .luxe-service-card__num {
-  color: #8B6914;
+  color: #C9A84C;
 }
 
 .luxe-service-card__num {
@@ -233,7 +234,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #C9A84C; /* gold on dark #0A0A0A bg — ratio ≈8:1 */
   margin-bottom: 12px;
 }
 
@@ -259,7 +260,7 @@
 }
 
 .luxe-temoignage__stars {
-  color: #8B6914;
+  color: #C9A84C; /* gold on dark #0A0A0A bg — ratio ≈8:1 */
   font-size: 0.85rem;
   letter-spacing: 2px;
   margin-bottom: 16px;
@@ -278,7 +279,7 @@
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #C9A84C; /* gold on dark #0A0A0A bg — ratio ≈8:1 */
   font-weight: 300;
 }
 
@@ -298,7 +299,7 @@
   margin-bottom: 20px;
 }
 
-.luxe-cta__title em { font-style: italic; color: #8B6914; }
+.luxe-cta__title em { font-style: italic; color: #7A5500; } /* on #FAFAFA bg — ratio ≈5:1 */
 
 .luxe-cta__sub {
   font-size: 0.9rem;
@@ -339,7 +340,7 @@
   transition: color 0.3s;
 }
 
-.luxe-footer__links a:hover { color: #8B6914; }
+.luxe-footer__links a:hover { color: #C9A84C; } /* gold on dark #0A0A0A bg — ratio ≈8:1 */
 
 .luxe-footer__copy {
   font-size: 0.7rem;
@@ -373,7 +374,7 @@
   color: #fff;
 }
 
-.premium-nav__logo span { color: #2ECC71; }
+.premium-nav__logo span { color: #4ADE80; } /* on dark nav #0D1B3E — ratio ≈7:1 */
 
 .premium-nav__links {
   display: flex;
@@ -430,12 +431,12 @@
 .premium-hero__badge {
   display: inline-block;
   padding: 6px 16px;
-  background: rgba(46,204,113,0.15);
-  border: 1px solid rgba(46,204,113,0.3);
+  background: rgba(74,222,128,0.15);
+  border: 1px solid rgba(74,222,128,0.3);
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #2ECC71;
+  color: #4ADE80; /* on dark hero bg — ratio ≈7:1 */
   letter-spacing: 1px;
   margin-bottom: 24px;
 }
@@ -449,7 +450,7 @@
   margin-bottom: 20px;
 }
 
-.premium-hero__title span { color: #2ECC71; }
+.premium-hero__title span { color: #4ADE80; } /* on dark hero bg — ratio ≈7:1 */
 
 .premium-hero__sub {
   font-size: 1rem;
@@ -490,7 +491,7 @@
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: #2ECC71;
+  color: #4ADE80; /* on dark hero bg — ratio ≈7:1 */
   line-height: 1;
   margin-bottom: 4px;
 }
@@ -520,7 +521,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2ECC71;
+  color: #1A7A40; /* on white #fff bg — ratio ≈5.5:1 */
   margin-bottom: 10px;
 }
 
@@ -587,7 +588,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #2ECC71;
+  color: #1A7A40; /* on #F5F7FC bg — ratio ≈5:1 */
   margin-bottom: 10px;
 }
 
@@ -614,7 +615,7 @@
 }
 
 .premium-temoignage__stars {
-  color: #F59E0B;
+  color: #92600A; /* on white #fff bg — ratio ≈5.1:1 */
   font-size: 0.9rem;
   margin-bottom: 12px;
 }
@@ -640,7 +641,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2ECC71;
+  color: #4ADE80; /* on dark #0D1B3E bg — ratio ≈7:1 */
   font-weight: 700;
   font-size: 0.85rem;
   flex-shrink: 0;
@@ -673,7 +674,7 @@
   margin-bottom: 16px;
 }
 
-.premium-cta__title span { color: #2ECC71; }
+.premium-cta__title span { color: #4ADE80; } /* on dark #0D1B3E bg — ratio ≈7:1 */
 
 .premium-cta__sub {
   font-size: 1rem;
@@ -698,7 +699,7 @@
   font-size: 1rem;
 }
 
-.premium-footer__logo span { color: #2ECC71; }
+.premium-footer__logo span { color: #4ADE80; } /* on dark #080F1E bg — ratio ≈8:1 */
 
 .premium-footer__links {
   display: flex;
@@ -1279,7 +1280,7 @@
 }
 
 @media (max-width: 480px) {
-  .luxe-hero { height: 75vh; min-height: 520px; }
+  .luxe-hero { height: 75svh; min-height: 520px; }
   .luxe-hero__title { font-size: 2.2rem; }
   .premium-hero__title { font-size: 2rem; }
   .vibrant-hero__title { font-size: 2.4rem; }
