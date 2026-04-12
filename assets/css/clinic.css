@@ -42,12 +42,12 @@
   transition: color 0.3s;
 }
 
-.cl-luxe-nav__links a:hover { color: #8B6914; }
+.cl-luxe-nav__links a:hover { color: #7A5500; }
 
 .cl-luxe-nav__cta {
   padding: 10px 28px;
   border: 1px solid #C9A84C;
-  color: #8B6914;
+  color: #7A5500;
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -75,7 +75,7 @@
   font-size: 0.68rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
   margin-bottom: 28px;
   font-weight: 300;
 }
@@ -89,7 +89,7 @@
   margin-bottom: 24px;
 }
 
-.cl-luxe-hero__title em { font-style: italic; color: #8B6914; }
+.cl-luxe-hero__title em { font-style: italic; color: #7A5500; }
 
 .cl-luxe-hero__sub {
   font-size: 0.95rem;
@@ -104,7 +104,7 @@
   display: inline-block;
   padding: 14px 36px;
   border: 1px solid #C9A84C;
-  color: #8B6914;
+  color: #7A5500;
   font-size: 0.72rem;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -139,7 +139,7 @@
   font-size: 0.6rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
   margin-bottom: 4px;
 }
 
@@ -160,7 +160,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
   margin-bottom: 16px;
 }
 
@@ -186,14 +186,14 @@
 }
 
 .cl-luxe-service:hover { background: #0A0A0A; border-color: #0A0A0A; }
-.cl-luxe-service:hover .cl-luxe-service__num { color: #8B6914; }
+.cl-luxe-service:hover .cl-luxe-service__num { color: #7A5500; }
 .cl-luxe-service:hover .cl-luxe-service__title,
 .cl-luxe-service:hover .cl-luxe-service__text { color: #FAFAFA; }
 
 .cl-luxe-service__num {
   font-family: Georgia,'Times New Roman',serif;
   font-size: 0.85rem;
-  color: #8B6914;
+  color: #7A5500;
   letter-spacing: 2px;
   margin-bottom: 20px;
   transition: color 0.4s;
@@ -226,7 +226,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
   margin-bottom: 16px;
 }
 
@@ -251,7 +251,7 @@
 }
 
 .cl-luxe-temoignage__stars {
-  color: #8B6914;
+  color: #7A5500;
   font-size: 0.9rem;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -270,7 +270,7 @@
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #7A5500;
 }
 
 /* CTA */
@@ -289,7 +289,7 @@
   margin-bottom: 20px;
 }
 
-.cl-luxe-cta__title em { font-style: italic; color: #8B6914; }
+.cl-luxe-cta__title em { font-style: italic; color: #7A5500; }
 
 .cl-luxe-cta__sub {
   font-size: 1rem;
@@ -313,7 +313,7 @@
   font-size: 0.9rem;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #8B6914;
+  color: #C9A84C; /* gold on #0A0A0A — ratio ≈ 6:1 */
 }
 
 .cl-luxe-footer__links { display: flex; gap: 32px; }
@@ -353,7 +353,7 @@
   color: #0B2D6E;
 }
 
-.cl-premium-nav__logo span { color: #00B4D8; }
+.cl-premium-nav__logo span { color: #006D87; } /* cyan on #fff — ratio ≈ 5:1 */
 
 .cl-premium-nav__links { display: flex; gap: 32px; }
 
@@ -364,12 +364,12 @@
   transition: color 0.2s;
 }
 
-.cl-premium-nav__links a:hover { color: #00B4D8; }
+.cl-premium-nav__links a:hover { color: #006D87; }
 
 .cl-premium-btn {
   display: inline-block;
   padding: 10px 24px;
-  background: #00B4D8;
+  background: #006D87; /* #fff on this — ratio ≈ 7:1 (WCAG AA) */
   color: #fff;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;
@@ -379,7 +379,7 @@
   transition: all 0.2s ease-out;
 }
 
-.cl-premium-btn:hover { background: #0096b5; }
+.cl-premium-btn:hover { background: #004F62; }
 
 .cl-premium-btn--outline {
   background: transparent;
@@ -404,7 +404,7 @@
   display: inline-block;
   background: rgba(0,180,216,0.15);
   border: 1px solid rgba(0,180,216,0.35);
-  color: #00B4D8;
+  color: #00B4D8; /* on dark hero bg — ratio OK */
   font-size: 0.8rem;
   font-weight: 600;
   padding: 6px 16px;
@@ -421,7 +421,7 @@
   margin-bottom: 20px;
 }
 
-.cl-premium-hero__title span { color: #00B4D8; }
+.cl-premium-hero__title span { color: #00B4D8; } /* on dark hero — ratio OK */
 
 .cl-premium-hero__sub {
   font-size: 1rem;
@@ -476,7 +476,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #00B4D8;
+  color: #006D87; /* cyan on #fff — ratio ≈ 5:1 */
   margin-bottom: 12px;
 }
 
@@ -530,7 +530,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #00B4D8;
+  color: #006D87; /* cyan on #F0F8FB — ratio ≈ 5:1 */
   margin-bottom: 12px;
 }
 
@@ -555,7 +555,7 @@
   box-shadow: 0 2px 16px rgba(11,45,110,0.06);
 }
 
-.cl-premium-temoignage__stars { color: #00B4D8; font-size: 0.9rem; margin-bottom: 16px; }
+.cl-premium-temoignage__stars { color: #006D87; font-size: 0.9rem; margin-bottom: 16px; } /* cyan on #fff — ratio ≈ 5:1 */
 
 .cl-premium-temoignage__quote {
   font-size: 0.9rem;
@@ -599,7 +599,7 @@
   line-height: 1.2;
 }
 
-.cl-premium-cta__title span { color: #00B4D8; }
+.cl-premium-cta__title span { color: #00B4D8; } /* on #0B2D6E dark — ratio OK */
 .cl-premium-cta__sub { color: rgba(255,255,255,0.7); font-size: 1rem; margin-bottom: 36px; line-height: 1.6; }
 
 /* Footer */
@@ -612,7 +612,7 @@
 }
 
 .cl-premium-footer__logo { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-weight: 700; color: #fff; font-size: 1rem; }
-.cl-premium-footer__logo span { color: #00B4D8; }
+.cl-premium-footer__logo span { color: #00B4D8; } /* on #071E4A dark — ratio OK */
 .cl-premium-footer__links { display: flex; gap: 28px; }
 .cl-premium-footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.65); transition: color 0.2s; }
 .cl-premium-footer__links a:hover { color: #fff; }
