@@ -44,6 +44,73 @@
     /* Animate */
     .animate-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
     .animate-in.visible{opacity:1;transform:translateY(0)}
+
+    /* Pillars */
+    .audit-pillars{padding:100px 24px;background:#fff}
+    .audit-pillars__eyebrow{text-align:center;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#7B2FF7;margin-bottom:16px}
+    .audit-pillars__title{text-align:center;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:#0A0A0A;max-width:600px;margin:0 auto 64px;letter-spacing:-0.5px;line-height:1.2}
+    .audit-pillars__grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;max-width:960px;margin:0 auto}
+    .audit-pillar{background:#FAFAFA;border:1.5px solid #EFEFEF;border-radius:16px;padding:36px 32px;transition:box-shadow .2s,border-color .2s}
+    .audit-pillar:hover{box-shadow:0 8px 32px rgba(0,0,0,.08);border-color:#D0C0F8}
+    .audit-pillar__icon{width:56px;height:56px;background:rgba(123,47,247,.1);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#7B2FF7;margin-bottom:20px}
+    .audit-pillar__title{font-size:1.1rem;font-weight:700;color:#0A0A0A;margin-bottom:12px}
+    .audit-pillar__desc{font-size:0.9rem;color:#595959;line-height:1.7;margin-bottom:20px}
+    .audit-pillar__checks{list-style:none;display:flex;flex-direction:column;gap:8px}
+    .audit-pillar__checks li{font-size:0.82rem;font-weight:600;color:#3A3A3A;padding-left:20px;position:relative}
+    .audit-pillar__checks li::before{content:'✓';position:absolute;left:0;color:#7B2FF7;font-weight:700}
+
+    /* Steps */
+    .audit-steps{padding:100px 24px;background:#0D1B3E;color:#fff}
+    .audit-steps__eyebrow{text-align:center;font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#7B2FF7;margin-bottom:16px}
+    .audit-steps__title{text-align:center;font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:800;color:#fff;margin-bottom:64px;letter-spacing:-0.5px}
+    .audit-steps__list{list-style:none;max-width:680px;margin:0 auto;display:flex;flex-direction:column}
+    .audit-step{display:flex;align-items:flex-start;gap:28px;padding:32px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+    .audit-step:last-child{border-bottom:none}
+    .audit-step__num{font-size:2rem;font-weight:800;color:#7B2FF7;line-height:1;flex-shrink:0;min-width:48px;letter-spacing:-1px}
+    .audit-step__title{font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:8px}
+    .audit-step__desc{font-size:0.9rem;color:rgba(255,255,255,.62);line-height:1.7}
+
+    /* Proof */
+    .audit-proof{padding:100px 24px;background:#FAFAFA;border-top:1px solid #EFEFEF}
+    .audit-proof__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1000px;margin:0 auto}
+    .audit-proof__card{background:#fff;border:1.5px solid #EFEFEF;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:16px}
+    .audit-proof__stars{color:#F59E0B;font-size:1rem;letter-spacing:2px}
+    .audit-proof__quote{font-size:0.9rem;color:#3A3A3A;line-height:1.75;font-style:italic;flex:1}
+    .audit-proof__author{font-size:0.8rem;color:#888}
+    .audit-proof__author strong{color:#1A1A1A;font-weight:700}
+
+    /* Form section */
+    .audit-form-section{padding:100px 24px;background:#fff;border-top:1px solid #EFEFEF}
+    .audit-form-section__inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+    .audit-form__eyebrow{font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#7B2FF7;margin-bottom:16px}
+    .audit-form__title{font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:800;color:#0A0A0A;line-height:1.15;letter-spacing:-0.5px;margin-bottom:16px}
+    .audit-form__subtitle{font-size:0.95rem;color:#595959;line-height:1.7;margin-bottom:32px}
+    .audit-form__guarantees{list-style:none;display:flex;flex-direction:column;gap:12px}
+    .audit-form__guarantees li{display:flex;align-items:center;gap:10px;font-size:0.88rem;font-weight:600;color:#1A1A1A}
+    .audit-form__guarantees li svg{color:#2ECC71;flex-shrink:0}
+    .audit-form{background:#FAFAFA;border:1.5px solid #EFEFEF;border-radius:20px;padding:40px;display:flex;flex-direction:column;gap:20px}
+    .audit-form__field{display:flex;flex-direction:column;gap:6px}
+    .audit-form__field label{font-size:0.85rem;font-weight:600;color:#1A1A1A}
+    .audit-form__req{color:#7B2FF7}
+    .audit-form__optional{font-weight:400;color:#999;font-size:0.8rem}
+    .audit-form__field input,.audit-form__field select,.audit-form__field textarea{padding:12px 16px;border:1.5px solid #D8D8D8;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#1A1A1A;background:#fff;transition:border-color .2s,box-shadow .2s;resize:none;-webkit-appearance:none;appearance:none}
+    .audit-form__field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px;cursor:pointer}
+    .audit-form__field input::placeholder,.audit-form__field textarea::placeholder{color:#ABABAB}
+    .audit-form__field input:focus,.audit-form__field select:focus,.audit-form__field textarea:focus{outline:none;border-color:#7B2FF7;box-shadow:0 0 0 3px rgba(123,47,247,.12)}
+    .audit-form__submit{display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px;background:#7B2FF7;color:#fff;border:none;border-radius:12px;font-family:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s;margin-top:4px}
+    .audit-form__submit:hover{background:#6520d4;transform:translateY(-2px);box-shadow:0 8px 24px rgba(123,47,247,.35)}
+    .audit-form__privacy{display:flex;align-items:center;gap:8px;font-size:0.75rem;color:#999;line-height:1.5;text-align:center;justify-content:center}
+    .audit-form__privacy svg{flex-shrink:0;color:#ABABAB}
+
+    /* Footer */
+    .home-footer{text-align:center;padding:40px 24px;border-top:1px solid #E8E8E8;font-size:0.85rem;color:#595959}
+    .home-footer strong{color:#0A0A0A}
+
+    /* Responsive */
+    .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+    @media(max-width:900px){.audit-pillars__grid{grid-template-columns:1fr}.audit-proof__grid{grid-template-columns:1fr}.audit-form-section__inner{grid-template-columns:1fr;gap:48px}}
+    @media(max-width:600px){.audit-form{padding:28px 20px}.audit-step{gap:16px}.audit-step__num{font-size:1.5rem;min-width:36px}}
   </style>
 
   <!-- ── Full CSS (non-blocking) ── -->
@@ -213,25 +280,25 @@
 
         <blockquote class="audit-proof__card animate-in">
           <div class="audit-proof__stars" aria-label="5 stars">★★★★★</div>
-          <p class="audit-proof__quote">"The audit was eye-opening. We didn't realise our mobile site was essentially broken. The redesign mockup they sent convinced us in 5 minutes."</p>
+          <p class="audit-proof__quote">"L'audit était vraiment détaillé — ils ont repéré des problèmes dont on n'avait aucune idée. Le mockup qu'ils nous ont envoyé nous a convaincus en cinq minutes."</p>
           <footer class="audit-proof__author">
-            <strong>Priya M.</strong> — Aesthetic Clinic, Orchard Road
+            <strong>Claire M.</strong> — Gérante, clinique esthétique
           </footer>
         </blockquote>
 
         <blockquote class="audit-proof__card animate-in">
           <div class="audit-proof__stars" aria-label="5 stars">★★★★★</div>
-          <p class="audit-proof__quote">"Clear, honest and genuinely useful. They told us exactly what was wrong and showed us a much better version. No fluff, no upsell."</p>
+          <p class="audit-proof__quote">"Honnête et sans baratin. Ils nous ont dit exactement ce qui n'allait pas et nous ont montré une version bien supérieure. Aucune pression commerciale après."</p>
           <footer class="audit-proof__author">
-            <strong>James T.</strong> — F&amp;B Group, Tanjong Pagar
+            <strong>Thomas R.</strong> — Directeur, groupe de restaurants
           </footer>
         </blockquote>
 
         <blockquote class="audit-proof__card animate-in">
           <div class="audit-proof__stars" aria-label="5 stars">★★★★★</div>
-          <p class="audit-proof__quote">"Got the report in less than 24 hours. Really detailed, with specific fixes. Even if we hadn't hired them, the audit alone was worth it."</p>
+          <p class="audit-proof__quote">"Reçu en moins de 24h, très complet, avec des recommandations concrètes. Même sans les avoir embauchés, l'audit aurait valu le coup à lui seul."</p>
           <footer class="audit-proof__author">
-            <strong>Aaron R.</strong> — Real Estate Agency, CBD
+            <strong>Sophie L.</strong> — Fondatrice, agence immobilière
           </footer>
         </blockquote>
 
