@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Website Audit — StudioWeb Singapore</title>
+  <meta name="description" content="Get a free professional audit of your website in 48 hours. Design, mobile, speed and conversion — we tell you exactly what to fix and show you what it could look like." />
+
+  <!-- ── Theme ── -->
+  <meta name="theme-color" content="#0A0A0A" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- ── Critical CSS inline ── -->
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;font-size:16px}
+    body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;color:#1A1A1A;line-height:1.6;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+
+    /* Nav */
+    .site-nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #E8E8E8;padding:0 24px}
+    .site-nav__inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+    .site-nav__logo{font-weight:700;font-size:1.1rem;letter-spacing:-0.5px;color:#0A0A0A;white-space:nowrap}
+    .site-nav__logo span{color:#7B2FF7}
+    .site-nav__back{display:flex;align-items:center;gap:6px;font-size:0.85rem;color:#666;font-weight:500;transition:color .2s}
+    .site-nav__back:hover{color:#0A0A0A}
+    .site-nav__contact{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;background:#7B2FF7;color:#fff;border-radius:999px;font-size:0.82rem;font-weight:700;white-space:nowrap;transition:background .2s,transform .2s;flex-shrink:0}
+    .site-nav__contact:hover{background:#6520d4;transform:translateY(-1px)}
+
+    /* Hero */
+    .audit-hero{background:#0D1B3E;color:#fff;padding:100px 24px 80px;text-align:center}
+    .audit-hero__eyebrow{font-size:0.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#7B2FF7;background:rgba(123,47,247,0.15);display:inline-block;padding:6px 16px;border-radius:999px;margin-bottom:28px}
+    .audit-hero__title{font-size:clamp(2rem,5vw,3.8rem);font-weight:800;line-height:1.1;max-width:780px;margin:0 auto 24px;letter-spacing:-1px}
+    .audit-hero__title em{font-style:normal;color:#7B2FF7}
+    .audit-hero__subtitle{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,0.72);max-width:540px;margin:0 auto 48px;line-height:1.8}
+    .audit-hero__cta{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:#7B2FF7;color:#fff;border-radius:999px;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s}
+    .audit-hero__cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(123,47,247,.5)}
+    .audit-hero__trust{margin-top:40px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
+    .audit-hero__trust-item{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,0.55)}
+    .audit-hero__trust-item svg{color:#2ECC71;flex-shrink:0}
+
+    /* Animate */
+    .animate-in{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+    .animate-in.visible{opacity:1;transform:translateY(0)}
+  </style>
+
+  <!-- ── Full CSS (non-blocking) ── -->
+  <link rel="stylesheet" href="assets/css/global.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="assets/css/global.css" /></noscript>
+  <link rel="stylesheet" href="assets/css/audit.css" media="print" onload="this.media='all'" />
+  <noscript><link rel="stylesheet" href="assets/css/audit.css" /></noscript>
+</head>
+<body>
+
+  <!-- ══ NAV ══ -->
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="site-nav__inner">
+      <a href="index.html" class="site-nav__back" aria-label="Back to homepage">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Home
+      </a>
+      <span class="site-nav__logo" role="img" aria-label="StudioWeb">Studio<span aria-hidden="true">Web</span></span>
+      <a href="#audit-form" class="site-nav__contact" aria-label="Request your free audit">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Get my audit
+      </a>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- ══ HERO ══ -->
+  <section class="audit-hero">
+    <p class="audit-hero__eyebrow animate-in">100% Free — No commitment</p>
+    <h1 class="audit-hero__title animate-in">
+      Your website is losing you<br><em>customers.</em> Let's fix that.
+    </h1>
+    <p class="audit-hero__subtitle animate-in">
+      We review your current site across 4 key areas and send you a
+      personalised report — with a visual preview of what it could look like.
+      Delivered in 48 hours.
+    </p>
+    <a href="#audit-form" class="audit-hero__cta animate-in">
+      Request my free audit
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a>
+    <div class="audit-hero__trust animate-in" aria-label="Trust indicators">
+      <span class="audit-hero__trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        No invoice ever
+      </span>
+      <span class="audit-hero__trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Delivered in 48h
+      </span>
+      <span class="audit-hero__trust-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        Tailored to your industry
+      </span>
+    </div>
+  </section>
+
+  <!-- ══ WHAT WE AUDIT ══ -->
+  <section class="audit-pillars" aria-labelledby="pillars-heading">
+    <div class="container">
+      <p class="audit-pillars__eyebrow animate-in">What we analyse</p>
+      <h2 id="pillars-heading" class="audit-pillars__title animate-in">4 areas that make or break your website</h2>
+
+      <div class="audit-pillars__grid">
+
+        <div class="audit-pillar animate-in">
+          <div class="audit-pillar__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          </div>
+          <h3 class="audit-pillar__title">First impression</h3>
+          <p class="audit-pillar__desc">Does your homepage immediately communicate what you do and why you're the right choice? We assess visual hierarchy, headline clarity and brand consistency.</p>
+          <ul class="audit-pillar__checks" aria-label="Checked points">
+            <li>Hero message clarity</li>
+            <li>Visual identity consistency</li>
+            <li>Trust signals above the fold</li>
+          </ul>
+        </div>
+
+        <div class="audit-pillar animate-in">
+          <div class="audit-pillar__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <h3 class="audit-pillar__title">Mobile experience</h3>
+          <p class="audit-pillar__desc">Over 70% of Singapore web traffic is mobile. We test your site on small screens and flag every layout, touch target or readability issue.</p>
+          <ul class="audit-pillar__checks" aria-label="Checked points">
+            <li>Responsive layout audit</li>
+            <li>Touch target sizing</li>
+            <li>Mobile loading speed</li>
+          </ul>
+        </div>
+
+        <div class="audit-pillar animate-in">
+          <div class="audit-pillar__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <h3 class="audit-pillar__title">Speed &amp; performance</h3>
+          <p class="audit-pillar__desc">A 1-second delay costs you 7% of conversions. We identify the top issues slowing your site down — images, fonts, render-blocking scripts — and tell you exactly what to fix.</p>
+          <ul class="audit-pillar__checks" aria-label="Checked points">
+            <li>Core Web Vitals review</li>
+            <li>Image optimisation gaps</li>
+            <li>Script &amp; CSS load order</li>
+          </ul>
+        </div>
+
+        <div class="audit-pillar animate-in">
+          <div class="audit-pillar__icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="audit-pillar__title">Conversion &amp; calls to action</h3>
+          <p class="audit-pillar__desc">Visitors land on your site — then what? We review every call-to-action, contact path and lead capture point to find where you're losing potential customers.</p>
+          <ul class="audit-pillar__checks" aria-label="Checked points">
+            <li>CTA visibility &amp; copy</li>
+            <li>Contact friction analysis</li>
+            <li>Booking / enquiry flow</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HOW IT WORKS ══ -->
+  <section class="audit-steps" aria-labelledby="steps-heading">
+    <div class="container">
+      <p class="audit-steps__eyebrow animate-in">The process</p>
+      <h2 id="steps-heading" class="audit-steps__title animate-in">Simple, fast, zero risk</h2>
+
+      <ol class="audit-steps__list" aria-label="Steps">
+        <li class="audit-step animate-in">
+          <span class="audit-step__num" aria-hidden="true">01</span>
+          <div class="audit-step__body">
+            <h3 class="audit-step__title">You fill in the form below</h3>
+            <p class="audit-step__desc">Your name, your website URL, and your industry. Takes 60 seconds.</p>
+          </div>
+        </li>
+        <li class="audit-step animate-in">
+          <span class="audit-step__num" aria-hidden="true">02</span>
+          <div class="audit-step__body">
+            <h3 class="audit-step__title">We analyse your site</h3>
+            <p class="audit-step__desc">We review your site manually across the 4 areas above. No automated tool — a real person looks at your website.</p>
+          </div>
+        </li>
+        <li class="audit-step animate-in">
+          <span class="audit-step__num" aria-hidden="true">03</span>
+          <div class="audit-step__body">
+            <h3 class="audit-step__title">You receive your report in 48h</h3>
+            <p class="audit-step__desc">A clear, actionable report by email — plus a visual mockup showing what your site could look like after a redesign.</p>
+          </div>
+        </li>
+        <li class="audit-step animate-in">
+          <span class="audit-step__num" aria-hidden="true">04</span>
+          <div class="audit-step__body">
+            <h3 class="audit-step__title">You decide what's next</h3>
+            <p class="audit-step__desc">No sales call, no pressure. If you want to work together, great. If not, the report is yours to keep.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ══ SOCIAL PROOF ══ -->
+  <section class="audit-proof" aria-labelledby="proof-heading">
+    <div class="container">
+      <h2 id="proof-heading" class="sr-only">Testimonials</h2>
+      <div class="audit-proof__grid">
+
+        <blockquote class="audit-proof__card animate-in">
+          <div class="audit-proof__stars" aria-label="5 stars">★★★★★</div>
+          <p class="audit-proof__quote">"The audit was eye-opening. We didn't realise our mobile site was essentially broken. The redesign mockup they sent convinced us in 5 minutes."</p>
+          <footer class="audit-proof__author">
+            <strong>Priya M.</strong> — Aesthetic Clinic, Orchard Road
+          </footer>
+        </blockquote>
+
+        <blockquote class="audit-proof__card animate-in">
+          <div class="audit-proof__stars" aria-label="5 stars">★★★★★</div>
+          <p class="audit-proof__quote">"Clear, honest and genuinely useful. They told us exactly what was wrong and showed us a much better version. No fluff, no upsell."</p>
+          <footer class="audit-proof__author">
+            <strong>James T.</strong> — F&amp;B Group, Tanjong Pagar
+          </footer>
+        </blockquote>
+
+        <blockquote class="audit-proof__card animate-in">
+          <div class="audit-proof__stars" aria-label="5 stars">★★★★★</div>
+          <p class="audit-proof__quote">"Got the report in less than 24 hours. Really detailed, with specific fixes. Even if we hadn't hired them, the audit alone was worth it."</p>
+          <footer class="audit-proof__author">
+            <strong>Aaron R.</strong> — Real Estate Agency, CBD
+          </footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FORM ══ -->
+  <section id="audit-form" class="audit-form-section" aria-labelledby="form-heading">
+    <div class="audit-form-section__inner">
+
+      <div class="audit-form-section__left">
+        <p class="audit-form__eyebrow animate-in">Free — No strings attached</p>
+        <h2 id="form-heading" class="audit-form__title animate-in">Request your<br>free audit</h2>
+        <p class="audit-form__subtitle animate-in">
+          We'll review your website and send you a personalised report within 48 hours.
+        </p>
+        <ul class="audit-form__guarantees animate-in" aria-label="Guarantees">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Completely free, always
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Delivered within 48 hours
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            No sales pitch, no follow-up spam
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Tailored to your industry &amp; market
+          </li>
+        </ul>
+      </div>
+
+      <div class="audit-form-section__right">
+        <form class="audit-form animate-in" id="audit-request-form" novalidate>
+
+          <div class="audit-form__field">
+            <label for="af-name">Your name <span class="audit-form__req" aria-hidden="true">*</span></label>
+            <input type="text" id="af-name" name="name" placeholder="Sarah L." autocomplete="name" required />
+          </div>
+
+          <div class="audit-form__field">
+            <label for="af-email">Your email <span class="audit-form__req" aria-hidden="true">*</span></label>
+            <input type="email" id="af-email" name="email" placeholder="sarah@yourbusiness.com" autocomplete="email" required />
+          </div>
+
+          <div class="audit-form__field">
+            <label for="af-url">Your current website URL <span class="audit-form__req" aria-hidden="true">*</span></label>
+            <input type="url" id="af-url" name="url" placeholder="https://www.yourbusiness.com.sg" required />
+          </div>
+
+          <div class="audit-form__field">
+            <label for="af-industry">Your industry <span class="audit-form__req" aria-hidden="true">*</span></label>
+            <select id="af-industry" name="industry" required>
+              <option value="" disabled selected>Select your industry</option>
+              <option value="Clinic / Medical">Clinic / Medical</option>
+              <option value="Beauty & Wellness">Beauty &amp; Wellness</option>
+              <option value="Restaurant / F&B">Restaurant / F&amp;B</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Sport & Fitness">Sport &amp; Fitness</option>
+              <option value="Pharmacy">Pharmacy</option>
+              <option value="Tutoring / Education">Tutoring / Education</option>
+              <option value="Interior Design">Interior Design</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="audit-form__field">
+            <label for="af-notes">Anything specific you'd like us to focus on? <span class="audit-form__optional">(optional)</span></label>
+            <textarea id="af-notes" name="notes" rows="3" placeholder="e.g. Our booking page has very low conversion, and the site looks outdated on mobile..."></textarea>
+          </div>
+
+          <button type="submit" class="audit-form__submit">
+            Send my audit request
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+
+          <p class="audit-form__privacy">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            Your details are only used to prepare your audit. We never share or sell your data.
+          </p>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="home-footer">
+    <strong>StudioWeb</strong> — Web Design &amp; Redesign &nbsp;·&nbsp; Singapore &nbsp;·&nbsp; All rights reserved © 2026
+  </footer>
+
+  <!-- ══ SCRIPTS ══ -->
+  <script src="assets/js/main.js" defer></script>
+  <script>
+    document.getElementById('audit-request-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var name     = document.getElementById('af-name').value.trim();
+      var email    = document.getElementById('af-email').value.trim();
+      var url      = document.getElementById('af-url').value.trim();
+      var industry = document.getElementById('af-industry').value;
+      var notes    = document.getElementById('af-notes').value.trim();
+
+      if (!name || !email || !url || !industry) return;
+
+      var subject = encodeURIComponent('Free Audit Request — ' + industry + ' — ' + name);
+      var body = encodeURIComponent(
+        'FREE AUDIT REQUEST\n' +
+        '══════════════════\n\n' +
+        'Name:     ' + name + '\n' +
+        'Email:    ' + email + '\n' +
+        'Website:  ' + url + '\n' +
+        'Industry: ' + industry + '\n' +
+        (notes ? '\nNotes:\n' + notes : '')
+      );
+      window.location.href = 'mailto:marvin.selftsick@gmail.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+
+</body>
+</html>

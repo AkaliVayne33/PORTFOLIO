@@ -35,6 +35,7 @@ PORTFOLIO/
 ├── clinic.html          ← 3 full mockups done
 ├── tutoring.html        ← 3 full mockups done
 ├── interior.html        ← 3 full mockups done
+├── audit.html           ← Free audit landing page (lead generation, mailto form)
 ├── assets/
 │   ├── css/
 │   │   ├── global.css       ← reset, CSS variables, typography, shared components
@@ -47,7 +48,8 @@ PORTFOLIO/
 │   │   ├── beauty.css       ← prefixes: .bw-luxe-* / .bw-premium-* / .bw-vibrant-*
 │   │   ├── clinic.css       ← prefixes: .cl-luxe-* / .cl-premium-* / .cl-vibrant-*
 │   │   ├── tutoring.css     ← prefixes: .tu-luxe-* / .tu-premium-* / .tu-vibrant-*
-│   │   └── interior.css     ← prefixes: .id-luxe-* / .id-premium-* / .id-vibrant-*
+│   │   ├── interior.css     ← prefixes: .id-luxe-* / .id-premium-* / .id-vibrant-*
+│   │   └── audit.css        ← styles for audit.html lead gen page
 │   ├── js/
 │   │   └── main.js          ← scroll animations, smooth scroll, active nav state, SW registration
 │   └── img/

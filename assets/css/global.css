@@ -133,6 +133,28 @@ ul {
   font-weight: 500;
 }
 
+/* ── Bouton Contact dans la nav ── */
+.site-nav__contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: #7B2FF7;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+}
+.site-nav__contact:hover {
+  background: #6520d4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(123,47,247,0.35);
+}
+
 .site-nav__back {
   display: flex;
   align-items: center;
@@ -384,6 +406,33 @@ ul {
   margin: 0 auto;
 }
 
+/* ── Hero buttons ── */
+.home-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-hero__audit {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  border: 2px solid rgba(123,47,247,0.4);
+  color: #7B2FF7;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.home-hero__audit:hover {
+  border-color: #7B2FF7;
+  background: #7B2FF7;
+  color: #fff;
+}
+
 /* ── Hero CTA button ── */
 .home-hero__cta {
   display: inline-flex;
@@ -465,7 +514,125 @@ ul {
   line-height: 1.6;
 }
 
-/* ── Final CTA section ── */
+/* ── Section Contact avec formulaire mailto ── */
+.home-contact {
+  background: #FAFAFA;
+  padding: 100px 24px;
+  border-top: 1px solid #E8E8E8;
+}
+
+.home-contact__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-contact__eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7B2FF7;
+  margin-bottom: 16px;
+}
+
+.home-contact__title {
+  font-family: Georgia,'Times New Roman',serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #0A0A0A;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.home-contact__subtitle {
+  font-size: 1rem;
+  color: #595959;
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.7;
+}
+
+.home-contact__form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home-contact__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.home-contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.home-contact__field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1A1A1A;
+}
+
+.home-contact__optional {
+  font-weight: 400;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.home-contact__field input,
+.home-contact__field textarea {
+  padding: 12px 16px;
+  border: 1.5px solid #D8D8D8;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: #1A1A1A;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  resize: none;
+}
+
+.home-contact__field input::placeholder,
+.home-contact__field textarea::placeholder {
+  color: #ABABAB;
+}
+
+.home-contact__field input:focus,
+.home-contact__field textarea:focus {
+  outline: none;
+  border-color: #7B2FF7;
+  box-shadow: 0 0 0 3px rgba(123,47,247,0.12);
+}
+
+.home-contact__submit {
+  align-self: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 36px;
+  background: #7B2FF7;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.home-contact__submit:hover {
+  background: #6520d4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(123,47,247,0.35);
+}
+
+/* ── Final CTA section (kept for sector pages) ── */
 .home-cta {
   padding: 80px 24px;
   background: #0A0A0A;
@@ -505,6 +672,148 @@ ul {
   box-shadow: 0 12px 32px rgba(123, 47, 247, 0.4);
 }
 
+/* ── Agency banner (bas des pages secteur) ── */
+.agency-banner {
+  background: #0D1B3E;
+  color: #fff;
+  padding: 64px 24px;
+}
+
+.agency-banner__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.agency-banner__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #7B2FF7;
+  margin-bottom: 10px;
+}
+
+.agency-banner__title {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.5px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.agency-banner__sub {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+  max-width: 440px;
+}
+
+.agency-banner__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.agency-banner__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background: #7B2FF7;
+  color: #fff;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.agency-banner__cta:hover {
+  background: #6520d4;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(123,47,247,0.45);
+}
+
+.agency-banner__secondary {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.agency-banner__secondary:hover {
+  color: rgba(255,255,255,0.85);
+}
+
+/* ── Sticky bar mobile ── */
+.sticky-audit-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: #0A0A0A;
+  border-top: 2px solid #7B2FF7;
+  padding: 12px 20px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sticky-audit-bar__text {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.7);
+}
+
+.sticky-audit-bar__text strong {
+  color: #fff;
+}
+
+.sticky-audit-bar__btn {
+  flex-shrink: 0;
+  padding: 9px 20px;
+  background: #7B2FF7;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.sticky-audit-bar__btn:hover {
+  background: #6520d4;
+}
+
+@media (max-width: 768px) {
+  .sticky-audit-bar {
+    display: flex;
+  }
+
+  /* éviter que le contenu soit caché derrière la sticky bar */
+  main {
+    padding-bottom: 64px;
+  }
+
+  .agency-banner__inner {
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+  }
+
+  .agency-banner__sub {
+    max-width: 100%;
+  }
+}
+
 /* ── Footer accueil ── */
 .home-footer {
   text-align: center;
@@ -520,6 +829,15 @@ ul {
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  .site-nav__contact {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+
+  .home-contact__row {
+    grid-template-columns: 1fr;
+  }
+
   .site-nav__links a {
     padding: 5px 10px;
     font-size: 0.75rem;
