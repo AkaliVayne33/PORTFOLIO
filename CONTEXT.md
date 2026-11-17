@@ -15,8 +15,8 @@ Fake names in testimonials must be English-speaking (Sarah L., James T., Priya M
 |-------|------|--------|
 | / (home) | index.html | ✅ Done |
 | /sport | sport.html | ✅ Done |
-| /immobilier | immobilier.html | ✅ Done |
-| /pharmacie | pharmacie.html | ✅ Done |
+| /real-estate | real-estate.html (old immobilier.html redirects) | ✅ Done |
+| /pharmacy | pharmacy.html (old pharmacie.html redirects) | ✅ Done |
 | /restaurant | restaurant.html | ✅ Done |
 | /beauty | beauty.html | ✅ Done |
 | /clinic | clinic.html | ✅ Done |
@@ -45,7 +45,7 @@ Each mockup contains:
 
 ### 1. Luxury & Minimalist (`#luxe`)
 - Palette: off-white `#FAFAFA`, black `#0A0A0A`, gold `#C9A84C`
-- Title font: `Playfair Display` (serif, Google Fonts)
+- Title font: Georgia / serif system stack
 - Body font: `Inter` thin (weight 300)
 - Generous whitespace, full-screen images
 - Animations: slow fade, subtle transitions (0.6s ease)
@@ -74,12 +74,12 @@ Each mockup contains:
 - Premium: "SportPro Club" — franchise gym
 - Vibrant: "FLUX TRAINING" — CrossFit/app startup
 
-### Real Estate (immobilier.html)
+### Real Estate (real-estate.html)
 - Luxury: "Maison Blanche" — prestige real estate
 - Premium: "ImmPro Advisory" — data-driven agency
 - Vibrant: "NEOHABITAT" — PropTech / AI search
 
-### Pharmacy (pharmacie.html)
+### Pharmacy (pharmacy.html)
 - Luxury: "The Park Dispensary" — wellness pharmacy
 - Premium: "PharmaCare+" — convenient community pharmacy
 - Vibrant: "MEDIFAST" — HealthTech app
@@ -110,14 +110,14 @@ Each mockup contains:
 - Vibrant: "FORM & FLUX" — bold editorial interior design studio
 
 ## Global navigation
-- `index.html`: home with 4 sector cards → links to sport.html, immobilier.html, pharmacie.html, restaurant.html
+- `index.html`: home with 8 sector cards → sport, real-estate, pharmacy, restaurant, beauty, clinic, tutoring, interior; `audit.html`: free audit landing page
 - Each sector page: sticky nav with `#luxe`, `#premium`, `#vibrant` anchor links + back to home
-- Direct deep links work: `sport.html#luxe`, `immobilier.html#premium`, etc.
+- Direct deep links work: `sport.html#luxe`, `real-estate.html#premium`, etc.
 
 ## Assets
 - Images: Unsplash URLs (licence-free, sector-appropriate)
 - Icons: Unicode emojis or inline SVG (no external lib)
-- Fonts: Google Fonts — Playfair Display, Inter, Space Grotesk, DM Sans
+- Fonts: system font stacks only (Google Fonts removed in step 22)
 
 ## CSS architecture
 - `global.css`: reset, CSS variables, site-nav, home page styles, animate-in class
@@ -199,3 +199,9 @@ Each mockup contains:
 - Update CLAUDE.md and/or CONTEXT.md immediately whenever a notable change is made
 - All content (including these files) must be in English
 - Never add French text to any file in this project
+- [x] Step 50: Review pass — sector nav wraps on phones (was scrolling sideways), inline hero styles removed
+  (they beat the mobile media queries on sport/restaurant/pharmacy/tutoring), one sr-only h1 per sector page
+  and mockup headings shifted down, demo navs labelled, banner/sticky bar out of <main>, stars and contrast
+  fixes, Unsplash srcset, phones skip hidden hero pictures, immobilier/pharmacie renamed real-estate/pharmacy
+  (old URLs redirect), canonical + Open Graph, sitemap.xml, _config.yml, audit.css removed (duplicated inline),
+  audit testimonials replaced by "What you get", shared form handler in main.js, PNG install screenshots.

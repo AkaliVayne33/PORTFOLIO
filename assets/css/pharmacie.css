@@ -96,7 +96,7 @@
 .ph-luxe-cta { padding: 100px 64px; background: #F9F7F4; text-align: center; }
 .ph-luxe-cta__title { font-family: Georgia,'Times New Roman',serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; color: #1C1C1C; line-height: 1.2; margin-bottom: 20px; }
 .ph-luxe-cta__title em { font-style: italic; color: #4A8C6F; }
-.ph-luxe-cta__sub { font-size: 0.88rem; font-weight: 300; color: #888; margin-bottom: 40px; line-height: 1.8; }
+.ph-luxe-cta__sub { font-size: 0.88rem; font-weight: 300; color: #595959; margin-bottom: 40px; line-height: 1.8; }
 
 /* Footer */
 .ph-luxe-footer { padding: 40px 64px; background: #1C1C1C; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(74,140,111,0.2); }

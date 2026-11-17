@@ -25,11 +25,15 @@ PORTFOLIO/
 ├── CONTEXT.md
 ├── index.html           ← homepage, fully optimised (Performance 100 desktop)
 ├── manifest.json        ← PWA manifest
-├── sw.js                ← Service Worker (cache-first, dynamic scope for any host)
+├── sw.js                ← Service Worker (HTML/CSS/JS network-first, images stale-while-revalidate)
 ├── offline.html         ← PWA offline fallback page
 ├── sport.html
-├── immobilier.html
-├── pharmacie.html
+├── real-estate.html
+├── pharmacy.html
+├── immobilier.html     ← redirect to real-estate.html (old URL, links already sent)
+├── pharmacie.html      ← redirect to pharmacy.html (old URL, links already sent)
+├── sitemap.xml
+├── _config.yml          ← GitHub Pages: keeps CLAUDE.md, CONTEXT.md, email-generator.html unpublished
 ├── restaurant.html
 ├── beauty.html          ← 3 full mockups done
 ├── clinic.html          ← 3 full mockups done
@@ -39,7 +43,7 @@ PORTFOLIO/
 ├── assets/
 │   ├── css/
 │   │   ├── global.css       ← reset, CSS variables, typography, shared components
-│   │   │                       NOTE: Google Fonts loaded via <link> in HTML (non-blocking)
+│   │   │                       NOTE: system font stacks only, no web fonts
 │   │   │                       Critical above-the-fold CSS is inlined in index.html <style>
 │   │   ├── sport.css
 │   │   ├── immobilier.css
@@ -49,14 +53,13 @@ PORTFOLIO/
 │   │   ├── clinic.css       ← prefixes: .cl-luxe-* / .cl-premium-* / .cl-vibrant-*
 │   │   ├── tutoring.css     ← prefixes: .tu-luxe-* / .tu-premium-* / .tu-vibrant-*
 │   │   ├── interior.css     ← prefixes: .id-luxe-* / .id-premium-* / .id-vibrant-*
-│   │   └── audit.css        ← styles for audit.html lead gen page
 │   ├── js/
 │   │   └── main.js          ← scroll animations, smooth scroll, active nav state, SW registration
 │   └── img/
 │       ├── icon.svg          ← site favicon/icon
 │       ├── icon-192.png      ← PWA icon 192px
 │       ├── icon-512.png      ← PWA icon 512px (required for splash screen)
-│       ├── screenshot.svg    ← PWA install screenshot
+│       ├── screenshot-wide.png / screenshot-narrow.png ← PWA install screenshots (regenerate after a redesign)
 │       └── sectors/          ← local images for index.html sector grid
 │           ├── sport.webp / sport.jpg
 │           ├── realestate.webp / realestate.jpg
@@ -71,11 +74,13 @@ PORTFOLIO/
 ## CSS conventions
 - CSS variables in `:root` for colours and typography
 - BEM naming: `.block__element--modifier`
-- Mobile-first: base styles = mobile, media queries for desktop (`min-width: 768px`, `min-width: 1200px`)
+- The existing stylesheets are desktop-first (base = desktop, `max-width: 768px` / `480px` queries). Keep that
+  pattern inside them; never put layout in a `style=""` attribute (it beats the media queries)
+- Small-phone fixes shared by every mockup are at the end of global.css (`body [class$="premium-hero"]`…)
 - No `!important` except when justified
 
 ## HTML structure of each sector page
-Each page (sport.html, immobilier.html, pharmacie.html, restaurant.html) contains:
+Each sector page (sport, real-estate, pharmacy, restaurant, beauty, clinic, tutoring, interior) contains:
 1. Global nav (back to index + anchors to the 3 sections)
 2. Section `id="luxe"` — Luxury & Minimalist positioning
 3. Section `id="premium"` — Premium & Corporate positioning
@@ -92,7 +97,7 @@ Each section contains a full mockup:
 
 ### Luxury & Minimalist
 - Palette: off-white (#FAFAFA), black (#0A0A0A), gold (#C9A84C)
-- Title font: `Playfair Display` (Google Fonts, serif)
+- Title font: Georgia / serif system stack
 - Body font: `Inter` thin (weight 300)
 - Generous spacing, lots of whitespace
 - Large full-screen images
@@ -127,10 +132,13 @@ Each section contains a full mockup:
 ## Performance rules (index.html is the reference — do not regress)
 - Critical CSS (nav + hero) must be inlined in `<style>` in `<head>`
 - Full CSS loaded non-blocking: `<link media="print" onload="this.media='all'">`
-- Google Fonts loaded non-blocking same way (no @import in CSS)
+- No web fonts (system stacks): nothing to load
 - JS loaded with `defer`
-- LCP image must have `fetchpriority="high"` and a `<link rel="preload">`
-- Sector grid images: local WebP via `<picture>` with JPEG fallback, `loading="lazy"` on all except first
+- The largest first-screen element must not be hidden by `.animate-in` (no animate-in in heroes)
+- A hero image that is visible on phones may be preloaded with `fetchpriority="high"`; one hidden on phones
+  gets `media="(min-width: 769px)"` on its preload and a `<picture>` with a 1×1 source for phones
+- Unsplash images get a `srcset` (w=640, 1000, original) + `sizes`
+- Sector grid images: local WebP via `<picture>` with JPEG fallback, below the fold: no preload, no fetchpriority
 - All `<img>` must have explicit `width` and `height` attributes
 - Contrast ratio minimum 4.5:1 for all text (use #595959 minimum on white backgrounds)
 - All pages need a `<main>` landmark
@@ -141,3 +149,15 @@ Each section contains a full mockup:
 - Sector page images: Unsplash URLs are fine for inner mockup pages (not the homepage)
 - Testimonials: credible fake names, star rating, short quote
 - Never use Bootstrap or any other CSS framework
+
+## Accessibility and SEO conventions (sector pages)
+- One page-level `<h1 class="sr-only">` ("<Sector> website redesign examples…"); `mockup-divider__title` = h2;
+  inside each mockup, headings start at h3 (hero) → h4 (sections) → h5 (cards). CSS targets classes only.
+- Each mockup's `<nav>` has `aria-label="Demo site menu (… mockup)"`; dead demo links `href="#"` get `tabindex="-1"`.
+- Agency banner and sticky audit bar sit after `</main>` (complementary landmarks are top level).
+- Star ratings: `role="img" aria-label="Rated N out of 5"`.
+- Quotes use English quotation marks “ ”, never « ».
+- Every page has canonical + Open Graph tags (og:image = assets/img/sectors/<sector>.jpg).
+- Forms: `<form data-mailto="…" data-kind="contact|audit">`, handled by main.js (required fields checked,
+  invalid ones marked `aria-invalid` and focused). No inline form scripts.
+- audit.html shows no testimonials until real clients exist ("What you get" section instead).

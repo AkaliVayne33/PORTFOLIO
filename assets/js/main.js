@@ -85,10 +85,10 @@ if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     });
   }
 
-  // Reads geometry lazily on scroll using getBoundingClientRect() —
-  // avoids any forced reflow at page load (no offsetTop/offsetHeight reads on init).
+  // The nav element is looked up once; its height is read on scroll (it changes on phones,
+  // where the nav wraps onto two rows) — no geometry read at page load.
+  const navEl = document.querySelector('.site-nav');
   function getActiveSection() {
-    const navEl = document.querySelector('.site-nav');
     const navHeight = navEl ? navEl.getBoundingClientRect().height : 64;
     const threshold = navHeight + window.innerHeight * 0.3;
     let activeId = sections[0].id;
@@ -113,3 +113,70 @@ if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     });
   }, { passive: true });
 })();
+
+
+/* ── 5. Contact forms (home page and audit page): open the visitor's email app ──
+   <form data-mailto="address" data-kind="contact|audit"> ; every [required] field is checked first.
+   mailto opens the visitor's email app; if none is set up nothing happens, so the address is shown too. */
+
+document.querySelectorAll('form[data-mailto]').forEach((form) => {
+  const to = form.dataset.mailto;
+  const status = form.querySelector('[role="status"]');
+  const required = Array.from(form.querySelectorAll('[required]'));
+  const value = (id) => (form.querySelector('#' + id)?.value || '').trim();
+  const filled = (field) => field.value.trim() !== '' && field.checkValidity();
+
+  function mark(field, invalid) {
+    if (invalid) {
+      field.setAttribute('aria-invalid', 'true');
+      if (status && status.id) field.setAttribute('aria-describedby', status.id);
+    } else {
+      field.removeAttribute('aria-invalid');
+      field.removeAttribute('aria-describedby');
+    }
+  }
+
+  function say(html) {
+    if (!status) return;
+    status.innerHTML = '';
+    // set a moment later: an identical message is announced again by screen readers
+    setTimeout(() => { status.innerHTML = html; }, 50);
+  }
+
+  required.forEach((field) => field.addEventListener('input', () => {
+    if (filled(field)) mark(field, false);
+  }));
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const invalid = required.filter((field) => !filled(field));
+    required.forEach((field) => mark(field, invalid.includes(field)));
+    if (invalid.length) {
+      const names = invalid.map((field) => (form.querySelector(`label[for="${field.id}"]`)?.textContent || field.name)
+        .replace(/\*|\(optional\)/g, '').replace(/\?\s*$/, '').trim());
+      say('Please fill in: ' + names.join(', ') + '.');
+      setTimeout(() => invalid[0].focus(), 100);
+      return;
+    }
+
+    let subject, body;
+    if (form.dataset.kind === 'audit') {
+      const industry = value('af-industry');
+      subject = 'Free Audit Request — ' + industry + ' — ' + value('af-name');
+      body = 'FREE AUDIT REQUEST\n══════════════════\n\n'
+        + 'Name:     ' + value('af-name') + '\n'
+        + 'Email:    ' + value('af-email') + '\n'
+        + 'Website:  ' + value('af-url') + '\n'
+        + 'Industry: ' + industry + '\n'
+        + (value('af-notes') ? '\nNotes:\n' + value('af-notes') : '');
+    } else {
+      subject = 'StudioWeb — Free audit request from ' + value('contact-name');
+      body = 'Name: ' + value('contact-name') + '\n'
+        + 'Email: ' + value('contact-email') + '\n'
+        + (value('contact-business') ? 'Business: ' + value('contact-business') + '\n' : '')
+        + '\n' + value('contact-message');
+    }
+    say('Your email app should open now. If it doesn\u2019t, write to us directly at <a href="mailto:' + to + '">' + to + '</a>.');
+    window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+});

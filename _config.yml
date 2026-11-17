@@ -1,0 +1,5 @@
+# GitHub Pages: files of the repository that must not be published
+exclude:
+  - CLAUDE.md
+  - CONTEXT.md
+  - email-generator.html

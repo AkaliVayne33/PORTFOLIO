@@ -119,7 +119,7 @@
 .rs-luxe-cta { padding: 100px 64px; background: #FAF6F0; text-align: center; }
 .rs-luxe-cta__title { font-family: Georgia,'Times New Roman',serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 400; color: #1A1108; line-height: 1.2; margin-bottom: 20px; }
 .rs-luxe-cta__title em { font-style: italic; color: #7A5500; } /* on #FAF6F0 bg — ratio ≈5:1 */
-.rs-luxe-cta__sub { font-size: 0.88rem; font-weight: 300; color: #888; margin-bottom: 40px; line-height: 1.8; }
+.rs-luxe-cta__sub { font-size: 0.88rem; font-weight: 300; color: #595959; margin-bottom: 40px; line-height: 1.8; }
 
 /* Footer */
 .rs-luxe-footer { padding: 40px 64px; background: #1A1108; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid rgba(140,109,63,0.2); }

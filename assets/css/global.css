@@ -1,8 +1,8 @@
 /* ============================================================
-   GLOBAL.CSS — Base commune pour tout le portfolio
+   GLOBAL.CSS — Shared base for the whole portfolio
    ============================================================ */
 
-/* Google Fonts loaded via <link> in HTML with media="print" trick for non-blocking load */
+/* Fonts: system font stacks only (no web fonts are loaded) */
 
 /* ── Reset ── */
 *, *::before, *::after {
@@ -104,7 +104,7 @@ ul {
   .js .animate-in { opacity: 1; transform: none; transition: none; }
 }
 
-/* ── Navigation globale du site (méta-nav) ── */
+/* ── Site-wide navigation (meta-nav) ── */
 .site-nav {
   position: sticky;
   top: 0;
@@ -144,7 +144,7 @@ ul {
   font-weight: 500;
 }
 
-/* ── Bouton Contact dans la nav ── */
+/* ── Contact button in the nav ── */
 .site-nav__contact {
   display: inline-flex;
   align-items: center;
@@ -525,7 +525,7 @@ ul {
   line-height: 1.6;
 }
 
-/* ── Section Contact avec formulaire mailto ── */
+/* ── Contact section with mailto form ── */
 .home-contact {
   background: #FAFAFA;
   padding: 100px 24px;
@@ -591,7 +591,7 @@ ul {
 
 .home-contact__optional {
   font-weight: 400;
-  color: #888;
+  color: #595959;
   font-size: 0.8rem;
 }
 
@@ -610,7 +610,7 @@ ul {
 
 .home-contact__field input::placeholder,
 .home-contact__field textarea::placeholder {
-  color: #ABABAB;
+  color: #767676;
 }
 
 .home-contact__field input:focus,
@@ -683,7 +683,7 @@ ul {
   box-shadow: 0 12px 32px rgba(123, 47, 247, 0.4);
 }
 
-/* ── Agency banner (bas des pages secteur) ── */
+/* ── Agency banner (bottom of sector pages) ── */
 .agency-banner {
   background: #0D1B3E;
   color: #fff;
@@ -704,7 +704,7 @@ ul {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #7B2FF7;
+  color: #B794FF;
   margin-bottom: 10px;
 }
 
@@ -754,7 +754,7 @@ ul {
 
 .agency-banner__secondary {
   font-size: 0.8rem;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255, 255, 255, 0.78);
   transition: color 0.2s;
   white-space: nowrap;
 }
@@ -809,7 +809,7 @@ ul {
     display: flex;
   }
 
-  /* éviter que le contenu soit caché derrière la sticky bar */
+  /* keep content from hiding behind the sticky bar */
   main {
     padding-bottom: 64px;
   }
@@ -840,6 +840,30 @@ ul {
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+  /* Sector pages: Home + Contact on the first row, the three style tags on a second row */
+  .site-nav__inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 8px 0;
+    row-gap: 8px;
+  }
+
+  .site-nav__back + .site-nav__logo {
+    display: none;
+  }
+
+  .site-nav__links {
+    order: 3;
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  [id] {
+    scroll-margin-top: 112px;
+  }
+
   .site-nav__contact {
     padding: 6px 12px;
     font-size: 0.75rem;
@@ -869,12 +893,47 @@ ul {
     gap: 4px;
   }
 
-  /* Hide logo text on very small screens to prevent nav overflow */
-  .site-nav__logo {
+  /* Very small screens: the home page drops its tagline (the brand name stays) */
+  .site-nav__tagline {
     display: none;
   }
 
   .site-nav__inner {
     justify-content: space-between;
+  }
+}
+
+/* ── Mockup button modifiers ── */
+/* Larger vibrant call-to-action (a.x beats the single-class rules of the sector stylesheets) */
+a.cta--large {
+  font-size: 1rem;
+  padding: 16px 40px;
+}
+
+/* Luxury call-to-action placed on a light background: dark gold text for readable contrast */
+a.luxe-btn--on-light {
+  color: #7A5500;
+  border-color: #8B6914;
+}
+
+/* ── Mockups on small phones (all sectors: sport "premium-hero", pharmacy "ph-premium-hero"…) ──
+   "body" in front: beats the single-class rules of the sector stylesheets, loaded after this file */
+@media (max-width: 480px) {
+  /* the hero column may shrink below the width of its stats row */
+  body [class$="premium-hero"] {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body [class$="premium-hero__stats"] {
+    flex-wrap: wrap;
+    gap: 20px 28px;
+  }
+
+  /* demo menu button: fits next to the brand name */
+  body [class$="luxe-nav__cta"] {
+    padding: 8px 12px;
+    letter-spacing: 1px;
+    white-space: normal;
+    text-align: center;
   }
 }

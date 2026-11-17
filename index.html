@@ -5,8 +5,16 @@
   <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads) -->
   <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000)})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Web Design Portfolio — Redesign Examples by Industry</title>
+  <title>StudioWeb Singapore — Website Redesign Examples by Industry</title>
   <meta name="description" content="Explore our web redesign examples by industry: sport, real estate, pharmacy, restaurant, beauty, clinic, tutoring and interior design." />
+  <link rel="canonical" href="https://akalivayne33.github.io/PORTFOLIO/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="StudioWeb" />
+  <meta property="og:title" content="StudioWeb Singapore — Website Redesign Examples" />
+  <meta property="og:description" content="Website redesign examples for Singapore businesses, by industry and style. Free website audit." />
+  <meta property="og:url" content="https://akalivayne33.github.io/PORTFOLIO/" />
+  <meta property="og:image" content="https://akalivayne33.github.io/PORTFOLIO/assets/img/screenshot-wide.png" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <!-- ── Theme & PWA ── -->
   <meta name="theme-color" content="#0A0A0A" />
@@ -20,8 +28,6 @@
 
   <!-- ── Preconnect for speed ── -->
 
-  <!-- ── LCP image preload ── -->
-  <link rel="preload" as="image" href="assets/img/sectors/sport.webp" type="image/webp" />
 
   <!-- ── Fonts (non-blocking) ── -->
 
@@ -62,10 +68,11 @@
     .home-contact__row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
     .home-contact__field{display:flex;flex-direction:column;gap:6px}
     .home-contact__field label{font-size:0.85rem;font-weight:600;color:#1A1A1A}
-    .home-contact__optional{font-weight:400;color:#888;font-size:0.8rem}
+    .home-contact__optional{font-weight:400;color:#595959;font-size:0.8rem}
+    .home-contact__field [aria-invalid="true"]{border-color:#C62828}
     .home-contact__field input,.home-contact__field textarea{padding:12px 16px;border:1.5px solid #D8D8D8;border-radius:10px;font-family:inherit;font-size:0.95rem;color:#1A1A1A;background:#fff;transition:border-color .2s,box-shadow .2s;resize:none}
-    .home-contact__field input::placeholder,.home-contact__field textarea::placeholder{color:#ABABAB}
-    .home-contact__field input:focus,.home-contact__field textarea:focus{outline:none;border-color:#7B2FF7;box-shadow:0 0 0 3px rgba(123,47,247,.12)}
+    .home-contact__field input::placeholder,.home-contact__field textarea::placeholder{color:#767676}
+    .home-contact__field input:focus,.home-contact__field textarea:focus{outline:2px solid transparent;border-color:#7B2FF7;box-shadow:0 0 0 3px rgba(123,47,247,.12)}
     .home-contact__submit{align-self:center;display:inline-flex;align-items:center;gap:8px;padding:14px 36px;background:#7B2FF7;color:#fff;border:none;border-radius:999px;font-family:inherit;font-size:0.95rem;font-weight:700;cursor:pointer;transition:background .2s,transform .2s,box-shadow .2s}
     .home-contact__submit:hover{background:#6520d4;transform:translateY(-2px);box-shadow:0 8px 24px rgba(123,47,247,.35)}
     .home-contact__status{text-align:center;font-size:.9rem;color:#595959}
@@ -84,7 +91,7 @@
     <div class="site-nav__inner">
       <span class="site-nav__logo" role="img" aria-label="StudioWeb">Studio<span aria-hidden="true">Web</span></span>
       <span class="site-nav__tagline">Redesign Examples</span>
-      <a href="#contact" class="site-nav__contact" aria-label="Contact us">
+      <a href="#contact" class="site-nav__contact">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Contact
       </a>
@@ -95,20 +102,20 @@
 
   <!-- ══ HERO ══ -->
   <section class="home-hero">
-    <p class="home-hero__eyebrow animate-in">Web Agency — Redesign &amp; Creation</p>
-    <h1 class="home-hero__title animate-in">
+    <p class="home-hero__eyebrow">Web Agency — Redesign &amp; Creation</p>
+    <h1 class="home-hero__title">
       Your website,<br><em>reinvented.</em>
     </h1>
-    <p class="home-hero__subtitle animate-in">
+    <p class="home-hero__subtitle">
       Discover what your website could look like based on your industry
       and positioning. Three styles, one ambition: make you stand out.
     </p>
-    <div class="home-hero__actions animate-in">
-      <a href="#sectors" class="home-hero__cta" aria-label="Browse sector examples">
+    <div class="home-hero__actions">
+      <a href="#sectors" class="home-hero__cta">
         Browse examples
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
       </a>
-      <a href="audit.html" class="home-hero__audit" aria-label="Get a free website audit">
+      <a href="audit.html" class="home-hero__audit">
         Get a free audit →
       </a>
     </div>
@@ -124,7 +131,7 @@
       <a href="sport.html" class="sector-card animate-in" aria-label="Sport industry examples">
         <picture>
           <source srcset="assets/img/sectors/sport.webp" type="image/webp" />
-          <img class="sector-card__img" src="assets/img/sectors/sport.jpg" alt="Sport gym interior" width="600" height="450" fetchpriority="high" />
+          <img class="sector-card__img" src="assets/img/sectors/sport.jpg" alt="Sport gym interior" width="600" height="450" />
         </picture>
         <div class="sector-card__overlay" aria-hidden="true">
           <span class="sector-card__label">Industry</span>
@@ -134,7 +141,7 @@
       </a>
 
       <!-- Real Estate -->
-      <a href="immobilier.html" class="sector-card animate-in" aria-label="Real estate industry examples">
+      <a href="real-estate.html" class="sector-card animate-in" aria-label="Real estate industry examples">
         <picture>
           <source srcset="assets/img/sectors/realestate.webp" type="image/webp" />
           <img class="sector-card__img" src="assets/img/sectors/realestate.jpg" alt="Modern real estate building" width="600" height="450" loading="lazy" />
@@ -147,7 +154,7 @@
       </a>
 
       <!-- Pharmacy -->
-      <a href="pharmacie.html" class="sector-card animate-in" aria-label="Pharmacy industry examples">
+      <a href="pharmacy.html" class="sector-card animate-in" aria-label="Pharmacy industry examples">
         <picture>
           <source srcset="assets/img/sectors/pharmacy.webp" type="image/webp" />
           <img class="sector-card__img" src="assets/img/sectors/pharmacy.jpg" alt="Pharmacy interior with shelves" width="600" height="450" loading="lazy" />
@@ -235,7 +242,7 @@
         A website that represents you,<br>and converts.
       </h2>
       <p class="pitch-section__subtitle animate-in">
-        Every example below is a real preview of what we can build for you.
+        Every example above is a real preview of what we can build for you.
         Luxury, corporate or creative — you choose the vibe, we deliver the result.
       </p>
 
@@ -273,7 +280,7 @@
         No commitment, no invoice.
       </p>
 
-      <form class="home-contact__form animate-in" id="contact-form" novalidate>
+      <form class="home-contact__form animate-in" id="contact-form" data-mailto="marvin.selftsick@gmail.com" data-kind="contact" novalidate>
         <div class="home-contact__row">
           <div class="home-contact__field">
             <label for="contact-name">Your name</label>
@@ -302,31 +309,6 @@
     </div>
   </section>
 
-  <script>
-    var CONTACT_EMAIL = 'marvin.selftsick@gmail.com'; // single place to change the contact address
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var name    = document.getElementById('contact-name').value.trim();
-      var email   = document.getElementById('contact-email').value.trim();
-      var biz     = document.getElementById('contact-business').value.trim();
-      var message = document.getElementById('contact-message').value.trim();
-      var status  = document.getElementById('contact-status');
-      if (!name || !email || !message || !document.getElementById('contact-email').checkValidity()) {
-        status.textContent = 'Please fill in your name, a valid email and your message.';
-        return;
-      }
-      // mailto opens the visitor's email app; if none is set up nothing happens, so the address is shown too
-      status.innerHTML = 'Your email app should open now. If it doesn’t, write to us directly at <a href="mailto:' + CONTACT_EMAIL + '">' + CONTACT_EMAIL + '</a>.';
-      var subject = encodeURIComponent('StudioWeb — Free audit request from ' + name);
-      var body    = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n' +
-        (biz ? 'Business: ' + biz + '\n' : '') +
-        '\n' + message
-      );
-      window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + subject + '&body=' + body;
-    });
-  </script>
 
   </main>
 

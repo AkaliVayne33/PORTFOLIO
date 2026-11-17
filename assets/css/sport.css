@@ -1,5 +1,5 @@
 /* ============================================================
-   SPORT.CSS — Styles spécifiques à la page Sport
+   SPORT.CSS — Styles for the Sport page
    ============================================================ */
 
 /* ══════════════════════════════════════════════
@@ -219,7 +219,7 @@
   transition: color 0.4s;
 }
 
-/* Témoignages luxe */
+/* Luxury testimonials */
 .luxe-temoignages {
   padding: 100px 60px;
   background: #0A0A0A;
@@ -572,7 +572,7 @@
   line-height: 1.7;
 }
 
-/* Témoignages premium */
+/* Premium testimonials */
 .premium-temoignages {
   padding: 80px 60px;
   background: #F5F7FC;
@@ -721,7 +721,7 @@
 
 /* ══════════════════════════════════════════════
    #VIBRANT — FLUX TRAINING
-   Palette : dégradé #7B2FF7→#F107A3, fond #0F0F0F
+   Palette: gradient #7B2FF7→#F107A3, background #0F0F0F
    Font : Space Grotesk
 ══════════════════════════════════════════════ */
 
@@ -810,7 +810,7 @@
   align-items: center;
 }
 
-/* Blob décoratif */
+/* Decorative blob */
 .vibrant-hero::before {
   content: '';
   position: absolute;
@@ -1038,7 +1038,7 @@
   position: relative;
 }
 
-/* Témoignages vibrant */
+/* Vibrant testimonials */
 .vibrant-temoignages {
   padding: 80px 48px;
   background: #111111;
