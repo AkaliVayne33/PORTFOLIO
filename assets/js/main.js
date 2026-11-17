@@ -27,12 +27,16 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
   animateEls.forEach((el) => el.classList.add('visible'));
 } else {
   const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      scrollObserver.unobserve(el);
-      setTimeout(() => el.classList.add('visible'), (staggerIndex.get(el) || 0) * 90);
-    });
+    // Cascade among the elements that appear together (not their rank in the whole list:
+    // on a phone the 8th card of a one-column grid scrolls in alone and must not wait 630 ms)
+    entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => (staggerIndex.get(a.target) || 0) - (staggerIndex.get(b.target) || 0))
+      .forEach((entry, i) => {
+        const el = entry.target;
+        scrollObserver.unobserve(el);
+        setTimeout(() => el.classList.add('visible'), i * 90);
+      });
   }, {
     threshold: 0.12,
     rootMargin: '0px 0px -50px 0px'

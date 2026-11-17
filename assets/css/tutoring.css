@@ -105,7 +105,7 @@
   text-align: center;
 }
 
-.tu-luxe-hero__badge-label { font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; color: #7A5500; margin-bottom: 4px; }
+.tu-luxe-hero__badge-label { font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; color: #C9A84C; margin-bottom: 4px; }
 .tu-luxe-hero__badge-val { font-family: Georgia,'Times New Roman',serif; font-size: 1rem; font-weight: 600; color: #fff; }
 
 /* Services */
@@ -125,14 +125,14 @@
 
 /* Testimonials */
 .tu-luxe-temoignages { padding: 100px 60px; background: #0A0A0A; }
-.tu-luxe-temoignages__eyebrow { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: #7A5500; margin-bottom: 16px; }
+.tu-luxe-temoignages__eyebrow { font-size: 0.7rem; letter-spacing: 4px; text-transform: uppercase; color: #C9A84C; margin-bottom: 16px; }
 .tu-luxe-temoignages__title { font-family: Georgia,'Times New Roman',serif; font-size: 2rem; font-weight: 400; color: #FAFAFA; font-style: italic; margin-bottom: 64px; }
 .tu-luxe-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 
 .tu-luxe-temoignage { padding: 36px; border: 1px solid rgba(201,168,76,0.2); }
-.tu-luxe-temoignage__stars { color: #7A5500; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; }
+.tu-luxe-temoignage__stars { color: #C9A84C; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 20px; }
 .tu-luxe-temoignage__quote { font-size: 0.9rem; font-weight: 300; color: rgba(250,250,250,0.75); line-height: 1.9; margin-bottom: 24px; font-style: italic; }
-.tu-luxe-temoignage__author { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #7A5500; }
+.tu-luxe-temoignage__author { font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: #C9A84C; }
 
 /* CTA */
 .tu-luxe-cta { padding: 120px 60px; background: #F7F5EE; text-align: center; }
@@ -465,7 +465,7 @@
 .tu-vibrant-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
 .tu-vibrant-temoignage { background: #1A1A1A; border-radius: 16px; padding: 32px 28px; border: 1px solid rgba(255,255,255,0.06); }
-.tu-vibrant-temoignage__stars { font-size: 0.9rem; color: #9D5FF5; margin-bottom: 16px; } /* purple on #1A1A1A — ratio ≈ 5:1 */
+.tu-vibrant-temoignage__stars { font-size: 0.9rem; color: #B48CFA; margin-bottom: 16px; } /* purple on #1A1A1A — ratio ≈ 5:1 */
 .tu-vibrant-temoignage__quote { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.75; margin-bottom: 24px; }
 .tu-vibrant-temoignage__author { display: flex; align-items: center; gap: 12px; }
 

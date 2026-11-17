@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://images.unsplash.com" />
 
   <!-- ── LCP image preload (luxe hero) ── -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1800&auto=format&fit=crop" imagesrcset="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1800&auto=format&fit=crop 1800w" imagesizes="100vw" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1800&auto=format&fit=crop" imagesrcset="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1800&auto=format&fit=crop 1800w" imagesizes="100vw" fetchpriority="high" />
 
   <!-- ── Fonts (non-blocking) ── -->
 
@@ -46,7 +46,8 @@
     .site-nav__inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
     .site-nav__logo{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:-0.5px;color:#0A0A0A;white-space:nowrap}
     .site-nav__logo span{color:#7B2FF7}
-    @media(max-width:768px){.site-nav__inner{flex-wrap:wrap;height:auto;padding:8px 0;row-gap:8px}.site-nav__back+.site-nav__logo{display:none}.site-nav__links{order:3;flex:1 0 100%;display:flex;justify-content:center;gap:6px}.site-nav__links a{padding:5px 10px;font-size:.75rem}}
+    @media(max-width:900px){.site-nav__inner{flex-wrap:wrap;height:auto;padding:8px 0;row-gap:8px}.site-nav__back+.site-nav__logo{display:none}.site-nav__links{order:3;flex:1 0 100%;display:flex;justify-content:center;gap:6px}.site-nav__links a{padding:5px 10px;font-size:.75rem}}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     .js .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
     .js .animate-in.visible{opacity:1;transform:translateY(0)}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .animate-in{opacity:1;transform:none;transition:none}}
@@ -58,7 +59,7 @@
     .id-luxe-nav{display:flex;align-items:center;justify-content:space-between;padding:24px 60px;background:#FAFAFA}
     @media(max-width:768px){.id-luxe-nav{padding:16px 24px}}
     .id-luxe-hero{position:relative;height:92vh;min-height:620px;overflow:hidden;display:flex;align-items:flex-end}
-    .id-luxe-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .id-luxe-hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.4)}
     .id-luxe-hero__content{position:relative;z-index:1;padding:0 60px 80px;max-width:680px}
     .id-luxe-hero__eyebrow{font-size:.7rem;letter-spacing:5px;text-transform:uppercase;color:#8B6914;margin-bottom:20px}
     .id-luxe-hero__title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.8rem,5vw,5.5rem);font-weight:400;color:#FAFAFA;line-height:1.12;margin-bottom:20px}

@@ -221,7 +221,7 @@
   font-size: 0.7rem;
   letter-spacing: 4px;
   text-transform: uppercase;
-  color: #7A5500;
+  color: #C9A84C;
   margin-bottom: 16px;
 }
 
@@ -246,7 +246,7 @@
 }
 
 .bw-luxe-temoignage__stars {
-  color: #7A5500;
+  color: #C9A84C;
   font-size: 0.9rem;
   letter-spacing: 2px;
   margin-bottom: 20px;
@@ -265,7 +265,7 @@
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #7A5500;
+  color: #C9A84C;
 }
 
 /* CTA */
@@ -639,7 +639,7 @@
   line-height: 1.2;
 }
 
-.bw-premium-cta__title span { color: #1A0533; }
+.bw-premium-cta__title span { color: #FFE3F1; }
 
 .bw-premium-cta__sub {
   color: rgba(255,255,255,0.85);

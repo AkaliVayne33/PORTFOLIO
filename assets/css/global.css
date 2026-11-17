@@ -366,7 +366,7 @@ ul {
   right: 20px;
   width: 36px;
   height: 36px;
-  background: rgba(255,255,255,0.65);
+  background: rgba(255,255,255,0.18);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -840,7 +840,7 @@ ul {
 }
 
 /* ── Responsive ── */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   /* Sector pages: Home + Contact on the first row, the three style tags on a second row */
   .site-nav__inner {
     flex-wrap: wrap;
@@ -864,6 +864,9 @@ ul {
   [id] {
     scroll-margin-top: 112px;
   }
+}
+
+@media (max-width: 768px) {
 
   .site-nav__contact {
     padding: 6px 12px;

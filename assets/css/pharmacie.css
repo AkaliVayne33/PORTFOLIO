@@ -78,7 +78,7 @@
 .ph-luxe-service:hover .ph-luxe-service__title,
 .ph-luxe-service:hover .ph-luxe-service__text { color: #F9F7F4; }
 .ph-luxe-service:hover .ph-luxe-service__num { color: #4A8C6F; }
-.ph-luxe-service__num { font-family: Georgia,'Times New Roman',serif; font-size: 2.2rem; color: rgba(74,140,111,0.22); margin-bottom: 16px; transition: color 0.4s; }
+.ph-luxe-service__num { font-family: Georgia,'Times New Roman',serif; font-size: 2.2rem; color: #2D6B52; margin-bottom: 16px; transition: color 0.4s; }
 .ph-luxe-service__title { font-family: Georgia,'Times New Roman',serif; font-size: 1.1rem; font-weight: 600; color: #1C1C1C; margin-bottom: 12px; transition: color 0.4s; }
 .ph-luxe-service__text { font-size: 0.82rem; font-weight: 300; color: #666; line-height: 1.9; transition: color 0.4s; }
 
@@ -166,7 +166,7 @@
 .ph-premium-cta { padding: 80px 60px; background: #003D3D; text-align: center; }
 .ph-premium-cta__title { font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size: clamp(1.8rem, 3.5vw, 3rem); font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 16px; }
 .ph-premium-cta__title span { color: #00B4A6; }
-.ph-premium-cta__sub { font-size: 1rem; color: rgba(255,255,255,0.52); margin-bottom: 36px; line-height: 1.7; }
+.ph-premium-cta__sub { font-size: 1rem; color: rgba(255,255,255,0.75); margin-bottom: 36px; line-height: 1.7; }
 
 /* Footer */
 .ph-premium-footer { background: #002929; padding: 40px 60px; display: flex; align-items: center; justify-content: space-between; }

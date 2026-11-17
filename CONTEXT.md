@@ -179,13 +179,15 @@ Each mockup contains:
 - [x] Step 43: tutoring.html CLS fix — style="" on <section class="tu-luxe-hero">, <div class="tu-luxe-hero__right">, <img>
 
 ## CLS pattern (rule for all pages)
-- For full-bleed hero (position:absolute img): add style="" on <section> with height/overflow/display, and style="" on <img> with position/inset/object-fit/filter/will-change
-- For split-grid hero (2-col grid): add style="" on <section> with display:grid/grid-template-columns/height, style="" on __right div with overflow/position, style="" on <img> with width/height/object-fit
-- Pseudo-elements (::before/::after) defined in inline <style> do NOT cause CLS — they only exist once CSS is parsed, so no pre-CSS state to shift from
-- style="" attribute on an element is applied at HTML parse time — before any <style> block — so it prevents the "unstyled → styled" shift window
+- Put every above-the-fold rule (nav, hero section, hero image incl. its filter, hero texts, .sr-only) in the
+  inline <style> of the page, with the SAME values as the sector stylesheet: when it arrives, nothing moves.
+- Never use style="" attributes for layout: they beat the mobile media queries (that broke the phone layout
+  of sport, restaurant, pharmacy and tutoring until step 50).
+- Breakpoints in the inline <style> must match the sector stylesheet (split heroes collapse at 900px).
+- Pseudo-elements (::before/::after) defined in inline <style> do NOT cause CLS.
 
 ## Known remaining issues (as of session end)
-- sport, restaurant, pharmacie, tutoring: CLS fixed via style="" attributes. Remaining pages (immobilier, beauty, clinic, interior) not yet audited for this specific pattern — run Lighthouse to check.
+- All 8 sector pages: hero rules live in the inline critical <style> (style="" attributes removed in step 50).
 - The [non attribué] forced reflow (30–90ms) on all sector pages is incompressible — it's the browser recalculating layout when deferred CSS loads. Not scored by Lighthouse.
 - A final Lighthouse pass on all pages is recommended to confirm 100 Accessibility + maximum Performance scores.
 
