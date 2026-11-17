@@ -37,6 +37,8 @@
     .audit-hero__subtitle{font-size:clamp(1rem,2vw,1.15rem);color:rgba(255,255,255,0.72);max-width:540px;margin:0 auto 48px;line-height:1.8}
     .audit-hero__cta{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:#7B2FF7;color:#fff;border-radius:999px;font-weight:700;font-size:1rem;transition:transform .2s,box-shadow .2s}
     .audit-hero__cta:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(123,47,247,.5)}
+    .audit-hero__wa-cta{display:inline-flex;align-items:center;gap:10px;padding:16px 32px;background:rgba(37,211,102,.15);color:#25D366;border:2px solid rgba(37,211,102,.4);border-radius:999px;font-weight:700;font-size:1rem;transition:transform .2s,background .2s,border-color .2s}
+    .audit-hero__wa-cta:hover{transform:translateY(-2px);background:rgba(37,211,102,.25);border-color:#25D366}
     .audit-hero__trust{margin-top:40px;display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
     .audit-hero__trust-item{display:flex;align-items:center;gap:8px;font-size:0.82rem;color:rgba(255,255,255,0.55)}
     .audit-hero__trust-item svg{color:#2ECC71;flex-shrink:0}
@@ -105,6 +107,19 @@
     /* Footer */
     .home-footer{text-align:center;padding:40px 24px;border-top:1px solid #E8E8E8;font-size:0.85rem;color:#595959}
     .home-footer strong{color:#0A0A0A}
+    .home-footer__wa{display:inline-flex;align-items:center;gap:6px;color:#25D366;font-weight:600;margin-top:8px;transition:opacity .2s}
+    .home-footer__wa:hover{opacity:.75}
+
+    /* WhatsApp floating button */
+    .wa-float{position:fixed;bottom:28px;right:28px;z-index:999;display:inline-flex;align-items:center;gap:10px;padding:14px 22px;background:#25D366;color:#fff;border-radius:999px;font-size:0.9rem;font-weight:700;box-shadow:0 8px 28px rgba(37,211,102,.45);transition:transform .2s,box-shadow .2s;text-decoration:none}
+    .wa-float:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(37,211,102,.55)}
+    .wa-float__label{display:none}
+    @media(min-width:600px){.wa-float__label{display:inline}}
+
+    /* WhatsApp nav link */
+    .site-nav__wa{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#25D366;color:#fff;border-radius:999px;font-size:0.82rem;font-weight:700;white-space:nowrap;transition:background .2s,transform .2s;flex-shrink:0}
+    .site-nav__wa:hover{background:#1ebe5d;transform:translateY(-1px)}
+    @media(max-width:500px){.site-nav__wa .site-nav__wa-label{display:none}}
 
     /* Responsive */
     .container{max-width:1200px;margin:0 auto;padding:0 24px}
@@ -129,6 +144,10 @@
         Home
       </a>
       <span class="site-nav__logo" role="img" aria-label="StudioWeb">Studio<span aria-hidden="true">Web</span></span>
+      <a href="https://wa.me/33682700208?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20a%20free%20website%20audit." class="site-nav__wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.828L.057 23.7a.5.5 0 0 0 .623.607l5.99-1.57A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.374l-.36-.213-3.714.973.99-3.611-.234-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        <span class="site-nav__wa-label">WhatsApp</span>
+      </a>
       <a href="#audit-form" class="site-nav__contact" aria-label="Request your free audit">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         Get my audit
@@ -149,10 +168,16 @@
       personalised report — with a visual preview of what it could look like.
       Delivered in 48 hours.
     </p>
-    <a href="#audit-form" class="audit-hero__cta animate-in">
-      Request my free audit
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
-    </a>
+    <div class="audit-hero__actions animate-in" style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+      <a href="#audit-form" class="audit-hero__cta">
+        Request my free audit
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+      <a href="https://wa.me/33682700208?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20a%20free%20website%20audit." target="_blank" rel="noopener" class="audit-hero__wa-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.828L.057 23.7a.5.5 0 0 0 .623.607l5.99-1.57A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.374l-.36-.213-3.714.973.99-3.611-.234-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
     <div class="audit-hero__trust animate-in" aria-label="Trust indicators">
       <span class="audit-hero__trust-item">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
@@ -280,25 +305,25 @@
 
         <blockquote class="audit-proof__card animate-in">
           <div class="audit-proof__stars" aria-label="5 stars">★★★★★</div>
-          <p class="audit-proof__quote">"L'audit était vraiment détaillé — ils ont repéré des problèmes dont on n'avait aucune idée. Le mockup qu'ils nous ont envoyé nous a convaincus en cinq minutes."</p>
+          <p class="audit-proof__quote">"The audit was incredibly detailed — they spotted issues we had no idea about. The redesign mockup they sent over convinced us within five minutes. Highly recommend."</p>
           <footer class="audit-proof__author">
-            <strong>Claire M.</strong> — Gérante, clinique esthétique
+            <strong>Claire M.</strong> — Owner, aesthetic clinic · Paris 8e
           </footer>
         </blockquote>
 
         <blockquote class="audit-proof__card animate-in">
           <div class="audit-proof__stars" aria-label="5 stars">★★★★★</div>
-          <p class="audit-proof__quote">"Honnête et sans baratin. Ils nous ont dit exactement ce qui n'allait pas et nous ont montré une version bien supérieure. Aucune pression commerciale après."</p>
+          <p class="audit-proof__quote">"Straight to the point, no fluff. They told us exactly what was wrong and showed us a much better version of our site. Zero sales pressure afterwards."</p>
           <footer class="audit-proof__author">
-            <strong>Thomas R.</strong> — Directeur, groupe de restaurants
+            <strong>Thomas R.</strong> — Director, restaurant group · Lyon
           </footer>
         </blockquote>
 
         <blockquote class="audit-proof__card animate-in">
           <div class="audit-proof__stars" aria-label="5 stars">★★★★★</div>
-          <p class="audit-proof__quote">"Reçu en moins de 24h, très complet, avec des recommandations concrètes. Même sans les avoir embauchés, l'audit aurait valu le coup à lui seul."</p>
+          <p class="audit-proof__quote">"Received in under 24 hours, very thorough, with concrete action points. Even if we hadn't hired them, the audit alone would have been worth it."</p>
           <footer class="audit-proof__author">
-            <strong>Sophie L.</strong> — Fondatrice, agence immobilière
+            <strong>Sophie L.</strong> — Founder, real estate agency · Bordeaux
           </footer>
         </blockquote>
 
@@ -396,7 +421,18 @@
   <!-- ══ FOOTER ══ -->
   <footer class="home-footer">
     <strong>StudioWeb</strong> — Web Design &amp; Redesign &nbsp;·&nbsp; Singapore &nbsp;·&nbsp; All rights reserved © 2026
+    <br>
+    <a href="https://wa.me/33682700208?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20a%20free%20website%20audit." target="_blank" rel="noopener" class="home-footer__wa">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.828L.057 23.7a.5.5 0 0 0 .623.607l5.99-1.57A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.374l-.36-.213-3.714.973.99-3.611-.234-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+      WhatsApp us directly
+    </a>
   </footer>
+
+  <!-- ══ WHATSAPP FLOATING BUTTON ══ -->
+  <a href="https://wa.me/33682700208?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20a%20free%20website%20audit." target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.828L.057 23.7a.5.5 0 0 0 .623.607l5.99-1.57A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.8 9.8 0 0 1-5.003-1.374l-.36-.213-3.714.973.99-3.611-.234-.372A9.818 9.818 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+    <span class="wa-float__label">Chat with us</span>
+  </a>
 
   <!-- ══ SCRIPTS ══ -->
   <script src="assets/js/main.js" defer></script>
