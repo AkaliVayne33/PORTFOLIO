@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://images.unsplash.com" />
 
   <!-- ── LCP image preload (luxe hero) ── -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&auto=format&fit=crop" fetchpriority="high" media="(min-width: 769px)" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&auto=format&fit=crop" imagesrcset="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&auto=format&fit=crop 1200w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high" media="(min-width: 769px)" />
 
   <!-- ── Fonts (non-blocking) ── -->
 
@@ -99,7 +99,6 @@
       </a>
     </div>
   </nav>
-  </nav>
 
 
   <main>
@@ -138,7 +137,7 @@
           Maison Blanche curates an exclusive selection of Singapore's finest
           properties — because your address says everything.
         </p>
-        <a href="#" tabindex="-1" class="re-luxe-btn luxe-btn--on-light">Explore Listings</a>
+        <a href="#" tabindex="-1" class="re-luxe-btn">Explore Listings</a>
       </div>
       <div class="re-luxe-hero__right">
         <picture>
@@ -148,7 +147,7 @@
           class="re-luxe-hero__img"
           src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&auto=format&fit=crop 1200w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
           alt="Luxury property Singapore"
           width="1200" height="800"
           fetchpriority="high"
@@ -297,7 +296,7 @@
         <img
           src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
           alt="ImmPro Advisory"
           width="800" height="600"
           loading="lazy"
@@ -436,7 +435,7 @@
             <img
               src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
               alt="NEOHABITAT modern property"
               width="800" height="800"
               loading="lazy"
@@ -527,7 +526,7 @@
         Your home is<br><span class="grad">one search away.</span>
       </h4>
       <p class="re-vibrant-cta__sub animate-in">Free to use. No agent fees. Just results.</p>
-      <a href="#" tabindex="-1" class="re-vibrant-btn animate-in" style="font-size:1rem;padding:16px 40px;">
+      <a href="#" tabindex="-1" class="re-vibrant-btn cta--large animate-in">
         Search Now →
       </a>
     </section>

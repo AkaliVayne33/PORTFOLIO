@@ -152,9 +152,12 @@ document.querySelectorAll('form[data-mailto]').forEach((form) => {
     const invalid = required.filter((field) => !filled(field));
     required.forEach((field) => mark(field, invalid.includes(field)));
     if (invalid.length) {
-      const names = invalid.map((field) => (form.querySelector(`label[for="${field.id}"]`)?.textContent || field.name)
-        .replace(/\*|\(optional\)/g, '').replace(/\?\s*$/, '').trim());
-      say('Please fill in: ' + names.join(', ') + '.');
+      const label = (field) => (form.querySelector(`label[for="${field.id}"]`)?.textContent || field.name)
+        .replace(/\*|\(optional\)/g, '').replace(/\?\s*$/, '').trim();
+      const empty = invalid.filter((field) => field.value.trim() === '').map(label);
+      const wrong = invalid.filter((field) => field.value.trim() !== '').map(label);
+      say([empty.length ? 'Please fill in: ' + empty.join(', ') + '.' : '',
+           wrong.length ? 'Please check the format of: ' + wrong.join(', ') + ' (e.g. name@company.com).' : ''].join(' ').trim());
       setTimeout(() => invalid[0].focus(), 100);
       return;
     }

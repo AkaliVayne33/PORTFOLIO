@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://images.unsplash.com" />
 
   <!-- ── LCP image preload (luxe hero) ── -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1800&auto=format&fit=crop" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1800&auto=format&fit=crop" imagesrcset="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1800&auto=format&fit=crop 1800w" imagesizes="100vw" />
 
   <!-- ── Fonts (non-blocking) ── -->
 
@@ -140,7 +140,7 @@
           Maison Atelier creates bespoke residential interiors for clients
           who understand that a home is more than a space — it is a statement.
         </p>
-        <a href="#" tabindex="-1" class="id-luxe-btn luxe-btn--on-light">View Our Portfolio</a>
+        <a href="#" tabindex="-1" class="id-luxe-btn">View Our Portfolio</a>
       </div>
     </section>
 
@@ -272,7 +272,7 @@
         <img
           src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
           alt="Livspace Pro renovation"
           width="800" height="600"
           loading="lazy"
@@ -411,7 +411,7 @@
             <img
               src="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1600210492493-0946911123ea?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1600210492493-0946911123ea?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
               alt="FORM & FLUX interior"
               width="800" height="800"
               loading="lazy"
@@ -502,7 +502,7 @@
         Got a space?<br><span class="id-grad">We've got ideas.</span>
       </h4>
       <p class="id-vibrant-cta__sub animate-in">Limited slots per quarter. Tell us about your project — let's see if we're a match.</p>
-      <a href="#" tabindex="-1" class="id-vibrant-btn animate-in" style="font-size:1rem;padding:16px 40px;">
+      <a href="#" tabindex="-1" class="id-vibrant-btn cta--large animate-in">
         Start a Project →
       </a>
     </section>

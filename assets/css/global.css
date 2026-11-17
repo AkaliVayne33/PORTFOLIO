@@ -615,7 +615,7 @@ ul {
 
 .home-contact__field input:focus,
 .home-contact__field textarea:focus {
-  outline: none;
+  outline: 2px solid transparent;
   border-color: #7B2FF7;
   box-shadow: 0 0 0 3px rgba(123,47,247,0.12);
 }
@@ -809,9 +809,10 @@ ul {
     display: flex;
   }
 
-  /* keep content from hiding behind the sticky bar */
-  main {
-    padding-bottom: 64px;
+  /* keep the end of the page (agency banner, after <main>) from hiding behind the sticky bar,
+     which can wrap onto two lines on small phones */
+  .agency-banner {
+    padding-bottom: 96px;
   }
 
   .agency-banner__inner {
@@ -936,4 +937,18 @@ a.luxe-btn--on-light {
     white-space: normal;
     text-align: center;
   }
+}
+
+/* Luxury call-to-action on a dark photo: light gold text */
+a.luxe-btn--on-dark {
+  color: #E8C77A;
+  border-color: #C9A84C;
+}
+
+/* A field marked invalid keeps its red border while it has the focus (main.js focuses it) */
+[aria-invalid="true"],
+[aria-invalid="true"]:focus,
+.home-contact__field [aria-invalid="true"]:focus,
+.audit-form__field [aria-invalid="true"]:focus {
+  border-color: #C62828;
 }

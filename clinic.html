@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://images.unsplash.com" />
 
   <!-- ── LCP image preload (luxe hero) ── -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop" fetchpriority="high" media="(min-width: 769px)" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop" imagesrcset="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop 1200w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high" media="(min-width: 769px)" />
 
   <!-- ── Fonts (non-blocking) ── -->
 
@@ -143,7 +143,7 @@
           class="cl-luxe-hero__img"
           src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1200&auto=format&fit=crop 1200w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
           alt="The Paragon Clinic"
           width="1200" height="800"
           fetchpriority="high"
@@ -285,7 +285,7 @@
         <img
           src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
           alt="SmileCare Dental clinic"
           width="800" height="600"
           loading="lazy"
@@ -424,7 +424,7 @@
             <img
               src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
               alt="MEDIPOINT clinic"
               width="800" height="800"
               loading="lazy"
@@ -515,7 +515,7 @@
         See a doctor<br><span class="cl-grad">today.</span>
       </h4>
       <p class="cl-vibrant-cta__sub animate-in">In-clinic or teleconsult. Appointments in under 60 seconds.</p>
-      <a href="#" tabindex="-1" class="cl-vibrant-btn animate-in" style="font-size:1rem;padding:16px 40px;">
+      <a href="#" tabindex="-1" class="cl-vibrant-btn cta--large animate-in">
         Book Now →
       </a>
     </section>

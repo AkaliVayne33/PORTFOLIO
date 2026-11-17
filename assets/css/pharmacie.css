@@ -53,7 +53,7 @@
 .ph-luxe-hero__sub { font-size: 0.95rem; font-weight: 300; color: #696969; line-height: 1.9; margin-bottom: 44px; max-width: 400px; }
 .ph-luxe-btn {
   display: inline-block; padding: 16px 40px;
-  border: 1px solid #4A8C6F; color: #4A8C6F;
+  border: 1px solid #2D6B52; color: #2D6B52;
   font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase;
   transition: all 0.4s; align-self: flex-start;
 }
@@ -65,12 +65,12 @@
   background: #F9F7F4; padding: 20px 28px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.12);
 }
-.ph-luxe-hero__badge-label { font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: #4A8C6F; margin-bottom: 4px; }
+.ph-luxe-hero__badge-label { font-size: 0.62rem; letter-spacing: 3px; text-transform: uppercase; color: #2D6B52; margin-bottom: 4px; }
 .ph-luxe-hero__badge-val { font-family: Georgia,'Times New Roman',serif; font-size: 1.4rem; font-weight: 600; color: #1C1C1C; }
 
 /* Services */
 .ph-luxe-services { padding: 100px 64px; background: #F9F7F4; }
-.ph-luxe-services__eyebrow { font-size: 0.68rem; letter-spacing: 4px; text-transform: uppercase; color: #4A8C6F; margin-bottom: 16px; text-align: center; }
+.ph-luxe-services__eyebrow { font-size: 0.68rem; letter-spacing: 4px; text-transform: uppercase; color: #2D6B52; margin-bottom: 16px; text-align: center; }
 .ph-luxe-services__title { font-family: Georgia,'Times New Roman',serif; font-size: 2.4rem; font-weight: 400; color: #1C1C1C; line-height: 1.3; text-align: center; margin-bottom: 72px; }
 .ph-luxe-services__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(74,140,111,0.15); border: 1px solid rgba(74,140,111,0.15); }
 .ph-luxe-service { background: #F9F7F4; padding: 48px 36px; transition: background 0.4s; }
@@ -84,13 +84,13 @@
 
 /* Testimonials */
 .ph-luxe-temoignages { padding: 100px 64px; background: #1C1C1C; }
-.ph-luxe-temoignages__eyebrow { font-size: 0.68rem; letter-spacing: 4px; text-transform: uppercase; color: #4A8C6F; text-align: center; margin-bottom: 12px; }
+.ph-luxe-temoignages__eyebrow { font-size: 0.68rem; letter-spacing: 4px; text-transform: uppercase; color: #6FB592; text-align: center; margin-bottom: 12px; }
 .ph-luxe-temoignages__title { font-family: Georgia,'Times New Roman',serif; font-size: 2rem; font-weight: 400; color: #F9F7F4; font-style: italic; text-align: center; margin-bottom: 64px; }
 .ph-luxe-temoignages__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; max-width: 1100px; margin: 0 auto; }
 .ph-luxe-temoignage { border-top: 1px solid rgba(74,140,111,0.3); padding-top: 32px; }
-.ph-luxe-temoignage__stars { color: #4A8C6F; font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 16px; }
+.ph-luxe-temoignage__stars { color: #6FB592; font-size: 0.82rem; letter-spacing: 2px; margin-bottom: 16px; }
 .ph-luxe-temoignage__quote { font-family: Georgia,'Times New Roman',serif; font-style: italic; font-size: 0.95rem; color: rgba(249,247,244,0.75); line-height: 1.9; margin-bottom: 20px; }
-.ph-luxe-temoignage__author { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: #4A8C6F; font-weight: 300; }
+.ph-luxe-temoignage__author { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: #6FB592; font-weight: 300; }
 
 /* CTA */
 .ph-luxe-cta { padding: 100px 64px; background: #F9F7F4; text-align: center; }

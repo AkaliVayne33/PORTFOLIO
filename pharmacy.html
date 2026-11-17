@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://images.unsplash.com" />
 
   <!-- ── LCP image preload (luxe hero) ── -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200&auto=format&fit=crop" fetchpriority="high" media="(min-width: 769px)" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200&auto=format&fit=crop" imagesrcset="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200&auto=format&fit=crop 1200w" imagesizes="(max-width: 768px) 100vw, 50vw" fetchpriority="high" media="(min-width: 769px)" />
 
   <!-- ── Fonts (non-blocking) ── -->
 
@@ -51,6 +51,8 @@
     .site-nav__links a.tag--premium{border-color:#0D1B3E;color:#0D1B3E}
     .site-nav__links a.tag--vibrant{border-color:#7B2FF7;color:#7B2FF7}
     @media(max-width:768px){.site-nav__inner{flex-wrap:wrap;height:auto;padding:8px 0;row-gap:8px}.site-nav__back+.site-nav__logo{display:none}.site-nav__links{order:3;flex:1 0 100%;display:flex;justify-content:center;gap:6px}.site-nav__links a{padding:5px 10px;font-size:.75rem}}
+    .ph-luxe-hero__right{overflow:hidden;position:relative}
+    .ph-luxe-hero__right img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
     .js .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
     .js .animate-in.visible{opacity:1;transform:translateY(0)}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .animate-in{opacity:1;transform:none;transition:none}}
@@ -139,7 +141,7 @@
         </p>
         <a href="#" tabindex="-1" class="ph-luxe-btn">Discover Our Services</a>
       </div>
-      <div class="ph-luxe-hero__right" style="overflow:hidden;position:relative">
+      <div class="ph-luxe-hero__right">
         <picture>
         <!-- phones: the picture column is hidden, so nothing is downloaded -->
         <source media="(max-width: 768px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
@@ -147,11 +149,10 @@
           class="ph-luxe-hero__img"
           src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=1200&auto=format&fit=crop 1200w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
           alt="Luxury pharmacy interior"
           width="1200" height="800"
           fetchpriority="high"
-          style="width:100%;height:100%;object-fit:cover;display:block;will-change:transform"
         />
       </picture>
         <div class="ph-luxe-hero__badge">
@@ -289,7 +290,7 @@
         <img
           src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1576602976047-174e57a47881?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
           alt="PharmaCare+ pharmacy"
           width="800" height="600"
           loading="lazy"
@@ -428,7 +429,7 @@
             <img
               src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
               alt="MEDIFAST health app"
               width="800" height="800"
               loading="lazy"
@@ -519,7 +520,7 @@
         Your pharmacist,<br><span class="grad">in your pocket.</span>
       </h4>
       <p class="ph-vibrant-cta__sub animate-in">Free download. First prescription delivery free.</p>
-      <a href="#" tabindex="-1" class="ph-vibrant-btn animate-in" style="font-size:1rem;padding:16px 40px;">
+      <a href="#" tabindex="-1" class="ph-vibrant-btn cta--large animate-in">
         Download MEDIFAST →
       </a>
     </section>

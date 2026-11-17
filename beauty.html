@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://images.unsplash.com" />
 
   <!-- ── LCP image preload (luxe hero) ── -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1800&auto=format&fit=crop" fetchpriority="high" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1800&auto=format&fit=crop" imagesrcset="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1800&auto=format&fit=crop 1800w" imagesizes="100vw" fetchpriority="high" />
 
   <!-- ── Fonts (non-blocking) ── -->
 
@@ -146,7 +146,7 @@
           SERENOVA is Singapore's most intimate luxury day spa. Each treatment
           is a curated journey — designed to restore, not simply relax.
         </p>
-        <a href="#" tabindex="-1" class="bw-luxe-btn luxe-btn--on-light">Explore Treatments</a>
+        <a href="#" tabindex="-1" class="bw-luxe-btn">Explore Treatments</a>
       </div>
     </section>
 
@@ -278,7 +278,7 @@
         <img
           src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
           alt="GlowPro Studios interior"
           width="800" height="600"
           loading="lazy"
@@ -418,7 +418,7 @@
             <img
               src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1604654894610-df63bc536371?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
               alt="Blossom Studio nail art"
               width="800" height="800"
               loading="lazy"
@@ -509,7 +509,7 @@
         Ready to<br><span class="bw-grad">blossom?</span>
       </h4>
       <p class="bw-vibrant-cta__sub animate-in">Slots fill up fast. Book online — takes 30 seconds.</p>
-      <a href="#" tabindex="-1" class="bw-vibrant-btn animate-in" style="font-size:1rem;padding:16px 40px;">
+      <a href="#" tabindex="-1" class="bw-vibrant-btn cta--large animate-in">
         Book Your Slot →
       </a>
     </section>

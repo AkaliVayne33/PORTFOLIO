@@ -31,7 +31,7 @@
   <link rel="preconnect" href="https://images.unsplash.com" />
 
   <!-- ── LCP image preload (luxe hero) ── -->
-  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&auto=format&fit=crop" fetchpriority="high" />
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&auto=format&fit=crop" imagesrcset="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1000&auto=format&fit=crop 1000w, https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1600&auto=format&fit=crop 1600w" imagesizes="100vw" fetchpriority="high" />
 
   <!-- ── Fonts (non-blocking) ── -->
 
@@ -51,6 +51,7 @@
     .site-nav__links a.tag--premium{border-color:#0D1B3E;color:#0D1B3E}
     .site-nav__links a.tag--vibrant{border-color:#7B2FF7;color:#7B2FF7}
     @media(max-width:768px){.site-nav__inner{flex-wrap:wrap;height:auto;padding:8px 0;row-gap:8px}.site-nav__back+.site-nav__logo{display:none}.site-nav__links{order:3;flex:1 0 100%;display:flex;justify-content:center;gap:6px}.site-nav__links a{padding:5px 10px;font-size:.75rem}}
+    .premium-btn--noshrink{flex-shrink:0}
     .js .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
     .js .animate-in.visible{opacity:1;transform:translateY(0)}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .animate-in{opacity:1;transform:none;transition:none}}
@@ -139,7 +140,6 @@
         alt="Luxury fitness club"
         width="1600" height="900"
         fetchpriority="high"
-        style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(0.45);will-change:transform"
       />
       <div class="luxe-hero__content">
         <p class="luxe-hero__eyebrow">Private Club · Orchard Road</p>
@@ -150,7 +150,7 @@
           A space designed for the most demanding. Bespoke coaching,
           premium equipment, personalised tracking.
         </p>
-        <a href="#" tabindex="-1" class="luxe-btn luxe-btn--on-light">Discover the Club</a>
+        <a href="#" tabindex="-1" class="luxe-btn">Discover the Club</a>
       </div>
     </section>
 
@@ -281,7 +281,7 @@
         <img
           src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
           alt="SportPro Club"
           width="800" height="600"
           loading="lazy"
@@ -295,7 +295,7 @@
           <p class="premium-services__tag animate-in">Our Services</p>
           <h4 class="premium-services__title animate-in">Everything you need to perform.</h4>
         </div>
-        <a href="#" tabindex="-1" class="premium-btn" style="flex-shrink:0;">See all →</a>
+        <a href="#" tabindex="-1" class="premium-btn premium-btn--noshrink">See all →</a>
       </div>
       <div class="premium-services__grid">
         <div class="premium-service-card animate-in">
@@ -422,7 +422,7 @@
             <img
               src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&auto=format&fit=crop 800w"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
               alt="FLUX Training athlete"
               width="800" height="800"
               loading="lazy"
@@ -514,7 +514,7 @@
         The time<br>is <span class="grad">now.</span>
       </h4>
       <p class="vibrant-cta__sub animate-in">First month at $1. No commitment. Cancel anytime.</p>
-      <a href="#" tabindex="-1" class="vibrant-btn animate-in" style="font-size:1rem;padding:16px 40px;">
+      <a href="#" tabindex="-1" class="vibrant-btn cta--large animate-in">
         I'm starting today →
       </a>
     </section>
