@@ -842,18 +842,18 @@ ul {
 /* ── Responsive ── */
 @media (max-width: 900px) {
   /* Sector pages: Home + Contact on the first row, the three style tags on a second row */
-  .site-nav__inner {
+  .sector-page .site-nav__inner {
     flex-wrap: wrap;
     height: auto;
     padding: 8px 0;
     row-gap: 8px;
   }
 
-  .site-nav__back + .site-nav__logo {
+  .sector-page .site-nav__logo {
     display: none;
   }
 
-  .site-nav__links {
+  .sector-page .site-nav__links {
     order: 3;
     flex: 1 0 100%;
     display: flex;
@@ -861,7 +861,7 @@ ul {
     gap: 6px;
   }
 
-  [id] {
+  .sector-page [id] {
     scroll-margin-top: 112px;
   }
 }
@@ -954,4 +954,30 @@ a.luxe-btn--on-dark {
 .home-contact__field [aria-invalid="true"]:focus,
 .audit-form__field [aria-invalid="true"]:focus {
   border-color: #C62828;
+}
+
+/* ── Very narrow phones (Galaxy Fold folded, 280 px) ── */
+@media (max-width: 320px) {
+  body [class$="nav__cta"],
+  body [class*="-btn"] {
+    white-space: normal;
+    padding-left: 12px;
+    padding-right: 12px;
+    letter-spacing: 1px;
+    max-width: 100%;
+  }
+
+  body .premium-btn--noshrink {
+    flex-shrink: 1;
+  }
+
+  /* demo menus: brand name and button fit side by side */
+  body [class$="luxe-nav__logo"] {
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+  }
+
+  body [class$="luxe-nav__cta"] {
+    font-size: 0.62rem;
+  }
 }

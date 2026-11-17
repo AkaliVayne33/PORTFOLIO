@@ -125,6 +125,9 @@ if ('serviceWorker' in navigator && location.protocol !== 'file:') {
 
 document.querySelectorAll('form[data-mailto]').forEach((form) => {
   const to = form.dataset.mailto;
+  // The script checks the fields itself (clear messages); without JS the browser checks them and the
+  // form falls back to a plain mailto post (action attribute).
+  form.noValidate = true;
   const status = form.querySelector('[role="status"]');
   const required = Array.from(form.querySelectorAll('[required]'));
   const value = (id) => (form.querySelector('#' + id)?.value || '').trim();
@@ -183,7 +186,14 @@ document.querySelectorAll('form[data-mailto]').forEach((form) => {
         + (value('contact-business') ? 'Business: ' + value('contact-business') + '\n' : '')
         + '\n' + value('contact-message');
     }
-    say('Your email app should open now. If it doesn\u2019t, write to us directly at <a href="mailto:' + to + '">' + to + '</a>.');
-    window.location.href = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    let url = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    // Some mail apps refuse mailto links longer than about 2,000 characters
+    if (url.length > 2000) {
+      url = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.slice(0, 600) + '\n\n[…message shortened, please paste the rest here]');
+      say('Your message is long: your email app opens with the beginning of it, please paste the rest. Or write to us directly at <a href="mailto:' + to + '">' + to + '</a>.');
+    } else {
+      say('Your email app should open now. If it doesn\u2019t, write to us directly at <a href="mailto:' + to + '">' + to + '</a>.');
+    }
+    window.location.href = url;
   });
 });

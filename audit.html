@@ -134,7 +134,8 @@
     /* WhatsApp nav link */
     .site-nav__wa{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#25D366;color:#06331A;border-radius:999px;font-size:0.82rem;font-weight:700;white-space:nowrap;transition:background .2s,transform .2s;flex-shrink:0}
     .site-nav__wa:hover{background:#1ebe5d;transform:translateY(-1px)}
-    @media(max-width:500px){.site-nav__wa .site-nav__wa-label{display:none}}
+    @media(max-width:500px){.site-nav__wa .site-nav__wa-label{display:none}.site-nav__back-label{display:none}.site-nav__inner{gap:10px}.site-nav__contact{padding:7px 12px}}
+    @media(max-width:340px){.site-nav__logo{display:none}.site-nav__contact svg{display:none}}
 
     /* Responsive */
     .container{max-width:1200px;margin:0 auto;padding:0 24px}
@@ -152,9 +153,9 @@
   <!-- ══ NAV ══ -->
   <nav class="site-nav" aria-label="Main navigation">
     <div class="site-nav__inner">
-      <a href="index.html" class="site-nav__back">
+      <a href="index.html" class="site-nav__back" aria-label="Home">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
-        Home
+        <span class="site-nav__back-label">Home</span>
       </a>
       <span class="site-nav__logo" role="img" aria-label="StudioWeb">Studio<span aria-hidden="true">Web</span></span>
       <a href="https://wa.me/33682700208?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20a%20free%20website%20audit." class="site-nav__wa" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
@@ -366,7 +367,7 @@
       </div>
 
       <div class="audit-form-section__right">
-        <form class="audit-form animate-in" id="audit-request-form" data-mailto="marvin.selftsick@gmail.com" data-kind="audit" novalidate>
+        <form class="audit-form animate-in" id="audit-request-form" data-mailto="marvin.selftsick@gmail.com" data-kind="audit" action="mailto:marvin.selftsick@gmail.com" method="post" enctype="text/plain">
 
           <div class="audit-form__field">
             <label for="af-name">Your name <span class="audit-form__req" aria-hidden="true">*</span></label>
@@ -401,7 +402,7 @@
 
           <div class="audit-form__field">
             <label for="af-notes">Anything specific you'd like us to focus on? <span class="audit-form__optional">(optional)</span></label>
-            <textarea id="af-notes" name="notes" rows="3" placeholder="e.g. Our booking page has very low conversion, and the site looks outdated on mobile..."></textarea>
+            <textarea id="af-notes" name="notes" rows="3" maxlength="1200" placeholder="e.g. Our booking page has very low conversion, and the site looks outdated on mobile..."></textarea>
           </div>
 
           <button type="submit" class="audit-form__submit">

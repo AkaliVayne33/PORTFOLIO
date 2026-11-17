@@ -74,7 +74,7 @@ PORTFOLIO/
 ## CSS conventions
 - CSS variables in `:root` for colours and typography
 - BEM naming: `.block__element--modifier`
-- The existing stylesheets are desktop-first (base = desktop, `max-width: 768px` / `480px` queries). Keep that
+- The existing stylesheets are desktop-first (base = desktop, `max-width: 900px` / `768px` / `480px` queries). Keep that
   pattern inside them; never put layout in a `style=""` attribute (it beats the media queries)
 - Small-phone fixes shared by every mockup are at the end of global.css (`body [class$="premium-hero"]`…)
 - No `!important` except when justified
@@ -131,12 +131,16 @@ Each section contains a full mockup:
 
 ## Performance rules (index.html is the reference — do not regress)
 - Critical CSS (nav + hero) must be inlined in `<style>` in `<head>`
-- Full CSS loaded non-blocking: `<link media="print" onload="this.media='all'">`
+- index.html and audit.html: full CSS loaded non-blocking (`<link media="print" onload="this.media='all'">`),
+  their inline critical CSS covers the whole first screen
+- Sector pages (`<body class="sector-page">`): global.css + sector CSS are normal render-blocking links.
+  The inline copy could not be kept identical to the long sector stylesheets and the page jumped (CLS 0.1–0.4)
+  when they arrived; the inline <style> stays as a fallback but is no longer the source of truth
 - No web fonts (system stacks): nothing to load
 - JS loaded with `defer`
 - The largest first-screen element must not be hidden by `.animate-in` (no animate-in in heroes)
-- A hero image that is visible on phones may be preloaded with `fetchpriority="high"`; one hidden on phones
-  gets `media="(min-width: 769px)"` on its preload and a `<picture>` with a 1×1 source for phones
+- A hero image that is visible on phones may be preloaded with `fetchpriority="high"`; one hidden below 900px
+  (split heroes) gets `media="(min-width: 901px)"` on its preload and a `<picture>` with a 1×1 source up to 900px
 - Unsplash images get a `srcset` (w=640, 1000, original) + `sizes`
 - Sector grid images: local WebP via `<picture>` with JPEG fallback, below the fold: no preload, no fetchpriority
 - All `<img>` must have explicit `width` and `height` attributes
@@ -158,6 +162,7 @@ Each section contains a full mockup:
 - Star ratings: `role="img" aria-label="Rated N out of 5"`.
 - Quotes use English quotation marks “ ”, never « ».
 - Every page has canonical + Open Graph tags (og:image = assets/img/sectors/<sector>.jpg).
-- Forms: `<form data-mailto="…" data-kind="contact|audit">`, handled by main.js (required fields checked,
-  invalid ones marked `aria-invalid` and focused). No inline form scripts.
+- Forms: `<form data-mailto="…" data-kind="contact|audit" action="mailto:…" method="post" enctype="text/plain">`,
+  handled by main.js (required fields checked, invalid ones marked `aria-invalid` and focused; long bodies
+  shortened for mailto). Without JS, the browser validates and posts to the mailto action.
 - audit.html shows no testimonials until real clients exist ("What you get" section instead).

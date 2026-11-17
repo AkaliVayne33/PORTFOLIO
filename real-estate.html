@@ -74,13 +74,12 @@
     @media(max-width:900px){.re-luxe-hero{grid-template-columns:1fr;min-height:auto}.re-luxe-hero__right{display:none}}
   </style>
 
-  <!-- ── Full CSS (non-blocking) ── -->
-  <link rel="stylesheet" href="assets/css/global.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="assets/css/global.css" /></noscript>
-  <link rel="stylesheet" href="assets/css/immobilier.css" media="print" onload="this.media='all'" />
-  <noscript><link rel="stylesheet" href="assets/css/immobilier.css" /></noscript>
+  <!-- ── Full CSS, render-blocking on sector pages: the first paint is already the final layout
+       (loaded asynchronously, the page jumped when it arrived; see CLAUDE.md) ── -->
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/immobilier.css" />
 </head>
-<body>
+<body class="sector-page">
 
   <!-- ══ GLOBAL NAV ══ -->
   <nav class="site-nav" aria-label="Main navigation">

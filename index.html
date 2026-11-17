@@ -280,7 +280,7 @@
         No commitment, no invoice.
       </p>
 
-      <form class="home-contact__form animate-in" id="contact-form" data-mailto="marvin.selftsick@gmail.com" data-kind="contact" novalidate>
+      <form class="home-contact__form animate-in" id="contact-form" data-mailto="marvin.selftsick@gmail.com" data-kind="contact" action="mailto:marvin.selftsick@gmail.com" method="post" enctype="text/plain">
         <div class="home-contact__row">
           <div class="home-contact__field">
             <label for="contact-name">Your name</label>
@@ -297,7 +297,7 @@
         </div>
         <div class="home-contact__field">
           <label for="contact-message">What do you need?</label>
-          <textarea id="contact-message" name="message" rows="4" placeholder="We're a dental clinic in Orchard Road. Our current site looks outdated and we'd like a modern redesign..." required></textarea>
+          <textarea id="contact-message" name="message" rows="4" maxlength="1200" placeholder="We're a dental clinic in Orchard Road. Our current site looks outdated and we'd like a modern redesign..." required></textarea>
         </div>
         <button type="submit" class="home-contact__submit">
           Send message
