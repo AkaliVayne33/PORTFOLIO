@@ -80,7 +80,7 @@
   text-transform: uppercase;
   transition: all 0.3s;
 }
-.re-luxe-nav__cta:hover { background: #B8975A; color: #fff; }
+.re-luxe-nav__cta:hover { background: #B8975A; color: #1A1209; }
 
 /* Hero */
 .re-luxe-hero {
@@ -210,7 +210,7 @@
 .re-luxe-service:hover { background: #1A1209; }
 .re-luxe-service:hover .re-luxe-service__title,
 .re-luxe-service:hover .re-luxe-service__text { color: #FAF8F5; }
-.re-luxe-service:hover .re-luxe-service__num { color: #7A5C1E; }
+.re-luxe-service:hover .re-luxe-service__num { color: #C9A84C; }
 .re-luxe-service__num {
   font-family: Georgia,'Times New Roman',serif;
   font-size: 2.2rem;

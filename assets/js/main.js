@@ -22,9 +22,15 @@ animateEls.forEach((el) => {
   perParent.set(parent, idx + 1);
 });
 
+// Once revealed, an element drops the animation classes: their transform/transition rules
+// (high specificity) would otherwise block the element's own hover effects.
+function settle(el) {
+  el.classList.remove('animate-in', 'visible');
+}
+
 if (reduceMotion || !('IntersectionObserver' in window)) {
   // No animation: show everything right away
-  animateEls.forEach((el) => el.classList.add('visible'));
+  animateEls.forEach(settle);
 } else {
   const scrollObserver = new IntersectionObserver((entries) => {
     // Cascade among the elements that appear together (not their rank in the whole list:
@@ -35,7 +41,10 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
       .forEach((entry, i) => {
         const el = entry.target;
         scrollObserver.unobserve(el);
-        setTimeout(() => el.classList.add('visible'), i * 90);
+        setTimeout(() => {
+          el.classList.add('visible');
+          setTimeout(() => settle(el), 700); // after the 0.6 s fade
+        }, i * 90);
       });
   }, {
     threshold: 0.12,
@@ -186,10 +195,21 @@ document.querySelectorAll('form[data-mailto]').forEach((form) => {
         + (value('contact-business') ? 'Business: ' + value('contact-business') + '\n' : '')
         + '\n' + value('contact-message');
     }
-    let url = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-    // Some mail apps refuse mailto links longer than about 2,000 characters
+    const start = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=';
+    let url = start + encodeURIComponent(body);
+    // Some mail apps refuse mailto links longer than about 2,000 characters: keep as many whole characters
+    // as fit once encoded (Chinese text or emoji take 6-12 encoded characters each)
     if (url.length > 2000) {
-      url = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body.slice(0, 600) + '\n\n[…message shortened, please paste the rest here]');
+      const note = encodeURIComponent('\n\n[…message shortened, please paste the rest here]');
+      let kept = '';
+      let room = 2000 - start.length - note.length;
+      for (const ch of body) { // for…of walks whole characters (an emoji is never split)
+        const enc = encodeURIComponent(ch);
+        if (enc.length > room) break;
+        kept += enc;
+        room -= enc.length;
+      }
+      url = start + kept + note;
       say('Your message is long: your email app opens with the beginning of it, please paste the rest. Or write to us directly at <a href="mailto:' + to + '">' + to + '</a>.');
     } else {
       say('Your email app should open now. If it doesn\u2019t, write to us directly at <a href="mailto:' + to + '">' + to + '</a>.');

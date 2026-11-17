@@ -981,3 +981,16 @@ a.luxe-btn--on-dark {
     font-size: 0.62rem;
   }
 }
+
+/* ── Print / Save as PDF: sections not yet scrolled into view are printed too ── */
+@media print {
+  .js .animate-in {
+    opacity: 1;
+    transform: none;
+  }
+
+  .sticky-audit-bar,
+  .site-nav {
+    display: none;
+  }
+}

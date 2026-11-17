@@ -77,7 +77,7 @@
 .ph-luxe-service:hover { background: #1C1C1C; }
 .ph-luxe-service:hover .ph-luxe-service__title,
 .ph-luxe-service:hover .ph-luxe-service__text { color: #F9F7F4; }
-.ph-luxe-service:hover .ph-luxe-service__num { color: #4A8C6F; }
+.ph-luxe-service:hover .ph-luxe-service__num { color: #6FB592; }
 .ph-luxe-service__num { font-family: Georgia,'Times New Roman',serif; font-size: 2.2rem; color: #2D6B52; margin-bottom: 16px; transition: color 0.4s; }
 .ph-luxe-service__title { font-family: Georgia,'Times New Roman',serif; font-size: 1.1rem; font-weight: 600; color: #1C1C1C; margin-bottom: 12px; transition: color 0.4s; }
 .ph-luxe-service__text { font-size: 0.82rem; font-weight: 300; color: #666; line-height: 1.9; transition: color 0.4s; }
@@ -178,7 +178,7 @@
 .ph-premium-footer__copy { font-size: 0.72rem; color: rgba(255,255,255,0.65); }
 
 /* ══════════════════════════════════════════════
-   #VIBRANT — MEDIFAST
+   #VIBRANT — CURAFLOW
    Palette: gradient #3B82F6→#06B6D4, dark bg #0A0F1E
    Font: Space Grotesk
 ══════════════════════════════════════════════ */
@@ -293,3 +293,6 @@
   .ph-luxe-hero__title { font-size: 2.2rem; }
   .ph-vibrant-hero__title { font-size: 2.4rem; }
 }
+
+/* Luxury hero picture fills its column */
+.ph-luxe-hero__right img { width: 100%; height: 100%; object-fit: cover; display: block; will-change: transform; }

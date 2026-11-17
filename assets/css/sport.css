@@ -61,7 +61,7 @@
 
 .luxe-nav__cta:hover {
   background: #C9A84C;
-  color: #fff;
+  color: #1A1209;
 }
 
 /* Hero luxe */
@@ -1286,3 +1286,6 @@
   .vibrant-hero__title { font-size: 2.4rem; }
   .mockup-divider__title { font-size: 1.2rem; }
 }
+
+/* "See all" button of the premium mockup: keeps its width in the flex row */
+.premium-btn--noshrink { flex-shrink: 0; }

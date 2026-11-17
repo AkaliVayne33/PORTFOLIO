@@ -44,7 +44,7 @@
   transition: all 0.3s;
 }
 
-.tu-luxe-nav__cta:hover { background: #C9A84C; color: #fff; }
+.tu-luxe-nav__cta:hover { background: #C9A84C; color: #1A1209; }
 
 /* Hero — split */
 .tu-luxe-hero { display: grid; grid-template-columns: 1fr 1fr; height: 88svh; max-height: 900px; }
@@ -91,7 +91,7 @@
   align-self: flex-start;
 }
 
-.tu-luxe-btn:hover { background: #C9A84C; color: #fff; }
+.tu-luxe-btn:hover { background: #C9A84C; color: #1A1209; }
 
 .tu-luxe-hero__right { position: relative; overflow: hidden; }
 .tu-luxe-hero__img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.88) saturate(0.85); }
@@ -116,7 +116,7 @@
 
 .tu-luxe-service { padding: 40px 32px; border: 1px solid rgba(0,0,0,0.08); transition: all 0.4s ease; }
 .tu-luxe-service:hover { background: #0A0A0A; border-color: #0A0A0A; }
-.tu-luxe-service:hover .tu-luxe-service__num { color: #7A5500; }
+.tu-luxe-service:hover .tu-luxe-service__num { color: #C9A84C; }
 .tu-luxe-service:hover .tu-luxe-service__title, .tu-luxe-service:hover .tu-luxe-service__text { color: #FAFAFA; }
 
 .tu-luxe-service__num { font-family: Georgia,'Times New Roman',serif; font-size: 0.85rem; color: #7A5500; letter-spacing: 2px; margin-bottom: 20px; transition: color 0.4s; }
@@ -544,3 +544,6 @@
   .tu-premium-hero__title { font-size: 2rem; }
   .tu-vibrant-hero__title { font-size: 2.4rem; }
 }
+
+/* Luxury hero picture fills its column */
+.tu-luxe-hero__right img { width: 100%; height: 100%; object-fit: cover; display: block; will-change: transform; }

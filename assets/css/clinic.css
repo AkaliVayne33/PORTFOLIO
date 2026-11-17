@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ══════════════════════════════════════════════
-   #LUXE — THE PARAGON CLINIC
+   #LUXE — THE ARDEN CLINIC
    Palette : #FAFAFA / #0A0A0A / #C9A84C
    Font : Playfair Display + Inter 300
 ══════════════════════════════════════════════ */
@@ -54,7 +54,7 @@
   transition: all 0.3s;
 }
 
-.cl-luxe-nav__cta:hover { background: #C9A84C; color: #fff; }
+.cl-luxe-nav__cta:hover { background: #C9A84C; color: #1A1209; }
 
 /* Hero — split */
 .cl-luxe-hero {
@@ -112,7 +112,7 @@
   align-self: flex-start;
 }
 
-.cl-luxe-btn:hover { background: #C9A84C; color: #fff; }
+.cl-luxe-btn:hover { background: #C9A84C; color: #1A1209; }
 
 .cl-luxe-hero__right {
   position: relative;
@@ -186,7 +186,7 @@
 }
 
 .cl-luxe-service:hover { background: #0A0A0A; border-color: #0A0A0A; }
-.cl-luxe-service:hover .cl-luxe-service__num { color: #7A5500; }
+.cl-luxe-service:hover .cl-luxe-service__num { color: #C9A84C; }
 .cl-luxe-service:hover .cl-luxe-service__title,
 .cl-luxe-service:hover .cl-luxe-service__text { color: #FAFAFA; }
 

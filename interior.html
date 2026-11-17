@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads) -->
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000)})(document.documentElement)</script>
+  <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads).
+       A visitor still served by an older service worker reloads once when the new one takes over. -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false;sw.addEventListener('controllerchange',function(){if(!done){done=true;location.reload()}})}})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interior Design Website Redesign Examples — StudioWeb Singapore</title>
   <meta name="description" content="Web redesign examples for interior design studios and renovation contractors in Singapore." />
@@ -216,7 +217,7 @@
 
 
   <!-- ════════════════════════════════════════
-       #PREMIUM — LIVSPACE PRO
+       #PREMIUM — NESTCRAFT PRO
   ════════════════════════════════════════ -->
   <div id="premium">
 
@@ -227,7 +228,7 @@
     </div>
 
     <nav class="id-premium-nav" aria-label="Demo site menu (premium mockup)">
-      <span class="id-premium-nav__logo">Livspace <span>Pro</span></span>
+      <span class="id-premium-nav__logo">Nestcraft <span>Pro</span></span>
       <div class="id-premium-nav__links">
         <a href="#" tabindex="-1">Services</a>
         <a href="#" tabindex="-1">Portfolio</a>
@@ -246,7 +247,7 @@
           Your dream home,<br><span>on time, on budget.</span>
         </h3>
         <p class="id-premium-hero__sub">
-          Livspace Pro handles full HDB and condo renovations across Singapore.
+          Nestcraft Pro handles full HDB and condo renovations across Singapore.
           One team, one quote, zero hidden costs. From hacking to handover.
         </p>
         <div class="id-premium-hero__actions">
@@ -273,7 +274,7 @@
           src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&auto=format&fit=crop 800w"
         sizes="(max-width: 768px) 100vw, 50vw"
-          alt="Livspace Pro renovation"
+          alt="Nestcraft Pro renovation"
           width="800" height="600"
           loading="lazy"
         />
@@ -332,7 +333,7 @@
         </div>
         <div class="id-premium-temoignage animate-in">
           <p class="id-premium-temoignage__stars" role="img" aria-label="Rated 5 out of 5">★★★★★</p>
-          <p class="id-premium-temoignage__quote">“Second project with Livspace Pro. First time they did our BTO — this time our parents' resale flat. Same team, same quality. Will keep coming back.”</p>
+          <p class="id-premium-temoignage__quote">“Second project with Nestcraft Pro. First time they did our BTO — this time our parents' resale flat. Same team, same quality. Will keep coming back.”</p>
           <div class="id-premium-temoignage__author">
             <div class="id-premium-temoignage__avatar">MK</div>
             <div>
@@ -355,13 +356,13 @@
 
     <!-- Footer -->
     <footer class="id-premium-footer">
-      <span class="id-premium-footer__logo">Livspace <span>Pro</span></span>
+      <span class="id-premium-footer__logo">Nestcraft <span>Pro</span></span>
       <div class="id-premium-footer__links">
         <a href="#" tabindex="-1">Privacy</a>
         <a href="#" tabindex="-1">Terms</a>
         <a href="#" tabindex="-1">HDB Info</a>
       </div>
-      <span class="id-premium-footer__copy">© 2026 Livspace Pro</span>
+      <span class="id-premium-footer__copy">© 2026 Nestcraft Pro</span>
     </footer>
 
   </div>

@@ -51,7 +51,7 @@
   transition: all 0.3s;
 }
 
-.id-luxe-nav__cta:hover { background: #C9A84C; color: #fff; }
+.id-luxe-nav__cta:hover { background: #C9A84C; color: #1A1209; }
 
 /* Hero — full bleed */
 .id-luxe-hero {
@@ -158,7 +158,7 @@
 }
 
 .id-luxe-service:hover { background: #0A0A0A; border-color: #0A0A0A; }
-.id-luxe-service:hover .id-luxe-service__num { color: #7A5500; }
+.id-luxe-service:hover .id-luxe-service__num { color: #C9A84C; }
 .id-luxe-service:hover .id-luxe-service__title,
 .id-luxe-service:hover .id-luxe-service__text { color: #FAFAFA; }
 
@@ -262,7 +262,7 @@
 
 
 /* ══════════════════════════════════════════════
-   #PREMIUM — LIVSPACE PRO
+   #PREMIUM — NESTCRAFT PRO
    Palette : #1B3A2D (deep forest) / white / #2ECC71 (green)
    Font : DM Sans 700 + Inter 400
 ══════════════════════════════════════════════ */

@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads) -->
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000)})(document.documentElement)</script>
+  <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads).
+       A visitor still served by an older service worker reloads once when the new one takes over. -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false;sw.addEventListener('controllerchange',function(){if(!done){done=true;location.reload()}})}})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pharmacy Website Redesign Examples — StudioWeb Singapore</title>
   <meta name="description" content="Pharmacy sector web redesign examples: Luxury, Premium and Vibrant positioning styles." />
@@ -386,7 +387,7 @@
 
 
   <!-- ════════════════════════════════════════
-       #VIBRANT — MEDIFAST
+       #VIBRANT — CURAFLOW
   ════════════════════════════════════════ -->
   <div id="vibrant">
 
@@ -416,7 +417,7 @@
             Healthcare,<br><span class="grad">on your terms.</span>
           </h3>
           <p class="ph-vibrant-hero__sub">
-            MEDIFAST is the smart pharmacy app that puts a licensed pharmacist,
+            CURAFLOW is the smart pharmacy app that puts a licensed pharmacist,
             your prescriptions and wellness plans in one place.
           </p>
           <div class="ph-vibrant-hero__actions">
@@ -430,7 +431,7 @@
               src="https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=800&auto=format&fit=crop"
         srcset="https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=640&auto=format&fit=crop 640w, https://images.unsplash.com/photo-1583947215259-38e31be8751f?w=800&auto=format&fit=crop 800w"
         sizes="(max-width: 768px) 100vw, 50vw"
-              alt="MEDIFAST health app"
+              alt="CURAFLOW health app"
               width="800" height="800"
               loading="lazy"
             />
@@ -461,7 +462,7 @@
         <div class="ph-vibrant-service animate-in">
           <div class="ph-vibrant-service__icon">📦</div>
           <h5 class="ph-vibrant-service__title">Smart Refills</h5>
-          <p class="ph-vibrant-service__text">Never run out of medication. MEDIFAST auto-refills your prescriptions and delivers before you even notice you're low.</p>
+          <p class="ph-vibrant-service__text">Never run out of medication. CURAFLOW auto-refills your prescriptions and delivers before you even notice you're low.</p>
         </div>
         <div class="ph-vibrant-service animate-in">
           <div class="ph-vibrant-service__icon">📊</div>
@@ -480,7 +481,7 @@
       <div class="ph-vibrant-temoignages__grid">
         <div class="ph-vibrant-temoignage animate-in">
           <p class="ph-vibrant-temoignage__stars" role="img" aria-label="Rated 5 out of 5">★★★★★</p>
-          <p class="ph-vibrant-temoignage__quote">“The AI caught a drug interaction my doctor missed. MEDIFAST literally saved me a bad reaction. This app is a must-have.”</p>
+          <p class="ph-vibrant-temoignage__quote">“The AI caught a drug interaction my doctor missed. CURAFLOW literally saved me a bad reaction. This app is a must-have.”</p>
           <div class="ph-vibrant-temoignage__author">
             <div class="ph-vibrant-temoignage__avatar">T</div>
             <div>
@@ -521,7 +522,7 @@
       </h4>
       <p class="ph-vibrant-cta__sub animate-in">Free download. First prescription delivery free.</p>
       <a href="#" tabindex="-1" class="ph-vibrant-btn cta--large animate-in">
-        Download MEDIFAST →
+        Download CURAFLOW →
       </a>
     </section>
 
@@ -533,7 +534,7 @@
         <a href="#" tabindex="-1">Terms</a>
         <a href="#" tabindex="-1">Privacy</a>
       </div>
-      <span class="ph-vibrant-footer__copy">© 2026 MEDIFAST</span>
+      <span class="ph-vibrant-footer__copy">© 2026 CURAFLOW</span>
     </footer>
 
   </div>

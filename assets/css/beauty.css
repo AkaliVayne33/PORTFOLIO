@@ -56,7 +56,7 @@
 
 .bw-luxe-nav__cta:hover {
   background: #C9A84C;
-  color: #fff;
+  color: #1A1209;
 }
 
 /* Hero */
@@ -182,7 +182,7 @@
 }
 
 .bw-luxe-service:hover .bw-luxe-service__num {
-  color: #7A5500;
+  color: #C9A84C;
 }
 
 .bw-luxe-service__num {

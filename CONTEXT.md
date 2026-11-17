@@ -68,6 +68,7 @@ Each mockup contains:
 - Floating badge on hero image (social proof number)
 
 ## Fake brand names per sector
+All invented: never reuse the name of a real company (Livspace, Medifast and "Paragon" were renamed in step 51).
 
 ### Sport
 - Luxury: "ÉLITE PERFORMANCE" — private club, Orchard Road
@@ -82,7 +83,7 @@ Each mockup contains:
 ### Pharmacy (pharmacy.html)
 - Luxury: "The Park Dispensary" — wellness pharmacy
 - Premium: "PharmaCare+" — convenient community pharmacy
-- Vibrant: "MEDIFAST" — HealthTech app
+- Vibrant: "CURAFLOW" — HealthTech app
 
 ### Restaurant (restaurant.html)
 - Luxury: "Le Cèdre Blanc" — Mediterranean fine dining
@@ -95,7 +96,7 @@ Each mockup contains:
 - Vibrant: "BLOSSOM STUDIO" — trendy nail art bar
 
 ### Clinic & Dental (clinic.html)
-- Luxury: "THE PARAGON CLINIC" — aesthetic medicine, Orchard Road
+- Luxury: "THE ARDEN CLINIC" — aesthetic medicine, Orchard Road
 - Premium: "SMILECARE DENTAL" — multi-branch dental chain
 - Vibrant: "MEDIPOINT" — tech-forward GP / telehealth
 
@@ -106,7 +107,7 @@ Each mockup contains:
 
 ### Interior Design & Renovation (interior.html)
 - Luxury: "MAISON ATELIER" — bespoke luxury interior design
-- Premium: "LIVSPACE PRO" — full-service HDB/condo renovation
+- Premium: "NESTCRAFT PRO" — full-service HDB/condo renovation
 - Vibrant: "FORM & FLUX" — bold editorial interior design studio
 
 ## Global navigation
@@ -142,9 +143,9 @@ Each mockup contains:
 - [x] Step 7: Final responsive pass + cross-browser testing
 - [x] Step 8: index.html updated with 4 new sector cards (beauty, clinic, tutoring, interior)
 - [x] Step 9: beauty.html + beauty.css — 3 full mockups (SERENOVA / GLOWPRO STUDIOS / BLOSSOM STUDIO)
-- [x] Step 10: clinic.html + clinic.css — 3 full mockups (THE PARAGON CLINIC / SMILECARE DENTAL / MEDIPOINT)
+- [x] Step 10: clinic.html + clinic.css — 3 full mockups (THE ARDEN CLINIC / SMILECARE DENTAL / MEDIPOINT)
 - [x] Step 11: tutoring.html + tutoring.css — 3 full mockups (ATHENA ACADEMY / SMARTPATH EDUCATION / SPARK LABS)
-- [x] Step 12: interior.html + interior.css — 3 full mockups (MAISON ATELIER / LIVSPACE PRO / FORM & FLUX)
+- [x] Step 12: interior.html + interior.css — 3 full mockups (MAISON ATELIER / NESTCRAFT PRO / FORM & FLUX)
 - [x] Step 13: PWA setup — manifest.json + sw.js + service worker registration in main.js
 - [x] Step 14: Performance pass — preconnect hints, fetchpriority on LCP image, width/height on all images, inline styles moved to CSS classes, ARIA labels added
 - [x] Step 15: Critical CSS inlined in index.html (nav + hero above-the-fold), global.css loaded non-blocking via media="print" trick, main.js deferred
@@ -179,15 +180,15 @@ Each mockup contains:
 - [x] Step 43: tutoring.html CLS fix — style="" on <section class="tu-luxe-hero">, <div class="tu-luxe-hero__right">, <img>
 
 ## CLS pattern (rule for all pages)
-- Put every above-the-fold rule (nav, hero section, hero image incl. its filter, hero texts, .sr-only) in the
-  inline <style> of the page, with the SAME values as the sector stylesheet: when it arrives, nothing moves.
-- Never use style="" attributes for layout: they beat the mobile media queries (that broke the phone layout
-  of sport, restaurant, pharmacy and tutoring until step 50).
-- Breakpoints in the inline <style> must match the sector stylesheet (split heroes collapse at 900px).
-- Pseudo-elements (::before/::after) defined in inline <style> do NOT cause CLS.
+- Sector pages load global.css + their stylesheet as normal render-blocking links: the first paint is the final
+  layout, CLS measured 0.000 at 390 / 768 / 1366 px even with the CSS delayed by 600 ms (step 50–51).
+  Their inline <style> is only a leftover fallback, not the source of truth: never rely on a rule that only
+  exists there (put it in the stylesheet).
+- index.html and audit.html keep non-blocking CSS: their inline critical <style> covers the first screen.
+- Never use style="" attributes for layout: they beat the mobile media queries.
 
 ## Known remaining issues (as of session end)
-- All 8 sector pages: hero rules live in the inline critical <style> (style="" attributes removed in step 50).
+- All 8 sector pages: render-blocking CSS, CLS 0 (measured in headless Chrome).
 - The [non attribué] forced reflow (30–90ms) on all sector pages is incompressible — it's the browser recalculating layout when deferred CSS loads. Not scored by Lighthouse.
 - A final Lighthouse pass on all pages is recommended to confirm 100 Accessibility + maximum Performance scores.
 

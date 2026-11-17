@@ -100,7 +100,7 @@
 .rs-luxe-service:hover { background: #1A1108; }
 .rs-luxe-service:hover .rs-luxe-service__title,
 .rs-luxe-service:hover .rs-luxe-service__text { color: #FAF6F0; }
-.rs-luxe-service:hover .rs-luxe-service__num { color: #6B4E1A; }
+.rs-luxe-service:hover .rs-luxe-service__num { color: #C9A97A; }
 .rs-luxe-service__num { font-family: Georgia,'Times New Roman',serif; font-size: 2.2rem; color: #6B4E1A; margin-bottom: 16px; transition: color 0.4s; }
 .rs-luxe-service__title { font-family: Georgia,'Times New Roman',serif; font-size: 1.1rem; font-weight: 600; color: #1A1108; margin-bottom: 12px; transition: color 0.4s; }
 .rs-luxe-service__text { font-size: 0.82rem; font-weight: 300; color: #666; line-height: 1.9; transition: color 0.4s; }
