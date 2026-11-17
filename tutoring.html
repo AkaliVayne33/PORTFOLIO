@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads) -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000)})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutoring & Enrichment — Redesign Examples</title>
   <meta name="description" content="Web redesign examples for tutoring centres and enrichment programmes in Singapore." />
@@ -13,7 +15,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   <meta name="apple-mobile-web-app-title" content="StudioWeb" />
   <link rel="manifest" href="manifest.json" />
-  <link rel="apple-touch-icon" href="assets/img/icon.svg" />
+  <link rel="apple-touch-icon" href="assets/img/icon-192.png" />
   <link rel="icon" type="image/svg+xml" href="assets/img/icon.svg" />
 
   <!-- ── Preconnect for speed ── -->
@@ -40,8 +42,9 @@
     .site-nav__links a.tag--luxe{border-color:#8B6914;color:#8B6914}
     .site-nav__links a.tag--premium{border-color:#0D1B3E;color:#0D1B3E}
     .site-nav__links a.tag--vibrant{border-color:#7B2FF7;color:#7B2FF7}
-    .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
-    .animate-in.visible{opacity:1;transform:translateY(0)}
+    .js .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+    .js .animate-in.visible{opacity:1;transform:translateY(0)}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .animate-in{opacity:1;transform:none;transition:none}}
     .mockup-divider{padding:48px 24px;text-align:center;background:#F4F4F4;border-top:1px solid #E0E0E0;border-bottom:1px solid #E0E0E0}
     .mockup-divider__label{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#696969;margin-bottom:8px}
     .mockup-divider__title{font-size:1.6rem;font-weight:700;color:#1A1A1A;margin-bottom:8px}

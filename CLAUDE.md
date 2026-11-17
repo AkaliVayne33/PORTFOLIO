@@ -114,7 +114,9 @@ Each section contains a full mockup:
 
 ## JavaScript (main.js)
 - IntersectionObserver to animate elements on scroll (class `animate-in`)
-- Smooth scroll on anchor links
+- `.animate-in` only hides content under `.js` (class set by a one-line inline script right after `<meta charset>` in every page), and never with `prefers-reduced-motion: reduce` — keep both when adding a page
+- Smooth scroll on anchor links (placeholder `href="#"` links in mockups do nothing)
+- Service worker registered with the relative path `sw.js` (works at a domain root and under `/PORTFOLIO/`)
 - No external dependencies
 
 ## Language

@@ -2,67 +2,68 @@
    MAIN.JS — Global animations & interactions
    ============================================================ */
 
+// Tells the inline <head> script that this file did load (otherwise it un-hides the content after 3 s)
+window.mainReady = true;
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
 /* ── 1. Scroll animations (IntersectionObserver + staggered cascade) ── */
 
 const animateEls = document.querySelectorAll('.animate-in');
 
-const scrollObserver = new IntersectionObserver((entries) => {
-  // Batch all DOM reads first, then schedule writes — avoids forced reflow
-  const toAnimate = [];
-
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-
-    // Read: find stagger index (pure read, no write yet)
-    const siblings = Array.from(
-      (entry.target.parentElement || document).querySelectorAll('.animate-in')
-    );
-    const idx = siblings.indexOf(entry.target);
-    toAnimate.push({ el: entry.target, idx });
-    scrollObserver.unobserve(entry.target);
-  });
-
-  // Write: schedule classList changes after all reads are done
-  toAnimate.forEach(({ el, idx }) => {
-    setTimeout(() => el.classList.add('visible'), idx * 90);
-  });
-}, {
-  threshold: 0.12,
-  rootMargin: '0px 0px -50px 0px'
+// Stagger index of each element among the .animate-in children of its parent,
+// computed once at load (instead of re-querying the siblings on every intersection).
+const staggerIndex = new Map();
+const perParent = new Map();
+animateEls.forEach((el) => {
+  const parent = el.parentElement;
+  const idx = perParent.get(parent) || 0;
+  staggerIndex.set(el, idx);
+  perParent.set(parent, idx + 1);
 });
 
-animateEls.forEach(el => scrollObserver.observe(el));
-
-
-/* ── 2. Smooth scroll on anchor links ── */
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    const href = anchor.getAttribute('href');
-    const target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-      // Offset for the sticky nav height (64 px)
-      const navHeight = document.querySelector('.site-nav')?.offsetHeight || 64;
-      const top = target.getBoundingClientRect().top + window.scrollY - navHeight;
-      window.scrollTo({ top, behavior: 'smooth' });
-    }
+if (reduceMotion || !('IntersectionObserver' in window)) {
+  // No animation: show everything right away
+  animateEls.forEach((el) => el.classList.add('visible'));
+} else {
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      scrollObserver.unobserve(el);
+      setTimeout(() => el.classList.add('visible'), (staggerIndex.get(el) || 0) * 90);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -50px 0px'
   });
+
+  animateEls.forEach((el) => scrollObserver.observe(el));
+}
+
+
+/* ── 2. Anchor links ──
+   Real anchors are left to the browser: CSS handles the smooth scroll (html{scroll-behavior},
+   off with reduced motion) and the sticky-nav offset ([id]{scroll-margin-top} in global.css),
+   which also covers a page opened with #premium in the URL, and focus moves to the target.
+   Only the placeholder links of the mockups ("#") are neutralised, so they don't jump to the top. */
+
+document.querySelectorAll('a[href="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', (e) => e.preventDefault());
 });
 
 
 /* ── 3. Service Worker registration (PWA) ── */
 
-if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator && location.protocol !== 'file:') {
   window.addEventListener('load', () => {
-    const swPath = location.pathname.startsWith('/PORTFOLIO') ? '/PORTFOLIO/sw.js' : '/sw.js';
-    navigator.serviceWorker.register(swPath).catch(() => {});
+    // Relative path: works at the domain root and under a sub-folder (e.g. GitHub Pages /PORTFOLIO/)
+    navigator.serviceWorker.register('sw.js').catch(() => {});
   });
 }
 
 
 /* ── 4. Active nav state — highlight tag as section enters viewport ── */
-
 
 (function initActiveNav() {
   // Only runs on sector pages that have the three anchor tags
@@ -79,6 +80,8 @@ if ('serviceWorker' in navigator) {
     navLinks.forEach(link => {
       const isActive = link.getAttribute('href') === `#${id}`;
       link.classList.toggle('is-active', isActive);
+      if (isActive) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
     });
   }
 
@@ -95,8 +98,9 @@ if ('serviceWorker' in navigator) {
     return activeId;
   }
 
-  // Set initial active state without any geometry read — user always starts at top
-  setActive(sections[0].id);
+  // Initial state: the first section, or the one in the URL (page opened with #premium…)
+  const fromHash = sections.find((s) => '#' + s.id === location.hash);
+  setActive((fromHash || sections[0]).id);
 
   // Update on scroll (throttled with requestAnimationFrame)
   let ticking = false;
