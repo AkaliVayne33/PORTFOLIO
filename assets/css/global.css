@@ -121,7 +121,9 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  flex-wrap: wrap; /* enlarged text: the Contact button wraps instead of leaving the screen */
+  height: auto;
+  min-height: 64px;
   gap: 16px;
 }
 
@@ -606,6 +608,8 @@ ul {
   background: #fff;
   transition: border-color 0.2s, box-shadow 0.2s;
   resize: none;
+  width: 100%;
+  min-width: 0;
 }
 
 .home-contact__field input::placeholder,
@@ -641,46 +645,6 @@ ul {
   background: #6520d4;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(123,47,247,0.35);
-}
-
-/* ── Final CTA section (kept for sector pages) ── */
-.home-cta {
-  padding: 80px 24px;
-  background: #0A0A0A;
-  text-align: center;
-}
-
-.home-cta__eyebrow {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #8B6914;
-  margin-bottom: 16px;
-}
-
-.home-cta__title {
-  font-family: Georgia,'Times New Roman',serif;
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 24px;
-}
-
-.home-cta__btn {
-  display: inline-block;
-  padding: 16px 40px;
-  background: linear-gradient(90deg, #7B2FF7, #F107A3);
-  color: #fff;
-  border-radius: 999px;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.home-cta__btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(123, 47, 247, 0.4);
 }
 
 /* ── Agency banner (bottom of sector pages) ── */
@@ -809,6 +773,11 @@ ul {
     display: flex;
   }
 
+  /* the bar covers the bottom of the screen: links reached with Tab scroll above it */
+  html:has(.sticky-audit-bar) {
+    scroll-padding-bottom: 6rem;
+  }
+
   .agency-banner__inner {
     flex-direction: column;
     text-align: center;
@@ -868,7 +837,7 @@ ul {
   }
 
   .home-contact__row {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr); /* may shrink below the inputs' natural width */
   }
 
   .site-nav__links a {
@@ -942,12 +911,20 @@ a.luxe-btn--on-dark {
   border-color: #C9A84C;
 }
 
-/* A field marked invalid keeps its red border while it has the focus (main.js focuses it) */
+/* A field marked invalid keeps its red border while it has the focus (main.js focuses it),
+   and the focused one gets a red ring so it stands out among the other invalid fields.
+   The field-class prefix is needed to beat ".home-contact__field input:focus" (outline: transparent). */
 [aria-invalid="true"],
 [aria-invalid="true"]:focus,
 .home-contact__field [aria-invalid="true"]:focus,
 .audit-form__field [aria-invalid="true"]:focus {
   border-color: #C62828;
+}
+
+.home-contact__field [aria-invalid="true"]:focus,
+.audit-form__field [aria-invalid="true"]:focus {
+  outline: 2px solid #C62828;
+  outline-offset: 2px;
 }
 
 /* ── Demo menus of the mockups on phones: height follows the content (sport "vibrant-nav", "bw-premium-nav"…) ── */
@@ -1041,12 +1018,6 @@ body .tu-luxe-hero {
 }
 
 /* ── Enlarged text (visitor's font size setting): nothing is cut off or pushed off screen ── */
-.site-nav__inner {
-  flex-wrap: wrap;
-  height: auto;
-  min-height: 64px;
-}
-
 body [class$="luxe-nav"],
 body [class$="premium-nav"],
 body [class$="vibrant-nav"] {
@@ -1066,26 +1037,9 @@ h1, h2, h3, h4, h5,
   font-size: clamp(1.2rem, 4.5vw, 1.8rem);
 }
 
-/* Enlarged text on very narrow phones: the style tags wrap, the form column may shrink */
+/* Enlarged text on very narrow phones: the style tags wrap */
 .site-nav__links {
   flex-wrap: wrap;
   justify-content: center;
 }
 
-@media (max-width: 768px) {
-  .home-contact__row {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-
-.home-contact__field input,
-.home-contact__field textarea {
-  width: 100%;
-  min-width: 0;
-}
-
-/* Focused invalid field: a visible ring (all invalid fields share the red border) */
-[aria-invalid="true"]:focus {
-  outline: 2px solid #C62828;
-  outline-offset: 2px;
-}
