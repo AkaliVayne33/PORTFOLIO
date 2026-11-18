@@ -38,7 +38,7 @@ ul {
   list-style: none;
 }
 
-/* ── Variables CSS globales ── */
+/* ── Global CSS variables ── */
 :root {
   /* Luxe */
   --luxe-bg: #FAFAFA;
@@ -66,7 +66,7 @@ ul {
   --section-padding-lg: 120px 60px;
 }
 
-/* ── Utilitaires ── */
+/* ── Utilities ── */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -238,7 +238,7 @@ ul {
   color: #fff;
 }
 
-/* ── Page d'accueil — Hero ── */
+/* ── Home page — Hero ── */
 .home-hero {
   min-height: 100vh;
   display: flex;
@@ -282,7 +282,7 @@ ul {
   line-height: 1.7;
 }
 
-/* ── Page d'accueil — Grille secteurs ── */
+/* ── Home page — Sector grid ── */
 .sectors-section {
   padding: 80px 24px;
   background: #fff;
@@ -766,10 +766,10 @@ ul {
 /* ── Sticky bar mobile ── */
 .sticky-audit-bar {
   display: none;
-  position: fixed;
+  /* sticky, not fixed: it is the last element of <body>, so it stays at the bottom of the screen while
+     scrolling but takes its own place at the end of the page (never covers the banner's links) */
+  position: sticky;
   bottom: 0;
-  left: 0;
-  right: 0;
   z-index: 200;
   background: #0A0A0A;
   border-top: 2px solid #7B2FF7;
@@ -809,12 +809,6 @@ ul {
     display: flex;
   }
 
-  /* keep the end of the page (agency banner, after <main>) from hiding behind the sticky bar,
-     which can wrap onto two lines on small phones */
-  .agency-banner {
-    padding-bottom: 96px;
-  }
-
   .agency-banner__inner {
     flex-direction: column;
     text-align: center;
@@ -826,7 +820,7 @@ ul {
   }
 }
 
-/* ── Footer accueil ── */
+/* ── Home footer ── */
 .home-footer {
   text-align: center;
   padding: 40px 24px;
@@ -1088,4 +1082,10 @@ h1, h2, h3, h4, h5,
 .home-contact__field textarea {
   width: 100%;
   min-width: 0;
+}
+
+/* Focused invalid field: a visible ring (all invalid fields share the red border) */
+[aria-invalid="true"]:focus {
+  outline: 2px solid #C62828;
+  outline-offset: 2px;
 }

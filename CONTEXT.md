@@ -189,7 +189,7 @@ All invented: never reuse the name of a real company (Livspace, Medifast and "Pa
 
 ## Known remaining issues (as of session end)
 - All 8 sector pages: render-blocking CSS, CLS 0 (measured in headless Chrome).
-- The [non attribué] forced reflow (30–90ms) on all sector pages is incompressible — it's the browser recalculating layout when deferred CSS loads. Not scored by Lighthouse.
+- Sector pages load their CSS render-blocking (no deferred CSS any more), so the old forced reflow when deferred CSS arrived no longer applies.
 - A final Lighthouse pass on all pages is recommended to confirm 100 Accessibility + maximum Performance scores.
 
 ## How to resume in a new session
