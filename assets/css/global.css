@@ -956,6 +956,19 @@ a.luxe-btn--on-dark {
   border-color: #C62828;
 }
 
+/* ── Demo menus of the mockups on phones: height follows the content (sport "vibrant-nav", "bw-premium-nav"…) ── */
+@media (max-width: 900px) {
+  body [class$="premium-nav"],
+  body [class$="vibrant-nav"] {
+    height: auto;
+    min-height: 56px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    row-gap: 8px;
+  }
+}
+
 /* ── Very narrow phones (Galaxy Fold folded, 280 px) ── */
 @media (max-width: 320px) {
   body [class$="nav__cta"],
@@ -984,6 +997,12 @@ a.luxe-btn--on-dark {
 
 /* ── Print / Save as PDF: sections not yet scrolled into view are printed too ── */
 @media print {
+  /* the mockups are designs: print their colours (gradient text is invisible without its background) */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
   .js .animate-in {
     opacity: 1;
     transform: none;

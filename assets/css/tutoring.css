@@ -47,7 +47,7 @@
 .tu-luxe-nav__cta:hover { background: #C9A84C; color: #1A1209; }
 
 /* Hero — split */
-.tu-luxe-hero { display: grid; grid-template-columns: 1fr 1fr; height: 88svh; max-height: 900px; }
+.tu-luxe-hero { display: grid; grid-template-columns: 1fr 1fr; height: 88svh; min-height: 560px; max-height: 900px; } /* min-height: phones held sideways */
 
 .tu-luxe-hero__left {
   background: #F7F5EE;
@@ -521,7 +521,7 @@
   .tu-luxe-nav { padding-top: 20px; padding-bottom: 20px; }
   .tu-luxe-nav__links, .tu-premium-nav__links, .tu-vibrant-nav__links { display: none; }
 
-  .tu-luxe-hero { grid-template-columns: 1fr; }
+  .tu-luxe-hero { grid-template-columns: 1fr; height: auto; min-height: 520px; max-height: none; }
   .tu-luxe-hero__right { display: none; }
   .tu-luxe-hero__left { padding: 60px 24px; }
   .tu-luxe-services__grid, .tu-luxe-temoignages__grid { grid-template-columns: 1fr; }

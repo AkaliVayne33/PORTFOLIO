@@ -208,3 +208,7 @@ All invented: never reuse the name of a real company (Livspace, Medifast and "Pa
   fixes, Unsplash srcset, phones skip hidden hero pictures, immobilier/pharmacie renamed real-estate/pharmacy
   (old URLs redirect), canonical + Open Graph, sitemap.xml, _config.yml, audit.css removed (duplicated inline),
   audit testimonials replaced by "What you get", shared form handler in main.js, PNG install screenshots.
+- [x] Step 51: Review passes 3–10 — render-blocking CSS on sector pages (CLS 0.000 measured), contrast audit in
+  headless Chrome (solid and gradient backgrounds, hover states), real brand names replaced (Nestcraft Pro,
+  CURAFLOW, The Arden Clinic), animation classes removed after reveal, mailto shortening by encoded length,
+  #hash re-jump on load, min-heights on heroes and demo menus (280 px, phones sideways), print in colour.

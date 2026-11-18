@@ -223,14 +223,21 @@ document.querySelectorAll('form[data-mailto]').forEach((form) => {
 
 /* ── 6. Links to a section (index.html#contact…) on a slow connection ──
    The browser jumps to the section before the full CSS has arrived; the content above it then shrinks
-   and the section ends up out of place. Once everything is loaded, the jump is redone, unless the
-   visitor has already scrolled by themselves. */
+   and the section ends up out of place. Once everything is loaded the jump is redone, but only on a
+   fresh visit (not back/forward or reload, where the browser restores the reader's position) and only
+   if the visitor has not scrolled by themselves (wheel, touch, keys, or a click: dragging the scrollbar
+   starts with a mousedown). Comparing scrollY does not work: the browser itself moves it as the page shrinks. */
 if (location.hash.length > 1) {
-  let moved = false;
-  ['wheel', 'touchstart', 'keydown'].forEach((type) => window.addEventListener(type, () => { moved = true; }, { once: true, passive: true }));
-  window.addEventListener('load', () => {
-    let target = null;
-    try { target = document.querySelector(location.hash); } catch (e) { /* not a valid selector */ }
-    if (target && !moved) target.scrollIntoView({ block: 'start' });
-  });
+  const nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+  const fresh = !nav || nav.type === 'navigate';
+  if (fresh) {
+    let moved = false;
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach((type) =>
+      window.addEventListener(type, () => { moved = true; }, { once: true, passive: true, capture: true }));
+    window.addEventListener('load', () => {
+      let target = null;
+      try { target = document.querySelector(location.hash); } catch (e) { /* not a valid selector */ }
+      if (target && !moved) target.scrollIntoView({ block: 'start' });
+    });
+  }
 }

@@ -76,7 +76,9 @@ PORTFOLIO/
 - BEM naming: `.block__element--modifier`
 - The existing stylesheets are desktop-first (base = desktop, `max-width: 900px` / `768px` / `480px` queries). Keep that
   pattern inside them; never put layout in a `style=""` attribute (it beats the media queries)
-- Small-phone fixes shared by every mockup are at the end of global.css (`body [class$="premium-hero"]`…)
+- Small-phone fixes shared by every mockup are at the end of global.css (`body [class$="premium-hero"]`,
+  `body [class$="premium-nav"]`…): heroes and demo menus must grow with their content (min-height, never a
+  fixed height alone), down to 280 px wide and on phones held sideways
 - No `!important` except when justified
 
 ## HTML structure of each sector page
@@ -121,6 +123,13 @@ Each section contains a full mockup:
 - IntersectionObserver to animate elements on scroll (class `animate-in`)
 - `.animate-in` only hides content under `.js` (class set by a one-line inline script right after `<meta charset>` in every page), and never with `prefers-reduced-motion: reduce` — keep both when adding a page
 - Smooth scroll on anchor links (placeholder `href="#"` links in mockups do nothing)
+- Elements drop `animate-in`/`visible` once revealed (their transform rules would block hover effects)
+- Shared contact forms (`form[data-mailto]`): see "Accessibility and SEO conventions"
+- §6: on a fresh visit with a #hash, the jump is redone after `load` unless the visitor scrolled (wheel, touch, keys, mousedown)
+  (the full CSS of index/audit arrives late and shifts the section); index/audit inline CSS has
+  `[id]{scroll-margin-top:72px}` so the first jump already stops below the nav
+- Service worker: a visitor still on an older worker reloads once when the new one takes control
+  (inline script in <head>), unless they have started typing
 - Service worker registered with the relative path `sw.js` (works at a domain root and under `/PORTFOLIO/`)
 - No external dependencies
 
