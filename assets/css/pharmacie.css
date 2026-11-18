@@ -270,7 +270,7 @@
   .ph-luxe-nav { padding-top: 20px; padding-bottom: 20px; }
   .ph-luxe-nav__links, .ph-premium-nav__links, .ph-vibrant-nav__links { display: none; }
 
-  .ph-luxe-hero { grid-template-columns: 1fr; }
+  .ph-luxe-hero { grid-template-columns: 1fr; min-height: 520px; } /* photo column hidden: no near-empty full screen */
   .ph-luxe-hero__right { display: none; }
   .ph-luxe-services__grid, .ph-luxe-temoignages__grid { grid-template-columns: 1fr; }
 

@@ -711,7 +711,7 @@
   .re-luxe-nav { padding-top: 20px; padding-bottom: 20px; }
   .re-luxe-nav__links, .re-premium-nav__links, .re-vibrant-nav__links { display: none; }
 
-  .re-luxe-hero { grid-template-columns: 1fr; }
+  .re-luxe-hero { grid-template-columns: 1fr; min-height: 520px; } /* photo column hidden: no near-empty full screen */
   .re-luxe-hero__right { display: none; }
   .re-luxe-services__header { grid-template-columns: 1fr; }
   .re-luxe-services__grid, .re-luxe-temoignages__grid { grid-template-columns: 1fr; }

@@ -927,7 +927,7 @@
   .cl-luxe-nav { padding-top: 20px; padding-bottom: 20px; }
   .cl-luxe-nav__links, .cl-premium-nav__links, .cl-vibrant-nav__links { display: none; }
 
-  .cl-luxe-hero { grid-template-columns: 1fr; }
+  .cl-luxe-hero { grid-template-columns: 1fr; min-height: 520px; } /* photo column hidden: no near-empty full screen */
   .cl-luxe-hero__right { display: none; }
   .cl-luxe-hero__left { padding: 60px 24px; }
   .cl-luxe-services__grid, .cl-luxe-temoignages__grid { grid-template-columns: 1fr; }
