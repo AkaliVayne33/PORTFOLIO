@@ -78,7 +78,6 @@
   height: 100%;
   object-fit: cover;
   filter: brightness(0.42);
-  will-change: transform;
 }
 
 .bw-luxe-hero__content {

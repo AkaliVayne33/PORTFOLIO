@@ -13,7 +13,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 100%; /* the visitor's own text size setting (16px by default) */
 }
 
 body {
@@ -958,6 +958,7 @@ a.luxe-btn--on-dark {
 
 /* ── Demo menus of the mockups on phones: height follows the content (sport "vibrant-nav", "bw-premium-nav"…) ── */
 @media (max-width: 900px) {
+  body [class$="luxe-nav"],
   body [class$="premium-nav"],
   body [class$="vibrant-nav"] {
     height: auto;
@@ -966,6 +967,14 @@ a.luxe-btn--on-dark {
     padding-bottom: 10px;
     flex-wrap: wrap;
     row-gap: 8px;
+  }
+}
+
+/* Rows of the mockups (title + "See all" button…) wrap on phones instead of widening the page */
+@media (max-width: 480px) {
+  body [class$="services__header"] {
+    flex-wrap: wrap;
+    gap: 16px;
   }
 }
 
@@ -1012,5 +1021,27 @@ a.luxe-btn--on-dark {
   .site-nav,
   .wa-float {
     display: none;
+  }
+}
+
+/* ── Luxury heroes grow with their content (larger text settings, short screens) ──
+   "body" in front: beats the fixed heights of the sector stylesheets, media queries included */
+body .luxe-hero,
+body .bw-luxe-hero,
+body .id-luxe-hero,
+body .rs-luxe-hero,
+body .tu-luxe-hero {
+  height: auto;
+  min-height: clamp(560px, 88svh, 900px);
+  max-height: none;
+}
+
+@media (max-width: 480px) {
+  body .luxe-hero,
+  body .bw-luxe-hero,
+  body .id-luxe-hero,
+  body .rs-luxe-hero,
+  body .tu-luxe-hero {
+    min-height: max(520px, 75svh);
   }
 }

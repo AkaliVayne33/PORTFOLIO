@@ -1289,4 +1289,6 @@
 }
 
 /* "See all" button of the premium mockup: keeps its width in the flex row */
-.premium-btn--noshrink { flex-shrink: 0; }
+@media (min-width: 481px) {
+  .premium-btn--noshrink { flex-shrink: 0; }
+}

@@ -40,7 +40,7 @@
   <!-- ── Critical CSS inline (above-the-fold: nav + luxe hero) ── -->
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;font-size:16px}
+    html{scroll-behavior:smooth;font-size:100%}
     body{font-family:system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#fff;color:#1A1A1A;line-height:1.6;-webkit-font-smoothing:antialiased}
     img{display:block;max-width:100%}
     a{text-decoration:none;color:inherit}
@@ -54,7 +54,7 @@
     .site-nav__links a.tag--vibrant{border-color:#7B2FF7;color:#7B2FF7}
     @media(max-width:900px){.site-nav__inner{flex-wrap:wrap;height:auto;padding:8px 0;row-gap:8px}.site-nav__back+.site-nav__logo{display:none}.site-nav__links{order:3;flex:1 0 100%;display:flex;justify-content:center;gap:6px}.site-nav__links a{padding:5px 10px;font-size:.75rem}}
     .ph-luxe-hero__right{overflow:hidden;position:relative}
-    .ph-luxe-hero__right img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
+    .ph-luxe-hero__right img{width:100%;height:100%;object-fit:cover;display:block}
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
     .js .animate-in{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
     .js .animate-in.visible{opacity:1;transform:translateY(0)}
@@ -70,7 +70,7 @@
     .ph-luxe-hero{display:grid;grid-template-columns:1fr 1fr;min-height:85vh}
     .ph-luxe-hero__left{background:#F9F7F4;display:flex;flex-direction:column;justify-content:center;padding:80px 64px}
     .ph-luxe-hero__right{overflow:hidden;position:relative}
-    .ph-luxe-hero__img{width:100%;height:100%;object-fit:cover;display:block;will-change:transform}
+    .ph-luxe-hero__img{width:100%;height:100%;object-fit:cover;display:block}
     .ph-luxe-hero__eyebrow{font-size:.68rem;font-weight:300;letter-spacing:5px;text-transform:uppercase;color:#4A8C6F;margin-bottom:28px}
     .ph-luxe-hero__title{font-family:Georgia,'Times New Roman',serif;font-size:clamp(2.2rem,3.8vw,3.8rem);font-weight:400;color:#1C1C1C;line-height:1.25;margin-bottom:24px}
     .ph-luxe-hero__sub{font-size:.95rem;font-weight:300;color:#696969;max-width:400px;margin-bottom:44px;line-height:1.9}

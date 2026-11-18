@@ -153,6 +153,8 @@ Each section contains a full mockup:
 - Unsplash images get a `srcset` (w=640, 1000, original) + `sizes`
 - Sector grid images: local WebP via `<picture>` with JPEG fallback, below the fold: no preload, no fetchpriority
 - All `<img>` must have explicit `width` and `height` attributes
+- Root font size `100%` (never a fixed px): the visitor's text size setting applies
+- No `will-change` on images (no animation uses it)
 - Contrast ratio minimum 4.5:1 for all text (use #595959 minimum on white backgrounds)
 - All pages need a `<main>` landmark
 
