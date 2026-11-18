@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads).
-       A visitor still served by an older service worker reloads once when the new one takes over. -->
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false;sw.addEventListener('controllerchange',function(){if(!done){done=true;location.reload()}})}})(document.documentElement)</script>
+       A visitor still served by an older service worker reloads once when the new one takes over
+       (not if they have started typing in a form: nothing typed is ever lost). -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false,typed=false;document.addEventListener('input',function(){typed=true},true);sw.addEventListener('controllerchange',function(){if(!done&&!typed){done=true;location.reload()}})}})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Interior Design Website Redesign Examples — StudioWeb Singapore</title>
   <meta name="description" content="Web redesign examples for interior design studios and renovation contractors in Singapore." />
@@ -287,17 +288,17 @@
       <h4 class="id-premium-services__title animate-in">Full renovation. Zero stress.</h4>
       <div class="id-premium-services__grid">
         <div class="id-premium-service animate-in">
-          <div class="id-premium-service__icon">🏠</div>
+          <div class="id-premium-service__icon" aria-hidden="true">🏠</div>
           <h5 class="id-premium-service__title">HDB & BTO Renovation</h5>
           <p class="id-premium-service__text">Full flat renovation from bare or resale. Hacking, plastering, tiling, carpentry, electrical and painting — all under one contract.</p>
         </div>
         <div class="id-premium-service animate-in">
-          <div class="id-premium-service__icon">🏢</div>
+          <div class="id-premium-service__icon" aria-hidden="true">🏢</div>
           <h5 class="id-premium-service__title">Condo & Landed</h5>
           <p class="id-premium-service__text">Premium finishes, bespoke joinery and top-tier materials for condo and landed properties. We manage every tradesperson on your behalf.</p>
         </div>
         <div class="id-premium-service animate-in">
-          <div class="id-premium-service__icon">🛠️</div>
+          <div class="id-premium-service__icon" aria-hidden="true">🛠️</div>
           <h5 class="id-premium-service__title">Partial Renovation</h5>
           <p class="id-premium-service__text">Kitchen upgrade, bathroom remodel or wardrobe replacement — we handle single-room renovations with the same care as full projects.</p>
         </div>
@@ -419,7 +420,7 @@
             />
           </div>
           <div class="id-vibrant-hero__badge">
-            <span class="id-vibrant-hero__badge-icon">🏅</span>
+            <span class="id-vibrant-hero__badge-icon" aria-hidden="true">🏅</span>
             <div>
               <p class="id-vibrant-hero__badge-num">SDA 2025</p>
               <p class="id-vibrant-hero__badge-label">Design Award Winner</p>
@@ -437,17 +438,17 @@
       </h4>
       <div class="id-vibrant-services__grid">
         <div class="id-vibrant-service animate-in">
-          <div class="id-vibrant-service__icon">🎨</div>
+          <div class="id-vibrant-service__icon" aria-hidden="true">🎨</div>
           <h5 class="id-vibrant-service__title">Residential Design</h5>
           <p class="id-vibrant-service__text">Your home as a canvas. We design spaces that feel like you — maximalist or restrained, dark and dramatic or open and airy. Always singular.</p>
         </div>
         <div class="id-vibrant-service animate-in">
-          <div class="id-vibrant-service__icon">🏪</div>
+          <div class="id-vibrant-service__icon" aria-hidden="true">🏪</div>
           <h5 class="id-vibrant-service__title">Retail & F&B</h5>
           <p class="id-vibrant-service__text">From concept café to flagship boutique — we design commercial spaces that drive footfall, encourage dwell time and go viral on Instagram.</p>
         </div>
         <div class="id-vibrant-service animate-in">
-          <div class="id-vibrant-service__icon">✏️</div>
+          <div class="id-vibrant-service__icon" aria-hidden="true">✏️</div>
           <h5 class="id-vibrant-service__title">Brand Identity & Space</h5>
           <p class="id-vibrant-service__text">Your brand brought to life in three dimensions. We align visual identity with spatial experience so every touchpoint tells the same story.</p>
         </div>

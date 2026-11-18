@@ -73,6 +73,7 @@
   overflow: hidden;
   display: flex;
   align-items: center;
+  background-color: #0A0A0A; /* text stays readable while the photo loads */
 }
 
 .luxe-hero__img {

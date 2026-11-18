@@ -319,7 +319,7 @@
 .re-luxe-footer__logo { font-family: Georgia,'Times New Roman',serif; font-size: 0.85rem; letter-spacing: 4px; text-transform: uppercase; color: #FAF8F5; }
 .re-luxe-footer__links { display: flex; gap: 32px; }
 .re-luxe-footer__links a { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: rgba(250,248,245,0.75); transition: color 0.3s; }
-.re-luxe-footer__links a:hover { color: #7A5C1E; }
+.re-luxe-footer__links a:hover { color: #C9A84C; }
 .re-luxe-footer__copy { font-size: 0.68rem; color: rgba(250,248,245,0.65); letter-spacing: 1px; }
 
 /* ══════════════════════════════════════════════

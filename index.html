@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads).
-       A visitor still served by an older service worker reloads once when the new one takes over. -->
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false;sw.addEventListener('controllerchange',function(){if(!done){done=true;location.reload()}})}})(document.documentElement)</script>
+       A visitor still served by an older service worker reloads once when the new one takes over
+       (not if they have started typing in a form: nothing typed is ever lost). -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false,typed=false;document.addEventListener('input',function(){typed=true},true);sw.addEventListener('controllerchange',function(){if(!done&&!typed){done=true;location.reload()}})}})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>StudioWeb Singapore — Website Redesign Examples by Industry</title>
   <meta name="description" content="Explore our web redesign examples by industry: sport, real estate, pharmacy, restaurant, beauty, clinic, tutoring and interior design." />

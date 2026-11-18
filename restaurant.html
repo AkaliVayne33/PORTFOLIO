@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads).
-       A visitor still served by an older service worker reloads once when the new one takes over. -->
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false;sw.addEventListener('controllerchange',function(){if(!done){done=true;location.reload()}})}})(document.documentElement)</script>
+       A visitor still served by an older service worker reloads once when the new one takes over
+       (not if they have started typing in a form: nothing typed is ever lost). -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false,typed=false;document.addEventListener('input',function(){typed=true},true);sw.addEventListener('controllerchange',function(){if(!done&&!typed){done=true;location.reload()}})}})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Restaurant Website Redesign Examples — StudioWeb Singapore</title>
   <meta name="description" content="Restaurant sector web redesign examples: Luxury, Premium and Vibrant positioning styles." />
@@ -306,17 +307,17 @@
       <h4 class="rs-premium-services__title animate-in">More than a meal — an experience.</h4>
       <div class="rs-premium-services__grid">
         <div class="rs-premium-service animate-in">
-          <div class="rs-premium-service__icon">📅</div>
+          <div class="rs-premium-service__icon" aria-hidden="true">📅</div>
           <h5 class="rs-premium-service__title">Easy Reservations</h5>
           <p class="rs-premium-service__text">Book online in under a minute. Instant confirmation, flexible cancellation up to 24 hours before.</p>
         </div>
         <div class="rs-premium-service animate-in">
-          <div class="rs-premium-service__icon">🎉</div>
+          <div class="rs-premium-service__icon" aria-hidden="true">🎉</div>
           <h5 class="rs-premium-service__title">Private Events</h5>
           <p class="rs-premium-service__text">Birthdays, corporate lunches, farewell dinners. We handle everything from setup to dessert.</p>
         </div>
         <div class="rs-premium-service animate-in">
-          <div class="rs-premium-service__icon">🚗</div>
+          <div class="rs-premium-service__icon" aria-hidden="true">🚗</div>
           <h5 class="rs-premium-service__title">Catering & Delivery</h5>
           <p class="rs-premium-service__text">Bring Brasserie Centrale to your home or office. Full catering service for groups of 10 to 150.</p>
         </div>
@@ -439,7 +440,7 @@
             />
           </div>
           <div class="rs-vibrant-hero__badge">
-            <span class="rs-vibrant-hero__badge-icon">🔥</span>
+            <span class="rs-vibrant-hero__badge-icon" aria-hidden="true">🔥</span>
             <div>
               <p class="rs-vibrant-hero__badge-num">4.9 ★</p>
               <p class="rs-vibrant-hero__badge-label">2,800+ reviews</p>
@@ -457,17 +458,17 @@
       </h4>
       <div class="rs-vibrant-services__grid">
         <div class="rs-vibrant-service animate-in">
-          <div class="rs-vibrant-service__icon">📲</div>
+          <div class="rs-vibrant-service__icon" aria-hidden="true">📲</div>
           <h5 class="rs-vibrant-service__title">Online Ordering</h5>
           <p class="rs-vibrant-service__text">Order your favourites from the app or website. Pick up in-store or get it delivered hot to your door in 30 min.</p>
         </div>
         <div class="rs-vibrant-service animate-in">
-          <div class="rs-vibrant-service__icon">🎤</div>
+          <div class="rs-vibrant-service__icon" aria-hidden="true">🎤</div>
           <h5 class="rs-vibrant-service__title">Event Catering</h5>
           <p class="rs-vibrant-service__text">Street food station at your next event? We set up, we cook live, we bring the energy. From 20 to 500 guests.</p>
         </div>
         <div class="rs-vibrant-service animate-in">
-          <div class="rs-vibrant-service__icon">🤝</div>
+          <div class="rs-vibrant-service__icon" aria-hidden="true">🤝</div>
           <h5 class="rs-vibrant-service__title">Brand Collabs</h5>
           <p class="rs-vibrant-service__text">Limited-edition menus, pop-ups, brand partnerships. If your brand is bold enough, let's build something together.</p>
         </div>

@@ -67,6 +67,7 @@
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  background-color: #0A0A0A; /* text stays readable while the photo loads */
 }
 
 .bw-luxe-hero__img {

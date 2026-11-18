@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads).
-       A visitor still served by an older service worker reloads once when the new one takes over. -->
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false;sw.addEventListener('controllerchange',function(){if(!done){done=true;location.reload()}})}})(document.documentElement)</script>
+       A visitor still served by an older service worker reloads once when the new one takes over
+       (not if they have started typing in a form: nothing typed is ever lost). -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false,typed=false;document.addEventListener('input',function(){typed=true},true);sw.addEventListener('controllerchange',function(){if(!done&&!typed){done=true;location.reload()}})}})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clinic &amp; Dental Website Redesign Examples — StudioWeb Singapore</title>
   <meta name="description" content="Web redesign examples for private clinics and dental practices in Singapore." />
@@ -300,17 +301,17 @@
       <h4 class="cl-premium-services__title animate-in">Complete dental care, simplified.</h4>
       <div class="cl-premium-services__grid">
         <div class="cl-premium-service animate-in">
-          <div class="cl-premium-service__icon">🦷</div>
+          <div class="cl-premium-service__icon" aria-hidden="true">🦷</div>
           <h5 class="cl-premium-service__title">General Dentistry</h5>
           <p class="cl-premium-service__text">Routine check-ups, fillings, extractions and cleanings. Gentle, thorough and stress-free for patients of all ages.</p>
         </div>
         <div class="cl-premium-service animate-in">
-          <div class="cl-premium-service__icon">✨</div>
+          <div class="cl-premium-service__icon" aria-hidden="true">✨</div>
           <h5 class="cl-premium-service__title">Teeth Whitening</h5>
           <p class="cl-premium-service__text">Professional in-clinic and take-home whitening systems. Visible results after one session, guaranteed or your money back.</p>
         </div>
         <div class="cl-premium-service animate-in">
-          <div class="cl-premium-service__icon">😁</div>
+          <div class="cl-premium-service__icon" aria-hidden="true">😁</div>
           <h5 class="cl-premium-service__title">Orthodontics & Invisalign</h5>
           <p class="cl-premium-service__text">Braces and clear aligners for teens and adults. Free consultation, flexible payment plans, results in as little as 6 months.</p>
         </div>
@@ -432,7 +433,7 @@
             />
           </div>
           <div class="cl-vibrant-hero__badge">
-            <span class="cl-vibrant-hero__badge-icon">🩺</span>
+            <span class="cl-vibrant-hero__badge-icon" aria-hidden="true">🩺</span>
             <div>
               <p class="cl-vibrant-hero__badge-num">30 min</p>
               <p class="cl-vibrant-hero__badge-label">Avg. wait time</p>
@@ -450,17 +451,17 @@
       </h4>
       <div class="cl-vibrant-services__grid">
         <div class="cl-vibrant-service animate-in">
-          <div class="cl-vibrant-service__icon">📱</div>
+          <div class="cl-vibrant-service__icon" aria-hidden="true">📱</div>
           <h5 class="cl-vibrant-service__title">Teleconsultation</h5>
           <p class="cl-vibrant-service__text">See a certified GP from your phone. Video call, prescription delivery and MC issued — all in under an hour.</p>
         </div>
         <div class="cl-vibrant-service animate-in">
-          <div class="cl-vibrant-service__icon">💉</div>
+          <div class="cl-vibrant-service__icon" aria-hidden="true">💉</div>
           <h5 class="cl-vibrant-service__title">Vaccinations & Screening</h5>
           <p class="cl-vibrant-service__text">Full range of vaccinations, health screenings and chronic disease management. Walk-in or book ahead — always same-day results.</p>
         </div>
         <div class="cl-vibrant-service animate-in">
-          <div class="cl-vibrant-service__icon">📋</div>
+          <div class="cl-vibrant-service__icon" aria-hidden="true">📋</div>
           <h5 class="cl-vibrant-service__title">Digital Health Records</h5>
           <p class="cl-vibrant-service__text">All your records, prescriptions and referrals in one secure app. Share with specialists instantly, no paper, no hassle.</p>
         </div>

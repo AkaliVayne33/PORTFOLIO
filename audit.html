@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads).
-       A visitor still served by an older service worker reloads once when the new one takes over. -->
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false;sw.addEventListener('controllerchange',function(){if(!done){done=true;location.reload()}})}})(document.documentElement)</script>
+       A visitor still served by an older service worker reloads once when the new one takes over
+       (not if they have started typing in a form: nothing typed is ever lost). -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false,typed=false;document.addEventListener('input',function(){typed=true},true);sw.addEventListener('controllerchange',function(){if(!done&&!typed){done=true;location.reload()}})}})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Free Website Audit — StudioWeb Singapore</title>
   <meta name="description" content="Get a free professional audit of your website in 48 hours. Design, mobile, speed and conversion — we tell you exactly what to fix and show you what it could look like." />
@@ -140,6 +141,7 @@
 
     /* Responsive */
     .container{max-width:1200px;margin:0 auto;padding:0 24px}
+    @media print{.wa-float,.site-nav{display:none}.js .animate-in{opacity:1;transform:none}}
     .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
     @media(max-width:900px){.audit-pillars__grid{grid-template-columns:1fr}.audit-proof__grid{grid-template-columns:1fr}.audit-form-section__inner{grid-template-columns:1fr;gap:48px}}
     @media(max-width:600px){.audit-form{padding:28px 20px}.audit-step{gap:16px}.audit-step__num{font-size:1.5rem;min-width:36px}}

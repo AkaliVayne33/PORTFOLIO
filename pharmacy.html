@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads).
-       A visitor still served by an older service worker reloads once when the new one takes over. -->
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false;sw.addEventListener('controllerchange',function(){if(!done){done=true;location.reload()}})}})(document.documentElement)</script>
+       A visitor still served by an older service worker reloads once when the new one takes over
+       (not if they have started typing in a form: nothing typed is ever lost). -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false,typed=false;document.addEventListener('input',function(){typed=true},true);sw.addEventListener('controllerchange',function(){if(!done&&!typed){done=true;location.reload()}})}})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pharmacy Website Redesign Examples — StudioWeb Singapore</title>
   <meta name="description" content="Pharmacy sector web redesign examples: Luxury, Premium and Vibrant positioning styles." />
@@ -305,17 +306,17 @@
       <h4 class="ph-premium-services__title animate-in">Everything your health needs.</h4>
       <div class="ph-premium-services__grid">
         <div class="ph-premium-service animate-in">
-          <div class="ph-premium-service__icon">💊</div>
+          <div class="ph-premium-service__icon" aria-hidden="true">💊</div>
           <h5 class="ph-premium-service__title">Prescriptions</h5>
           <p class="ph-premium-service__text">Upload your prescription online or walk in. Fast, accurate dispensing with full medication counselling.</p>
         </div>
         <div class="ph-premium-service animate-in">
-          <div class="ph-premium-service__icon">🌿</div>
+          <div class="ph-premium-service__icon" aria-hidden="true">🌿</div>
           <h5 class="ph-premium-service__title">Nutrition & Supplements</h5>
           <p class="ph-premium-service__text">Expert-curated range of vitamins, minerals and health supplements. Guidance tailored to your lifestyle.</p>
         </div>
         <div class="ph-premium-service animate-in">
-          <div class="ph-premium-service__icon">🚚</div>
+          <div class="ph-premium-service__icon" aria-hidden="true">🚚</div>
           <h5 class="ph-premium-service__title">Same-Day Delivery</h5>
           <p class="ph-premium-service__text">Order before 2pm and receive your products the same day, anywhere in Singapore. Tracked and insured.</p>
         </div>
@@ -398,7 +399,7 @@
     </div>
 
     <nav class="ph-vibrant-nav" aria-label="Demo site menu (vibrant mockup)">
-      <span class="ph-vibrant-nav__logo">MEDI<span>FAST</span></span>
+      <span class="ph-vibrant-nav__logo">CURA<span>FLOW</span></span>
       <div class="ph-vibrant-nav__links">
         <a href="#" tabindex="-1">Shop</a>
         <a href="#" tabindex="-1">Programs</a>
@@ -437,7 +438,7 @@
             />
           </div>
           <div class="ph-vibrant-hero__badge">
-            <span class="ph-vibrant-hero__badge-icon">🏥</span>
+            <span class="ph-vibrant-hero__badge-icon" aria-hidden="true">🏥</span>
             <div>
               <p class="ph-vibrant-hero__badge-num">50,000+</p>
               <p class="ph-vibrant-hero__badge-label">App Users</p>
@@ -455,17 +456,17 @@
       </h4>
       <div class="ph-vibrant-services__grid">
         <div class="ph-vibrant-service animate-in">
-          <div class="ph-vibrant-service__icon">🤖</div>
+          <div class="ph-vibrant-service__icon" aria-hidden="true">🤖</div>
           <h5 class="ph-vibrant-service__title">AI Health Check</h5>
           <p class="ph-vibrant-service__text">Chat with our AI pharmacist 24/7. Symptom checker, drug interactions, dosage guidance — instant answers.</p>
         </div>
         <div class="ph-vibrant-service animate-in">
-          <div class="ph-vibrant-service__icon">📦</div>
+          <div class="ph-vibrant-service__icon" aria-hidden="true">📦</div>
           <h5 class="ph-vibrant-service__title">Smart Refills</h5>
           <p class="ph-vibrant-service__text">Never run out of medication. CURAFLOW auto-refills your prescriptions and delivers before you even notice you're low.</p>
         </div>
         <div class="ph-vibrant-service animate-in">
-          <div class="ph-vibrant-service__icon">📊</div>
+          <div class="ph-vibrant-service__icon" aria-hidden="true">📊</div>
           <h5 class="ph-vibrant-service__title">Wellness Tracker</h5>
           <p class="ph-vibrant-service__text">Track supplements, vitals and health goals in one dashboard. Personalised insights powered by your data.</p>
         </div>
@@ -528,7 +529,7 @@
 
     <!-- Footer -->
     <footer class="ph-vibrant-footer">
-      <span class="ph-vibrant-footer__logo">MEDI<span>FAST</span></span>
+      <span class="ph-vibrant-footer__logo">CURA<span>FLOW</span></span>
       <div class="ph-vibrant-footer__links">
         <a href="#" tabindex="-1">Legal</a>
         <a href="#" tabindex="-1">Terms</a>

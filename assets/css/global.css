@@ -990,7 +990,8 @@ a.luxe-btn--on-dark {
   }
 
   .sticky-audit-bar,
-  .site-nav {
+  .site-nav,
+  .wa-float {
     display: none;
   }
 }

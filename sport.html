@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <!-- Scroll animations only hide content when main.js can reveal it (un-hidden after 3 s if main.js never loads).
-       A visitor still served by an older service worker reloads once when the new one takes over. -->
-  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false;sw.addEventListener('controllerchange',function(){if(!done){done=true;location.reload()}})}})(document.documentElement)</script>
+       A visitor still served by an older service worker reloads once when the new one takes over
+       (not if they have started typing in a form: nothing typed is ever lost). -->
+  <script>(function(d){d.classList.add('js');setTimeout(function(){if(!window.mainReady)d.classList.remove('js')},3000);var sw=navigator.serviceWorker;if(sw&&sw.controller){var done=false,typed=false;document.addEventListener('input',function(){typed=true},true);sw.addEventListener('controllerchange',function(){if(!done&&!typed){done=true;location.reload()}})}})(document.documentElement)</script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sport Website Redesign Examples — StudioWeb Singapore</title>
   <meta name="description" content="Sport sector web redesign examples: Luxury, Premium and Vibrant positioning styles." />
@@ -300,17 +301,17 @@
       </div>
       <div class="premium-services__grid">
         <div class="premium-service-card animate-in">
-          <div class="premium-service-card__icon">💪</div>
+          <div class="premium-service-card__icon" aria-hidden="true">💪</div>
           <h5 class="premium-service-card__title">Personal Coaching</h5>
           <p class="premium-service-card__text">One-on-one or small group sessions with a coach dedicated to your specific goals.</p>
         </div>
         <div class="premium-service-card animate-in">
-          <div class="premium-service-card__icon">🥗</div>
+          <div class="premium-service-card__icon" aria-hidden="true">🥗</div>
           <h5 class="premium-service-card__title">Nutrition & Assessment</h5>
           <p class="premium-service-card__text">Body analysis, personalised meal plan and monthly follow-up by our sports dietitians.</p>
         </div>
         <div class="premium-service-card animate-in">
-          <div class="premium-service-card__icon">📊</div>
+          <div class="premium-service-card__icon" aria-hidden="true">📊</div>
           <h5 class="premium-service-card__title">Performance Tracking</h5>
           <p class="premium-service-card__text">Digital dashboards, regular measurements and real-time program adjustments.</p>
         </div>
@@ -430,7 +431,7 @@
             />
           </div>
           <div class="vibrant-hero__badge">
-            <span class="vibrant-hero__badge-icon">🔥</span>
+            <span class="vibrant-hero__badge-icon" aria-hidden="true">🔥</span>
             <div>
               <p class="vibrant-hero__badge-num">8,241</p>
               <p class="vibrant-hero__badge-label">Active Members</p>
@@ -449,17 +450,17 @@
       </div>
       <div class="vibrant-services__grid">
         <div class="vibrant-service-card animate-in">
-          <div class="vibrant-service-card__icon">⚡</div>
+          <div class="vibrant-service-card__icon" aria-hidden="true">⚡</div>
           <h5 class="vibrant-service-card__title">HIIT Programs</h5>
           <p class="vibrant-service-card__text">Short, intense sessions designed to burn maximum calories in minimum time. 20 minutes = real results.</p>
         </div>
         <div class="vibrant-service-card animate-in">
-          <div class="vibrant-service-card__icon">🤝</div>
+          <div class="vibrant-service-card__icon" aria-hidden="true">🤝</div>
           <h5 class="vibrant-service-card__title">Live Community</h5>
           <p class="vibrant-service-card__text">Train with thousands of members live. Weekly challenges, leaderboards, achievement badges.</p>
         </div>
         <div class="vibrant-service-card animate-in">
-          <div class="vibrant-service-card__icon">📱</div>
+          <div class="vibrant-service-card__icon" aria-hidden="true">📱</div>
           <h5 class="vibrant-service-card__title">FLUX App</h5>
           <p class="vibrant-service-card__text">AI-powered performance tracking, adaptive meal plans and immersive audio coaching — in your pocket.</p>
         </div>
