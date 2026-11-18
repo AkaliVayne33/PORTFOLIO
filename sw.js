@@ -7,17 +7,21 @@
    Bump CACHE_NAME only to drop old cached files entirely.
    ============================================================ */
 
-const CACHE_NAME = 'studioweb-v3';
+const CACHE_NAME = 'studioweb-v4';
 
 const BASE = self.registration.scope;
 const STATIC_ASSETS = [
   BASE,
   BASE + 'index.html',
+  BASE + 'audit.html',       /* the page every sector page's sticky bar and banner point to */
   BASE + 'offline.html',
   BASE + 'assets/css/global.css',
   BASE + 'assets/js/main.js',
   BASE + 'manifest.json',
-  BASE + 'assets/img/icon.svg'
+  BASE + 'assets/img/icon.svg',
+  /* home grid photos (about 165 KB): the first one loads before the worker takes over */
+  ...['sport', 'realestate', 'pharmacy', 'restaurant', 'beauty', 'clinic', 'tutoring', 'interior']
+    .map((name) => BASE + 'assets/img/sectors/' + name + '.webp')
 ];
 
 /* Only successful, same-origin responses are worth keeping (never a 404 or a 500) */
@@ -71,16 +75,19 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Network first for pages, styles and scripts
+  // Network first for pages, styles and scripts.
+  // Pages are cached under their address without the query string (?utm_…, ?fbclid…):
+  // one copy per page, found again offline whatever tracking parameters the link carries.
   const isPage = request.mode === 'navigate';
+  const key = isPage ? url.origin + url.pathname : request;
   event.respondWith(
     fetch(request)
       .then((response) => {
-        store(event, request, response);
+        store(event, key, response);
         return response;
       })
       .catch(async () =>
-        (await caches.match(request)) ||
+        (await caches.match(key)) ||
         (isPage ? await caches.match(BASE + 'offline.html') : undefined) ||
         Response.error())
   );
