@@ -338,10 +338,10 @@
 
 .tu-vibrant-nav__links a:hover { color: #9D5FF5; }
 
-.tu-vibrant-btn {
+.tu-vibrant-btn { /* gradient darkened so the white label reads at ≥ 4.6:1 */
   display: inline-block;
   padding: 10px 24px;
-  background: linear-gradient(90deg, #7B2FF7, #00D4FF);
+  background: linear-gradient(90deg, #7B2FF7, #007F99);
   color: #fff;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;

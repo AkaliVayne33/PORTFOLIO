@@ -458,10 +458,10 @@
 
 .id-vibrant-nav__links a:hover { color: #FF6B35; }
 
-.id-vibrant-btn {
+.id-vibrant-btn { /* gradient darkened so the white label reads at ≥ 4.6:1 */
   display: inline-block;
   padding: 10px 24px;
-  background: linear-gradient(90deg, #FF6B35, #A855F7);
+  background: linear-gradient(90deg, #D83A00, #9E42F6);
   color: #fff;
   font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-weight: 700;

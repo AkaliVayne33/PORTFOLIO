@@ -195,6 +195,8 @@ document.querySelectorAll('form[data-mailto]').forEach((form) => {
         + (value('contact-business') ? 'Business: ' + value('contact-business') + '\n' : '')
         + '\n' + value('contact-message');
     }
+    // a pasted essay in the name field must not fill the whole link: subject kept short
+    if (subject.length > 120) subject = Array.from(subject).slice(0, 120).join('') + '…';
     const start = 'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=';
     let url = start + encodeURIComponent(body);
     // Some mail apps refuse mailto links longer than about 2,000 characters: keep as many whole characters

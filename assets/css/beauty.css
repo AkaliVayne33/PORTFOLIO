@@ -418,7 +418,7 @@
   display: inline-block;
   background: rgba(232,121,160,0.15);
   border: 1px solid rgba(232,121,160,0.35);
-  color: #B5006A; /* rose on dark plum — ratio ≈ 5.5:1 */
+  color: #E879A0; /* rose on dark plum #1A0533–#3D1060 — ratio ≥ 5.3:1 */
   font-size: 0.8rem;
   font-weight: 600;
   padding: 6px 16px;
