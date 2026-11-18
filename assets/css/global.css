@@ -261,7 +261,7 @@ ul {
 
 .home-hero__title {
   font-family: Georgia,'Times New Roman',serif;
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(2rem, 6vw, 5rem); /* same as the inline critical CSS of index.html */
   font-weight: 700;
   color: #0A0A0A;
   line-height: 1.1;
@@ -1044,4 +1044,48 @@ body .tu-luxe-hero {
   body .tu-luxe-hero {
     min-height: max(520px, 75svh);
   }
+}
+
+/* ── Enlarged text (visitor's font size setting): nothing is cut off or pushed off screen ── */
+.site-nav__inner {
+  flex-wrap: wrap;
+  height: auto;
+  min-height: 64px;
+}
+
+body [class$="luxe-nav"],
+body [class$="premium-nav"],
+body [class$="vibrant-nav"] {
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+/* long words in big titles break instead of widening the page */
+h1, h2, h3, h4, h5,
+[class$="__title"],
+.sector-card__name {
+  overflow-wrap: anywhere; /* also lets flex and grid columns shrink below a long word */
+}
+
+/* sector cards: the name shrinks on narrow screens */
+.sector-card__name {
+  font-size: clamp(1.2rem, 4.5vw, 1.8rem);
+}
+
+/* Enlarged text on very narrow phones: the style tags wrap, the form column may shrink */
+.site-nav__links {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .home-contact__row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.home-contact__field input,
+.home-contact__field textarea {
+  width: 100%;
+  min-width: 0;
 }
