@@ -46,11 +46,12 @@ self.addEventListener('install', (event) => {
   self.skipWaiting();
 });
 
-/* ── Activate: clean old caches ── */
+/* ── Activate: clean this site's old caches ── */
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((keys) =>
-      Promise.all(keys.filter((k) => k !== CACHE_NAME).map((k) => caches.delete(k)))
+      // only this site's old caches: other projects on the same github.io domain share the origin
+      Promise.all(keys.filter((k) => k.startsWith('studioweb-') && k !== CACHE_NAME).map((k) => caches.delete(k)))
     ).then(() => self.clients.claim())
   );
 });
