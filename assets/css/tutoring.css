@@ -47,7 +47,7 @@
 .tu-luxe-nav__cta:hover { background: #C9A84C; color: #1A1209; }
 
 /* Hero — split */
-.tu-luxe-hero { display: grid; grid-template-columns: 1fr 1fr; height: 88svh; min-height: 560px; max-height: 900px; } /* min-height: phones held sideways */
+.tu-luxe-hero { display: grid; grid-template-columns: 1fr 1fr; min-height: clamp(560px, 88svh, 900px); } /* grows with its content */
 
 .tu-luxe-hero__left {
   background: #F7F5EE;

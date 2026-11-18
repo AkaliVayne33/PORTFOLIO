@@ -62,9 +62,7 @@
 /* Hero */
 .bw-luxe-hero {
   position: relative;
-  height: 90svh;
-  min-height: 560px; /* phone held sideways, Galaxy Fold: the text block is never cut off */
-  max-height: 900px;
+  height: auto; min-height: clamp(560px, 88svh, 900px); /* grows with its content (enlarged text, short screens) */
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -80,6 +78,17 @@
   filter: brightness(0.42);
 }
 
+/* dark scrim between the photo and the text (readable whatever the photo); ::after paints above the photo,
+   the text block (z-index 1) stays on top */
+.bw-luxe-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 55%, rgba(10,10,10,0.3) 100%);
+}
+
 .bw-luxe-hero__content {
   position: relative;
   z-index: 1;
@@ -91,9 +100,9 @@
   font-size: 0.7rem;
   letter-spacing: 5px;
   text-transform: uppercase;
-  color: #C9A84C;
+  color: #E8C77A;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .bw-luxe-hero__title {
@@ -113,7 +122,7 @@
 .bw-luxe-hero__sub {
   font-size: 1rem;
   font-weight: 300;
-  color: rgba(250,250,250,0.7);
+  color: rgba(250,250,250,0.88);
   max-width: 440px;
   line-height: 1.8;
   margin-bottom: 40px;
@@ -1129,7 +1138,7 @@
 }
 
 @media (max-width: 480px) {
-  .bw-luxe-hero { height: 75svh; max-height: none; }
+  .bw-luxe-hero { min-height: max(520px, 75svh); }
   .bw-luxe-hero__title { font-size: 2.2rem; }
   .bw-premium-hero__title { font-size: 2rem; }
   .bw-vibrant-hero__title { font-size: 2.4rem; }

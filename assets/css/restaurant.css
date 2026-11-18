@@ -40,9 +40,7 @@
 /* Hero — full bleed image with text overlay */
 .rs-luxe-hero {
   position: relative;
-  height: 92svh;
-  max-height: 900px;
-  min-height: 620px;
+  height: auto; min-height: clamp(560px, 88svh, 900px); /* grows with its content (enlarged text, short screens) */
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -54,16 +52,27 @@
   object-fit: cover;
   filter: brightness(0.5) saturate(0.9);
 }
+
+/* dark scrim between the photo and the text (readable whatever the photo); ::after paints above the photo,
+   the text block (z-index 1) stays on top */
+.rs-luxe-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 55%, rgba(10,10,10,0.3) 100%);
+}
 /* Warm vignette — ::before pseudo on hero, synced with inline critical CSS */
 .rs-luxe-hero__content {
   position: relative; z-index: 1;
   padding: 0 64px 72px;
   max-width: 760px;
 }
-.rs-luxe-hero__eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: #C9A97A; margin-bottom: 20px; font-weight: 300; }
+.rs-luxe-hero__eyebrow { font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase; color: #E3C9A0; margin-bottom: 20px; font-weight: 400; }
 .rs-luxe-hero__title { font-family: Georgia,'Times New Roman',serif; font-size: clamp(3rem, 5.5vw, 5.5rem); font-weight: 400; color: #FAF6F0; line-height: 1.1; margin-bottom: 20px; }
 .rs-luxe-hero__title em { font-style: italic; color: #C9A97A; }
-.rs-luxe-hero__sub { font-size: 1rem; font-weight: 300; color: rgba(250,246,240,0.65); line-height: 1.85; margin-bottom: 40px; max-width: 480px; }
+.rs-luxe-hero__sub { font-size: 1rem; font-weight: 300; color: rgba(250,246,240,0.88); line-height: 1.85; margin-bottom: 40px; max-width: 480px; }
 .rs-luxe-btn {
   display: inline-block; padding: 16px 44px;
   border: 1px solid #6B4E1A; color: #6B4E1A;
@@ -303,6 +312,7 @@
 }
 
 @media (max-width: 480px) {
+  .rs-luxe-hero { min-height: max(520px, 75svh); }
   .rs-luxe-hero__title { font-size: 2.4rem; }
   .rs-premium-hero__title { font-size: 2rem; }
   .rs-vibrant-hero__title { font-size: 2.4rem; }

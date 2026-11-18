@@ -134,6 +134,8 @@
     .wa-float:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(37,211,102,.55)}
     .wa-float__label{display:none}
     @media(min-width:600px){.wa-float__label{display:inline}}
+    /* phones: focused fields scroll clear of the floating button, which steps aside while the form is in use */
+    @media(max-width:768px){html{scroll-padding-bottom:96px}body:has(.audit-form :focus) .wa-float{display:none}}
 
     /* WhatsApp nav link */
     .site-nav__wa{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:#25D366;color:#06331A;border-radius:999px;font-size:0.82rem;font-weight:700;white-space:nowrap;transition:background .2s,transform .2s;flex-shrink:0}

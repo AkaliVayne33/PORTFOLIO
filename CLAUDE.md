@@ -79,6 +79,9 @@ PORTFOLIO/
 - Small-phone fixes shared by every mockup are at the end of global.css (`body [class$="premium-hero"]`,
   `body [class$="premium-nav"]`…): heroes and demo menus must grow with their content (min-height, never a
   fixed height alone), down to 280 px wide and on phones held sideways
+- Luxury hero heights and the dark scrim over the hero photo (`::after`) live in each sector stylesheet,
+  not in global.css: `height: auto; min-height: clamp(560px, 88svh, 900px)`, `max(520px, 75svh)` at ≤480 px;
+  text over a photo is checked pixel by pixel (≥4.5:1, 3:1 for large titles)
 - No `!important` except when justified
 
 ## HTML structure of each sector page
