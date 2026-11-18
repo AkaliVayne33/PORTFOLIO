@@ -333,7 +333,8 @@ ul {
 .sector-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 60%);
+  /* dark enough under the label and name whatever the photo (4.5:1 measured) */
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 55%, rgba(0,0,0,0.15) 90%);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -342,7 +343,7 @@ ul {
 }
 
 .sector-card:hover .sector-card__overlay {
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%);
+  background: linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.75) 55%, rgba(0,0,0,0.25) 90%);
 }
 
 .sector-card__label {
@@ -350,7 +351,7 @@ ul {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
+  color: #fff;
   margin-bottom: 6px;
 }
 
@@ -1043,3 +1044,41 @@ h1, h2, h3, h4, h5,
   justify-content: center;
 }
 
+
+/* ── Luxury heroes: a dark scrim between the photo and the text (readable whatever the photo) ──
+   ::after comes after the photo in paint order; the text block (z-index 1) stays on top */
+body .luxe-hero::after,
+body .bw-luxe-hero::after,
+body .id-luxe-hero::after,
+body .rs-luxe-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.6) 55%, rgba(10,10,10,0.3) 100%);
+}
+
+/* sport: text centred vertically on the left */
+body .luxe-hero::after {
+  background: linear-gradient(to right, rgba(10,10,10,0.8) 0%, rgba(10,10,10,0.55) 100%);
+}
+
+body .luxe-hero__eyebrow,
+body .bw-luxe-hero__eyebrow,
+body .id-luxe-hero__eyebrow {
+  color: #E8C77A;
+  font-weight: 400;
+}
+
+body .rs-luxe-hero__eyebrow {
+  color: #E3C9A0;
+  font-weight: 400;
+}
+
+body .luxe-hero__sub,
+body .bw-luxe-hero__sub,
+body .id-luxe-hero__sub,
+body .rs-luxe-hero__sub {
+  color: rgba(250,250,250,0.88);
+}
