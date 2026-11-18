@@ -63,6 +63,7 @@
 .bw-luxe-hero {
   position: relative;
   height: 90svh;
+  min-height: 560px; /* phone held sideways, Galaxy Fold: the text block is never cut off */
   max-height: 900px;
   overflow: hidden;
   display: flex;

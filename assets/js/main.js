@@ -219,3 +219,18 @@ document.querySelectorAll('form[data-mailto]').forEach((form) => {
     window.location.href = url;
   });
 });
+
+
+/* ── 6. Links to a section (index.html#contact…) on a slow connection ──
+   The browser jumps to the section before the full CSS has arrived; the content above it then shrinks
+   and the section ends up out of place. Once everything is loaded, the jump is redone, unless the
+   visitor has already scrolled by themselves. */
+if (location.hash.length > 1) {
+  let moved = false;
+  ['wheel', 'touchstart', 'keydown'].forEach((type) => window.addEventListener(type, () => { moved = true; }, { once: true, passive: true }));
+  window.addEventListener('load', () => {
+    let target = null;
+    try { target = document.querySelector(location.hash); } catch (e) { /* not a valid selector */ }
+    if (target && !moved) target.scrollIntoView({ block: 'start' });
+  });
+}

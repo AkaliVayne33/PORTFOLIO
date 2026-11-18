@@ -968,7 +968,7 @@
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  background: linear-gradient(90deg, #7B2FF7, #F107A3);
+  background: linear-gradient(90deg, #9D5FF5, #F107A3); /* light purple start: ≥ 4.5:1 on #0F0F0F */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
